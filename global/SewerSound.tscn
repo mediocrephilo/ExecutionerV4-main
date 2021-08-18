@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://global/SewerSound.gd" type="Script" id=1]
+[ext_resource path="res://act2/Sounds/zapsplat_nature_cave_ambience_water_drips_and_splatters_wind_howling_outside_60079.wav" type="AudioStream" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

@@ -1,0 +1,314 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://sprites/Act1settings/sceneone/roady2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneone/unnamed.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/sceneone/middle tree.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/sceneone/house 1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/right jump 4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Act1settings/sceneone/grass1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Act1settings/sceneone/front grass.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Act1settings/sceneone/back grass.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=18]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=21]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=22]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=23]
+[ext_resource path="res://player.gd" type="Script" id=24]
+[ext_resource path="res://Act1/playerscenes/scene9/door3.gd" type="Script" id=25]
+[ext_resource path="res://sprites/Act1settings/sceneone/bird/Untitled685-20200625194627.PNG" type="Texture" id=26]
+[ext_resource path="res://sprites/Act1settings/sceneone/bird/Untitled685-20200625194509.PNG" type="Texture" id=27]
+[ext_resource path="res://Act1/playerscenes/scene9/Area2D2.gd" type="Script" id=28]
+[ext_resource path="res://sounds/Closing-Squeaky-Door-1-www.fesliyanstudios.com.wav" type="AudioStream" id=29]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=30]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 495.271, 1199.13 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 92.5304
+height = 393.103
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5944.11, 137.664 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 103.199, 1097.02 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 997.533, 1448.23 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 251.429, 2199.46 )
+
+[node name="scene 1" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1822.37, 1196.02 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 5898.43, -16.4831 )
+scale = Vector2( 1.08766, 1.07289 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 5942.67, -107.801 )
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource( 29 )
+
+[node name="paper" type="ParallaxBackground" parent="."]
+
+[node name="paperlayer" type="ParallaxLayer" parent="paper"]
+
+[node name="papersprite" type="Sprite" parent="paper/paperlayer"]
+position = Vector2( 0, -4.25781 )
+scale = Vector2( 3.685, 1 )
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back tree" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.3, 0.3 )
+
+[node name="back tree layer" type="ParallaxLayer" parent="back tree"]
+
+[node name="back tree sprite" type="Sprite" parent="back tree/back tree layer"]
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mid tree" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.2, 0.2 )
+
+[node name="mid tree layer" type="ParallaxLayer" parent="mid tree"]
+
+[node name="mid tree sprite" type="Sprite" parent="mid tree/mid tree layer"]
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back grass" type="ParallaxBackground" parent="."]
+
+[node name="back grass layer" type="ParallaxLayer" parent="back grass"]
+
+[node name="back grass sprite2" type="Sprite" parent="back grass/back grass layer"]
+position = Vector2( -1678.35, 0 )
+scale = Vector2( 0.989756, 1 )
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="back grass/back grass layer"]
+position = Vector2( 9783.09, 1156.2 )
+scale = Vector2( 2.01713, 1.85095 )
+texture = ExtResource( 2 )
+
+[node name="road" type="ParallaxBackground" parent="."]
+
+[node name="road layer" type="ParallaxLayer" parent="road"]
+
+[node name="road sprite" type="Sprite" parent="road/road layer"]
+position = Vector2( 85.0967, 637.621 )
+scale = Vector2( 1.86653, 1.31893 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="front tree" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="front tree layer" type="ParallaxLayer" parent="front tree"]
+
+[node name="front tree sprite" type="Sprite" parent="front tree/front tree layer"]
+position = Vector2( -397.718, 0 )
+z_index = 100
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="front grass" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="front grass layer" type="ParallaxLayer" parent="front grass"]
+
+[node name="front grasssprite" type="Sprite" parent="front grass/front grass layer"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="front grasssprite2" type="Sprite" parent="front grass/front grass layer"]
+position = Vector2( 3211.1, 9.5874 )
+scale = Vector2( 0.844702, 1 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 2596.88, 652.789 )
+z_as_relative = false
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( -2166.39, 957.149 )
+scale = Vector2( 0.869016, 0.900177 )
+z_as_relative = false
+frames = SubResource( 2 )
+animation = "jump"
+speed_scale = 1.5
+
+[node name="playerCollision" type="CollisionShape2D" parent="player"]
+light_mask = 3
+position = Vector2( -2206.31, 1022.68 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( -1805.12, 923.949 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 8024
+limit_bottom = 2160
+
+[node name="Walk" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource( 30 )
+volume_db = 2.0
+
+[node name="vignette" type="ParallaxBackground" parent="."]
+layer = 128
+
+[node name="vignette layer" type="ParallaxLayer" parent="vignette"]
+
+[node name="vignette sprite" type="Sprite" parent="vignette/vignette layer"]
+position = Vector2( -64.4035, -36.1411 )
+scale = Vector2( 1.80272, 1.04579 )
+z_index = 100
+texture = ExtResource( 17 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4209.42, 2101.33 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 41.0424, 1220.69 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 8448.51, 1042.18 )
+shape = SubResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3657.56, 1406.76 )
+z_index = 2
+frames = SubResource( 7 )
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 6065.61, 952.736 )
+scale = Vector2( 1.04841, 1.1256 )
+z_index = 2
+frames = SubResource( 8 )
+frame = 2
+playing = true
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 2712.67, 648.158 )
+rotation = -0.404916
+scale = Vector2( 0.666533, 0.709781 )
+z_index = 2
+frames = SubResource( 8 )
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="exiting" type="Area2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exiting"]
+position = Vector2( -20.8533, 594.319 )
+shape = SubResource( 9 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="exiting" to="exiting" method="_on_exiting_body_entered"]

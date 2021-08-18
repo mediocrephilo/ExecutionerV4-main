@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/211192__yuval__small-clock-in-room.wav-f8c2fb4cc6041ef9f126b5b5e533d2f1.sample"
+
+[deps]
+
+source_file="res://sounds/211192__yuval__small-clock-in-room.wav"
+dest_files=[ "res://.import/211192__yuval__small-clock-in-room.wav-f8c2fb4cc6041ef9f126b5b5e533d2f1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

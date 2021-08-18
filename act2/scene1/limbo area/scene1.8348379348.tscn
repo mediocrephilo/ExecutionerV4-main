@@ -1,0 +1,358 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=3]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=6]
+[ext_resource path="res://act2/scene1/limbo area/enter3.gd" type="Script" id=7]
+[ext_resource path="res://act2/scene1/limbo area/enter.gd" type="Script" id=8]
+[ext_resource path="res://sprites/act 2 setting/scene1/black background.png" type="Texture" id=9]
+[ext_resource path="res://sprites/act 2 setting/scene1/path.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp1.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=14]
+[ext_resource path="res://act2/scene1/limbo area/enter2.gd" type="Script" id=15]
+[ext_resource path="res://sprites/act 2 setting/scene1/buildings1.png" type="Texture" id=16]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp3.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=18]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=19]
+[ext_resource path="res://act2/scene1/limbo area/enter5.gd" type="Script" id=20]
+[ext_resource path="res://act2/scene1/first room/lamp.gd" type="Script" id=21]
+[ext_resource path="res://Act1/playerscenes/scene6/player.gd" type="Script" id=22]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=23]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp2.png" type="Texture" id=24]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=25]
+[ext_resource path="res://sprites/act 2 setting/scene1/buildings2.png" type="Texture" id=26]
+[ext_resource path="res://sprites/act 2 setting/scene1/stars.png" type="Texture" id=27]
+[ext_resource path="res://act2/scene1/limbo area/enter4.gd" type="Script" id=28]
+[ext_resource path="res://act2/scene1/limbo area/scene1.8348379348.gd" type="Script" id=29]
+[ext_resource path="res://sounds/ftus_electromanetic_field_street_light_002_335.mp3" type="AudioStream" id=30]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 123.261
+height = 248.272
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4011.96, 291.377 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 90.4785, 692.394 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 73.9526, 571.204 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 316.479, 341.677 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 375.927, 399.304 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 310.735, 346.773 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 298.039, 339.081 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 381.49, 345.863 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 100
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 29 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 3874.1, 1163.17 )
+scale = Vector2( 1.02199, 1 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -99
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 0.6 )
+motion_mirroring = Vector2( 0, 2000 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3837.86, 1074.6 )
+texture = ExtResource( 27 )
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 3837.86, 1074.6 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = -98
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3837.86, 1074.6 )
+texture = ExtResource( 16 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 3837.86, 1074.6 )
+texture = ExtResource( 26 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+layer = -98
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 3837.86, 1074.6 )
+texture = ExtResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3901.59, 1091.64 )
+scale = Vector2( 1.02281, 1 )
+texture = ExtResource( 10 )
+
+[node name="lamp" type="AnimatedSprite" parent="."]
+position = Vector2( 3851.08, 1087 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.75
+
+[node name="lamp2" type="AnimatedSprite" parent="."]
+position = Vector2( 5461.55, 1097.46 )
+frames = SubResource( 1 )
+frame = 3
+script = ExtResource( 21 )
+
+[node name="lamp3" type="AnimatedSprite" parent="."]
+position = Vector2( 6928.03, 1146.08 )
+frames = SubResource( 1 )
+frame = 9
+speed_scale = 0.75
+script = ExtResource( 21 )
+
+[node name="lamp4" type="AnimatedSprite" parent="."]
+position = Vector2( 8478.89, 1134.37 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.75
+script = ExtResource( 21 )
+
+[node name="lamp5" type="AnimatedSprite" parent="."]
+position = Vector2( 9825.51, 1166.37 )
+frames = SubResource( 1 )
+frame = 1
+
+[node name="lamp6" type="AnimatedSprite" parent="."]
+position = Vector2( 2414.95, 1134.37 )
+frames = SubResource( 1 )
+frame = 3
+speed_scale = 0.75
+script = ExtResource( 21 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 60.5951, 55.0864 )
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 192.085, 1672.69 )
+scale = Vector2( 0.759914, 0.821187 )
+frames = SubResource( 2 )
+animation = "fall"
+speed_scale = 1.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 209.64, 1765.99 )
+shape = SubResource( 3 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 240.214, 1660.3 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2160
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3868.12, 2287.06 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -11.0172, 1377.16 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 7670.94, 1448.46 )
+shape = SubResource( 6 )
+
+[node name="enter" type="Area2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter"]
+position = Vector2( 844.482, 1607.12 )
+shape = SubResource( 7 )
+
+[node name="Label" type="Label" parent="enter"]
+margin_left = 727.435
+margin_top = 1110.87
+margin_right = 1790.44
+margin_bottom = 1275.87
+custom_fonts/font = SubResource( 8 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enter2" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter2"]
+position = Vector2( 2393.93, 1516.52 )
+shape = SubResource( 9 )
+
+[node name="Label" type="Label" parent="enter2"]
+margin_left = 2273.71
+margin_top = 1074.85
+margin_right = 2504.71
+margin_bottom = 1174.85
+custom_fonts/font = SubResource( 10 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enter3" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter3"]
+position = Vector2( 3983.04, 1565.12 )
+shape = SubResource( 11 )
+
+[node name="Label" type="Label" parent="enter3"]
+margin_left = 3862.65
+margin_top = 1073.51
+margin_right = 4093.65
+margin_bottom = 1173.51
+custom_fonts/font = SubResource( 12 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enter4" type="Area2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter4"]
+position = Vector2( 5458.66, 1582.81 )
+shape = SubResource( 13 )
+
+[node name="Label" type="Label" parent="enter4"]
+margin_left = 5354.99
+margin_top = 1101.3
+margin_right = 5585.99
+margin_bottom = 1201.3
+custom_fonts/font = SubResource( 14 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enter5" type="Area2D" parent="."]
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter5"]
+position = Vector2( 6874.95, 1594.77 )
+shape = SubResource( 15 )
+
+[node name="Label" type="Label" parent="enter5"]
+margin_left = 6716.96
+margin_top = 1113.56
+margin_right = 6947.96
+margin_bottom = 1213.56
+custom_fonts/font = SubResource( 16 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 3831.42, 1088.74 )
+scale = Vector2( 1.03138, 1.04636 )
+texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+
+[connection signal="body_entered" from="enter" to="enter" method="_on_enter_body_entered"]
+[connection signal="body_exited" from="enter" to="enter" method="_on_enter_body_exited"]
+[connection signal="body_entered" from="enter2" to="enter2" method="_on_enter2_body_entered"]
+[connection signal="body_exited" from="enter2" to="enter2" method="_on_enter2_body_exited"]
+[connection signal="body_entered" from="enter3" to="enter3" method="_on_enter3_body_entered"]
+[connection signal="body_exited" from="enter3" to="enter3" method="_on_enter3_body_exited"]
+[connection signal="body_entered" from="enter4" to="enter4" method="_on_enter4_body_entered"]
+[connection signal="body_exited" from="enter4" to="enter4" method="_on_enter4_body_exited"]
+[connection signal="body_entered" from="enter5" to="enter5" method="_on_enter5_body_entered"]
+[connection signal="body_exited" from="enter5" to="enter5" method="_on_enter5_body_exited"]

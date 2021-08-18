@@ -1,0 +1,382 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://sprites/act 2 setting/scene1/path.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act 2 setting/scene1/black background.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act 2 setting/scene1/stars.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act 2 setting/scene2/bakery1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act 2 setting/scene2/sign2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act 2 setting/scene2/bakery2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/act 2 setting/scene2/sign1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act 2 setting/scene1/buildings1.png" type="Texture" id=8]
+[ext_resource path="res://act2/scene2/bake.gd" type="Script" id=9]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=11]
+[ext_resource path="res://Act1/playerscenes/scene1/KinematicBody2D.gd" type="Script" id=12]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=16]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=18]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=21]
+[ext_resource path="res://act2/scene2/sign.gd" type="Script" id=22]
+[ext_resource path="res://act2/scene1/first room/lamp.gd" type="Script" id=23]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp3.png" type="Texture" id=24]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp1.png" type="Texture" id=25]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp2.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=27]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=28]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=29]
+[ext_resource path="res://sounds/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav" type="AudioStream" id=30]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=31]
+[ext_resource path="res://act2/scene2/ad.gd" type="Script" id=32]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 122.043
+height = 321.971
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1063.29, 536.37 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 28 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 206.97, 277.787 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 28 )
+
+[sub_resource type="Animation" id=9]
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 7000, -0.25, 0, 0.25, 0, 7000, -0.25, 0, 0.25, 0, 7000, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1571.12, -0.25, 0, 0.25, 0, 1600, -0.25, 0, 0.25, 0, 1571.12, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 266.793, 1004.32 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 4410.18, 77.7944 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 178.545, 889.891 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 280.302, 1354.39 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -101
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = -21
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3837.81, 1044.3 )
+z_index = -2
+texture = ExtResource( 2 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+z_index = -4
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 4267.64, 805.576 )
+texture = ExtResource( 27 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+layer = -99
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+z_index = -2
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 3885, 1201.59 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = -101
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+z_index = -22
+motion_mirroring = Vector2( 0, 2000 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3749.58, 765.513 )
+scale = Vector2( 0.996009, 1.00623 )
+z_index = -100
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3874.55, 1156.98 )
+texture = ExtResource( 1 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( -12.9778, 168.711 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 876.386, 1560.24 )
+frames = SubResource( 1 )
+animation = "fall"
+speed_scale = 1.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 844.135, 1633.81 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 839.012, 1615.04 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2160
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+position = Vector2( -193.574, -60.6724 )
+
+[node name="bake" type="Area2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bake"]
+position = Vector2( 2770.53, 1274.08 )
+scale = Vector2( 2.59512, 2.15508 )
+z_index = -1
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bake"]
+position = Vector2( 2763.84, 1461.56 )
+shape = SubResource( 4 )
+
+[node name="dialoguebox" type="Control" parent="bake"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="bake/dialoguebox"]
+margin_left = 1625.37
+margin_top = 1465.58
+margin_right = 3908.37
+margin_bottom = 1965.58
+texture = ExtResource( 29 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bake/dialoguebox"]
+margin_left = 1778.74
+margin_top = 1553.58
+margin_right = 3727.74
+margin_bottom = 1884.58
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "dfdf"
+text = "dfdf"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="bake/dialoguebox"]
+
+[node name="Type" type="AudioStreamPlayer" parent="bake/dialoguebox"]
+stream = ExtResource( 30 )
+
+[node name="continuesprite" type="Sprite" parent="bake/dialoguebox"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="bake/dialoguebox/continuesprite"]
+
+[node name="sign" type="Area2D" parent="."]
+z_index = 4
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="sign"]
+position = Vector2( 7323.41, 1661.67 )
+scale = Vector2( 2.69884, 4.00301 )
+z_index = -5
+frames = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sign"]
+position = Vector2( 7373.37, 1695.78 )
+shape = SubResource( 7 )
+
+[node name="dialoguebox" type="Control" parent="sign"]
+margin_left = -310.0
+margin_top = 163.0
+margin_right = 1563.0
+margin_bottom = 203.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="sign/dialoguebox"]
+margin_left = 5750.0
+margin_top = 1466.0
+margin_right = 7837.0
+margin_bottom = 1966.0
+texture = ExtResource( 29 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="sign/dialoguebox"]
+margin_left = 5875.0
+margin_top = 1548.0
+margin_right = 7704.0
+margin_bottom = 1875.0
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="sign/dialoguebox"]
+
+[node name="type" type="AudioStreamPlayer" parent="sign/dialoguebox"]
+stream = ExtResource( 30 )
+
+[node name="continuesprite" type="Sprite" parent="sign/dialoguebox"]
+position = Vector2( 7000, 1600 )
+scale = Vector2( 1.07429, 1.57942 )
+texture = ExtResource( 31 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sign/dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 12.3372, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 104.307, 990.912 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3923.2, 2125.83 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 7811.21, 1159.69 )
+shape = SubResource( 12 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 6810.74, 1199.73 )
+z_index = -1
+frames = SubResource( 13 )
+frame = 13
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 8678.83, 1232.22 )
+z_index = -1
+frames = SubResource( 13 )
+frame = 13
+script = ExtResource( 23 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 3391.32, 1159.12 )
+z_index = -1
+frames = SubResource( 13 )
+frame = 13
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 7758.59, 888.712 )
+shape = SubResource( 14 )
+
+[connection signal="body_entered" from="bake" to="bake" method="_on_bake_body_entered"]
+[connection signal="body_exited" from="bake" to="bake" method="_on_bake_body_exited"]
+[connection signal="tween_completed" from="bake/dialoguebox/Tween" to="bake" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="sign" to="sign" method="_on_sign_body_entered"]
+[connection signal="body_exited" from="sign" to="sign" method="_on_sign_body_exited"]
+[connection signal="tween_completed" from="sign/dialoguebox/Tween" to="sign" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

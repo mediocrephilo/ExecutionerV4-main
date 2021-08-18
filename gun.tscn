@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://act2/scene3/gun.gd" type="Script" id=1]
+[ext_resource path="res://act2/scene3/bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/act 2 setting/scene 3/gun.png" type="Texture" id=3]
+
+[node name="gun" type="KinematicBody2D"]
+position = Vector2( 1676.21, 171.852 )
+rotation = 15.708
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 2000
+Bullet = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 3 )
+
+[node name="visibility" type="Area2D" parent="."]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visibility"]
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="body_entered" from="visibility" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="visibility" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

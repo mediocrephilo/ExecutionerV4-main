@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=1]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "done"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2226.83, -0.25, 0, 0.25, 0, 2226.83, -0.25, 0, 0.25, 0, 2226.83, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1640.15, -0.25, 0, 0.25, 0, 1570, -0.25, 0, 0.25, 0, 1640.15, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[node name="dialoguebox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 5.71997
+margin_bottom = 5.71997
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 646.0
+margin_top = 1638.0
+margin_right = 3174.0
+margin_bottom = 1943.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 471.0
+margin_top = 1560.57
+margin_right = 3357.0
+margin_bottom = 2060.57
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="continueSprite" type="Sprite" parent="."]
+position = Vector2( 2226.83, 1570 )
+scale = Vector2( 1.44342, 1.87054 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="continueSprite"]
+autoplay = "done"
+anims/done = SubResource( 2 )
+
+[node name="type" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

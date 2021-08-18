@@ -1,0 +1,1643 @@
+[gd_scene load_steps=94 format=2]
+
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (3).png" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/scenefour/road.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=13]
+[ext_resource path="res://Act1/playerscenes/scene5/player.gd" type="Script" id=14]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=15]
+[ext_resource path="res://sprites/Act1settings/scenefive/pillar.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Act1settings/scenefive/wood.png" type="Texture" id=17]
+[ext_resource path="res://Act1/playerscenes/scene5/wood.gd" type="Script" id=18]
+[ext_resource path="res://Act1/playerscenes/scene5/orbitcenter.gd" type="Script" id=19]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime3.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime1.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime2.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime5.png" type="Texture" id=23]
+[ext_resource path="res://Act1/playerscenes/scene5/playercam.gd" type="Script" id=24]
+[ext_resource path="res://sprites/Act1settings/scenefive/Untitled78-20210105110318.PNG" type="Texture" id=25]
+[ext_resource path="res://sprites/Act1settings/scenefive/Untitled79-20210105112447.PNG" type="Texture" id=26]
+[ext_resource path="res://sprites/Act1settings/scenefive/bloodtextwill.png" type="Texture" id=27]
+[ext_resource path="res://sprites/Act1settings/scenefive/bloodtextsave.png" type="Texture" id=28]
+[ext_resource path="res://sprites/Act1settings/scenefive/bloodtextus.png" type="Texture" id=29]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (2).png" type="Texture" id=30]
+[ext_resource path="res://sprites/Act1settings/sceneone/front grass.png" type="Texture" id=31]
+[ext_resource path="res://sprites/Act1settings/sceneone/back grass.png" type="Texture" id=32]
+[ext_resource path="res://sprites/Act1settings/scenefive/bear2.png" type="Texture" id=33]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (5).png" type="Texture" id=34]
+[ext_resource path="res://Act1/playerscenes/scene5/exitscene6.gd" type="Script" id=35]
+[ext_resource path="res://sprites/Act1settings/scenefive/block.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Act1settings/scenefive/Untitled80-20210105112855.PNG" type="Texture" id=37]
+[ext_resource path="res://sprites/Act1settings/scenefive/Untitled78-20210105110236.PNG" type="Texture" id=38]
+[ext_resource path="res://sprites/Act1settings/scenefive/bear1.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Act1settings/scenefive/bear3.png" type="Texture" id=40]
+[ext_resource path="res://Act1/playerscenes/scene5/bear.gd" type="Script" id=41]
+[ext_resource path="res://wood3.tscn" type="PackedScene" id=42]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (3).png" type="Texture" id=43]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (4).png" type="Texture" id=44]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (4).png" type="Texture" id=45]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (1).png" type="Texture" id=46]
+[ext_resource path="res://Act1/playerscenes/scene5/exitscene5.gd" type="Script" id=47]
+[ext_resource path="res://orbitcenter.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Act1/playerscenes/scene5/scene5.gd" type="Script" id=49]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 92.3945, 378.161 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3430.28, 153 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 193.751, 1178.85 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 2006.3, 200.7 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 337.008, 1204.65 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 226.766, 377.696 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 380.474, 316.105 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 606.97, 667.991 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 666.938, 107.859 )
+
+[sub_resource type="Animation" id=11]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10974.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ), Vector2( -10954.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ), Vector2( -10954.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ), Vector2( -10954.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ), Vector2( -10954.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ), Vector2( -10954.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10954.1, 1277.1 ), Vector2( -10984.1, 1277.1 ), Vector2( -10954.1, 1277.1 ), Vector2( -10924.1, 1277.1 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 461.271, 22.4366 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 805.879, 137.006 )
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 49966, 907.081 )
+
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ ExtResource( 30 ), ExtResource( 1 ), ExtResource( 45 ), ExtResource( 34 ), ExtResource( 45 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=35]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 45 ), ExtResource( 1 ), ExtResource( 30 ), ExtResource( 1 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 45 ), ExtResource( 1 ), ExtResource( 30 ), ExtResource( 1 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 490.214, 1667.33 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 796.609, 2905.59 )
+
+[sub_resource type="SpriteFrames" id=39]
+animations = [ {
+"frames": [ ExtResource( 39 ), ExtResource( 33 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 484.613, 1178.2 )
+
+[sub_resource type="Curve2D" id=41]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2351.53, 1261.31, 0, 0, 0, 0, -9059.27, 1294.39, 0, 0, 0, 0, -13896.5, -211.902, 0, 0, 0, 0, -13896.5, -211.902, 0, 0, 0, 0, -21709.1, 1281.35, 0, 0, 0, 0, -31073.4, 96.7676, 0, 0, 0, 0, -37464.1, -5040.51, 0, 0, 0, 0, -46434.4, -1452.39, 0, 0, 0, 0, -53390.3, -1264.85, 0, 0, 0, 0, -64436.6, -1136.7 )
+}
+
+[sub_resource type="Animation" id=42]
+length = 90.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6, 79.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.02, 0.02, 1.0 ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "New Anim"
+length = 10.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -66317.1, -0.25, 0, 0.25, 0, -66447.7, -0.25, 0, 0.25, 0, -66317.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -4129.74, -0.25, 0, 0.25, 0, -457.656, -0.25, 0, 0.25, 0, -4129.74, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "New Anim"
+length = 15.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -66445.9, -0.25, 0, 0.25, 0, -66431.4, -0.25, 0, 0.25, 0, -66445.9, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -449.939, -0.25, 0, 0.25, 0, -4209.11, -0.25, 0, 0.25, 0, -449.939, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+
+[node name="scene5" type="Node2D"]
+script = ExtResource( 49 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 4000, 4000 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1938.45, 215.384 )
+texture = ExtResource( 46 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 4546.9, 1922.1 )
+scale = Vector2( 1.8687, 1 )
+texture = ExtResource( 2 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( -466.59, 10.1357 )
+z_index = 1
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 3631.71, 1589.26 )
+frames = SubResource( 1 )
+animation = "jump"
+speed_scale = 1.75
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 3650.79, 1616.69 )
+shape = SubResource( 2 )
+
+[node name="playercam" type="Camera2D" parent="player"]
+position = Vector2( 3193.88, 1574.5 )
+scale = Vector2( 2, 2 )
+current = true
+limit_left = -67240
+limit_right = 5000
+limit_bottom = 2160
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_top = 0.75
+script = ExtResource( 24 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -762.683, 597.237 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 5003.69, 1593.99 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 6846.65, 333.262 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -65309.5, -1325.99 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -67239.8, -2296.47 )
+shape = SubResource( 6 )
+
+[node name="pillar" type="StaticBody2D" parent="."]
+position = Vector2( 0, 217.692 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar2" type="StaticBody2D" parent="."]
+position = Vector2( -1286.8, 148.669 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar2"]
+position = Vector2( 251.261, 2173.77 )
+scale = Vector2( 0.898041, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="pillar2"]
+position = Vector2( 251.261, 2173.77 )
+scale = Vector2( 0.898041, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar2"]
+position = Vector2( 235.303, 1872.73 )
+shape = SubResource( 8 )
+
+[node name="pillar3" type="StaticBody2D" parent="."]
+position = Vector2( -8792.3, -124.55 )
+
+[node name="Sprite" type="Sprite" parent="pillar3"]
+position = Vector2( -21.9585, 2286.27 )
+scale = Vector2( 1.54091, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar3"]
+position = Vector2( -48.2148, 2250.04 )
+shape = SubResource( 9 )
+
+[node name="pillar4" type="StaticBody2D" parent="."]
+position = Vector2( -3099.11, 302.076 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar4"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar4"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar6" type="StaticBody2D" parent="."]
+position = Vector2( -4444.42, 150.238 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar6"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar6"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar9" type="StaticBody2D" parent="."]
+position = Vector2( -5874.62, -40.4422 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar9"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar9"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar11" type="StaticBody2D" parent="."]
+position = Vector2( -7175.35, -90.1948 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar11"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar11"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar12" type="StaticBody2D" parent="."]
+position = Vector2( -22659.5, -113.033 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar12"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar12"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar13" type="StaticBody2D" parent="."]
+position = Vector2( -23436.2, -82.7788 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar13"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar13"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar14" type="StaticBody2D" parent="."]
+position = Vector2( -24208.5, -114.213 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar14"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar14"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="pillar15" type="StaticBody2D" parent="."]
+position = Vector2( -25019.6, -114.213 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="pillar15"]
+position = Vector2( 406.522, 2144.89 )
+scale = Vector2( 0.558634, 0.736729 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar15"]
+position = Vector2( 410.394, 1928.07 )
+shape = SubResource( 7 )
+
+[node name="wood" type="KinematicBody2D" parent="."]
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood"]
+anims/shake = SubResource( 11 )
+
+[node name="Timer" type="Timer" parent="wood"]
+one_shot = true
+
+[node name="wood2" type="KinematicBody2D" parent="."]
+position = Vector2( -1739.65, -615.028 )
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood2"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood2"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood2"]
+anims/shake = SubResource( 12 )
+
+[node name="Timer" type="Timer" parent="wood2"]
+one_shot = true
+
+[node name="wood3" parent="." instance=ExtResource( 42 )]
+
+[node name="wood4" type="KinematicBody2D" parent="."]
+position = Vector2( -5886.69, -658.958 )
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood4"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood4"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood4"]
+anims/shake = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="wood4"]
+one_shot = true
+
+[node name="wood20" type="KinematicBody2D" parent="."]
+position = Vector2( -3859.35, -943.498 )
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood20"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood20"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood20"]
+anims/shake = SubResource( 14 )
+
+[node name="Timer" type="Timer" parent="wood20"]
+one_shot = true
+
+[node name="wood5" type="KinematicBody2D" parent="."]
+position = Vector2( -7792.66, -1133.11 )
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood5"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood5"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood5"]
+anims/shake = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="wood5"]
+one_shot = true
+
+[node name="wood6" type="KinematicBody2D" parent="."]
+position = Vector2( -9870.72, -471.653 )
+motion/sync_to_physics = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood6"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood6"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood6"]
+anims/shake = SubResource( 16 )
+
+[node name="Timer" type="Timer" parent="wood6"]
+one_shot = true
+
+[node name="wood7" type="KinematicBody2D" parent="."]
+position = Vector2( -26754, -5761.29 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood7"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood7"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood7"]
+anims/shake = SubResource( 17 )
+
+[node name="Timer" type="Timer" parent="wood7"]
+one_shot = true
+
+[node name="wood8" type="KinematicBody2D" parent="."]
+position = Vector2( -28024.7, -5381.68 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood8"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood8"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood8"]
+anims/shake = SubResource( 18 )
+
+[node name="Timer" type="Timer" parent="wood8"]
+one_shot = true
+
+[node name="wood9" type="KinematicBody2D" parent="."]
+position = Vector2( -29295.5, -4845.36 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood9"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood9"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood9"]
+anims/shake = SubResource( 19 )
+
+[node name="Timer" type="Timer" parent="wood9"]
+one_shot = true
+
+[node name="wood10" type="KinematicBody2D" parent="."]
+position = Vector2( -30636.8, -4322.58 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood10"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood10"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood10"]
+anims/shake = SubResource( 20 )
+
+[node name="Timer" type="Timer" parent="wood10"]
+one_shot = true
+
+[node name="wood11" type="KinematicBody2D" parent="."]
+position = Vector2( -32224.4, -4695.16 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood11"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood11"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood11"]
+anims/shake = SubResource( 21 )
+
+[node name="Timer" type="Timer" parent="wood11"]
+one_shot = true
+
+[node name="wood12" type="KinematicBody2D" parent="."]
+position = Vector2( -33783.1, -5118.21 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood12"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood12"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood12"]
+anims/shake = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="wood12"]
+one_shot = true
+
+[node name="wood13" type="KinematicBody2D" parent="."]
+position = Vector2( -45114.4, -4589.11 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood13"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood13"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood13"]
+anims/shake = SubResource( 23 )
+
+[node name="Timer" type="Timer" parent="wood13"]
+one_shot = true
+
+[node name="wood19" type="KinematicBody2D" parent="."]
+position = Vector2( -43698.5, -5033.47 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood19"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood19"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood19"]
+anims/shake = SubResource( 24 )
+
+[node name="Timer" type="Timer" parent="wood19"]
+one_shot = true
+
+[node name="wood14" type="KinematicBody2D" parent="."]
+position = Vector2( -46455.1, -3988.84 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood14"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood14"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood14"]
+anims/shake = SubResource( 25 )
+
+[node name="Timer" type="Timer" parent="wood14"]
+one_shot = true
+
+[node name="wood15" type="KinematicBody2D" parent="."]
+position = Vector2( -47956.4, -3422.01 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood15"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood15"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood15"]
+anims/shake = SubResource( 26 )
+
+[node name="Timer" type="Timer" parent="wood15"]
+one_shot = true
+
+[node name="wood16" type="KinematicBody2D" parent="."]
+position = Vector2( -49333.3, -2991.24 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood16"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood16"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood16"]
+anims/shake = SubResource( 27 )
+
+[node name="Timer" type="Timer" parent="wood16"]
+one_shot = true
+
+[node name="wood17" type="KinematicBody2D" parent="."]
+position = Vector2( -50563.7, -2773.09 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood17"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood17"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood17"]
+anims/shake = SubResource( 28 )
+
+[node name="Timer" type="Timer" parent="wood17"]
+one_shot = true
+
+[node name="wood18" type="KinematicBody2D" parent="."]
+position = Vector2( -51796.5, -2752.96 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="wood18"]
+position = Vector2( -10954.1, 1277.1 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wood18"]
+position = Vector2( -10963, 1290.46 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wood18"]
+anims/shake = SubResource( 29 )
+
+[node name="Timer" type="Timer" parent="wood18"]
+one_shot = true
+
+[node name="orbitcenter" parent="." instance=ExtResource( 48 )]
+
+[node name="orbitcenter2" type="Node2D" parent="."]
+position = Vector2( -30461.7, -1719.97 )
+script = ExtResource( 19 )
+radius = Vector2( 1000, 1000 )
+rotation_duration = 10.0
+
+[node name="orbit3" type="KinematicBody2D" parent="orbitcenter2" groups=[
+"platforms",
+]]
+position = Vector2( 886.208, -463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit3"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit3"]
+position = Vector2( 1056.06, 872.048 )
+shape = SubResource( 31 )
+
+[node name="orbit5" type="KinematicBody2D" parent="orbitcenter2" groups=[
+"platforms",
+]]
+position = Vector2( 463.288, 886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit5"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit5"]
+position = Vector2( 1048.47, 879.638 )
+shape = SubResource( 31 )
+
+[node name="orbit6" type="KinematicBody2D" parent="orbitcenter2" groups=[
+"platforms",
+]]
+position = Vector2( -886.208, 463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit6"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit6"]
+position = Vector2( 1059.85, 860.664 )
+shape = SubResource( 31 )
+
+[node name="orbit4" type="KinematicBody2D" parent="orbitcenter2" groups=[
+"platforms",
+]]
+position = Vector2( -463.288, -886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit4"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit4"]
+position = Vector2( 1056.06, 867.874 )
+shape = SubResource( 31 )
+
+[node name="orbitcenter3" type="Node2D" parent="."]
+position = Vector2( -33211, -3288.46 )
+script = ExtResource( 19 )
+radius = Vector2( 1000, 1000 )
+rotation_duration = 10.0
+
+[node name="orbit" type="KinematicBody2D" parent="orbitcenter3" groups=[
+"platforms",
+]]
+position = Vector2( 886.208, -463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit"]
+position = Vector2( 1056.06, 872.048 )
+shape = SubResource( 31 )
+
+[node name="orbit2" type="KinematicBody2D" parent="orbitcenter3" groups=[
+"platforms",
+]]
+position = Vector2( 463.288, 886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit2"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit2"]
+position = Vector2( 1056.06, 872.048 )
+shape = SubResource( 31 )
+
+[node name="orbit3" type="KinematicBody2D" parent="orbitcenter3" groups=[
+"platforms",
+]]
+position = Vector2( -886.208, 463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit3"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit3"]
+position = Vector2( 1056.06, 872.048 )
+shape = SubResource( 31 )
+
+[node name="orbit5" type="KinematicBody2D" parent="orbitcenter3" groups=[
+"platforms",
+]]
+position = Vector2( -463.288, -886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit5"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit5"]
+position = Vector2( 1059.85, 868.254 )
+shape = SubResource( 31 )
+
+[node name="orbitcenter4" type="Node2D" parent="."]
+position = Vector2( -35913.3, -5019.45 )
+script = ExtResource( 19 )
+radius = Vector2( 1000, 1000 )
+rotation_duration = 10.0
+
+[node name="orbit" type="KinematicBody2D" parent="orbitcenter4" groups=[
+"platforms",
+]]
+position = Vector2( 886.208, -463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit"]
+position = Vector2( 1052.27, 864.459 )
+shape = SubResource( 31 )
+
+[node name="orbit2" type="KinematicBody2D" parent="orbitcenter4" groups=[
+"platforms",
+]]
+position = Vector2( 463.288, 886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit2"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit2"]
+position = Vector2( 1056.06, 868.254 )
+shape = SubResource( 31 )
+
+[node name="orbit3" type="KinematicBody2D" parent="orbitcenter4" groups=[
+"platforms",
+]]
+position = Vector2( -886.208, 463.288 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit3"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit3"]
+position = Vector2( 1059.85, 864.459 )
+shape = SubResource( 31 )
+
+[node name="orbit4" type="KinematicBody2D" parent="orbitcenter4" groups=[
+"platforms",
+]]
+position = Vector2( -463.288, -886.208 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit4"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 30 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit4"]
+position = Vector2( 1056.06, 875.843 )
+shape = SubResource( 31 )
+
+[node name="long" type="StaticBody2D" parent="."]
+position = Vector2( -46828.2, -3744.78 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="long"]
+position = Vector2( 76.8975, -63.4538 )
+scale = Vector2( 1.66582, 3.31938 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long"]
+position = Vector2( 73.7966, -29.5848 )
+shape = SubResource( 32 )
+
+[node name="long2" type="StaticBody2D" parent="."]
+position = Vector2( -48789.4, -3262.54 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="long2"]
+position = Vector2( 131.212, -53.1066 )
+scale = Vector2( 1.6535, 3.70198 )
+texture = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long2"]
+position = Vector2( 118.769, -1.47788 )
+shape = SubResource( 32 )
+
+[node name="long3" type="StaticBody2D" parent="."]
+position = Vector2( -50747.8, -3552.02 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="long3"]
+position = Vector2( 67.3906, -58.9651 )
+scale = Vector2( 1.61492, 3.19012 )
+texture = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long3"]
+position = Vector2( 73.7966, -29.5848 )
+shape = SubResource( 32 )
+
+[node name="long4" type="StaticBody2D" parent="."]
+position = Vector2( -52869.6, -4050.88 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="long4"]
+position = Vector2( 73.0171, -86.7012 )
+scale = Vector2( 1.63276, 3.89004 )
+texture = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long4"]
+position = Vector2( 73.7966, -29.5848 )
+shape = SubResource( 32 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -49081.9, 4625.35 )
+shape = SubResource( 33 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.9, 0.9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 4000, 4000 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3903.21, 483.921 )
+frames = SubResource( 34 )
+frame = 3
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 1044.25, -684.493 )
+scale = Vector2( 0.63002, 0.628466 )
+frames = SubResource( 35 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3667.61, -1808.34 )
+scale = Vector2( 1.22074, 1.11504 )
+frames = SubResource( 36 )
+frame = 1
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 4583.36, 1100.81 )
+texture = ExtResource( 31 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 4650.08, 1074.12 )
+z_index = -1
+texture = ExtResource( 32 )
+
+[node name="exitscene5" type="Area2D" parent="."]
+script = ExtResource( 47 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exitscene5"]
+position = Vector2( 6497.28, 773.258 )
+shape = SubResource( 37 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -67886, -1970.44 )
+z_index = -6
+texture = ExtResource( 32 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( -66059.4, -1102.2 )
+z_index = -5
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -67870.3, -1627.88 )
+texture = ExtResource( 31 )
+
+[node name="exitscene6" type="Area2D" parent="."]
+position = Vector2( 444.263, -64.49 )
+script = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exitscene6"]
+position = Vector2( -68169.3, -2684.75 )
+shape = SubResource( 38 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( -26367, 254.824 )
+scale = Vector2( 0.644406, 0.631234 )
+
+[node name="Sprite7" type="Sprite" parent="StaticBody2D2"]
+texture = ExtResource( 36 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( -29401.4, -764.267 )
+scale = Vector2( 0.644406, 0.631234 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite7" type="Sprite" parent="StaticBody2D3"]
+texture = ExtResource( 36 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( -34876.5, -4069.09 )
+scale = Vector2( 0.644406, 0.631234 )
+
+[node name="Sprite7" type="Sprite" parent="StaticBody2D4"]
+texture = ExtResource( 36 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D5"]
+position = Vector2( -32186.2, -2366.9 )
+scale = Vector2( 0.653211, 0.629294 )
+texture = ExtResource( 37 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( -4078.66, 403.242 )
+scale = Vector2( 1.60761, 1.70614 )
+texture = ExtResource( 25 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( -14066.8, -849.913 )
+scale = Vector2( 1.11007, 1.4075 )
+texture = ExtResource( 38 )
+
+[node name="bear" type="KinematicBody2D" parent="."]
+position = Vector2( 5745.97, 1202.21 )
+scale = Vector2( 1.02013, 1 )
+z_index = 4
+motion/sync_to_physics = true
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bear"]
+position = Vector2( 10.1729, -1142.78 )
+scale = Vector2( 2.02881, 2.41962 )
+frames = SubResource( 39 )
+frame = 11
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bear"]
+position = Vector2( 0.510254, -107.9 )
+shape = SubResource( 40 )
+disabled = true
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 1297.38, 0 )
+scale = Vector2( 1.02013, 1 )
+curve = SubResource( 41 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 2351.53, 1261.31 )
+rotate = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+position = Vector2( 2009.28, -59.0964 )
+remote_path = NodePath("../../../bear")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+playback_process_mode = 0
+"anims/New Anim" = SubResource( 42 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( -66382.4, -2293.7 )
+scale = Vector2( 1, 1.74768 )
+texture = ExtResource( 43 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite9"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 43 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( -66431.4, -4209.11 )
+scale = Vector2( 1, 1.77957 )
+texture = ExtResource( 44 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite10"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 44 )
+
+[connection signal="ground_update" from="player" to="player/playercam" method="_on_player_ground_update"]
+[connection signal="animation_finished" from="wood/AnimationPlayer" to="wood" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood/Timer" to="wood" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood2/AnimationPlayer" to="wood2" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood2/Timer" to="wood2" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood4/AnimationPlayer" to="wood4" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood4/Timer" to="wood4" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood20/AnimationPlayer" to="wood20" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood20/Timer" to="wood20" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood5/AnimationPlayer" to="wood5" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood5/Timer" to="wood5" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood6/AnimationPlayer" to="wood6" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood6/Timer" to="wood6" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood7/AnimationPlayer" to="wood7" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood7/Timer" to="wood7" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood8/AnimationPlayer" to="wood8" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood8/Timer" to="wood8" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood9/AnimationPlayer" to="wood9" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood9/Timer" to="wood9" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood10/AnimationPlayer" to="wood10" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood10/Timer" to="wood10" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood11/AnimationPlayer" to="wood11" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood11/Timer" to="wood11" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood12/AnimationPlayer" to="wood12" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood12/Timer" to="wood12" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood13/AnimationPlayer" to="wood13" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood13/Timer" to="wood13" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood19/AnimationPlayer" to="wood19" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood19/Timer" to="wood19" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood14/AnimationPlayer" to="wood14" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood14/Timer" to="wood14" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood15/AnimationPlayer" to="wood15" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood15/Timer" to="wood15" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood16/AnimationPlayer" to="wood16" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood16/Timer" to="wood16" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood17/AnimationPlayer" to="wood17" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood17/Timer" to="wood17" method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="wood18/AnimationPlayer" to="wood18" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="wood18/Timer" to="wood18" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="exitscene6" to="exitscene6" method="_on_exitscene6_body_entered"]

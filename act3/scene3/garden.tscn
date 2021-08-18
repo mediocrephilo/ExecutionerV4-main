@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneone/background.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Act1settings/sceneone/middle tree.png" type="Texture" id=6]
+[ext_resource path="res://sprites/act3settings/scene2/grassbg.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 168.384, 1082.22 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5125.97, 144.018 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3787.5, 1056.13 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 3757, 1121.04 )
+scale = Vector2( 1, 1.09227 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 3706.5, 1070.54 )
+scale = Vector2( 1, 1.09227 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 2372.82, 1052.88 )
+scale = Vector2( 1.37127, 1.04693 )
+texture = ExtResource( 7 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 659.395, 1437.7 )
+
+[node name="Camera2D2" type="Camera2D" parent="player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2160
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 3726.7, 1151.34 )
+scale = Vector2( 1, 1.203 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 3839.52, 1051.37 )
+scale = Vector2( 1, 1.06338 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 1037.74 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 7708.25, 1080.97 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 5078.27, 2002.7 )
+shape = SubResource( 2 )

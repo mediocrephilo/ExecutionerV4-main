@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ambience_factory_interior_hum.wav-82c502c8139fe5949bd4dd62b1395c85.sample"
+
+[deps]
+
+source_file="res://sounds/ambience_factory_interior_hum.wav"
+dest_files=[ "res://.import/ambience_factory_interior_hum.wav-82c502c8139fe5949bd4dd62b1395c85.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

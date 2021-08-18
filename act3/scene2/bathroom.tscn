@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://sprites/act3settings/tub1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act3settings/bath.png" type="Texture" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/act3settings/bath2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act3settings/mirror.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act3settings/mirror2.png" type="Texture" id=6]
+[ext_resource path="res://act3/scene2/mirror2dialoguebox.gd" type="Script" id=7]
+[ext_resource path="res://act3/scene2/tub.gd" type="Script" id=8]
+[ext_resource path="res://act3/scene2/mirror.gd" type="Script" id=9]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=10]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=11]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 805.331, 320.412 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 158.614, 817.351 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1920.49, 97.445 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 335.279, 504.688 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1909.09, 1070.48 )
+scale = Vector2( 1.00403, 1.02505 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="tub" type="Area2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="tub"]
+position = Vector2( 1898.73, 1156.96 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tub"]
+position = Vector2( 863.057, 1655.79 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 47.3621, 1269.31 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3741.62, 1278.78 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1875.54, 2018.21 )
+shape = SubResource( 4 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3459.35, 1610.82 )
+
+[node name="mirror" type="Area2D" parent="."]
+z_index = -1
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="mirror"]
+position = Vector2( 1908.68, 1079.36 )
+frames = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
+position = Vector2( 2486.9, 1554.31 )
+shape = SubResource( 6 )
+
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_left = 1346.0
+margin_top = 1482.0
+margin_right = 3601.0
+margin_bottom = 1982.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="dialoguebox"]
+
+[node name="continuesprite" type="Sprite" parent="dialoguebox"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 10 )
+[connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
+[connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]
+[connection signal="body_entered" from="mirror" to="mirror" method="_on_mirror_body_entered"]
+[connection signal="body_entered" from="mirror" to="dialoguebox" method="_on_mirror_body_entered"]
+[connection signal="body_exited" from="mirror" to="mirror" method="_on_mirror_body_exited"]
+[connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

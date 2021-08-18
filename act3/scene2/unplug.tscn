@@ -1,0 +1,187 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://sprites/act3settings/unplug.png" type="Texture" id=1]
+[ext_resource path="res://smolplayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://act4/scene3/redbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://smolplayer.gd" type="Script" id=4]
+[ext_resource path="res://act3/scene2/unplug.gd" type="Script" id=5]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 185.852, 2769.58 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1293.28, 38.1033 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 60.0403, 293.782 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 218.464, 35.4382 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 39.7457, 164.371 )
+
+[sub_resource type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 1490.42, 389.062 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 100
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 25.0339, -602.051 )
+rotation = -0.00268543
+scale = Vector2( 1, 0.687811 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -76.8799, 1742.59 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3972.08, 1973.23 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 95.3296, 992.84, 1571.33, 982.934, 1576.29, 1101.81, 95.3296, 1116.67 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3639.77, 1065.01 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4097.3, 3690.19 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3119.37, 4169.93 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 951.31, 4197.61 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1154.36, 223.633 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3387.91, 209.13 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1117.37, 3155.09 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2879.5, 2490.84 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 28.7332, 1845.04 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -492.629, 1437.01 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3820.52, 1540.59 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3180.66, 1670.57 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2580.07, 1775.46 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 681.99, 2801.11 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1378.06, 3804.54 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 918.113, 2754.72 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1158.14, 1963.43 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2861.8, 2705.69 )
+shape = SubResource( 5 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="redbox" parent="TileMap" instance=ExtResource( 3 )]
+material = SubResource( 7 )
+position = Vector2( 1120.19, 1601.22 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="redbox2" parent="TileMap" instance=ExtResource( 3 )]
+material = SubResource( 7 )
+position = Vector2( 2751.91, 1989.44 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="redbox3" parent="TileMap" instance=ExtResource( 3 )]
+material = SubResource( 7 )
+position = Vector2( 471.135, 2407.99 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="redbox4" parent="TileMap" instance=ExtResource( 3 )]
+material = SubResource( 7 )
+position = Vector2( 3312.59, 2902.85 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="redbox5" parent="TileMap" instance=ExtResource( 3 )]
+material = SubResource( 7 )
+position = Vector2( 680.229, 3636.5 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2683.16, -2799.19 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 1873.86, 1543.18 )
+scale = Vector2( 0.4, 0.4 )
+current = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2021.07, 605.179 )
+shape = SubResource( 8 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 941.634
+margin_top = 49.09
+margin_right = 3196.63
+margin_bottom = 149.09
+custom_fonts/font = SubResource( 9 )
+text = "Move all blocks out of the maze. Press esc to exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

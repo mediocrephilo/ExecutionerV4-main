@@ -1,0 +1,245 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://sprites/act3settings/window.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act3settings/kitchen.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act3settings/homewall.png" type="Texture" id=4]
+[ext_resource path="res://act3/scene2/kitchen.gd" type="Script" id=5]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=9]
+[ext_resource path="res://act3/scene2/player.gd" type="Script" id=10]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=16]
+[ext_resource path="res://sprites/act3settings/fridge.png" type="Texture" id=17]
+[ext_resource path="res://act3/scene2/kitchenexit.gd" type="Script" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8167.36, 329.641 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 173.753, 1948.1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 107.287
+height = 405.029
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 120.263, 801.321 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="wall" type="Sprite" parent="."]
+position = Vector2( -8626.3, 1083.07 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 4 )
+
+[node name="window3" type="Sprite" parent="wall"]
+position = Vector2( -1269.29, -486.192 )
+scale = Vector2( 1.7452, 3.25521 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="floor2" type="Sprite" parent="wall"]
+position = Vector2( 534.196, 125.428 )
+scale = Vector2( 1.29687, 1 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="sprites" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wall" type="Sprite" parent="sprites"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 4 )
+
+[node name="stuff" type="Sprite" parent="sprites"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 3 )
+
+[node name="floor" type="Sprite" parent="sprites"]
+position = Vector2( 2501.63, 1250.59 )
+scale = Vector2( 1.41028, 1.15547 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="window" type="Sprite" parent="sprites"]
+position = Vector2( 3060.62, 489.86 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="window2" type="Sprite" parent="sprites"]
+position = Vector2( 774.217, 481.455 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="sprites2" type="Area2D" parent="."]
+position = Vector2( -4146.45, -3.59821 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wall" type="Sprite" parent="sprites2"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 4 )
+
+[node name="stuff" type="Sprite" parent="sprites2"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 3 )
+
+[node name="floor" type="Sprite" parent="sprites2"]
+position = Vector2( 2501.63, 1250.59 )
+scale = Vector2( 1.41028, 1.15547 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="window" type="Sprite" parent="sprites2"]
+position = Vector2( 3060.62, 489.86 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="window2" type="Sprite" parent="sprites2"]
+position = Vector2( 774.217, 481.455 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="sprites3" type="Area2D" parent="."]
+position = Vector2( -8319.87, 2.12109 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wall2" type="Sprite" parent="sprites3"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 4 )
+
+[node name="stuff" type="Sprite" parent="sprites3"]
+position = Vector2( 1935.37, 1051.64 )
+scale = Vector2( 1.08745, 1.15547 )
+texture = ExtResource( 3 )
+
+[node name="floor" type="Sprite" parent="sprites3"]
+position = Vector2( 2501.63, 1250.59 )
+scale = Vector2( 1.41028, 1.15547 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="window" type="Sprite" parent="sprites3"]
+position = Vector2( 3060.62, 489.86 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="window2" type="Sprite" parent="sprites3"]
+position = Vector2( 774.217, 481.455 )
+scale = Vector2( 1.89782, 3.7613 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -3014.5, 2325.61 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3996.8, 912.85 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -10707.8, 675.156 )
+shape = SubResource( 2 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 3432.63, 1748.32 )
+z_index = 1
+script = ExtResource( 10 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( -14.1509, 3.14461 )
+scale = Vector2( 0.972362, 0.993858 )
+frames = SubResource( 3 )
+animation = "fall"
+speed_scale = 1.75
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 0, -18.8678 )
+shape = SubResource( 4 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+limit_left = -10500
+limit_top = 0
+limit_right = 3840
+limit_bottom = 2160
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -9601.82, 1223.01 )
+scale = Vector2( 1.76468, 1.71645 )
+texture = ExtResource( 17 )
+
+[node name="Timer2" type="Timer" parent="."]
+autostart = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 0.9
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 3865.43, 1468.86 )
+shape = SubResource( 5 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

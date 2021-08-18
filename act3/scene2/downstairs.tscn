@@ -1,0 +1,173 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://sprites/act3settings/housedoor1.png" type="Texture" id=1]
+[ext_resource path="res://act3/scene2/Area2D .gd" type="Script" id=2]
+[ext_resource path="res://sprites/act3settings/housedoor2.png" type="Texture" id=3]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/act3settings/homewall.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=6]
+[ext_resource path="res://act3/scene2/Area2D2 .gd" type="Script" id=7]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://act3/scene2/Area2D4.gd" type="Script" id=9]
+[ext_resource path="res://act3/scene2/downup.gd" type="Script" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 412.971, 500.365 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1517.4, 236.424 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 175.261, 80.1621 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 99.0625, 967.65 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 117.57, 796.846 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 93.0934, 1000.93 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="wall" type="Sprite" parent="."]
+position = Vector2( 1958.01, 1052.95 )
+scale = Vector2( 1.02157, 1.04382 )
+z_index = -2
+texture = ExtResource( 5 )
+
+[node name="stairs" type="Sprite" parent="."]
+position = Vector2( 1928.44, 1112.1 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="stairs2" type="Sprite" parent="."]
+position = Vector2( -881.922, 876.118 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="stairs3" type="Sprite" parent="."]
+position = Vector2( -1555.35, 558.829 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -388.497, -40.7843 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+position = Vector2( 1695.36, 1181.38 )
+z_index = -1
+frames = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1506.96, 1344.04 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = 1309.08
+margin_top = 432.06
+margin_right = 1540.08
+margin_bottom = 532.06
+custom_fonts/font = SubResource( 3 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Label2" type="Label" parent="Area2D2"]
+margin_left = 2526.3
+margin_top = 313.892
+margin_right = 2757.3
+margin_bottom = 413.892
+custom_fonts/font = SubResource( 3 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 2642.87, 1285.8 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D2"]
+position = Vector2( 2818.09, 1128.01 )
+z_index = -1
+frames = SubResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 324.599, 1276.77 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1669.83, 2033.55 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3420.46, 2034.48 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 621.956, 1788.43 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 276.996, 1623.01 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -37.3492, 1548.84 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3751.73, 2205.4 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -32.6454, 1233.99 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3975.93, 1183.66 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 0, 684.783 )
+shape = SubResource( 7 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 3847.2, 1259.21 )
+shape = SubResource( 8 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D4_body_entered"]

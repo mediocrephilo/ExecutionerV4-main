@@ -1,0 +1,197 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://sprites/act3settings/news1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act3settings/desk2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act3settings/tv1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act3settings/tv3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act3settings/news2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act3settings/homewall.png" type="Texture" id=6]
+[ext_resource path="res://sprites/act3settings/tv5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act3settings/window.png" type="Texture" id=8]
+[ext_resource path="res://sprites/act3settings/tv2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=10]
+[ext_resource path="res://sprites/act3settings/tv4.png" type="Texture" id=11]
+[ext_resource path="res://sprites/act3settings/fireplace.png" type="Texture" id=12]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://act3/scene2/tv.gd" type="Script" id=15]
+[ext_resource path="res://act3/scene2/paper.gd" type="Script" id=16]
+[ext_resource path="res://act3/scene2/livingroomexit.gd" type="Script" id=17]
+[ext_resource path="res://act4/scene3/pixelblacksquare.png" type="Texture" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "static",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 722.73, 899.851 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 13 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 447.427, 195.761 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 100
+font_data = ExtResource( 13 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 288.869, 1208.12 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 3508.58, 203.39 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 289.034, 630.235 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="wall" type="Sprite" parent="."]
+position = Vector2( 1918.29, 1074.88 )
+scale = Vector2( 1.03218, 1.03365 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="floor" type="Sprite" parent="."]
+position = Vector2( 1469.55, 1206.86 )
+scale = Vector2( 1.32776, 1.03365 )
+texture = ExtResource( 10 )
+
+[node name="window" type="Sprite" parent="."]
+position = Vector2( 719.088, 622.863 )
+scale = Vector2( 1.94482, 3.60471 )
+texture = ExtResource( 8 )
+
+[node name="window2" type="Sprite" parent="."]
+position = Vector2( 3469.03, 619.731 )
+scale = Vector2( 1.94482, 3.60471 )
+texture = ExtResource( 8 )
+
+[node name="fireplace" type="Sprite" parent="."]
+position = Vector2( 2171.56, 1359.52 )
+scale = Vector2( 1.30444, 0.892709 )
+texture = ExtResource( 12 )
+
+[node name="table" type="Sprite" parent="."]
+position = Vector2( 672.374, 1695.44 )
+scale = Vector2( 2.9956, 2.74754 )
+texture = ExtResource( 2 )
+
+[node name="tv" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="tv"]
+position = Vector2( 2184.15, 601.081 )
+z_index = -1
+frames = SubResource( 1 )
+animation = "static"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tv"]
+position = Vector2( 2157.89, 1118.91 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="tv"]
+margin_left = 2045.04
+margin_top = 196.442
+margin_right = 2305.04
+margin_bottom = 296.442
+custom_fonts/font = SubResource( 3 )
+text = "watch"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="paper" type="Area2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="paper"]
+position = Vector2( 408.333, 1566.1 )
+frames = SubResource( 4 )
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paper"]
+position = Vector2( 524.659, 1752.71 )
+shape = SubResource( 5 )
+
+[node name="Label" type="Label" parent="paper"]
+margin_left = 311.336
+margin_top = 1314.53
+margin_right = 503.336
+margin_bottom = 1414.53
+custom_fonts/font = SubResource( 6 )
+text = "read"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 262.6, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -399.609, 1073.24 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3836.25, 1061.82 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1735.45, 2180.72 )
+shape = SubResource( 8 )
+
+[node name="player" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3250.74, 1635.24 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 17 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 3922.86, 1407.09 )
+shape = SubResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1417.9, 602.456 )
+scale = Vector2( 0.524577, 8.19474 )
+texture = ExtResource( 18 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 2923.03, 594.342 )
+scale = Vector2( 0.524577, 8.19474 )
+texture = ExtResource( 18 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 2172.49, 87.2243 )
+scale = Vector2( 11.9347, 0.587966 )
+texture = ExtResource( 18 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 2172.49, 1109.57 )
+scale = Vector2( 12.1883, 0.587966 )
+texture = ExtResource( 18 )
+
+[connection signal="body_entered" from="tv" to="tv" method="_on_tv_body_entered"]
+[connection signal="body_exited" from="tv" to="tv" method="_on_tv_body_exited"]
+[connection signal="body_entered" from="paper" to="paper" method="_on_paper_body_entered"]
+[connection signal="body_exited" from="paper" to="paper" method="_on_paper_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

@@ -1,0 +1,224 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://player.gd" type="Script" id=3]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act4setting/scene5/metaldoor1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/other/jen1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/other/bigboi1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/act4setting/scene5/celiinglight.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=16]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/other/jen2.png" type="Texture" id=18]
+[ext_resource path="res://sprites/characters/other/bigboi2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=21]
+[ext_resource path="res://act3/lastscene/Area2D.gd" type="Script" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 545.505, 442.733 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 481.06, 1718.77 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 6254.24, 551.016 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 159.388
+height = 443.506
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1995.32, 1067.88 )
+scale = Vector2( 1.07064, 1.09133 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( -3788.07, 77.6884 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -3829.59, -10.1501 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( 2510.2, 1896.59 )
+scale = Vector2( 1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Sprite5" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -5078.14, 1889.6 )
+scale = Vector2( 1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Sprite6" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( 3297.37, 135.613 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( 841.884, 97.6292 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -1579.68, 110.179 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 5 )
+
+[node name="Sprite9" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -4065.39, 141.7 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 5 )
+
+[node name="Sprite10" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -2716.26, -636.682 )
+scale = Vector2( 1.94382, 1.78747 )
+texture = ExtResource( 12 )
+
+[node name="Sprite11" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( -242.644, -627.727 )
+scale = Vector2( 1.94382, 1.78747 )
+texture = ExtResource( 12 )
+
+[node name="Sprite12" type="Sprite" parent="Sprite/Sprite2"]
+position = Vector2( 2238.62, -596.265 )
+scale = Vector2( 1.94382, 1.78747 )
+texture = ExtResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+position = Vector2( -5341.1, 1649.59 )
+scale = Vector2( 1.16358, 1.15831 )
+z_index = 1
+frames = SubResource( 1 )
+frame = 1
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Area2D"]
+position = Vector2( -4783.22, 1604.34 )
+scale = Vector2( 1.27435, 1.2674 )
+z_index = 1
+frames = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -5044.13, 1902.5 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = -5312.07
+margin_top = 1059.36
+margin_right = -4857.07
+margin_bottom = 1159.36
+custom_fonts/font = SubResource( 4 )
+text = "Remember"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3850.47, 996.276 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -8174.69, 1105.82 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2311.21, 2611.82 )
+shape = SubResource( 6 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( -123.143, 58.999 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 3054.55, 1686.99 )
+scale = Vector2( 1.15152, 1.11587 )
+z_index = 1
+frames = SubResource( 7 )
+animation = "fall"
+speed_scale = 1.5
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 3075.25, 1701.64 )
+shape = SubResource( 8 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 3103.46, 1772.13 )
+current = true
+limit_left = -8000
+limit_top = 0
+limit_right = 4000
+limit_bottom = 2160
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

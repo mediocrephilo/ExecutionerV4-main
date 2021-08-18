@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_impacts_body_person_heavy_005_43768.wav-4dbadcb736e1e13b06ed4cbd63eface0.sample"
+
+[deps]
+
+source_file="res://act2/Sounds/zapsplat_impacts_body_person_heavy_005_43768.wav"
+dest_files=[ "res://.import/zapsplat_impacts_body_person_heavy_005_43768.wav-4dbadcb736e1e13b06ed4cbd63eface0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

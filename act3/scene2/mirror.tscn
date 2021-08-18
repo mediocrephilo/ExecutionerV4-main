@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://sprites/act3settings/mirror/FE9D868E-EC0A-47C8-A335-257D5D8F87FF.JPG" type="Texture" id=1]
+[ext_resource path="res://sprites/act3settings/mirror/miror1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act3settings/mirror/Untitled31-20210203112620.PNG" type="Texture" id=3]
+[ext_resource path="res://sprites/act3settings/mirror/Untitled31-20210203112627.PNG" type="Texture" id=4]
+[ext_resource path="res://act3/scene2/mirrorchoices.gd" type="Script" id=5]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=6]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=7]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=8]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://sprites/act3settings/mirror/D4644180-E72B-45D3-96DC-B6AD9F0E061D.JPG" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "phi",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "frame",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "scary",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "everythin",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 9 )
+
+[sub_resource type="Animation" id=3]
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2250, -0.25, 0, 0.25, 0, 2250, -0.25, 0, 0.25, 0, 2250, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1641.65, -0.25, 0, 0.25, 0, 1600, -0.25, 0, 0.25, 0, 1641.65, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1931.86, 1006.8 )
+scale = Vector2( 5.43343, 5.48343 )
+frames = SubResource( 1 )
+animation = "scary"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_left = 371.802
+margin_top = 1624.49
+margin_right = 3633.8
+margin_bottom = 2124.49
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_left = 566.0
+margin_top = 1705.0
+margin_right = 3368.0
+margin_bottom = 2037.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 2250, 1600 )
+scale = Vector2( 1.8331, 2.33037 )
+texture = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/Sprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="dialoguebox"]
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 7 )
+[connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]
+[connection signal="tree_exiting" from="dialoguebox" to="." method="_on_dialoguebox_tree_exiting"]
+[connection signal="tween_completed" from="dialoguebox/Tween" to="." method="_on_Tween_tween_completed"]

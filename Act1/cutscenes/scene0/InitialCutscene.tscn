@@ -1,0 +1,256 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Act1/cutscenes/scene0/InitialCutscene.gd" type="Script" id=1]
+[ext_resource path="res://sounds/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav" type="AudioStream" id=2]
+[ext_resource path="res://sprites/UI/aquifer/Aquifer.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Act1/cutscenes/scene0/executioner_1.ogv" type="VideoStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+extra_spacing_bottom = 48
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "line1"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "line2"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "line3"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "line4"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "line5"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "line6"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 3840.0
+margin_bottom = 2160.0
+stream = ExtResource( 4 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 1387.62
+margin_top = 445.564
+margin_right = 4602.61
+margin_bottom = 1759.57
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "listen, lovers"
+visible_characters = 0
+percent_visible = 0.0
+text = "listen, lovers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichTextLabel"]
+anims/line1 = SubResource( 2 )
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+margin_left = 1079.02
+margin_top = 445.564
+margin_right = 4294.01
+margin_bottom = 1759.57
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+well and truly try us"
+visible_characters = 0
+percent_visible = 0.0
+text = "
+well and truly try us"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="RichTextLabel7"]
+anims/line2 = SubResource( 3 )
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+margin_left = 859.332
+margin_top = 458.64
+margin_right = 4074.33
+margin_bottom = 1772.64
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+against the unseeing seeker"
+visible_characters = 0
+percent_visible = 0.0
+text = "
+
+against the unseeing seeker"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="RichTextLabel6"]
+anims/line3 = SubResource( 4 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 937.79
+margin_top = 471.716
+margin_right = 4152.79
+margin_bottom = 1785.72
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+
+the convicted and the damned
+"
+visible_characters = 0
+percent_visible = 0.0
+text = "
+
+
+the convicted and the damned
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="RichTextLabel3"]
+anims/line4 = SubResource( 5 )
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+margin_left = 924.714
+margin_top = 490.023
+margin_right = 4139.71
+margin_bottom = 1804.03
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+
+
+be our jury and our judge"
+visible_characters = 0
+percent_visible = 0.0
+text = "
+
+
+
+be our jury and our judge"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="RichTextLabel5"]
+anims/line5 = SubResource( 6 )
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_left = 1160.09
+margin_top = 510.945
+margin_right = 4375.09
+margin_bottom = 1824.95
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+
+
+
+and then your own"
+visible_characters = 0
+percent_visible = 0.0
+text = "
+
+
+
+
+and then your own"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="RichTextLabel4"]
+anims/line6 = SubResource( 7 )
+
+[node name="Type" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

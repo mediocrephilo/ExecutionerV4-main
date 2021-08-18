@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Simple-Book-Page-Turn-www.fesliyanstudios.com-www.fesliyanstudios.com.wav-24b64cc22869cb138db811e7640020ee.sample"
+
+[deps]
+
+source_file="res://sounds/Simple-Book-Page-Turn-www.fesliyanstudios.com-www.fesliyanstudios.com.wav"
+dest_files=[ "res://.import/Simple-Book-Page-Turn-www.fesliyanstudios.com-www.fesliyanstudios.com.wav-24b64cc22869cb138db811e7640020ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

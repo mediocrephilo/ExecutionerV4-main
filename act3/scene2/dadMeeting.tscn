@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://act3/scene2/dadmeetingdialogue.gd" type="Script" id=1]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=2]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_left = 575.385
+margin_top = 146.059
+margin_right = 3221.38
+margin_bottom = 646.059
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Tween" type="Tween" parent="dialoguebox"]
+
+[node name="continuesprite" type="Sprite" parent="dialoguebox"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 2 )
+[connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

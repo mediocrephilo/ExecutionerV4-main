@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/characters/other/paris2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/other/paris1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/sceneten/jail.png" type="Texture" id=4]
+[ext_resource path="res://paris.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 94.6934, 1300.69 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2085.6, 117.683 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 359.53, 406.738 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1910.38, 1081.58 )
+scale = Vector2( 1.01002, 1.03117 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -9.61792, 1019.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3895.26, 971.41 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1885.11, 2077.47 )
+shape = SubResource( 2 )
+
+[node name="player" parent="StaticBody2D/CollisionShape2D3" instance=ExtResource( 1 )]
+position = Vector2( -1442.69, -444.622 )
+
+[node name="paris" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="paris"]
+position = Vector2( 2931.39, 1554.19 )
+scale = Vector2( 1.15984, 1.11988 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paris"]
+position = Vector2( 2802.33, 1700.74 )
+shape = SubResource( 4 )

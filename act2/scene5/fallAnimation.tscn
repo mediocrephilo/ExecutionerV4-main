@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cutsceneimages/sewer/fall.ogv" type="VideoStream" id=1]
+[ext_resource path="res://act2/scene5/fallAnimation.gd" type="Script" id=2]
+[ext_resource path="res://act2/Sounds/zapsplat_impacts_body_person_heavy_005_43768.wav" type="AudioStream" id=3]
+[ext_resource path="res://act2/Sounds/zapsplat_nature_wind_stormy_constant_gales_howling_60089.wav" type="AudioStream" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 3840.0
+margin_bottom = 2160.0
+stream = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

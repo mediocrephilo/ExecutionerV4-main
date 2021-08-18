@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_nature_cave_ambience_water_drips_and_splatters_wind_howling_outside_60079.wav-f7a5672699ba0a2d53ccf294d2c6d1f0.sample"
+
+[deps]
+
+source_file="res://act2/Sounds/zapsplat_nature_cave_ambience_water_drips_and_splatters_wind_howling_outside_60079.wav"
+dest_files=[ "res://.import/zapsplat_nature_cave_ambience_water_drips_and_splatters_wind_howling_outside_60079.wav-f7a5672699ba0a2d53ccf294d2c6d1f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

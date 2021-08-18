@@ -1,0 +1,351 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sewer2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act 2 setting/scene 4/piano2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sewer.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=12]
+[ext_resource path="res://sprites/act 2 setting/scene 4/piano1.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=16]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=17]
+[ext_resource path="res://act2/scene4/mobcut.gd" type="Script" id=18]
+[ext_resource path="res://sprites/act 2 setting/scene 4/nice buildings.png" type="Texture" id=19]
+[ext_resource path="res://act2/scene4/playercut.gd" type="Script" id=20]
+[ext_resource path="res://sprites/act 2 setting/scene 4/mob2.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=22]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084619.PNG" type="Texture" id=23]
+[ext_resource path="res://sprites/act 2 setting/scene 4/poles.png" type="Texture" id=24]
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=25]
+[ext_resource path="res://sprites/act 2 setting/scene 4/nice buildings2.png" type="Texture" id=26]
+[ext_resource path="res://sprites/act 2 setting/scene 4/mob1.png" type="Texture" id=27]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=28]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084607.PNG" type="Texture" id=29]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084613.PNG" type="Texture" id=30]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084632.PNG" type="Texture" id=31]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084638.PNG" type="Texture" id=32]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084310.PNG" type="Texture" id=33]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084643.PNG" type="Texture" id=34]
+[ext_resource path="res://sprites/UI/JeanSunHo/JeanSunHoBold.ttf" type="DynamicFontData" id=35]
+[ext_resource path="res://act2/scene4/ohnocut.gd" type="Script" id=36]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 361.018, 469.7 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 215.13, 166.255 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 197.701, 1065.79 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 5000.86, 159.56 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 5 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 82.9133
+height = 171.178
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 253.302, 211.108 )
+
+[sub_resource type="Curve2D" id=11]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 373.171, 1596.33, 0, 0, 0, 0, 14231.7, 1668.8 )
+}
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 672.912, 1185.32 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=16]
+size = 130
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 35 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1035.3, 41.9109 )
+
+[node name="sky" type="ParallaxBackground" parent="."]
+layer = -104
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="sky"]
+
+[node name="Sprite" type="Sprite" parent="sky/ParallaxLayer"]
+position = Vector2( 3833.07, 1062.9 )
+texture = ExtResource( 28 )
+
+[node name="vig" type="ParallaxBackground" parent="."]
+layer = 2
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="vig"]
+
+[node name="Sprite" type="Sprite" parent="vig/ParallaxLayer"]
+position = Vector2( 3833.07, 1062.9 )
+texture = ExtResource( 7 )
+
+[node name="buildings" type="Area2D" parent="."]
+z_index = -31
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="buildings"]
+position = Vector2( 2847.58, 1096.01 )
+z_index = -100
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="buildings"]
+position = Vector2( 1764.86, 1543.24 )
+shape = SubResource( 2 )
+
+[node name="tree" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 0.5, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="tree"]
+z_index = -2
+
+[node name="Sprite" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 2165.34, 1052.42 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 22 )
+
+[node name="Sprite2" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 3946.53, 1048.26 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 22 )
+
+[node name="Sprite3" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 7540.14, 1025.22 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 22 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2791.13, 1098.35 )
+texture = ExtResource( 25 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+z_index = 100
+motion_scale = Vector2( 0.5, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
+position = Vector2( 3667.68, 1190.99 )
+scale = Vector2( 0.846234, 1 )
+z_index = -100
+texture = ExtResource( 24 )
+
+[node name="sewer" type="Area2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="sewer"]
+position = Vector2( 6309.14, -263.828 )
+scale = Vector2( 1.4071, 2.46728 )
+frames = SubResource( 3 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sewer"]
+position = Vector2( 6071.31, 1917.29 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -861.701, 1074.99 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 6539.56, 1104.02 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3502.53, 2135.01 )
+shape = SubResource( 6 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 209.129, 34.8548 )
+z_index = 1
+script = ExtResource( 20 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 1773.43, 1772.07 )
+scale = Vector2( 0.70485, 0.717409 )
+frames = SubResource( 7 )
+animation = "walk"
+speed_scale = 1.3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 1761.46, 1839.12 )
+shape = SubResource( 8 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+position = Vector2( 1760.16, 1856.01 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 1751.45, 1838.59 )
+scale = Vector2( 19.71, -11.2017 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2160
+
+[node name="piano" type="Area2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="piano"]
+position = Vector2( 952.177, 1624.13 )
+scale = Vector2( 3.35704, 2.52924 )
+frames = SubResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piano"]
+position = Vector2( 948.362, 1810.93 )
+shape = SubResource( 10 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 11 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 5668.75, 1624.02 )
+rotation = 0.00521911
+offset = 5000.0
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
+script = ExtResource( 18 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/Area2D"]
+position = Vector2( -5122.92, -173.752 )
+scale = Vector2( 0.570285, 0.581476 )
+frames = SubResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
+position = Vector2( -4892.99, -749.731 )
+z_index = 5
+shape = SubResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 2851.96, 647.412 )
+scale = Vector2( 2.02972, 1 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 14 )
+
+[node name="ohnocut" type="Control" parent="."]
+margin_left = 1165.86
+margin_top = -205.965
+margin_right = 1165.86
+margin_bottom = -165.965
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type" type="AudioStreamPlayer2D" parent="ohnocut"]
+position = Vector2( -313.314, 276.558 )
+
+[node name="Tween" type="Tween" parent="ohnocut"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ohnocut"]
+position = Vector2( 1163.99, 941.837 )
+scale = Vector2( 1, 0.961319 )
+frames = SubResource( 14 )
+frame = 3
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="ohnocut"]
+position = Vector2( 1113.93, 932.877 )
+scale = Vector2( 1.68418, 0.854478 )
+frames = SubResource( 15 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ohnocut"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -524.0
+margin_top = 550.539
+margin_right = 1901.0
+margin_bottom = 1023.54
+custom_fonts/normal_font = SubResource( 16 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="buildings" to="buildings" method="_on_buildings_body_entered"]
+[connection signal="body_exited" from="buildings" to="buildings" method="_on_buildings_body_exited"]
+[connection signal="body_entered" from="sewer" to="sewer" method="_on_sewer_body_entered"]
+[connection signal="body_exited" from="sewer" to="sewer" method="_on_sewer_body_exited"]
+[connection signal="body_entered" from="piano" to="piano" method="_on_piano_body_entered"]
+[connection signal="body_exited" from="piano" to="piano" method="_on_piano_body_exited"]
+[connection signal="body_entered" from="Path2D/PathFollow2D/Area2D" to="Path2D/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="tree_exited" from="ohnocut" to="player" method="_on_ohnocut_tree_exited"]
+[connection signal="tween_completed" from="ohnocut/Tween" to="ohnocut" method="_on_Tween_tween_completed"]

@@ -1,0 +1,407 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://sprites/act4setting/scene5/black3.png" type="Texture" id=1]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act4setting/scene5/black4.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act4setting/scene5/celiinglight.png" type="Texture" id=4]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=9]
+[ext_resource path="res://act4/door.gd" type="Script" id=10]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=11]
+[ext_resource path="res://Act1/playerscenes/player.gd" type="Script" id=12]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=15]
+[ext_resource path="res://sprites/act4setting/scene5/black1.png" type="Texture" id=16]
+[ext_resource path="res://sprites/act4setting/scene5/metaldoor2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=18]
+[ext_resource path="res://sprites/act4setting/scene5/black2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=21]
+[ext_resource path="res://sprites/act4setting/scene5/metaldoor1.png" type="Texture" id=22]
+[ext_resource path="res://act4/correctl.gd" type="Script" id=23]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=24]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6878.73, 351.033 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 1 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 557.996, 772.102 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 20 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 144.025
+height = 311.988
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 339.744, 1423.12 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 200
+font_data = ExtResource( 20 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="walls" type="StaticBody2D" parent="."]
+
+[node name="Sprite3" type="Sprite" parent="walls"]
+position = Vector2( 9424.29, 1050.62 )
+scale = Vector2( 1, 1.06977 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="walls"]
+position = Vector2( 5616.68, 1063.69 )
+scale = Vector2( 1, 1.06977 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="walls"]
+position = Vector2( 1864.88, 1044.58 )
+scale = Vector2( 1, 1.06107 )
+texture = ExtResource( 14 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="floor"]
+flip_v = true
+
+[node name="road2" type="Sprite" parent="floor/Sprite"]
+position = Vector2( 3714.02, 3002.8 )
+texture = ExtResource( 21 )
+flip_v = true
+
+[node name="road3" type="Sprite" parent="floor/Sprite"]
+position = Vector2( 11337.2, 2999.74 )
+texture = ExtResource( 21 )
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 6393.08, 2268.6 )
+shape = SubResource( 1 )
+
+[node name="filter" type="AnimatedSprite" parent="."]
+position = Vector2( 5591.19, 1283.72 )
+scale = Vector2( 3.07375, 1.69392 )
+z_index = 2
+frames = SubResource( 2 )
+frame = 9
+playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 5506.2, 594.855 )
+scale = Vector2( 3.07053, 2.6208 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="door" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door"]
+position = Vector2( 9609.5, 1108.67 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2( 9626.59, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="door"]
+margin_left = 1169.4
+margin_top = 231.552
+margin_right = 1400.4
+margin_bottom = 331.552
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="door2" type="Area2D" parent="."]
+position = Vector2( 5057.65, 7.10913 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door2"]
+position = Vector2( 1246.07, 1094.87 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
+position = Vector2( 1277.51, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="door2"]
+margin_left = 1169.4
+margin_top = 245.352
+margin_right = 1400.4
+margin_bottom = 345.352
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="door4" type="Area2D" parent="."]
+position = Vector2( -10.1877, 46.793 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door4"]
+position = Vector2( 1246.07, 1094.87 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door4"]
+position = Vector2( 1277.51, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="door4"]
+margin_left = 1169.4
+margin_top = 245.352
+margin_right = 1400.4
+margin_bottom = 345.352
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="correct" type="Area2D" parent="."]
+position = Vector2( 6715.8, -34.1394 )
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="correct"]
+position = Vector2( 1246.07, 1094.87 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="correct"]
+position = Vector2( 1277.51, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="correct"]
+margin_left = 1169.4
+margin_top = 245.352
+margin_right = 1400.4
+margin_bottom = 345.352
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="door6" type="Area2D" parent="."]
+position = Vector2( 1596.17, -3.5271 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door6"]
+position = Vector2( 1246.07, 1094.87 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door6"]
+position = Vector2( 1277.51, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="door6"]
+margin_left = 1169.4
+margin_top = 245.352
+margin_right = 1400.4
+margin_bottom = 345.352
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="door3" type="Area2D" parent="."]
+position = Vector2( 3357.12, 25.8904 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door3"]
+position = Vector2( 1246.07, 1094.87 )
+scale = Vector2( 0.795638, 0.994323 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door3"]
+position = Vector2( 1277.51, 1213.16 )
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="door3"]
+margin_left = 1169.4
+margin_top = 245.352
+margin_right = 1400.4
+margin_bottom = 345.352
+custom_fonts/font = SubResource( 5 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 308.883, 1686.98 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+frames = SubResource( 6 )
+animation = "fall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource( 7 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 11000
+limit_bottom = 2160
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -253.85, 654.152 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 11110, 762.724 )
+shape = SubResource( 8 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1290.67
+margin_top = 1041.13
+margin_right = 1372.67
+margin_bottom = 1241.13
+custom_fonts/font = SubResource( 9 )
+text = "I"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 2971.18
+margin_top = 1053.67
+margin_right = 3053.18
+margin_bottom = 1253.67
+custom_fonts/font = SubResource( 9 )
+text = "G"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 4651.69
+margin_top = 1059.94
+margin_right = 4743.69
+margin_bottom = 1259.94
+custom_fonts/font = SubResource( 9 )
+text = "B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 6260.13
+margin_top = 1073.39
+margin_right = 6363.13
+margin_bottom = 1273.39
+custom_fonts/font = SubResource( 9 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 7894.48
+margin_top = 1026.86
+margin_right = 7997.48
+margin_bottom = 1226.86
+custom_fonts/font = SubResource( 9 )
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 9589.81
+margin_top = 1019.96
+margin_right = 9692.81
+margin_bottom = 1219.96
+custom_fonts/font = SubResource( 9 )
+text = "M"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="door" method="_on_door_body_exited"]
+[connection signal="body_entered" from="door2" to="door2" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door2" to="door2" method="_on_door_body_exited"]
+[connection signal="body_entered" from="door4" to="door4" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door4" to="door4" method="_on_door_body_exited"]
+[connection signal="body_entered" from="correct" to="correct" method="_on_door_body_entered"]
+[connection signal="body_exited" from="correct" to="correct" method="_on_door_body_exited"]
+[connection signal="body_entered" from="door6" to="door6" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door6" to="door6" method="_on_door_body_exited"]
+[connection signal="body_entered" from="door3" to="door3" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door3" to="door3" method="_on_door_body_exited"]

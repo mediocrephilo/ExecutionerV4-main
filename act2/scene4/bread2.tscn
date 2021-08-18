@@ -1,0 +1,253 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sewer.png" type="Texture" id=4]
+[ext_resource path="res://player.gd" type="Script" id=5]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=8]
+[ext_resource path="res://sprites/act 2 setting/scene 4/piano2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=14]
+[ext_resource path="res://act2/scene4/buildings.gd" type="Script" id=15]
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=16]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=17]
+[ext_resource path="res://sprites/act 2 setting/scene 4/nice buildings.png" type="Texture" id=18]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sewer2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=20]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=21]
+[ext_resource path="res://sprites/act 2 setting/scene 4/poles.png" type="Texture" id=22]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=23]
+[ext_resource path="res://sprites/act 2 setting/scene 4/nice buildings2.png" type="Texture" id=24]
+[ext_resource path="res://sprites/act 2 setting/scene 4/piano1.png" type="Texture" id=25]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 215.13, 166.255 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 197.701, 1065.79 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5000.86, 159.56 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 82.9133
+height = 171.178
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 253.302, 211.108 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 361.018, 469.7 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1037.3, 41.9109 )
+
+[node name="sky" type="ParallaxBackground" parent="."]
+layer = -104
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="sky"]
+
+[node name="Sprite" type="Sprite" parent="sky/ParallaxLayer"]
+position = Vector2( 3833.07, 1062.9 )
+texture = ExtResource( 21 )
+
+[node name="vig" type="ParallaxBackground" parent="."]
+layer = 2
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="vig"]
+
+[node name="Sprite" type="Sprite" parent="vig/ParallaxLayer"]
+position = Vector2( 3833.07, 1062.9 )
+texture = ExtResource( 8 )
+
+[node name="pole" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="pole"]
+motion_scale = Vector2( 0.8, 1 )
+
+[node name="Sprite" type="Sprite" parent="pole/ParallaxLayer"]
+position = Vector2( 3864.5, 1115.29 )
+texture = ExtResource( 22 )
+
+[node name="Sprite2" type="Sprite" parent="pole/ParallaxLayer"]
+position = Vector2( 3864.5, 1115.29 )
+texture = ExtResource( 22 )
+
+[node name="Sprite3" type="Sprite" parent="pole/ParallaxLayer"]
+position = Vector2( 3864.5, 1115.29 )
+texture = ExtResource( 22 )
+
+[node name="tree" type="ParallaxBackground" parent="."]
+layer = -101
+scroll_offset = Vector2( 0.5, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="tree"]
+
+[node name="Sprite" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 2165.34, 1052.42 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 20 )
+
+[node name="Sprite2" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 3946.53, 1048.26 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 20 )
+
+[node name="Sprite3" type="Sprite" parent="tree/ParallaxLayer"]
+position = Vector2( 7540.14, 1025.22 )
+scale = Vector2( 0.499088, 1 )
+texture = ExtResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2791.13, 1098.35 )
+texture = ExtResource( 16 )
+
+[node name="sewer" type="Area2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="sewer"]
+position = Vector2( 6180.98, -223.26 )
+scale = Vector2( 1.4071, 2.46728 )
+frames = SubResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sewer"]
+position = Vector2( 5941.86, 1936.54 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -861.701, 1074.99 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 6539.56, 1104.02 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3502.53, 2135.01 )
+shape = SubResource( 4 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+z_index = 1
+script = ExtResource( 5 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( -343.391, 1776.31 )
+scale = Vector2( 0.70485, 0.717409 )
+frames = SubResource( 5 )
+animation = "walk"
+speed_scale = 1.3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( -361.367, 1826.34 )
+shape = SubResource( 6 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( -353.839, 1870.29 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2140
+
+[node name="piano" type="Area2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="piano"]
+position = Vector2( 952.177, 1624.13 )
+scale = Vector2( 3.35704, 2.52924 )
+frames = SubResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piano"]
+position = Vector2( 948.362, 1810.93 )
+shape = SubResource( 8 )
+
+[node name="buildings" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="buildings"]
+position = Vector2( 2847.58, 1096.01 )
+z_index = -1
+frames = SubResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="buildings"]
+position = Vector2( 1764.86, 1543.24 )
+shape = SubResource( 10 )
+
+[node name="Label" type="Label" parent="buildings"]
+margin_left = 1610.71
+margin_top = 1202.93
+margin_right = 1841.71
+margin_bottom = 1302.93
+custom_fonts/font = SubResource( 11 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="sewer" to="sewer" method="_on_sewer_body_entered"]
+[connection signal="body_exited" from="sewer" to="sewer" method="_on_sewer_body_exited"]
+[connection signal="body_entered" from="piano" to="piano" method="_on_piano_body_entered"]
+[connection signal="body_exited" from="piano" to="piano" method="_on_piano_body_exited"]
+[connection signal="body_entered" from="buildings" to="buildings" method="_on_buildings_body_entered"]
+[connection signal="body_exited" from="buildings" to="buildings" method="_on_buildings_body_exited"]

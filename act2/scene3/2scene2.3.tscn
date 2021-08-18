@@ -1,0 +1,658 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=1]
+[ext_resource path="res://act2/scene3/gun.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneone/back grass.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act 2 setting/scene1/path.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=5]
+[ext_resource path="res://act2/scene3/dfs.gd" type="Script" id=6]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act 2 setting/scene1/black background.png" type="Texture" id=8]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp3.png" type="Texture" id=9]
+[ext_resource path="res://sprites/act 2 setting/scene1/buildings1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=11]
+[ext_resource path="res://sprites/act 2 setting/scene 3/pole.png" type="Texture" id=12]
+[ext_resource path="res://act2/scene1/first room/lamp.gd" type="Script" id=13]
+[ext_resource path="res://act2/scene3/bullet.tscn" type="PackedScene" id=14]
+[ext_resource path="res://act2/scene3/uppgun.gd" type="Script" id=15]
+[ext_resource path="res://sprites/act 2 setting/scene1/stars.png" type="Texture" id=16]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/act 2 setting/scene1/lamp1.png" type="Texture" id=18]
+[ext_resource path="res://Act1/playerscenes/scene5/player.gd" type="Script" id=19]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=21]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=22]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=23]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=24]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=25]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=26]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=27]
+[ext_resource path="res://sprites/act 2 setting/scene 3/gun.png" type="Texture" id=28]
+[ext_resource path="res://gun.tscn" type="PackedScene" id=29]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 305.549, 1535.47 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14652.5, 240.739 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 11 ), ExtResource( 23 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 72.1531
+height = 268.084
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 281.207, 2435.64 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 1, 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 3000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3742.5, 1035.36 )
+scale = Vector2( 1, 1.13193 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+layer = -4
+scroll_offset = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 7000, 0 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 3742.5, 255.95 )
+scale = Vector2( 1, 1.84405 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 1.2, 1.2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 3680, 1500 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 2626.25, 628.396 )
+scale = Vector2( 0.70931, 0.755107 )
+texture = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3209.66, 1119.27 )
+scale = Vector2( 0.918558, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 9575.39, 1126.26 )
+scale = Vector2( 0.918558, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 16396.5, 1205.58 )
+scale = Vector2( 0.918558, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 22794.6, 1205.58 )
+scale = Vector2( 0.918558, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 3697.65, 1177.77 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 11397.7, 1174.08 )
+texture = ExtResource( 4 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 19054.2, 1167.74 )
+texture = ExtResource( 4 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 25672.1, 1167.74 )
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3502.32, 1191.54 )
+z_index = 3
+frames = SubResource( 1 )
+frame = 5
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 7787.93, 1209.95 )
+z_index = 3
+frames = SubResource( 1 )
+frame = 1
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 15555.8, 1214.62 )
+z_index = 3
+frames = SubResource( 1 )
+frame = 5
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 18995.1, 1192.17 )
+z_index = 3
+frames = SubResource( 1 )
+frame = 9
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( 29019.1, 1197.61 )
+z_index = 3
+frames = SubResource( 1 )
+frame = 16
+script = ExtResource( 13 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 5566.17, 1181.37 )
+texture = ExtResource( 18 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 10157.6, 1189.51 )
+texture = ExtResource( 18 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 12798.3, 1193.1 )
+texture = ExtResource( 18 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 22167.7, 1183.51 )
+texture = ExtResource( 18 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 25642.7, 1212.2 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 31.0653, 973.689 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 27952.6, 881.461 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 14386.5, 2206.98 )
+shape = SubResource( 3 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 26753.6, 1918.67 )
+z_index = 4
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( -110.16, -187.025 )
+scale = Vector2( 0.666053, 0.689198 )
+frames = SubResource( 4 )
+animation = "fall"
+speed_scale = 1.5
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( -117.08, -222.678 )
+shape = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_bottom = 2200
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -11
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 3333.17, 1223 )
+texture = ExtResource( 10 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -11
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 9188.31, 1140.88 )
+scale = Vector2( 1, 1.35766 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 14736.5, 1384.81 )
+scale = Vector2( 1, 1.10201 )
+texture = ExtResource( 10 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 15111.9, 1237.09 )
+scale = Vector2( 1, 1.10201 )
+texture = ExtResource( 10 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 20895.8, 1397.75 )
+scale = Vector2( 1, 1.10201 )
+texture = ExtResource( 10 )
+
+[node name="Sprite5" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 26982, 1079.64 )
+scale = Vector2( 1, 1.10201 )
+texture = ExtResource( 10 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 1643.51, 1078.06 )
+texture = ExtResource( 12 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 3140.07, 1067.95 )
+texture = ExtResource( 12 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( 4531.32, 1083.49 )
+texture = ExtResource( 12 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( 6202.37, 1067.95 )
+texture = ExtResource( 12 )
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( 8188.48, 1100.51 )
+texture = ExtResource( 12 )
+
+[node name="Sprite19" type="Sprite" parent="."]
+position = Vector2( 10330.9, 1087.48 )
+texture = ExtResource( 12 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+position = Vector2( 12408.1, 1087.48 )
+texture = ExtResource( 12 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+position = Vector2( 14583.1, 1107.02 )
+texture = ExtResource( 12 )
+
+[node name="Sprite22" type="Sprite" parent="."]
+position = Vector2( 16378.5, 1107.02 )
+texture = ExtResource( 12 )
+
+[node name="Sprite23" type="Sprite" parent="."]
+position = Vector2( 16378.5, 1107.02 )
+texture = ExtResource( 12 )
+
+[node name="Sprite24" type="Sprite" parent="."]
+position = Vector2( 18470.7, 1084.19 )
+texture = ExtResource( 12 )
+
+[node name="Sprite25" type="Sprite" parent="."]
+position = Vector2( 20882.4, 1061.37 )
+texture = ExtResource( 12 )
+
+[node name="Sprite26" type="Sprite" parent="."]
+position = Vector2( 23256, 1076.59 )
+texture = ExtResource( 12 )
+
+[node name="Sprite27" type="Sprite" parent="."]
+position = Vector2( 26253.5, 1084.19 )
+texture = ExtResource( 12 )
+
+[node name="gun" parent="." instance=ExtResource( 29 )]
+
+[node name="uppgun" type="KinematicBody2D" parent="."]
+position = Vector2( 3147.99, 253.294 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun"]
+
+[node name="uppgun2" type="KinematicBody2D" parent="."]
+position = Vector2( 4474.34, 212.573 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 2000
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun2"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun2"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun2/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun2"]
+
+[node name="uppgun4" type="KinematicBody2D" parent="."]
+position = Vector2( 12337.8, 320.982 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun4"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun4"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun4/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun4"]
+
+[node name="uppgun5" type="KinematicBody2D" parent="."]
+position = Vector2( 16277.2, 231.733 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun5"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun5"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun5/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun5"]
+
+[node name="uppgun6" type="KinematicBody2D" parent="."]
+position = Vector2( 23211.9, 196.033 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun6"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun6"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun6/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun6"]
+
+[node name="uppgun3" type="KinematicBody2D" parent="."]
+position = Vector2( 8110.16, 270.747 )
+rotation = 15.708
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="uppgun3"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="uppgun3"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="uppgun3/visibility"]
+
+[node name="Timer" type="Timer" parent="uppgun3"]
+
+[node name="gun4" type="KinematicBody2D" parent="."]
+position = Vector2( 6299.19, 103.027 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun4"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun4"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun4/visibility"]
+
+[node name="Timer" type="Timer" parent="gun4"]
+
+[node name="gun6" type="KinematicBody2D" parent="."]
+position = Vector2( 10348.2, 90.0909 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun6"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun6"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun6/visibility"]
+
+[node name="Timer" type="Timer" parent="gun6"]
+
+[node name="gun8" type="KinematicBody2D" parent="."]
+position = Vector2( 14597.8, 70.6863 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun8"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun8"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun8/visibility"]
+
+[node name="Timer" type="Timer" parent="gun8"]
+
+[node name="gun10" type="KinematicBody2D" parent="."]
+position = Vector2( 18530.4, 90.0907 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun10"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun10"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun10/visibility"]
+
+[node name="Timer" type="Timer" parent="gun10"]
+
+[node name="gun11" type="KinematicBody2D" parent="."]
+position = Vector2( 20930.7, 93.9985 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun11"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun11"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun11/visibility"]
+
+[node name="Timer" type="Timer" parent="gun11"]
+
+[node name="gun13" type="KinematicBody2D" parent="."]
+position = Vector2( 26350.4, 115.963 )
+rotation = -6.28319
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+detect_radius = 1500
+Bullet = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="gun13"]
+position = Vector2( -77.7616, 276.091 )
+rotation = 0.406662
+scale = Vector2( 0.723864, 0.67878 )
+texture = ExtResource( 28 )
+
+[node name="visibility" type="Area2D" parent="gun13"]
+position = Vector2( -28.5748, 74.165 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gun13/visibility"]
+
+[node name="Timer" type="Timer" parent="gun13"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 27720.3, 359.692 )
+shape = SubResource( 6 )
+
+[connection signal="body_entered" from="uppgun/visibility" to="uppgun" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun/visibility" to="uppgun" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun/Timer" to="uppgun" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="uppgun2/visibility" to="uppgun2" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun2/visibility" to="uppgun2" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun2/Timer" to="uppgun2" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="uppgun4/visibility" to="uppgun4" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun4/visibility" to="uppgun4" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun4/Timer" to="uppgun4" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="uppgun5/visibility" to="uppgun5" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun5/visibility" to="uppgun5" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun5/Timer" to="uppgun5" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="uppgun6/visibility" to="uppgun6" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun6/visibility" to="uppgun6" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun6/Timer" to="uppgun6" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="uppgun3/visibility" to="uppgun3" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="uppgun3/visibility" to="uppgun3" method="_on_visibility_body_exited"]
+[connection signal="timeout" from="uppgun3/Timer" to="uppgun3" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun4/visibility" to="gun4" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun4/visibility" to="gun4" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun4/Timer" to="gun4" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun6/visibility" to="gun6" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun6/visibility" to="gun6" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun6/Timer" to="gun6" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun8/visibility" to="gun8" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun8/visibility" to="gun8" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun8/Timer" to="gun8" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun10/visibility" to="gun10" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun10/visibility" to="gun10" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun10/Timer" to="gun10" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun11/visibility" to="gun11" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun11/visibility" to="gun11" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun11/Timer" to="gun11" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="gun13/visibility" to="gun13" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="gun13/visibility" to="gun13" method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="gun13/Timer" to="gun13" method="_on_Timer_timeout"]
+[connection signal="body_shape_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_shape_entered"]

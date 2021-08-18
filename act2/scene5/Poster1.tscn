@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/act 2 setting/scene 5/Poseter1.jpg" type="Texture" id=1]
+[ext_resource path="res://act2/scene5/Poster.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1920, 1080 )
+texture = ExtResource( 1 )

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://act4/scene2/ball.gd" type="Script" id=1]
+[ext_resource path="res://sprites/act4setting/scene2/ball.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 122.03
+
+[node name="ball" type="Area2D"]
+position = Vector2( 5510.77, 1567.46 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -63.4082, -48.0366 )
+scale = Vector2( 0.746367, 0.807854 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -74.2965, -48.6771 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}

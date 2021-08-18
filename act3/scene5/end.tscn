@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://act3/scene5/end.gd" type="Script" id=1]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/act3settings/scene5/bigboia1.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 125.158, 278.491 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[node name="end" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 6275.09, -8700.76 )
+scale = Vector2( 0.579468, 0.613261 )
+frames = SubResource( 1 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6302.46, -8697.62 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 6055.59
+margin_top = -9151.77
+margin_right = 6510.59
+margin_bottom = -9051.77
+custom_fonts/font = SubResource( 3 )
+text = "Remember"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="." to="." method="_on_end_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_end_body_exited"]

@@ -1,0 +1,469 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://sprites/Act1settings/sceneone/roady2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneone/grass1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/sceneone/middle tree.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/sceneten/jail/Untitled725-20200718143950.PNG" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/right jump 4.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Act1settings/sceneten/jail/Untitled725-20200718145341.PNG" type="Texture" id=7]
+[ext_resource path="res://sprites/Act1settings/sceneone/front grass.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Act1settings/sceneone/back grass.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=18]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=21]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=22]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=23]
+[ext_resource path="res://player.gd" type="Script" id=24]
+[ext_resource path="res://Act1/playerscenes/scenez10/jail2.gd" type="Script" id=25]
+[ext_resource path="res://Act1/playerscenes/scenez10/jail.gd" type="Script" id=26]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=27]
+[ext_resource path="res://sprites/Act1settings/sceneten/jail/Untitled725-20200718144953.PNG" type="Texture" id=28]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=29]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=30]
+[ext_resource path="res://Act1/playerscenes/scenez10/scene10exit.gd" type="Script" id=31]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=33]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=34]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 92.5304
+height = 393.103
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 411.383, 1051.39 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 29 )
+
+[sub_resource type="Animation" id=6]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2221.12, 1465.7 ), Vector2( 2221.12, 1500 ), Vector2( 2221.12, 1465.7 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 400.24, 987.73 )
+
+[sub_resource type="Animation" id=9]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2221.12, 1411.62 ), Vector2( 2221.12, 1500 ), Vector2( 2221.12, 1411.62 ) ]
+}
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 4644.33, 137.664 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 103.199, 1097.02 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 304.749, 1669.98 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 516.659, 2176.68 )
+
+[node name="scene 1" type="Node2D"]
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 2506.65, 657.947 )
+z_index = 50
+script = ExtResource( 24 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 4691.4, 921.099 )
+scale = Vector2( 0.869016, 0.900177 )
+z_index = 6
+frames = SubResource( 1 )
+animation = "jump"
+speed_scale = 1.5
+flip_h = true
+
+[node name="playerCollision" type="CollisionShape2D" parent="player"]
+light_mask = 3
+position = Vector2( 4763.72, 937.75 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 3244.88, 874.482 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 2160
+
+[node name="Walk" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource( 34 )
+
+[node name="paper" type="ParallaxBackground" parent="."]
+
+[node name="paperlayer" type="ParallaxLayer" parent="paper"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="papersprite" type="Sprite" parent="paper/paperlayer"]
+position = Vector2( -231.835, 0 )
+scale = Vector2( 2.12478, 1 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="back tree" type="ParallaxBackground" parent="."]
+layer = -9
+scroll_base_scale = Vector2( 0.3, 0.3 )
+
+[node name="back tree layer" type="ParallaxLayer" parent="back tree"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back tree sprite" type="Sprite" parent="back tree/back tree layer"]
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mid tree" type="ParallaxBackground" parent="."]
+layer = -8
+scroll_base_scale = Vector2( 0.2, 0.2 )
+
+[node name="mid tree layer" type="ParallaxLayer" parent="mid tree"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mid tree sprite" type="Sprite" parent="mid tree/mid tree layer"]
+texture = ExtResource( 4 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back grass" type="ParallaxBackground" parent="."]
+layer = -7
+
+[node name="back grass layer" type="ParallaxLayer" parent="back grass"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="back grass sprite" type="Sprite" parent="back grass/back grass layer"]
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="road layer" type="ParallaxLayer" parent="road"]
+z_index = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="road sprite" type="Sprite" parent="road/road layer"]
+position = Vector2( -57.8604, -62.6948 )
+scale = Vector2( 2.92627, 1.94381 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="jaildoor2" type="Area2D" parent="road/road layer"]
+z_index = -16
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="road/road layer/jaildoor2"]
+position = Vector2( 1325.98, 1738.26 )
+shape = SubResource( 3 )
+
+[node name="jaildoor2" type="AnimatedSprite" parent="road/road layer/jaildoor2"]
+visible = false
+position = Vector2( 2128.26, 629.563 )
+scale = Vector2( 1.1, 1.173 )
+frames = SubResource( 4 )
+
+[node name="Type" type="AudioStreamPlayer" parent="road/road layer/jaildoor2"]
+stream = ExtResource( 33 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="road/road layer/jaildoor2"]
+
+[node name="dialoguebox" type="Control" parent="road/road layer/jaildoor2/CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="road/road layer/jaildoor2/CanvasLayer/dialoguebox"]
+margin_left = 199.0
+margin_top = 1508.14
+margin_right = 3628.0
+margin_bottom = 2008.14
+texture = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="road/road layer/jaildoor2/CanvasLayer/dialoguebox"]
+margin_left = 416.392
+margin_top = 1613.53
+margin_right = 3475.39
+margin_bottom = 1909.53
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuesprite" type="Sprite" parent="road/road layer/jaildoor2/CanvasLayer/dialoguebox"]
+position = Vector2( 2221.12, 1465.7 )
+scale = Vector2( 1.87, 2.529 )
+texture = ExtResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="road/road layer/jaildoor2/CanvasLayer/dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 6 )
+
+[node name="Tween" type="Tween" parent="road/road layer/jaildoor2/CanvasLayer/dialoguebox"]
+
+[node name="jaildoor1" type="Area2D" parent="road/road layer"]
+z_index = -10
+script = ExtResource( 26 )
+
+[node name="jaildoor1" type="AnimatedSprite" parent="road/road layer/jaildoor1"]
+position = Vector2( 2128.26, 629.563 )
+scale = Vector2( 1.10028, 1.17333 )
+z_index = -19
+frames = SubResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="road/road layer/jaildoor1"]
+position = Vector2( 2429.11, 1671.41 )
+shape = SubResource( 8 )
+
+[node name="Type" type="AudioStreamPlayer" parent="road/road layer/jaildoor1"]
+stream = ExtResource( 33 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="road/road layer/jaildoor1"]
+
+[node name="dialoguebox" type="Control" parent="road/road layer/jaildoor1/CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="road/road layer/jaildoor1/CanvasLayer/dialoguebox"]
+margin_left = 199.0
+margin_top = 1508.14
+margin_right = 3628.0
+margin_bottom = 2008.14
+texture = ExtResource( 27 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="road/road layer/jaildoor1/CanvasLayer/dialoguebox"]
+margin_left = 416.392
+margin_top = 1613.53
+margin_right = 3475.39
+margin_bottom = 1909.53
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuesprite" type="Sprite" parent="road/road layer/jaildoor1/CanvasLayer/dialoguebox"]
+position = Vector2( 2221.12, 1500 )
+scale = Vector2( 1.8699, 2.52878 )
+texture = ExtResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="road/road layer/jaildoor1/CanvasLayer/dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 9 )
+
+[node name="Tween" type="Tween" parent="road/road layer/jaildoor1/CanvasLayer/dialoguebox"]
+
+[node name="Label" type="Label" parent="road/road layer/jaildoor1"]
+margin_left = 2143.6
+margin_top = 1035.68
+margin_right = 2835.6
+margin_bottom = 1221.68
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="road/road layer"]
+z_index = -16
+
+[node name="jaildoor3" type="Sprite" parent="road/road layer/Area2D"]
+position = Vector2( 2128.26, 629.563 )
+scale = Vector2( 1.10028, 1.17333 )
+z_index = -27
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="road/road layer/Area2D"]
+shape = SubResource( 11 )
+
+[node name="front tree" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="front tree layer" type="ParallaxLayer" parent="front tree"]
+z_index = 8
+
+[node name="front tree sprite" type="Sprite" parent="front tree/front tree layer"]
+position = Vector2( 1856.93, -36.9614 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="front grass" type="ParallaxBackground" parent="."]
+layer = 50
+
+[node name="front grass layer" type="ParallaxLayer" parent="front grass"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="front grasssprite" type="Sprite" parent="front grass/front grass layer"]
+texture = ExtResource( 8 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vignette" type="ParallaxBackground" parent="."]
+layer = 128
+
+[node name="vignette layer" type="ParallaxLayer" parent="vignette"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="vignette sprite" type="Sprite" parent="vignette/vignette layer"]
+position = Vector2( -64.4035, -36.1411 )
+scale = Vector2( 1.0144, 1.04579 )
+z_index = 100
+texture = ExtResource( 17 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3345.48, 2057.65 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 41.0424, 1220.69 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 7925.32, 1372.02 )
+shape = SubResource( 14 )
+
+[node name="scene10exit" type="Area2D" parent="."]
+script = ExtResource( 31 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene10exit"]
+position = Vector2( 8064.98, 1485.85 )
+shape = SubResource( 15 )
+[connection signal="body_entered" from="road/road layer/jaildoor2" to="road/road layer/jaildoor2" method="_on_jaildoor2_body_entered"]
+[connection signal="body_exited" from="road/road layer/jaildoor2" to="road/road layer/jaildoor2" method="_on_jaildoor2_body_exited"]
+[connection signal="tween_completed" from="road/road layer/jaildoor2/CanvasLayer/dialoguebox/Tween" to="road/road layer/jaildoor2" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="road/road layer/jaildoor1" to="road/road layer/jaildoor1" method="_on_jaildoor1_body_entered"]
+[connection signal="body_exited" from="road/road layer/jaildoor1" to="road/road layer/jaildoor1" method="_on_jaildoor1_body_exited"]
+[connection signal="tween_completed" from="road/road layer/jaildoor1/CanvasLayer/dialoguebox/Tween" to="road/road layer/jaildoor1" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="scene10exit" to="scene10exit" method="_on_scene10exit_body_entered"]

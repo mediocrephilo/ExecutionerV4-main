@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://act4/scene3/door2.gd" type="Script" id=2]
+[ext_resource path="res://act4/scene3/halldoor1.png" type="Texture" id=3]
+[ext_resource path="res://act4/scene3/halldoor2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 777.045, 774.753 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 116.417, 1188.48 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 2131.67, 94.1062 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="door" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="door"]
+position = Vector2( 1923.08, 1087.55 )
+scale = Vector2( 1.02242, 1.03066 )
+frames = SubResource( 1 )
+
+[node name="Label" type="Label" parent="door"]
+margin_left = 1720.88
+margin_top = 149.642
+margin_right = 2144.88
+margin_bottom = 249.642
+custom_fonts/font = SubResource( 2 )
+text = "Open lock"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2( 1961.87, 1267.87 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3803.62, 1127.74 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -13.3459, 1114.39 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1915.15, 2175.4 )
+shape = SubResource( 5 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 333.619, 1714.65 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1871.97, 1080.85 )
+scale = Vector2( 0.517358, 1.07116 )
+texture = ExtResource( 6 )
+[connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="door" method="_on_door_body_exited"]

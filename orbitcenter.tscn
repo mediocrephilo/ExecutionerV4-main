@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/Act1settings/scenefive/slime5.png" type="Texture" id=1]
+[ext_resource path="res://Act1/playerscenes/scene5/orbitcenter.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/scenefive/slime3.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 461.271, 22.4366 )
+
+[node name="orbitcenter" type="Node2D"]
+position = Vector2( -27412.4, -658.368 )
+script = ExtResource( 2 )
+radius = Vector2( 1000, 1000 )
+rotation_duration = 10.0
+
+[node name="orbit" type="KinematicBody2D" parent="." groups=[
+"platforms",
+]]
+position = Vector2( 41.8808, -999.123 )
+motion/sync_to_physics = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbit"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 1 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbit"]
+position = Vector2( 1051.63, 862.448 )
+scale = Vector2( 1, 0.5 )
+shape = SubResource( 2 )
+
+[node name="orbit6" type="KinematicBody2D" parent="." groups=[
+"platforms",
+]]
+position = Vector2( 999.123, 41.8808 )
+motion/sync_to_physics = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbit6"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbit6"]
+position = Vector2( 1070.48, 864.269 )
+shape = SubResource( 2 )
+
+[node name="orbit3" type="KinematicBody2D" parent="." groups=[
+"platforms",
+]]
+position = Vector2( -41.8808, 999.123 )
+motion/sync_to_physics = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbit3"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbit3"]
+position = Vector2( 1056.06, 867.874 )
+shape = SubResource( 2 )
+
+[node name="orbit4" type="KinematicBody2D" parent="." groups=[
+"platforms",
+]]
+position = Vector2( -999.123, -41.8808 )
+motion/sync_to_physics = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="orbit4"]
+position = Vector2( 1058.44, 969.4 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orbit4"]
+position = Vector2( 1059.67, 864.269 )
+shape = SubResource( 2 )

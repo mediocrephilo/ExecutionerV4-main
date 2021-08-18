@@ -1,0 +1,270 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://drawncutscenes/cassy.jpeg" type="Texture" id=1]
+[ext_resource path="res://drawncutscenes/cassy3.jpeg" type="Texture" id=2]
+[ext_resource path="res://drawncutscenes/cassy2.jpeg" type="Texture" id=3]
+[ext_resource path="res://drawncutscenes/cassy6.jpeg" type="Texture" id=4]
+[ext_resource path="res://drawncutscenes/cassy4.jpeg" type="Texture" id=5]
+[ext_resource path="res://drawncutscenes/cassy8.jpeg" type="Texture" id=6]
+[ext_resource path="res://drawncutscenes/cassy5.jpeg" type="Texture" id=7]
+[ext_resource path="res://drawncutscenes/cassy9.jpeg" type="Texture" id=8]
+[ext_resource path="res://drawncutscenes/cassy7.jpeg" type="Texture" id=9]
+[ext_resource path="res://drawncutscenes/cassy10.jpeg" type="Texture" id=10]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084310.PNG" type="Texture" id=11]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://drawncutscenes/cassy.gd" type="Script" id=13]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=14]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084613.PNG" type="Texture" id=15]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084619.PNG" type="Texture" id=16]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084607.PNG" type="Texture" id=17]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084638.PNG" type="Texture" id=18]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084643.PNG" type="Texture" id=19]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084632.PNG" type="Texture" id=20]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=21]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow1.PNG" type="Texture" id=22]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow.PNG" type="Texture" id=23]
+[ext_resource path="res://drawncutscenes/choiceBox.gd" type="Script" id=24]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "happ",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "blush",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "kalm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 90
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 80
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 80
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 80
+font_data = ExtResource( 12 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Control"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Control"]
+position = Vector2( 1900.28, 1909.67 )
+scale = Vector2( 1.35088, 1.3549 )
+frames = SubResource( 1 )
+animation = "happ"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Control"]
+position = Vector2( 2016.13, -1539.6 )
+scale = Vector2( 1.38633, 1.87548 )
+frames = SubResource( 1 )
+animation = "happ"
+frame = 1
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="Control"]
+position = Vector2( 2214.63, 446.539 )
+scale = Vector2( 1, 0.43358 )
+frames = SubResource( 2 )
+frame = 6
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
+position = Vector2( 2277.92, 428.282 )
+scale = Vector2( 1.06687, 0.509848 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="Type" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource( 14 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+anchor_left = 25.8708
+anchor_top = 7.08623
+anchor_right = 25.8708
+anchor_bottom = 7.08623
+margin_left = 298.838
+margin_top = -108.447
+margin_right = 1774.84
+margin_bottom = 216.553
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="choiceBox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="choiceBox"]
+margin_left = 745.0
+margin_top = 1576.0
+margin_right = 3230.0
+margin_bottom = 2106.0
+texture = ExtResource( 21 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="choiceBox"]
+margin_left = 1926.73
+margin_top = 1772.46
+margin_right = 2227.73
+margin_bottom = 1938.46
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "or"
+text = "or"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="choiceBox"]
+margin_left = 897.0
+margin_top = 1887.36
+margin_right = 3057.0
+margin_bottom = 2090.36
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="choiceBox"]
+margin_left = 897.0
+margin_top = 1679.3
+margin_right = 3083.0
+margin_bottom = 1860.3
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="choiceBox"]
+margin_left = 957.0
+margin_top = 1696.0
+margin_right = 2904.0
+margin_bottom = 1985.0
+custom_fonts/normal_font = SubResource( 10 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="choiceBox"]
+position = Vector2( 3010.44, 1725.3 )
+scale = Vector2( 0.326183, 0.299013 )
+frames = SubResource( 8 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="choiceBox"]
+position = Vector2( 3013.16, 1937.22 )
+scale = Vector2( 0.309881, 0.342485 )
+frames = SubResource( 9 )
+playing = true
+flip_v = true
+
+[node name="hhh" type="Tween" parent="choiceBox"]
+
+[node name="type" type="AudioStreamPlayer" parent="choiceBox"]
+
+[node name="aks" type="Tween" parent="choiceBox"]
+[connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
+[connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_completed"]
+[connection signal="tween_started" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_started"]
+[connection signal="tween_completed" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_completed"]
+[connection signal="tween_started" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_started"]
+[connection signal="tween_completed" from="choiceBox/aks" to="choiceBox" method="_on_aks_tween_completed"]
+[connection signal="tween_started" from="choiceBox/aks" to="choiceBox" method="_on_aks_tween_started"]

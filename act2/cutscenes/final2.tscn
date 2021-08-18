@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://drawncutscenes/boycutscene2.jpg" type="Texture" id=1]
+[ext_resource path="res://drawncutscenes/boycutscene1.jpg" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1897.15, 1091.43 )
+scale = Vector2( 2.02295, 2.0212 )
+frames = SubResource( 1 )
+frame = 1

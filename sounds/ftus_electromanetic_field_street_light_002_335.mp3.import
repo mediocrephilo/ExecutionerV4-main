@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ftus_electromanetic_field_street_light_002_335.mp3-ae9488dd55dc9128e42fb70f9d52f364.mp3str"
+
+[deps]
+
+source_file="res://sounds/ftus_electromanetic_field_street_light_002_335.mp3"
+dest_files=[ "res://.import/ftus_electromanetic_field_street_light_002_335.mp3-ae9488dd55dc9128e42fb70f9d52f364.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

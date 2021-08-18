@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav-5b1acb76186e40f189abe1e411c8a10a.sample"
+
+[deps]
+
+source_file="res://sounds/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav"
+dest_files=[ "res://.import/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav-5b1acb76186e40f189abe1e411c8a10a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

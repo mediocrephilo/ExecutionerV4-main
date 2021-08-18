@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://sprites/act4setting/scene5/codemachinewrong.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act4setting/scene5/black1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act4setting/scene5/codemachine.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act4setting/scene5/code.png" type="Texture" id=5]
+[ext_resource path="res://sprites/act4setting/scene5/black3.png" type="Texture" id=6]
+[ext_resource path="res://sprites/act4setting/scene5/black2.png" type="Texture" id=7]
+[ext_resource path="res://act4/scene5/machine.gd" type="Script" id=8]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "wrong",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 9 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="machine" type="Area2D" parent="."]
+z_index = 4
+script = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="machine"]
+position = Vector2( 1759.56, 1031.07 )
+z_index = 3
+frames = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="machine"]
+position = Vector2( 1320.73, 571.412 )
+scale = Vector2( 0.621669, 0.66951 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="machine"]
+position = Vector2( 1438.87, 584.64 )
+scale = Vector2( 0.767551, 0.796925 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="machine"]
+position = Vector2( 1570.41, 578.651 )
+scale = Vector2( 0.769397, 0.763686 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite4" type="Sprite" parent="machine"]
+position = Vector2( 1702.46, 579.091 )
+scale = Vector2( 0.743545, 0.796925 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite5" type="Sprite" parent="machine"]
+position = Vector2( 1837.87, 578.84 )
+scale = Vector2( 0.810022, 0.789539 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="machine"]
+position = Vector2( 1966.47, 571.37 )
+scale = Vector2( 0.771244, 0.769226 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="machine"]
+position = Vector2( 2088.85, 579.232 )
+scale = Vector2( 0.753106, 0.814816 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="machine"]
+position = Vector2( 2203.43, 563.502 )
+scale = Vector2( 0.755548, 0.726918 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Sprite9" type="Sprite" parent="machine"]
+position = Vector2( 2309.78, 567.592 )
+scale = Vector2( 0.755548, 0.726918 )
+z_index = 5
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="machine"]
+margin_left = 1025.8
+margin_top = 48.8478
+margin_right = 2654.8
+margin_bottom = 148.848
+custom_fonts/font = SubResource( 2 )
+text = "Type on keyboard. press esc to exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1934.48, 1094.83 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1956.94, 1053.16 )
+scale = Vector2( 1.0196, 1.09954 )
+z_index = 9
+frames = SubResource( 3 )
+frame = 12
+playing = true

@@ -1,0 +1,269 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://sprites/UI/JeanSunHo/JeanSunHoBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084619.PNG" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084613.PNG" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084310.PNG" type="Texture" id=4]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084607.PNG" type="Texture" id=5]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084638.PNG" type="Texture" id=6]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084632.PNG" type="Texture" id=7]
+[ext_resource path="res://sprites/UI/GirlTextbox/Untitled85-20210106084643.PNG" type="Texture" id=8]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=9]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=10]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Act1/cutscenes/scene4/choicebox.gd" type="Script" id=12]
+[ext_resource path="res://Act1/cutscenes/scene4/dialoguebox.gd" type="Script" id=13]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow.PNG" type="Texture" id=14]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow1.PNG" type="Texture" id=15]
+[ext_resource path="res://Act1/cutscenes/scene4/girltalk.gd" type="Script" id=16]
+[ext_resource path="res://Act1/cutscenes/scene4/unnamed.jpg" type="Texture" id=17]
+[ext_resource path="res://Act1/cutscenes/scene4/Untitled88-20210106175311.PNG" type="Texture" id=18]
+[ext_resource path="res://Act1/cutscenes/scene4/Untitled88-20210106175943.PNG" type="Texture" id=19]
+[ext_resource path="res://Act1/cutscenes/scene4/Untitled88-20210106175832.PNG" type="Texture" id=20]
+[ext_resource path="res://Act1/cutscenes/scene4/29D6E2D2-B684-4E7F-8241-B791679B74B8.JPG" type="Texture" id=21]
+[ext_resource path="res://Act1/cutscenes/scene4/018FC6ED-F387-4087-8457-796864C4AF6F.JPG" type="Texture" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "patty",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+size = 130
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 100
+font_data = ExtResource( 11 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=9]
+resource_name = "fade"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 16 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 4209.0
+margin_bottom = 2404.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 1859.43, 1231.18 )
+scale = Vector2( 4.62068, 4.48755 )
+frames = SubResource( 1 )
+frame = 5
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1991.53, 465.518 )
+scale = Vector2( 0.740516, 0.440623 )
+frames = SubResource( 2 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 2039.91, 441.98 )
+scale = Vector2( 0.895117, 0.464839 )
+frames = SubResource( 3 )
+frame = 5
+playing = true
+
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_right = 3864.0
+margin_bottom = 2179.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_left = 1151.0
+margin_top = 202.0
+margin_right = 2428.0
+margin_bottom = 862.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="type" type="AudioStreamPlayer" parent="dialoguebox"]
+
+[node name="hhhh" type="Tween" parent="dialoguebox"]
+
+[node name="choicebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="choicebox"]
+margin_left = 399.846
+margin_top = 1537.31
+margin_right = 3471.85
+margin_bottom = 2037.31
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="choicebox"]
+margin_left = 570.0
+margin_top = 1635.0
+margin_right = 3163.0
+margin_bottom = 1776.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="type" type="AudioStreamPlayer" parent="choicebox"]
+stream = ExtResource( 9 )
+
+[node name="Tween" type="Tween" parent="choicebox"]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="choicebox"]
+margin_left = 575.0
+margin_top = 1838.0
+margin_right = 3185.0
+margin_bottom = 2012.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="choicebox"]
+position = Vector2( 3205.01, 1684.23 )
+scale = Vector2( 0.249418, 0.236342 )
+frames = SubResource( 7 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="choicebox"]
+position = Vector2( 3207.63, 1875.15 )
+scale = Vector2( 0.291262, 0.272956 )
+frames = SubResource( 8 )
+frame = 5
+playing = true
+flip_v = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 4023.0
+margin_bottom = 2305.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
+anims/fade = SubResource( 9 )
+[connection signal="tween_completed" from="dialoguebox/hhhh" to="dialoguebox" method="_on_hhhh_tween_completed"]
+[connection signal="tween_completed" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_completed"]
+[connection signal="tween_started" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_started"]
+[connection signal="tween_started" from="dialoguebox/hhhh" to="." method="_on_hhhh_tween_started"]
+[connection signal="tween_completed" from="choicebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_completed"]
+[connection signal="tween_started" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_started"]
+[connection signal="tween_started" from="choicebox/Tween" to="." method="_on_Tween_tween_started"]

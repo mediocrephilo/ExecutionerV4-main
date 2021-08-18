@@ -1,0 +1,333 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://sprites/act3settings/scene5/tallbuilding.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneone/roady2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=3]
+[ext_resource path="res://act3/scene5/Area2D.gd" type="Script" id=4]
+[ext_resource path="res://act3/scene5/bigboi.gd" type="Script" id=5]
+[ext_resource path="res://act3/scene5/Path2D.gd" type="Script" id=8]
+[ext_resource path="res://act3/scene5/Path2D2.gd" type="Script" id=9]
+[ext_resource path="res://act3/scene5/Path2D4.gd" type="Script" id=10]
+[ext_resource path="res://sprites/act3settings/scene5/fog.png" type="Texture" id=12]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=13]
+[ext_resource path="res://sprites/act 2 setting/scene1/buildings1.png" type="Texture" id=14]
+[ext_resource path="res://sprites/act3settings/scene5/unnamed.png" type="Texture" id=16]
+[ext_resource path="res://orbitcenter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://movingwood.tscn" type="PackedScene" id=18]
+[ext_resource path="res://act3/scene5/enemy.tscn" type="PackedScene" id=19]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1674.53, 96.1583 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2769.62, 82.4541 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2740.21, 178.064 )
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1514.77, 388.027, 0, 0, 0, 0, 1454.7, 388.027, 0, 0, 0, 0, -1509.45, 388.027 )
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -113.048, -4053.03, 0, 0, 0, 0, 1418.97, -4019.72, 0, 0, 0, 0, -114.115, -4052.31 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2058.54, 2397.72, 0, 0, 0, 0, 3009.58, -9966.51 )
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1302.74, 2983.01 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="sky" type="Sprite" parent="Sprite"]
+position = Vector2( 2269.2, 456.271 )
+scale = Vector2( 1.46027, 2.06295 )
+z_index = -1
+texture = ExtResource( 13 )
+
+[node name="sky2" type="Sprite" parent="Sprite"]
+position = Vector2( 4973.22, -3492.73 )
+scale = Vector2( 2.00506, 2.06295 )
+z_index = -2
+texture = ExtResource( 13 )
+
+[node name="sky3" type="Sprite" parent="Sprite"]
+position = Vector2( 4904.76, -7066.16 )
+scale = Vector2( 2.01047, 2.06295 )
+z_index = -2
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="sky4" type="Sprite" parent="Sprite"]
+position = Vector2( 12729.1, -2955.91 )
+scale = Vector2( 1.55598, 4.56343 )
+z_index = -2
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="Sprite3" type="Sprite" parent="Sprite"]
+position = Vector2( 1690.39, 781.863 )
+scale = Vector2( 1, 1.743 )
+z_index = -1
+texture = ExtResource( 14 )
+
+[node name="Sprite4" type="Sprite" parent="Sprite"]
+modulate = Color( 0.67451, 0.67451, 0.67451, 1 )
+position = Vector2( 2412.1, -394.747 )
+scale = Vector2( 1.15492, 3.27652 )
+z_index = -1
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+modulate = Color( 0.490196, 0.470588, 0.470588, 1 )
+position = Vector2( -695.005, -3327.45 )
+z_index = -1
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Sprite5" type="Sprite" parent="Sprite"]
+modulate = Color( 0.490196, 0.470588, 0.470588, 1 )
+position = Vector2( 9328.54, -3083.08 )
+z_index = -1
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+modulate = Color( 0.490196, 0.470588, 0.470588, 1 )
+position = Vector2( 7127.12, -3020.34 )
+scale = Vector2( 1.73616, 1 )
+z_index = -1
+texture = ExtResource( 1 )
+
+[node name="fog" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
+self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
+position = Vector2( 2655.62, -7022.46 )
+scale = Vector2( 6.63699, 3.27211 )
+z_index = 30
+texture = ExtResource( 12 )
+
+[node name="fog2" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
+self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
+position = Vector2( 2164.98, -268.901 )
+scale = Vector2( 6.63699, 3.8782 )
+z_index = 30
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 1976.01, 462.906 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -190.249, 1015.28 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( -162.115, 552.699 )
+scale = Vector2( 0.825428, 0.915453 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( 8896.44, -5412.01 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D7"]
+position = Vector2( 1435.35, 709.86 )
+scale = Vector2( 1.50881, 0.915453 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2( 1146.39, 1181.85 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 2070.4, 3161.4 )
+scale = Vector2( 0.565357, 1.0987 )
+texture = ExtResource( 3 )
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1481.21, 2177.68 )
+shape = SubResource( 3 )
+
+[node name="player" parent="." instance=ExtResource( 20 )]
+position = Vector2( 2130.67, 1921.35 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 20
+
+[node name="Camera2D2" type="Camera2D" parent="player"]
+current = true
+limit_bottom = 2160
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 1612.57, 272.466 )
+curve = SubResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -1514.77, 388.027 )
+rotation = -0.00405938
+rotate = false
+
+[node name="KinematicBody2D" parent="Path2D/PathFollow2D" instance=ExtResource( 18 )]
+position = Vector2( 450.882, 3.80597 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 18 )]
+position = Vector2( -302.022, 1018.5 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 904.08, -116.06 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1480.37, -486.758 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2108.43, -789.092 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D7" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2700.34, -1124.04 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D9" parent="." instance=ExtResource( 18 )]
+position = Vector2( 6067.29, -3626.02 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1357.67, 180.755 )
+rotation = -0.00405938
+scale = Vector2( 0.5, 1 )
+
+[node name="orbitcenter" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2976.25, -3093.84 )
+
+[node name="orbitcenter2" parent="." instance=ExtResource( 17 )]
+visible = false
+position = Vector2( -2857.77, -2591.59 )
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2( 5619.02, 736.034 )
+curve = SubResource( 5 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2( -113.048, -4053.03 )
+rotation = 0.0218031
+
+[node name="KinematicBody2D" parent="Path2D2/PathFollow2D" instance=ExtResource( 18 )]
+
+[node name="KinematicBody2D2" parent="Path2D2/PathFollow2D" instance=ExtResource( 18 )]
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2( 6861.07, 118.231 )
+curve = SubResource( 5 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4"]
+position = Vector2( -113.048, -4053.03 )
+rotation = 0.0218031
+
+[node name="KinematicBody2D" parent="Path2D4/PathFollow2D" instance=ExtResource( 18 )]
+
+[node name="bigboi" type="Path2D" parent="."]
+curve = SubResource( 6 )
+script = ExtResource( 5 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="bigboi"]
+position = Vector2( 2058.54, 2397.72 )
+rotation = -1.49415
+
+[node name="Area2D" type="Area2D" parent="bigboi/PathFollow2D"]
+position = Vector2( -3349.28, 2973.58 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="bigboi/PathFollow2D/Area2D"]
+position = Vector2( 326.867, -876.082 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="bigboi/PathFollow2D/Area2D"]
+position = Vector2( 543.988, 1347.04 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigboi/PathFollow2D/Area2D"]
+position = Vector2( 542.952, 372.976 )
+rotation = -3.24282
+shape = SubResource( 7 )
+
+[node name="Area2D2" type="Area2D" parent="bigboi/PathFollow2D"]
+position = Vector2( -3749.84, -1545.81 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="bigboi/PathFollow2D/Area2D2"]
+position = Vector2( 326.867, -876.082 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="bigboi/PathFollow2D/Area2D2"]
+position = Vector2( 543.988, 1347.04 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigboi/PathFollow2D/Area2D2"]
+position = Vector2( 542.952, 372.976 )
+rotation = -3.24282
+shape = SubResource( 7 )
+
+[node name="KinematicBody2D8" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3310.12, 925.564 )
+[connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="bigboi/PathFollow2D/Area2D2" to="bigboi/PathFollow2D/Area2D2" method="_on_Area2D_body_entered"]

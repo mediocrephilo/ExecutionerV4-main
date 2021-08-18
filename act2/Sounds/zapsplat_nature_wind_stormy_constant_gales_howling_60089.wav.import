@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_nature_wind_stormy_constant_gales_howling_60089.wav-9e34853afe2c2549e13c914146586503.sample"
+
+[deps]
+
+source_file="res://act2/Sounds/zapsplat_nature_wind_stormy_constant_gales_howling_60089.wav"
+dest_files=[ "res://.import/zapsplat_nature_wind_stormy_constant_gales_howling_60089.wav-9e34853afe2c2549e13c914146586503.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

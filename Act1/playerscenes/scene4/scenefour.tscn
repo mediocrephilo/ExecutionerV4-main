@@ -1,0 +1,771 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/scenefour/moredoor.png" type="Texture" id=3]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=4]
+[ext_resource path="res://Act1/playerscenes/scene4/scenefour.gd" type="Script" id=5]
+[ext_resource path="res://sprites/Act1settings/scenefour/road.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=13]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (6).png" type="Texture" id=17]
+[ext_resource path="res://Act1/playerscenes/player.gd" type="Script" id=18]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes/Untitled683-20200625170656.PNG" type="Texture" id=19]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes/Untitled683-20200625171525.PNG" type="Texture" id=20]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes/Untitled683-20200625171744.PNG" type="Texture" id=21]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes/Untitled683-20200625171814.PNG" type="Texture" id=22]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes/Untitled683-20200625170914.PNG" type="Texture" id=23]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes2/Untitled683-20200625173229.PNG" type="Texture" id=24]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes2/Untitled683-20200625173255.PNG" type="Texture" id=25]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes2/Untitled683-20200625173012.PNG" type="Texture" id=26]
+[ext_resource path="res://sprites/Act1settings/scenefour/eyes2/Untitled683-20200625173147.PNG" type="Texture" id=27]
+[ext_resource path="res://sprites/Act1settings/scenefour/moreeyes/Untitled684-20200625193540.PNG" type="Texture" id=28]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (10).png" type="Texture" id=29]
+[ext_resource path="res://sprites/Act1settings/scenefour/moreeyes/Untitled684-20200625193727.PNG" type="Texture" id=30]
+[ext_resource path="res://sprites/Act1settings/sceneone/front grass.png" type="Texture" id=31]
+[ext_resource path="res://sprites/Act1settings/sceneone/back grass.png" type="Texture" id=32]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=33]
+[ext_resource path="res://Act1/playerscenes/scene4/door4.gd" type="Script" id=34]
+[ext_resource path="res://sounds/Closing-Squeaky-Door-1-www.fesliyanstudios.com.wav" type="AudioStream" id=35]
+[ext_resource path="res://Act1/playerscenes/scene4/lamp.gd" type="Script" id=36]
+[ext_resource path="res://sprites/Act1settings/scenefour/lamps.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Act1settings/scenefour/lamp3.PNG" type="Texture" id=38]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (1).png" type="Texture" id=40]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (2).png" type="Texture" id=41]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (3).png" type="Texture" id=42]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (4).png" type="Texture" id=43]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (5).png" type="Texture" id=44]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (7).png" type="Texture" id=45]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (8).png" type="Texture" id=46]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 81.7256
+height = 541.412
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8699.33, 118.454 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 328.354, 1303.27 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 607.575, 1855.44 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 618.498, 1246.35 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+font_data = ExtResource( 33 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 793.939, 1300.33 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=11]
+resource_name = "New Anim"
+length = 15.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -3484.74, -0.25, 0, 0.25, 0, -2054.96, -0.25, 0, 0.25, 0, -3484.74, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 467.531, -0.25, 0, 0.25, 0, 375.112, -0.25, 0, 0.25, 0, 467.531, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "New Anim"
+length = 10.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2544.24, -0.25, 0, 0.25, 0, -2386.58, -0.25, 0, 0.25, 0, -2544.24, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 163.092, -0.25, 0, 0.25, 0, 2011.47, -0.25, 0, 0.25, 0, 163.092, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "New Anim"
+length = 6.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2392.02, -0.25, 0, 0.25, 0, -2489.88, -0.25, 0, 0.25, 0, -2392.02, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3.1, 6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 190.274, -0.25, 0, 0.25, 0, 1929.92, -0.25, 0, 0.25, 0, 190.274, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3.1, 6 )
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "New Anim"
+length = 8.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2223.49, -0.25, 0, 0.25, 0, -2315.91, -0.25, 0, 0.25, 0, -2223.49, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 212.02, -0.25, 0, 0.25, 0, 1951.67, -0.25, 0, 0.25, 0, 212.02, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "New Anim"
+length = 4.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2071.27, -0.25, 0, 0.25, 0, -1978.85, -0.25, 0, 0.25, 0, -2071.27, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 201.147, -0.25, 0, 0.25, 0, 1951.67, -0.25, 0, 0.25, 0, 201.147, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4 )
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "New Anim"
+length = 6.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -1815.76, -0.25, 0, 0.25, 0, -1853.82, -0.25, 0, 0.25, 0, -1815.76, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3, 6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 239.202, -0.25, 0, 0.25, 0, 1940.8, -0.25, 0, 0.25, 0, 239.202, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3, 6 )
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "New Anim"
+length = 16.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -1130.77, -0.25, 0, 0.25, 0, 2011.47, -0.25, 0, 0.25, 0, -1130.77, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 8, 16 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 698.578, -0.25, 0, 0.25, 0, 1128.05, -0.25, 0, 0.25, 0, 698.578, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 8, 16 )
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "New Anim"
+length = 8.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2296.88, -0.25, 0, 0.25, 0, 3019.92, -0.25, 0, 0.25, 0, -2296.88, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1005.74, -0.25, 0, 0.25, 0, 1043.79, -0.25, 0, 0.25, 0, 1005.74, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "New Anim"
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -1701.6, -0.25, 0, 0.25, 0, 2951.97, -0.25, 0, 0.25, 0, -1701.6, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 440.35, -0.25, 0, 0.25, 0, 483.841, -0.25, 0, 0.25, 0, 440.35, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 10 )
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "New Anim"
+length = 20.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -2911.16, -0.25, 0, 0.25, 0, 3172.75, -0.25, 0, 0.25, 0, -2911.16, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 10, 20 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -223.97, -0.25, 0, 0.25, 0, -139.291, -0.25, 0, 0.25, 0, -223.97, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 10, 20 )
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "New Anim"
+length = 15.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -3309.02, -0.25, 0, 0.25, 0, 3628.2, -0.25, 0, 0.25, 0, -3309.02, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -149.818, -0.25, 0, 0.25, 0, -162.845, -0.25, 0, 0.25, 0, -149.818, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7.5, 15 )
+}
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 102.807, 889.548 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 3798, 0 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2003.95, 201.597 )
+scale = Vector2( 1.0048, 0.990956 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6026.07, 257.972 )
+scale = Vector2( 1.0048, 0.990956 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="roady boi" type="Sprite" parent="."]
+position = Vector2( 2593.75, 1675.26 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player2" type="KinematicBody2D" parent="."]
+position = Vector2( 3395.11, 1583.68 )
+z_index = 2
+script = ExtResource( 18 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player2"]
+position = Vector2( 122.756, 0 )
+frames = SubResource( 1 )
+animation = "jump"
+speed_scale = 1.5
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+position = Vector2( 169.054, 43.0327 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="player2"]
+position = Vector2( 98, 0 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 8500
+limit_bottom = 2160
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player2"]
+stream = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1330.55, 2077.47 )
+z_index = 1
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -4029.94, 1220.45 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4680.56, 714.478 )
+shape = SubResource( 5 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+z_index = 1
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D3"]
+position = Vector2( 4264.16, 881.116 )
+scale = Vector2( 1, 1.15108 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 4430.91, 834.521 )
+shape = SubResource( 6 )
+
+[node name="Label" type="Label" parent="Area2D3"]
+margin_left = 3940.87
+margin_top = 236.48
+margin_right = 4599.87
+margin_bottom = 782.48
+custom_fonts/font = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D3"]
+stream = ExtResource( 35 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 5912.06, 1947.03 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -1330.52, 1679.35 )
+scale = Vector2( 0.966201, 1 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -5384.15, 1674.87 )
+scale = Vector2( 0.966201, 1 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = -97
+scroll_base_scale = Vector2( 0.2, 0.2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3873.39, -314.913 )
+scale = Vector2( 1, 2.23512 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 3873.39, -314.913 )
+scale = Vector2( 1, 2.23512 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.3, 0.3 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 158.449, 1300.61 )
+texture = ExtResource( 28 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 3411.06, 795.555 )
+texture = ExtResource( 28 )
+flip_h = true
+flip_v = true
+
+[node name="Sprite12" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 4070.95, 958.266 )
+texture = ExtResource( 28 )
+
+[node name="Sprite10" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 7818.16, 1240.89 )
+texture = ExtResource( 28 )
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 3297.92, 1922.71 )
+scale = Vector2( 0.660957, 0.920166 )
+texture = ExtResource( 30 )
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 50.7041, 57.0419 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -4254.46, 1248.58 )
+shape = SubResource( 8 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+layer = 100
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 3200.67, 1077.45 )
+z_index = 7
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 8151.78, 2114.69 )
+texture = ExtResource( 31 )
+offset = Vector2( -3391.96, -1024.56 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 514.529, 2114.69 )
+texture = ExtResource( 31 )
+offset = Vector2( -3391.96, -1024.56 )
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+layer = -50
+scroll_base_scale = Vector2( 0.7, 0.7 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 4609.94, 719.193 )
+scale = Vector2( 0.598925, 0.600942 )
+frames = SubResource( 9 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 1458.69, 696.195 )
+scale = Vector2( 0.598925, 0.600942 )
+frames = SubResource( 10 )
+frame = 7
+playing = true
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 3904.19, 912.667 )
+texture = ExtResource( 32 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( -3580.95, 950.695 )
+texture = ExtResource( 32 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( -2719.04, 418.037 )
+z_index = 3
+texture = ExtResource( 39 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite4"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 11 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -2544.24, 163.092 )
+z_index = 6
+texture = ExtResource( 40 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite5"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 12 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -2392.02, 190.274 )
+z_index = 7
+texture = ExtResource( 41 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite6"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 13 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( -2223.49, 212.02 )
+z_index = 6
+texture = ExtResource( 42 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite7"]
+"anims/New Anim" = SubResource( 14 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( -1978.85, 1951.67 )
+z_index = 3
+texture = ExtResource( 43 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite8"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 15 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( -1853.82, 1940.8 )
+z_index = 7
+texture = ExtResource( 44 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite9"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 16 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 2011.47, 1128.05 )
+scale = Vector2( 1.50966, 1.0438 )
+texture = ExtResource( 45 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite10"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 17 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 3019.92, 1043.79 )
+scale = Vector2( 3.51779, 1 )
+z_index = 4
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite11"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 18 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 2951.97, 483.841 )
+scale = Vector2( 3.37577, 1 )
+z_index = 3
+texture = ExtResource( 46 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite12"]
+"anims/New Anim" = SubResource( 19 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 3172.75, -139.291 )
+rotation = 4.71239
+scale = Vector2( 1, 3.9039 )
+z_index = -1
+texture = ExtResource( 42 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite13"]
+"anims/New Anim" = SubResource( 20 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 3628.2, -162.845 )
+rotation = 4.71239
+scale = Vector2( 1, 3.8975 )
+z_index = -1
+texture = ExtResource( 43 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite14"]
+"anims/New Anim" = SubResource( 21 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 2568.35, 1292.9 )
+scale = Vector2( 1.67572, 1.55453 )
+texture = ExtResource( 38 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+z_index = 9
+script = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 3099.48, 1541.05 )
+shape = SubResource( 22 )
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 2589.34, 1345.41 )
+scale = Vector2( 1.62898, 1.72349 )
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]
+[connection signal="body_exited" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_exited"]

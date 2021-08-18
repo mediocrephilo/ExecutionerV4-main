@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://act2/cutscenes/scene1/dialoguebox.gd" type="Script" id=1]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=3]
+[ext_resource path="res://sounds/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav" type="AudioStream" id=4]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2550, -0.25, 0, 0.25, 0, 2550, -0.25, 0, 0.25, 0, 2550, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1544.2, -0.25, 0, 0.25, 0, 1500, -0.25, 0, 0.25, 0, 1544.2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_left = 508.0
+margin_top = 1383.0
+margin_right = 3318.0
+margin_bottom = 1883.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_left = 655.0
+margin_top = 1475.0
+margin_right = 3154.0
+margin_bottom = 1796.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuesprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 2550, 1544.2 )
+scale = Vector2( 0.905352, 1.43929 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="dialoguebox"]
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 4 )
+[connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

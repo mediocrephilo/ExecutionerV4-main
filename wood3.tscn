@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/Act1settings/scenefive/wood.png" type="Texture" id=1]
+[ext_resource path="res://Act1/playerscenes/scene5/wood.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 666.938, 107.859 )
+
+[sub_resource type="Animation" id=2]
+
+[node name="wood3" type="KinematicBody2D"]
+position = Vector2( -3505.1, -1138.36 )
+motion/sync_to_physics = true
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 33.9956, 21.0718 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/shake = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="wood" type="Sprite" parent="."]
+position = Vector2( 5.28516, 48.124 )
+scale = Vector2( 1.40377, 2.66773 )
+texture = ExtResource( 1 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

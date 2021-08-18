@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Walking-sound-snow.wav-1e7b4d7cd0987c9663db9f8f288255f0.sample"
+
+[deps]
+
+source_file="res://sounds/Walking-sound-snow.wav"
+dest_files=[ "res://.import/Walking-sound-snow.wav-1e7b4d7cd0987c9663db9f8f288255f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
