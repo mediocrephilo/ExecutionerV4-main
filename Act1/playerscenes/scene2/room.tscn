@@ -43,9 +43,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "idle",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ) ],
@@ -53,14 +53,14 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -341,7 +341,6 @@ script = ExtResource( 38 )
 position = Vector2( 1607.63, 1119.92 )
 z_index = -1
 frames = SubResource( 12 )
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -414,17 +413,18 @@ pitch_scale = 0.7
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 17 )
-frame = 7
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
+
 [connection signal="body_entered" from="doortime" to="doortime" method="_on_doortime_body_entered"]
 [connection signal="body_exited" from="doortime" to="doortime" method="_on_doortime_body_exited"]
-[connection signal="body_entered" from="chair" to="chair/dialoguebox" method="_on_chair_body_entered"]
 [connection signal="body_entered" from="chair" to="chair" method="_on_chair_body_entered"]
-[connection signal="body_exited" from="chair" to="chair/dialoguebox" method="_on_chair_body_exited"]
+[connection signal="body_entered" from="chair" to="chair/dialoguebox" method="_on_chair_body_entered"]
 [connection signal="body_exited" from="chair" to="chair" method="_on_chair_body_exited"]
+[connection signal="body_exited" from="chair" to="chair/dialoguebox" method="_on_chair_body_exited"]
 [connection signal="tree_exited" from="chair/dialoguebox" to="chair" method="_on_dialoguebox_tree_exited"]
 [connection signal="tween_completed" from="chair/dialoguebox/Tween" to="chair/dialoguebox" method="_on_Tween_tween_completed"]
 [connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
