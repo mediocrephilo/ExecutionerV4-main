@@ -14,4 +14,4 @@ func _on_news_body_exited(body):
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
-		print("asd")
+		Transition.change_scene("res://drawncutscenes/newspaper.tscn")
