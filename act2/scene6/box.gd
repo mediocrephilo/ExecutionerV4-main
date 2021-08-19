@@ -1,6 +1,7 @@
 extends Area2D
 
 var canInteract = false
+var cantalk = false
 
 func _ready():
 	$Label.hide()
@@ -21,7 +22,11 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
 		$beep/AnimatedSprite.show()
 		$beep/AnimatedSprite.play("appear")
+	if Input.is_action_just_pressed("ui_interact") and cantalk == true:
+		Transition.change_scene("res://drawncutscenes/act2boi.tscn")
 		
 func _on_AnimatedSprite_animation_finished():
 	$beep/AnimatedSprite.play("vibing")
 	$Label.text = "Talk"
+	cantalk = true
+	
