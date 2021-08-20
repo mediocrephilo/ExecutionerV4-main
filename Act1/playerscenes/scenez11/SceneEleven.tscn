@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://sprites/Act1settings/sceneten/jail1.jpg" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneeleven/jaiInside/Untitled17-20210819134155.PNG" type="Texture" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneeleven/jaiInside/Untitled17-20210819134459.PNG" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneeleven/jaiInside/Untitled17-20210819134613.PNG" type="Texture" id=3]
+[ext_resource path="res://sprites/Act1settings/sceneeleven/jaiInside/Untitled17-20210819134650.PNG" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1920, 1080 )
-texture = ExtResource( 1 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
