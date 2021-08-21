@@ -17,11 +17,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "3",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "1",
@@ -30,6 +25,11 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "3",
 "speed": 5.0
 } ]
 
@@ -61,7 +61,6 @@ position = Vector2( 1888.4, 1081.94 )
 scale = Vector2( 1.0334, 1.00999 )
 frames = SubResource( 1 )
 animation = "3"
-frame = 1
 playing = true
 
 [node name="Tween" type="Tween" parent="Control"]
@@ -92,10 +91,10 @@ __meta__ = {
 position = Vector2( 1932.8, 1042.72 )
 scale = Vector2( 1.03311, 1.16752 )
 frames = SubResource( 3 )
-frame = 2
 speed_scale = 0.25
 playing = true
 flip_h = true
 flip_v = true
+
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

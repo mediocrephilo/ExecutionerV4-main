@@ -3,4 +3,4 @@ extends Area2D
 func _on_Area2D_body_entered(body):
 	if body.name == "player":
 		#print("asadfs")
-		Transition.change_scene("res://act4/act4scene4cut.tscn")
+		Transition.change_scene("res://act4/cutscene/parkscene.tscn")

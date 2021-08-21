@@ -14,7 +14,7 @@ func _process(delta):
 	if end.entered == true:
 		$AnimatedSprite.play("idle")
 		$walk.stop()
-		Transition.change_scene("res://act4/cutscene/gym.tscn")
+		Transition.change_scene("res://act4/cutscene/baby/grass.tscn")
 	
 	
 func _physics_process(delta):

@@ -17,3 +17,7 @@ func _on_snowman_body_exited(body):
 		$Label.hide()
 		canInteract = false
 		$AnimatedSprite.stop()
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
+		Transition.change_scene("res://act4/cutscene/baby/Node2D.tscn")

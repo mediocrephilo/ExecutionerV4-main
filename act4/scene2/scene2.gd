@@ -83,5 +83,4 @@ func _on_Area2D_body_entered(body):
 		$road.position.x -= 0
 		$Area2D.position.x -= 0
 		#get_tree().paused =true
-		print("adsdfs")
 		$player/AnimatedSprite.play("idle")

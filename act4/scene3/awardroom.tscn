@@ -39,10 +39,10 @@ extents = Vector2( 369.623, 1337.54 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 7304.59, 323.696 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 473.388, 401.368 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 14 ) ],
 "loop": true,
@@ -54,18 +54,18 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=8]
 radius = 121.712
 height = 337.389
 
@@ -114,11 +114,11 @@ shape = SubResource( 5 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 6670.26, 2245.43 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 7453.83, 2149.34 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 539.093, 1716.59 )
@@ -126,12 +126,12 @@ script = ExtResource( 6 )
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 11.0923, -44.3696 )
-frames = SubResource( 6 )
+frames = SubResource( 7 )
 animation = "fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 0, -4.19751 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
 
@@ -141,5 +141,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 7680
 limit_bottom = 2160
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

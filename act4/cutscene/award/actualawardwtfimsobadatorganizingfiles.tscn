@@ -13,11 +13,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "3",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "1",
@@ -26,6 +21,11 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "3",
 "speed": 5.0
 } ]
 
@@ -74,5 +74,6 @@ text = "\\"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

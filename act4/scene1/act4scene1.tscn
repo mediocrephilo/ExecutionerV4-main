@@ -576,6 +576,7 @@ text = "remember"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="timeout" from="gun/Timer" to="gun" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="gun/visibility" to="gun" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="gun/visibility" to="gun" method="_on_Area2D_body_exited"]
