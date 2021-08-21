@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -24,6 +24,9 @@
 [ext_resource path="res://act4/door.gd" type="Script" id=22]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=23]
 [ext_resource path="res://act4/rightdoor.gd" type="Script" id=24]
+[ext_resource path="res://sprites/act4setting/scene5/smallcode2.png" type="Texture" id=25]
+[ext_resource path="res://sprites/act4setting/scene5/smallcode1.png" type="Texture" id=26]
+[ext_resource path="res://act4/code.gd" type="Script" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6878.73, 351.033 )
@@ -53,14 +56,9 @@ font_data = ExtResource( 23 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "walk",
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -68,9 +66,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "fall",
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -83,6 +86,21 @@ extents = Vector2( 339.744, 1423.12 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 200
+font_data = ExtResource( 23 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 199.441, 272.585 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 100
 font_data = ExtResource( 23 )
 
 [node name="Node2D" type="Node2D"]
@@ -128,7 +146,7 @@ position = Vector2( 5591.19, 1283.72 )
 scale = Vector2( 3.07375, 1.69392 )
 z_index = 2
 frames = SubResource( 2 )
-frame = 2
+frame = 10
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -394,6 +412,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="code" type="Area2D" parent="."]
+script = ExtResource( 27 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="code"]
+position = Vector2( 329.008, 1051 )
+scale = Vector2( 0.729212, 0.76306 )
+frames = SubResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="code"]
+position = Vector2( 326.334, 1120.12 )
+shape = SubResource( 11 )
+
+[node name="Label" type="Label" parent="code"]
+margin_left = 146.998
+margin_top = 726.168
+margin_right = 508.998
+margin_bottom = 826.168
+custom_fonts/font = SubResource( 12 )
+text = "Observe"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]
 [connection signal="body_exited" from="door" to="door" method="_on_door_body_exited"]
 [connection signal="body_entered" from="door2" to="door2" method="_on_door_body_entered"]
@@ -406,3 +447,5 @@ __meta__ = {
 [connection signal="body_exited" from="door6" to="door6" method="_on_door_body_exited"]
 [connection signal="body_entered" from="door3" to="door3" method="_on_door_body_entered"]
 [connection signal="body_exited" from="door3" to="door3" method="_on_door_body_exited"]
+[connection signal="body_entered" from="code" to="code" method="_on_code_body_entered"]
+[connection signal="body_exited" from="code" to="code" method="_on_code_body_exited"]
