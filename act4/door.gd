@@ -6,7 +6,7 @@ func _ready():
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
-		print("jsfhdjkhfald")
+		Transition.change_scene("res://act4/cutscene/deathlol.tscn")
 func _on_door_body_entered(body):
 	if body.name == "player":
 		$Label.show()
