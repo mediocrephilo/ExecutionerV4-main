@@ -5,8 +5,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_right = 3865.0
-margin_bottom = 2172.0
+margin_right = 3841.0
+margin_bottom = 2161.0
 stream = ExtResource( 1 )
 autoplay = true
 __meta__ = {
