@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneeleven/diary.PNG" type="Texture" id=1]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Act1/playerscenes/scenez11/diary3.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 90
@@ -12,6 +13,7 @@ size = 90
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1925.33, 1077.74 )
