@@ -21,15 +21,15 @@ texture = ExtResource( 1 )
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 624.0
 margin_top = 244.0
-margin_right = 1819.0
+margin_right = 1899.0
 margin_bottom = 1970.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Elphabolon, XX
-	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad. I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
+	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
 text = "Elphabolon, XX
-	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad. I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
+	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
 __meta__ = {
 "_edit_use_anchors_": false
 }
