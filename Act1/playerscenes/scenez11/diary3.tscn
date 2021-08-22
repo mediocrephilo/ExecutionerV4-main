@@ -57,12 +57,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 1616.58
+margin_left = 1335.76
 margin_top = 7.58957
-margin_right = 3104.58
+margin_right = 2823.76
 margin_bottom = 98.5896
 custom_fonts/font = SubResource( 3 )
-text = "(esc) to escape"
+text = "(esc) to escape, (f) to repent"
 __meta__ = {
 "_edit_use_anchors_": false
 }
