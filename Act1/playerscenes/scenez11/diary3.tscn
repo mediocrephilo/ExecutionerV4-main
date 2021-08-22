@@ -35,7 +35,7 @@ __meta__ = {
 }
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-margin_left = 2063.0
+margin_left = 2036.0
 margin_top = 274.0
 margin_right = 3165.0
 margin_bottom = 1940.0
@@ -43,9 +43,9 @@ custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Elphabon, XX
-	"
+	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
 text = "Elphabon, XX
-	"
+	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
 __meta__ = {
 "_edit_use_anchors_": false
 }
