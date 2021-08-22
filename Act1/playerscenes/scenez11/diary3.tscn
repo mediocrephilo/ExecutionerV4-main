@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneeleven/diary.PNG" type="Texture" id=1]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,10 @@ size = 90
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 90
 font_data = ExtResource( 2 )
 
@@ -48,6 +52,17 @@ bbcode_text = "Elphabon, XX
 	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
 text = "Elphabon, XX
 	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1616.58
+margin_top = 7.58957
+margin_right = 3104.58
+margin_bottom = 98.5896
+custom_fonts/font = SubResource( 3 )
+text = "(esc) to escape"
 __meta__ = {
 "_edit_use_anchors_": false
 }

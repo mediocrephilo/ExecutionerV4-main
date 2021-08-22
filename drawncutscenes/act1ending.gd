@@ -29,6 +29,8 @@ func _process(_delta):
 	#$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true:
 		load_dialogue()
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 11:
+		Transition.change_scene("res://Act1/playerscenes/scenez11/SceneEleven.tscn")
 		
 func load_dialogue():
 	$Sprite.show()
