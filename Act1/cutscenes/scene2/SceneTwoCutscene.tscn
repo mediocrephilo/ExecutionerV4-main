@@ -54,9 +54,9 @@ margin_bottom = 72.0001
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Poseidon, XXXX
+bbcode_text = "Posadion, XXXX
 	Today my teddy bear ran away. And it's all my fault. I left her box open this morning before I went to the jail, and when I came back she was gone. I tried closing it and locking it, but she still didn't come back. I hope she's okay out there. Maybe she found the others that ran away. She might be playing with them, all together like a tea party! I wonder where they went? Maybe one day I can go play with them too."
-text = "Poseidon, XXXX
+text = "Posadion, XXXX
 	Today my teddy bear ran away. And it's all my fault. I left her box open this morning before I went to the jail, and when I came back she was gone. I tried closing it and locking it, but she still didn't come back. I hope she's okay out there. Maybe she found the others that ran away. She might be playing with them, all together like a tea party! I wonder where they went? Maybe one day I can go play with them too."
 __meta__ = {
 "_edit_use_anchors_": true
