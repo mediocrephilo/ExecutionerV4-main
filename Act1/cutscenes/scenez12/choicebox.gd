@@ -25,8 +25,8 @@ var choice6 = [
 	"[center] IT WAS NICE TO SPEAK TO YOU AGAIN, POLLY"
 ]
 var choice7 = [
-	"[center] I DO REMEMBER",
-	"[center] I DON'T REMEMBER"
+	"[center] REALLY? THIS IS MY STORY, IS IT?",
+	"[center] EVEN IF THAT'S THE CASE . . . WHAT DO YOU WANT?"
 ]
 var choice8 = [
 	"[center] WHAT IS THAT SUPPOSED TO MEAN?",

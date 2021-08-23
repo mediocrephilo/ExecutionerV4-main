@@ -5,7 +5,7 @@ var dialogue = [
 ]
 
 var dialogue2 = [
-	"[center] maybe you can make me leave? [/center]"
+	"[center] maybe now you can make me leave? [/center]"
 ]
 
 var dialogue3 = [
