@@ -144,14 +144,14 @@ playing = true
 position = Vector2( 1991.53, 465.518 )
 scale = Vector2( 0.740516, 0.440623 )
 frames = SubResource( 2 )
-frame = 15
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 2039.91, 441.98 )
 scale = Vector2( 0.895117, 0.464839 )
 frames = SubResource( 3 )
-frame = 2
+frame = 11
 playing = true
 
 [node name="dialoguebox" type="Control" parent="."]
@@ -243,8 +243,16 @@ playing = true
 position = Vector2( 3207.63, 1875.15 )
 scale = Vector2( 0.291262, 0.272956 )
 frames = SubResource( 8 )
+frame = 3
 playing = true
 flip_v = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="choicebox"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 margin_right = 4023.0
@@ -257,11 +265,11 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
 anims/fade = SubResource( 9 )
-[connection signal="tween_completed" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_completed"]
 [connection signal="tween_completed" from="dialoguebox/hhhh" to="dialoguebox" method="_on_hhhh_tween_completed"]
-[connection signal="tween_started" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_started"]
+[connection signal="tween_completed" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_completed"]
 [connection signal="tween_started" from="dialoguebox/hhhh" to="." method="_on_hhhh_tween_started"]
-[connection signal="tween_completed" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_completed"]
+[connection signal="tween_started" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_started"]
 [connection signal="tween_completed" from="choicebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
-[connection signal="tween_started" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_started"]
+[connection signal="tween_completed" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_completed"]
 [connection signal="tween_started" from="choicebox/Tween" to="." method="_on_Tween_tween_started"]
+[connection signal="tween_started" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_started"]

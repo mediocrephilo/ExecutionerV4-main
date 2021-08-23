@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://drawncutscenes/cassy.jpeg" type="Texture" id=1]
 [ext_resource path="res://drawncutscenes/cassy3.jpeg" type="Texture" id=2]
@@ -42,14 +42,14 @@ animations = [ {
 "name": "2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "kalm",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "kalm",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -84,7 +84,7 @@ size = 100
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 90
+size = 80
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=6]
@@ -92,10 +92,6 @@ size = 80
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 80
-font_data = ExtResource( 12 )
-
-[sub_resource type="DynamicFont" id=10]
 size = 80
 font_data = ExtResource( 12 )
 
@@ -132,7 +128,6 @@ position = Vector2( 1900.28, 1909.67 )
 scale = Vector2( 1.35088, 1.3549 )
 frames = SubResource( 1 )
 animation = "happ"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Control"]
@@ -146,13 +141,14 @@ frame = 1
 position = Vector2( 2214.63, 446.539 )
 scale = Vector2( 1, 0.43358 )
 frames = SubResource( 2 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
 position = Vector2( 2277.92, 428.282 )
 scale = Vector2( 1.06687, 0.509848 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Type" type="AudioStreamPlayer" parent="Control"]
@@ -193,25 +189,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="choiceBox"]
-margin_left = 1926.73
-margin_top = 1772.46
-margin_right = 2227.73
-margin_bottom = 1938.46
-custom_fonts/normal_font = SubResource( 5 )
-bbcode_enabled = true
-bbcode_text = "or"
-text = "or"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="RichTextLabel2" type="RichTextLabel" parent="choiceBox"]
 margin_left = 897.0
 margin_top = 1887.36
 margin_right = 3057.0
 margin_bottom = 2090.36
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -222,7 +205,7 @@ margin_left = 897.0
 margin_top = 1679.3
 margin_right = 3083.0
 margin_bottom = 1860.3
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_lock_": true,
@@ -234,7 +217,7 @@ margin_left = 957.0
 margin_top = 1696.0
 margin_right = 2904.0
 margin_bottom = 1985.0
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 7 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -245,13 +228,13 @@ __meta__ = {
 position = Vector2( 3010.44, 1725.3 )
 scale = Vector2( 0.326183, 0.299013 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="choiceBox"]
 position = Vector2( 3013.16, 1937.22 )
 scale = Vector2( 0.309881, 0.342485 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 flip_v = true
 
@@ -261,8 +244,8 @@ flip_v = true
 
 [node name="aks" type="Tween" parent="choiceBox"]
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
-[connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
 [connection signal="tween_started" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_started"]
 [connection signal="tween_completed" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_completed"]
 [connection signal="tween_started" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_started"]

@@ -77,7 +77,6 @@ func load_dialogue2(choicenumber):
 	$TextureRect.show()
 	$RichTextLabel.hide()
 	$RichTextLabel2.hide()
-	$RichTextLabel3.hide()
 	$type.play()
 	finished = false
 	$RichTextLabel4.bbcode_text = choicenumber[0]
@@ -88,7 +87,6 @@ func load_dialogue2(choicenumber):
 	)
 	$aks.start()
 	$RichTextLabel2.hide()
-	$RichTextLabel3.hide()
 	$AnimatedSprite4.hide()
 	
 func _on_hhh_tween_completed(_object, _key):
@@ -96,7 +94,6 @@ func _on_hhh_tween_completed(_object, _key):
 	$type.stop()
 	$AnimatedSprite3.show()
 	$AnimatedSprite4.show()
-	$RichTextLabel3.show()
 
 
 func _on_Tween_tween_started(_object, _key):
@@ -104,7 +101,6 @@ func _on_Tween_tween_started(_object, _key):
 	$RichTextLabel2.hide()
 	$AnimatedSprite3.hide()
 	$AnimatedSprite4.hide()
-	$RichTextLabel3.hide()
 	$TextureRect.hide()
 	$RichTextLabel4.hide()
 	finished = false

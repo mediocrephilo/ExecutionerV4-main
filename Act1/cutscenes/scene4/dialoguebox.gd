@@ -1,16 +1,16 @@
 extends Control
 
 var dialogue = [
-	"[center] i am still here!",
+	"[center] three little bunnies sitting in a square",
 ]
 
 var dialogue2 = [
-	"[center] maybe you can make me leave?"
+	"[center] one was gobbled up by a bear!"
 ]
 
 var dialogue3 = [
-	"[center] i don't know either. i hate you, i hate you!",
-	"[center] hmmm . . . but aren't we in your mind?",
+	"[center] you tell me! hehe!",
+	"[center] it's a game! don't you remember? we used to play it all the time!",
 ]
 
 var dialogue4 = [

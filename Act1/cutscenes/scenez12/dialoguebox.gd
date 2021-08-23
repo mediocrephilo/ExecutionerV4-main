@@ -1,21 +1,21 @@
 extends Control
 
 var dialogue = [
-	"[center] three little bunnies sitting in a square",
+	"[center] i am still here! [/center]",
 ]
 
 var dialogue2 = [
-	"[center] one was gobbled up by a bear!"
+	"[center] maybe you can make me leave? [/center]"
 ]
 
 var dialogue3 = [
-	"[center] you tell me! hehe!",
-	"[center] it's a game! don't you remember? we used to play it all the time!",
+	"[center] that is so rude! you were always so mean . . . i hate you! [/center]",
+	"[center] hmmm . . . but i'm in your story, aren't i? [/center]",
 ]
 
 var dialogue4 = [
 	"[center] well that's just rude. i was real! no thanks to you.",
-	"[center] and who's fault is that?",
+	"[center] but i guess, since you still remember me, i don't hate you as much. [/center]",
 ]
 
 var dialogue5 = [

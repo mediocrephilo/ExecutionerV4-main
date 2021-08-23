@@ -1,16 +1,16 @@
 extends Control
 
 var choice = [
-	"[center] . . . WHERE AM I NOW?",
-	"[center] HELLO AGAIN, POLLY"
+	"[center] I DIDN'T FORGET YOU",
+	"[center] WHY DO I KEEP SEEING YOU?"
 ]
 var choice2 = [
-	"[center] . . . ARE YOU REAL?",
-	"[center] WHAT IS . . . ALL THIS?"
+	"[center] TRUST ME. IF I KNEW HOW, I WOULD",
+	"[center] I THINK ONLY YOU CAN DO THAT"
 ]
 var choice3 = [
-	"[center] YOU'RE NOT REAL",
-	"[center] YOU WERE REAL"
+	"[center] . . . ",
+	"[center] I GUESS I DESERVED THAT"
 ]
 var choice4 = [
 	"[center] WHAT DO YOU WANT?",
