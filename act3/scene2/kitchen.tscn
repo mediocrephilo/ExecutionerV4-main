@@ -27,6 +27,11 @@ extents = Vector2( 173.753, 1948.1 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "idle",
@@ -40,11 +45,6 @@ animations = [ {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "walk",
 "speed": 5.0
 } ]
 
@@ -208,7 +208,7 @@ speed_scale = 1.75
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2( 0, -18.8678 )
+position = Vector2( 0, -19.184 )
 shape = SubResource( 4 )
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]

@@ -17,14 +17,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "1",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
@@ -91,6 +91,7 @@ __meta__ = {
 position = Vector2( 1932.8, 1042.72 )
 scale = Vector2( 1.03311, 1.16752 )
 frames = SubResource( 3 )
+frame = 1
 speed_scale = 0.25
 playing = true
 flip_h = true

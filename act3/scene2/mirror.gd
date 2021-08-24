@@ -10,8 +10,10 @@ func _on_mirror_body_entered(body):
 	if body.name == "player":
 		canInteract = true
 		$AnimatedSprite.play("default")
+		$Label.show()
 
 func _on_mirror_body_exited(body):
 	if body.name == "player":
 		$AnimatedSprite.stop()
 		canInteract = false
+		$Label.hide()

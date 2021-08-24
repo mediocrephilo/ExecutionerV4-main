@@ -61,6 +61,7 @@ position = Vector2( 955.78, 1680.49 )
 shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="tub"]
+visible = false
 margin_left = 631.64
 margin_top = 1059.52
 margin_right = 945.64
@@ -140,6 +141,8 @@ margin_bottom = 40.0
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="dialoguebox"]
+
+[node name="Area2D" type="Area2D" parent="."]
 
 [connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
 [connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]

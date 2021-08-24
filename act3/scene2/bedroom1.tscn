@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://sprites/act3settings/bed.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://sprites/act3settings/switch1.png" type="Texture" id=12]
 [ext_resource path="res://act3/scene2/booksymbol.gd" type="Script" id=13]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=14]
-[ext_resource path="res://act3/scene2/desk.gd" type="Script" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -94,7 +93,6 @@ texture = ExtResource( 6 )
 
 [node name="desk" type="Area2D" parent="."]
 z_index = -1
-script = ExtResource( 15 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="desk"]
 position = Vector2( 3376.41, 1671.4 )
@@ -110,6 +108,7 @@ position = Vector2( 3132.44, 1619.72 )
 shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="desk"]
+visible = false
 margin_left = 3060.22
 margin_top = 1148.75
 margin_right = 3418.22

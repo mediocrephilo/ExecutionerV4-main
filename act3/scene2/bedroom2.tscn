@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act3settings/switch2.png" type="Texture" id=2]
 [ext_resource path="res://sprites/act3settings/window.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Act1settings/scenetwo/book.png" type="Texture" id=4]
 [ext_resource path="res://act3/scene2/desk.gd" type="Script" id=5]
-[ext_resource path="res://act3/scene2/booksymbol.gd" type="Script" id=6]
 [ext_resource path="res://sprites/act3settings/shelf2.png" type="Texture" id=7]
 [ext_resource path="res://sprites/act3settings/homewall.png" type="Texture" id=8]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=9]
@@ -145,7 +144,6 @@ position = Vector2( -1240.77, -704.219 )
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = -1
-script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
 position = Vector2( 726.715, 1354.41 )
@@ -157,6 +155,7 @@ position = Vector2( 695.428, 1517.4 )
 shape = SubResource( 2 )
 
 [node name="Label2" type="Label" parent="Area2D"]
+visible = false
 margin_left = 516.239
 margin_top = 1083.64
 margin_right = 874.239
