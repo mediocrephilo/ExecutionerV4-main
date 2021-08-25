@@ -1466,6 +1466,7 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D12/PathFollow2D/skull12"]
 position = Vector2( 94.9885, 24.0942 )
 shape = SubResource( 51 )
+
 [connection signal="body_entered" from="pick/Area2D" to="pick" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="pick/Area2D" to="pick" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="portal" to="portal" method="_on_portal_body_entered"]
