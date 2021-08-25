@@ -26,7 +26,7 @@
 [ext_resource path="res://act3/scene3/Path2D7.gd" type="Script" id=24]
 [ext_resource path="res://act3/scene3/Path2D9.gd" type="Script" id=25]
 [ext_resource path="res://act3/scene3/pick.gd" type="Script" id=26]
-[ext_resource path="res://act3/scene3/portal.gd" type="Script" id=27]
+[ext_resource path="res://act3/scene3/portal2.gd" type="Script" id=27]
 [ext_resource path="res://sprites/act3settings/scene2/tank.png" type="Texture" id=28]
 [ext_resource path="res://act3/scene3/skull1.gd" type="Script" id=29]
 [ext_resource path="res://act3/scene3/skull12.gd" type="Script" id=30]
@@ -1463,6 +1463,7 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D12/PathFollow2D/skull12"]
 position = Vector2( 94.9885, 24.0942 )
 shape = SubResource( 51 )
+
 [connection signal="body_entered" from="pick/Area2D" to="pick" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="pick/Area2D" to="pick" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="portal" to="portal" method="_on_portal_body_entered"]

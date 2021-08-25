@@ -43,8 +43,9 @@ func _process(_delta):
 			load_bluedialogue()
 		if dialogue_index == 4 and dialogue_index3 == 1:
 			load_dialogue()
-	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 6:
-		#Transition
+		if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 5:
+			Transition.change_scene("res://act3/scene3/normal2.tscn")
+
 		
 func load_dialogue():
 	$Sprite.show()
@@ -138,3 +139,6 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$Type.stop()
 	dialogue_index +=1
+	
+
+

@@ -39,6 +39,8 @@ func _process(_delta):
 			load_dialogue()
 		if dialogue_index == 2 and dialogue_index3 == 3:
 			load_dialogue()
+	if dialogue_index == 3 and dialogue_index3 == 3 and Input.is_action_just_pressed("ui_accept"):
+		Transition.change_scene("res://act3/scene3/normal4.tscn")
 		
 func load_dialogue():
 	$Sprite.show()
@@ -86,5 +88,3 @@ func _on_Tween_tween_completed(_object, _key):
 	dialogue_index +=1
 
 
-func _on_Control_tree_exited():
-	print("adsfdgf")

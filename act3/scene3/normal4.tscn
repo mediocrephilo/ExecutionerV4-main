@@ -1,17 +1,18 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=1]
+[ext_resource path="res://act3/scene3/girl2.gd" type="Script" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sprites/act3settings/scene2/factory２.png" type="Texture" id=3]
-[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act3settings/scene2/factory２.png" type="Texture" id=4]
 [ext_resource path="res://sprites/act3settings/scene2/factory３.png" type="Texture" id=5]
-[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=6]
-[ext_resource path="res://act3/scene3/girl1.gd" type="Script" id=7]
+[ext_resource path="res://sprites/act3settings/scene2/skull.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=7]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -40,21 +41,39 @@ font_data = ExtResource( 8 )
 position = Vector2( 1943.7, 1034.96 )
 scale = Vector2( 1.071, 1.10752 )
 frames = SubResource( 1 )
-frame = 8
+frame = 19
 playing = true
 
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 634.705, 1488.11 )
+scale = Vector2( 2.34861, 2.5249 )
+texture = ExtResource( 6 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 1674, 1512 )
+scale = Vector2( 2.34861, 2.5249 )
+texture = ExtResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 2478.48, 1505.48 )
+scale = Vector2( 2.34861, 2.5249 )
+texture = ExtResource( 6 )
+
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 256.311, 1788.09 )
+visible = false
+position = Vector2( 255.548, 1788.09 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1689.86, 202.949 )
+visible = false
+position = Vector2( 2433.59, 232.23 )
 scale = Vector2( 1.84493, 1.10147 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1962.69, 1020.39 )
 scale = Vector2( 0.540548, 1.10341 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 1943.7, 1034.96 )
@@ -77,17 +96,17 @@ position = Vector2( 732.455, 2327.44 )
 shape = SubResource( 3 )
 
 [node name="chest" type="Area2D" parent="."]
-script = ExtResource( 7 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chest"]
-position = Vector2( 741.858, 1804.76 )
+position = Vector2( 3352.6, 1799.31 )
 shape = SubResource( 4 )
 
 [node name="Label" type="Label" parent="chest"]
-margin_left = 556.139
-margin_top = 1121.65
-margin_right = 817.139
-margin_bottom = 1221.65
+margin_left = 3249.36
+margin_top = 1151.56
+margin_right = 3510.36
+margin_bottom = 1251.56
 custom_fonts/font = SubResource( 5 )
 text = "Talk"
 __meta__ = {
@@ -106,7 +125,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="chest/dialoguebox"]
 position = Vector2( 1910.56, 512.398 )
 scale = Vector2( 1.5603, 1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="chest/dialoguebox"]
 margin_left = 878.0

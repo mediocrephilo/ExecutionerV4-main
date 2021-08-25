@@ -1,18 +1,32 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Act1/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Act1settings/sceneone/background.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Act1settings/sceneone/middle tree.png" type="Texture" id=6]
 [ext_resource path="res://sprites/act3settings/scene2/grassbg.png" type="Texture" id=7]
+[ext_resource path="res://act3/scene3/elf.gd" type="Script" id=8]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=9]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 168.384, 1082.22 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5125.97, 144.018 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 757.448, 986.603 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -36,14 +50,7 @@ scale = Vector2( 1.37127, 1.04693 )
 texture = ExtResource( 7 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 659.395, 1437.7 )
-
-[node name="Camera2D2" type="Camera2D" parent="player"]
-current = true
-limit_left = 0
-limit_top = 0
-limit_right = 7680
-limit_bottom = 2160
+position = Vector2( 483.183, 1501.58 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 3726.7, 1151.34 )
@@ -62,9 +69,60 @@ position = Vector2( 0, 1037.74 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 7708.25, 1080.97 )
+position = Vector2( 6827.37, 1263.09 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 5078.27, 2002.7 )
 shape = SubResource( 2 )
+
+[node name="chest" type="Area2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chest"]
+position = Vector2( 7334.6, 986.132 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="chest"]
+margin_left = 6934.79
+margin_top = 273.556
+margin_right = 7165.79
+margin_bottom = 373.556
+custom_fonts/font = SubResource( 4 )
+text = "interact"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialoguebox" type="Control" parent="chest"]
+margin_left = -115.0
+margin_top = 227.0
+margin_right = 2516.0
+margin_bottom = 694.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type2" type="AudioStreamPlayer" parent="chest/dialoguebox"]
+
+[node name="Sprite" type="Sprite" parent="chest/dialoguebox"]
+position = Vector2( 6319.28, 1545.81 )
+scale = Vector2( 1.50024, 1.07076 )
+texture = ExtResource( 9 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="chest/dialoguebox"]
+margin_left = 5315.0
+margin_top = 1370.0
+margin_right = 7165.0
+margin_bottom = 1724.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="chest/dialoguebox"]
+
+[connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
+[connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
+[connection signal="tween_completed" from="chest/dialoguebox/Tween" to="chest" method="_on_Tween_tween_completed"]

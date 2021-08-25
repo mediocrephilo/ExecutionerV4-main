@@ -1,7 +1,7 @@
 extends Control
 
 var dialogue = [
-		"",
+	
 		"Why did it leave in the first place if it liked its nest so much?",
 		"And whatever happened to the tree?",
 		"But maybe I've remembered incorrectly. I mean, it's been . . . some time since we read it.",
@@ -30,18 +30,18 @@ func _ready():
 func _process(_delta):
 	#$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true:
-		if dialogue_index < 5:
+		if dialogue_index < 4:
 			load_dialogue()
-		if dialogue_index == 5 and dialogue_index1 == 0:
+		if dialogue_index == 4 and dialogue_index1 == 0:
 			load_reddialogue()
-		if dialogue_index == 5 and dialogue_index3 == 0 and dialogue_index1 == 1:
+		if dialogue_index == 4 and dialogue_index3 == 0 and dialogue_index1 == 1:
 			load_dialogue()
-		if dialogue_index == 6 and dialogue_index3 == 0:
+		if dialogue_index == 5 and dialogue_index3 == 0:
 			load_bluedialogue()
-		if dialogue_index >= 6 and dialogue_index3 == 1:
+		if dialogue_index >= 5 and dialogue_index3 == 1:
 			load_dialogue()
-	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 6:
-		#Transition
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 7:
+		Transition.change_scene("res://act3/scene3/normal3.tscn")
 		
 func load_dialogue():
 	$Sprite.show()
