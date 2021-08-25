@@ -69,7 +69,7 @@ playing = true
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 1887.61, 1069.64 )
 frames = SubResource( 2 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="Control" type="Control" parent="."]

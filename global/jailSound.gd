@@ -11,7 +11,8 @@ export var transition_type = 1 # TRANS_SINE
 
 # Called when the node enters the scene tree for the first time.
 func playsound():
-	$AudioStreamPlayer.play()
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
 	
 func stopsound():
 	$AudioStreamPlayer.stop()

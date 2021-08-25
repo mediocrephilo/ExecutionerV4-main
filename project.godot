@@ -41,11 +41,12 @@ config/icon="res://icon.png"
 GameOver="*res://global/gameover/gameOver.gd"
 ForestSound="*res://global/ForestSound.tscn"
 HorrorSound="*res://global/HorrorSound.tscn"
-JailSound="*res://global/JailSound.gd"
 SewerSound="*res://global/SewerSound.tscn"
 Transition="*res://transition/Transition.tscn"
 Steer="*res://steer.gd"
 Exit="*res://global/menu/exit.tscn"
+FactorySound="*res://global/FactorySound.tscn"
+JailSound="*res://global/JailSound.tscn"
 
 [display]
 
