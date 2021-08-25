@@ -5,13 +5,10 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-func _ready():
-	#JailSound.playsound()
-	ForestSound.playsound()
 
 # Called when the node enters the scene tree for the first time.
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("one"):
 		Transition.change_scene("res://Act1/playerscenes/scenez11/bed.tscn")
 	if Input.is_action_just_pressed("two"):
