@@ -3,7 +3,6 @@
 [ext_resource path="res://sounds/Forest-ambience.wav" type="AudioStream" id=1]
 [ext_resource path="res://global/ForestSound.gd" type="Script" id=2]
 
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 

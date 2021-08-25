@@ -508,7 +508,6 @@ shape = SubResource( 13 )
 position = Vector2( 3657.56, 1406.76 )
 z_index = 2
 frames = SubResource( 14 )
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -542,7 +541,7 @@ __meta__ = {
 position = Vector2( 14213.6, 1145.56 )
 z_index = -1
 frames = SubResource( 16 )
-frame = 2
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -634,10 +633,10 @@ autoplay = "New Anim"
 stream = ExtResource( 30 )
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Area2D3" to="ParallaxBackground/ParallaxLayer/dialoguebox" method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]
-[connection signal="body_exited" from="Area2D3" to="ParallaxBackground/ParallaxLayer/dialoguebox" method="_on_Area2D3_body_exited"]
+[connection signal="body_entered" from="Area2D3" to="ParallaxBackground/ParallaxLayer/dialoguebox" method="_on_Area2D3_body_entered"]
 [connection signal="body_exited" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_exited"]
+[connection signal="body_exited" from="Area2D3" to="ParallaxBackground/ParallaxLayer/dialoguebox" method="_on_Area2D3_body_exited"]
 [connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D4_body_entered"]
 [connection signal="body_exited" from="Area2D4" to="Area2D4" method="_on_Area2D4_body_exited"]
 [connection signal="tree_exited" from="ParallaxBackground/ParallaxLayer/dialoguebox" to="player" method="_on_dialoguebox_tree_exited"]

@@ -5,6 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+func _ready():
+		JailSound.playsound()
 
 # Called when the node enters the scene tree for the first time.
 # Called every frame. 'delta' is the elapsed time since the previous frame.
