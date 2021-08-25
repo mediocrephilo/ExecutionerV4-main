@@ -43,6 +43,7 @@ ForestSound="*res://global/ForestSound.tscn"
 HorrorSound="*res://global/HorrorSound.tscn"
 Transition="*res://transition/Transition.tscn"
 SewerSound="*res://global/SewerSound.tscn"
+JailSound="*res://global/JailSound.gd"
 Steer="*res://steer.gd"
 Exit="*res://global/menu/exit.tscn"
 
