@@ -1,7 +1,8 @@
 extends Area2D
 
+
 var dialogue = [
-		"EWW... IT'S CLOGGED ..."
+		"IT'S TOO DARK TO SEE ANYTHING"
 ]
 var dialogue_index = 0
 var number = 0
@@ -10,12 +11,12 @@ var canInteract = false
 func _ready():
 	$dialoguebox.hide()
 	$Label.hide()
-func _on_tub_body_entered(body):
+func _on_chest_body_entered(body):
 	if body.name == "player" and number == 0:
 		canInteract = true
 		$Label.show()
 		$AnimatedSprite.play("default")
-func _on_tub_body_exited(body):
+func _on_chest_body_exited(body):
 	if body.name == "player":
 		canInteract = false
 		$Label.hide()
@@ -42,4 +43,3 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	if number == 0:
 		$dialoguebox/Type2.stop()
-		Transition.change_scene("act3/scene2/unplug.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/act3settings/cracked1.png" type="Texture" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://act3/scene2/tu b.gd" type="Script" id=8]
 [ext_resource path="res://act3/scene2/mirrordialogue.gd" type="Script" id=9]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,13 +26,17 @@ extents = Vector2( 716.07, 448.444 )
 size = 100
 font_data = ExtResource( 7 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 158.614, 817.351 )
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 158.614, 817.351 )
+
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 1920.49, 97.445 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -39,7 +44,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 211.315, 333.764 )
 
 [node name="Node2D" type="Node2D"]
@@ -73,19 +78,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="dialoguebox" type="Control" parent="tub"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type2" type="AudioStreamPlayer" parent="tub/dialoguebox"]
+
+[node name="Sprite" type="Sprite" parent="tub/dialoguebox"]
+position = Vector2( 1191.11, 782.471 )
+scale = Vector2( 1, 0.788591 )
+texture = ExtResource( 10 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tub/dialoguebox"]
+margin_left = 548.944
+margin_top = 655.008
+margin_right = 1756.94
+margin_bottom = 901.008
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="tub/dialoguebox"]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 47.3621, 1269.31 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3741.62, 1278.78 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1875.54, 2018.21 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3417.64, 1601.34 )
@@ -95,11 +127,11 @@ z_index = -1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="mirror"]
 position = Vector2( 1908.68, 1079.36 )
-frames = SubResource( 6 )
+frames = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
 position = Vector2( 2508.89, 1584.83 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1930.04, 983.001 )
@@ -144,4 +176,5 @@ margin_bottom = 40.0
 
 [connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
 [connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]
+[connection signal="tween_completed" from="tub/dialoguebox/Tween" to="tub" method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
