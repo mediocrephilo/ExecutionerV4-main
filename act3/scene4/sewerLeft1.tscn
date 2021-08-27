@@ -133,6 +133,7 @@ shape = SubResource( 5 )
 position = Vector2( -2900.83, 1594.73 )
 scale = Vector2( 3.3177, 1.03371 )
 frames = SubResource( 6 )
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -183,6 +184,7 @@ bbcode_enabled = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

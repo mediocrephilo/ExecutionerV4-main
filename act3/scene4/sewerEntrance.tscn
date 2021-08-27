@@ -131,7 +131,7 @@ position = Vector2( 3284.66, 894.928 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ParallaxLayer/ladder"]
-position = Vector2( 3159.9, 840.549 )
+position = Vector2( 3159.9, 842.549 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -149,7 +149,6 @@ position = Vector2( 7781.36, 1174.99 )
 shape = SubResource( 4 )
 
 [node name="sewerWater" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 z_index = 10
@@ -226,8 +225,7 @@ __meta__ = {
 stream = ExtResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 4441.65, 1069.32 )
+position = Vector2( 4446.62, 1069.32 )
 scale = Vector2( 2.69158, 1 )
 texture = ExtResource( 14 )
 

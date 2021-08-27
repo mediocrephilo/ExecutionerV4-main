@@ -905,5 +905,6 @@ texture = ExtResource( 7 )
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 1933.59, 413.879 )
 texture = ExtResource( 7 )
+
 [connection signal="body_entered" from="ghost" to="ghost" method="_on_ghost_body_entered"]
 [connection signal="body_exited" from="ghost" to="ghost" method="_on_ghost_body_exited"]
