@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=1]
 [ext_resource path="res://act3/scene5/player2.gd" type="Script" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=29]
 [ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=30]
 [ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=31]
+[ext_resource path="res://act3/scene5/exit1.gd" type="Script" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 487.299, 71.4017 )
@@ -44,37 +45,37 @@ extents = Vector2( 2769.62, 82.4541 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 2740.21, 178.064 )
 
+[sub_resource type="Curve2D" id=7]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1514.77, 388.027, 0, 0, 0, 0, 1454.7, 388.027, 0, 0, 0, 0, -1509.45, 388.027 )
+}
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=6]
 radius = 59.3335
 height = 158.321
-
-[sub_resource type="Curve2D" id=7]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -1514.77, 388.027, 0, 0, 0, 0, 1454.7, 388.027, 0, 0, 0, 0, -1509.45, 388.027 )
-}
 
 [sub_resource type="Curve2D" id=8]
 _data = {
@@ -88,6 +89,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 1302.74, 2983.01 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 544.175, 1859.87 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -241,27 +245,6 @@ flip_v = true
 position = Vector2( 1481.21, 2177.68 )
 shape = SubResource( 4 )
 
-[node name="player2" type="KinematicBody2D" parent="."]
-position = Vector2( 2185.09, 1734.01 )
-scale = Vector2( 1, 1 )
-script = ExtResource( 2 )
-
-[node name="playerSprite" type="AnimatedSprite" parent="player2"]
-position = Vector2( -60.2664, 22.6635 )
-scale = Vector2( 0.529125, 0.499879 )
-frames = SubResource( 5 )
-animation = "walk"
-frame = 5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
-position = Vector2( -68.1951, 19.7629 )
-shape = SubResource( 6 )
-
-[node name="Camera2D" type="Camera2D" parent="player2"]
-current = true
-
-[node name="Walk" type="AudioStreamPlayer2D" parent="player2"]
-
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 7 )
 script = ExtResource( 10 )
@@ -287,6 +270,30 @@ position = Vector2( 571.878, -3414.55 )
 scale = Vector2( 1, 1.55637 )
 z_index = -1
 texture = ExtResource( 8 )
+
+[node name="player2" type="KinematicBody2D" parent="."]
+position = Vector2( 2185.09, 1734.01 )
+script = ExtResource( 2 )
+
+[node name="playerSprite" type="AnimatedSprite" parent="player2"]
+position = Vector2( -60.2664, 22.6635 )
+scale = Vector2( 0.529125, 0.499879 )
+frames = SubResource( 5 )
+animation = "walk"
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+position = Vector2( -68.1951, 19.7629 )
+shape = SubResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="player2"]
+current = true
+limit_left = -1000
+limit_top = -10900
+limit_right = 6000
+limit_bottom = 2160
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="player2"]
 
 [node name="KinematicBody2D2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1859.54, 1356.03 )
@@ -445,5 +452,13 @@ position = Vector2( 3420.39, 1217 )
 [node name="KinematicBody2D11" parent="." instance=ExtResource( 20 )]
 position = Vector2( 6692.58, -2206.57 )
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 32 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 7049.85, -10184.6 )
+shape = SubResource( 11 )
+
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D2" to="bigboi/PathFollow2D/Area2D2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
