@@ -50,33 +50,33 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 494.057, 524.355 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 353.1, 1798.32 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 2103.66, 168.596 )
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 21 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=10]
 radius = 94.6017
 height = 537.264
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 18 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": true,
@@ -146,21 +146,21 @@ frames = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
 position = Vector2( 3039.76, 1434.23 )
-shape = SubResource( 11 )
+shape = SubResource( 6 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -91.7897, 609.745 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3992.85, 622.858 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 2189.84, 2170.17 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 481.337, 1608.85 )
@@ -170,13 +170,13 @@ __meta__ = {
 }
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
-frames = SubResource( 8 )
+frames = SubResource( 9 )
 animation = "walk"
 speed_scale = 1.25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( -19.3021, 78.107 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 limit_left = 0
@@ -187,11 +187,10 @@ limit_bottom = 2160
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 2523.11, 867.674 )
 scale = Vector2( 1.57678, 1.42284 )
-frames = SubResource( 10 )
-frame = 8
+frames = SubResource( 11 )
+frame = 7
 playing = true
 
 [connection signal="body_entered" from="door2" to="door2" method="_on_door2_body_entered"]
