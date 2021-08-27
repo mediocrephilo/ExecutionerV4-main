@@ -137,7 +137,7 @@ position = Vector2( 7296.95, 1488.43 )
 position = Vector2( 7033.75, 1532.11 )
 scale = Vector2( 3.43735, 1.08666 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -185,4 +185,5 @@ margin_bottom = 588.0
 [node name="continuesprite" type="Sprite" parent="dialoguebox"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
