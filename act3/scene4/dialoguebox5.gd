@@ -7,6 +7,7 @@ extends Control
 
 
 var dialogue = [
+		". . . Oh dear. This one's a long one. Then I'll begin - pay attention.",
 		"''The two visitors had never seen such brightness before, and they could not look at it directly, for fear of being burnt.''",
 		"''Suddenly, a thought came to them: 'If the light is so bright from far away . . . our son must be in incredible pain on the surface!'''",
 		"''Thus, the parents brought out their tubes of still-water, and poured them out onto the flames, in the hopes that they would subside.''",

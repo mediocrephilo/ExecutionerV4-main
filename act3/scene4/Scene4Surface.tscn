@@ -211,7 +211,7 @@ flip_v = true
 position = Vector2( 6829.6, 1042.93 )
 z_index = -1
 frames = SubResource( 9 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
