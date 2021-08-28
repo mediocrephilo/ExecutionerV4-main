@@ -4,7 +4,8 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
-		"They permit smart men to live and useful men to work. As we are neither, there lie ahead only two paths:",
+		"They permit smart men to live and useful men to work.", 
+		"As we are neither, there lie ahead only two paths:",
 		"We may die, or we may fight, and I, for one, am too cowardly to die.",
 		". . . Here is my ultimatum.",
 		"We gather here today as traitors, as enemies of the state.",
