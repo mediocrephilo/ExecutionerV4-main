@@ -7,8 +7,14 @@ extends Control
 
 
 var dialogue = [
-		"Next . . .",
-		"''The bird ... left ''"
+		"''The two visitors had never seen such brightness before, and they could not look at it directly, for fear of being burnt.''",
+		"''Suddenly, a thought came to them: 'If the light is so bright from far away . . . our son must be in incredible pain on the surface!'''",
+		"''Thus, the parents brought out their tubes of still-water, and poured them out onto the flames, in the hopes that they would subside.''",
+		"''However, the bird on the surface, with his flaming talons that allowed him to see, knew nothing of this.''",
+		"''The droplets fell and fell, and scattered all about the star's surface. However, the flames were too strong, and continued to burn with passion.''",
+		"''But the bird, standing, waiting for his parents' arrival, was not so lucky to espcape the downpour.''",
+		"''The still-water rained down and quenched his talons, exposing him for the first time to the cold whiteness around him.''",
+		"''He screamed, eyes burning, feathers turning into ash. He burned and burned until there was nothing Left but dust.''",
 ]
 var dialogue_index = 0
 var finished = false

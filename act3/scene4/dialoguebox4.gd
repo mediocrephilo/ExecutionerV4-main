@@ -7,8 +7,11 @@ extends Control
 
 
 var dialogue = [
-		"Next . . .",
-		"''The bird ... right ''"
+		"''The took some moss and some dried mole meat, and carved small tubes to carry water for the journey.''",
+		"''The star appeared as a bright speck in the mouth of their cave, and they set their path and began to fly.''",
+		"''They flew and flew, but the speck never grew brighter, and their wings soon began to tire.''",
+		"''However, Right as the pair were about to give up and return home, a bright, piercing glow blinded their eyes,''",
+		"''and when their vision cleared, a ball of fire hung before them.''",
 ]
 var dialogue_index = 0
 var finished = false

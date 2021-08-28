@@ -8,7 +8,9 @@ extends Control
 
 var dialogue = [
 		"Hmm . . . so there is some hidden meaning in this text. I'll continue reading then.",
-		"''Every day the bird would ''"
+		"''The bird was happy, even though he was lonely.''",
+		"''There was no one else on his little star: the heat had long burned away the trees and grass and other animals on the surface.''",
+		"''On the entire star, there was no one Left but him.''",
 ]
 var dialogue_index = 0
 var finished = false

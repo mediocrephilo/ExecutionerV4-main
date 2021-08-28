@@ -7,7 +7,9 @@ extends Control
 
 
 var dialogue = [
-		"''right''"
+		"''He was so lonely that one day, he sent a message to his family, still living in their old, dark cavern.''",
+		"''Mother, Father, he wrote. 'I have been on this star since early Tagelion. Why don't you pay me a visit?'''",
+		"''Overjoyed at the message, his parents began planning for their trip Right away.''",
 ]
 var dialogue_index = 0
 var finished = false
