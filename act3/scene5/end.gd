@@ -11,7 +11,7 @@ func _input(event):
 		print("sasdjfh")
 
 func _on_end_body_entered(body):
-	if body.name == "player":
+	if body.name == "player2":
 		$Label.show()
 		$AnimatedSprite.play("default")
 		canInteract = true
@@ -19,7 +19,7 @@ func _on_end_body_entered(body):
 
 
 func _on_end_body_exited(body):
-		if body.name == "player":
+		if body.name == "player2":
 			$Label.hide()
 			canInteract = false
 			$AnimatedSprite.stop()

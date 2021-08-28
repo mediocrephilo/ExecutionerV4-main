@@ -37,24 +37,24 @@ extents = Vector2( 2740.21, 178.064 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -98,8 +98,22 @@ z_index = -3
 texture = ExtResource( 18 )
 flip_h = true
 
+[node name="sky5" type="Sprite" parent="Sprite"]
+position = Vector2( -8654.86, -7571.22 )
+scale = Vector2( 1.63524, 2.06295 )
+z_index = -3
+texture = ExtResource( 18 )
+flip_h = true
+
 [node name="sky4" type="Sprite" parent="Sprite"]
 position = Vector2( 2055.1, -11666 )
+scale = Vector2( 1.55598, 3.16144 )
+z_index = -3
+texture = ExtResource( 18 )
+flip_h = true
+
+[node name="sky6" type="Sprite" parent="Sprite"]
+position = Vector2( -8339.96, -12437.8 )
 scale = Vector2( 1.55598, 3.16144 )
 z_index = -3
 texture = ExtResource( 18 )
@@ -137,6 +151,14 @@ flip_h = true
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
 position = Vector2( 2655.62, -7022.46 )
+scale = Vector2( 6.63699, 3.27211 )
+z_index = 30
+texture = ExtResource( 16 )
+
+[node name="fog3" type="Sprite" parent="Sprite"]
+modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
+self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
+position = Vector2( -7631.92, -10986.8 )
 scale = Vector2( 6.63699, 3.27211 )
 z_index = 30
 texture = ExtResource( 16 )
@@ -209,6 +231,10 @@ shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="player2"]
 current = true
+limit_left = -6000
+limit_top = -10900
+limit_right = 7000
+limit_bottom = 2160
 
 [node name="Walk" type="AudioStreamPlayer" parent="player2"]
 
@@ -338,6 +364,31 @@ position = Vector2( 542.952, 372.976 )
 rotation = -3.24282
 shape = SubResource( 8 )
 
+[node name="Area2D3" type="Area2D" parent="bigboi/PathFollow2D"]
+position = Vector2( -3489.46, -6838.26 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="bigboi/PathFollow2D/Area2D3"]
+position = Vector2( 326.867, -876.082 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="bigboi/PathFollow2D/Area2D3"]
+position = Vector2( 543.988, 1347.04 )
+rotation = 1.48702
+scale = Vector2( 4.31505, 2.95334 )
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigboi/PathFollow2D/Area2D3"]
+position = Vector2( 542.952, 372.976 )
+rotation = -3.24282
+shape = SubResource( 8 )
+
 [node name="KinematicBody2D8" parent="." instance=ExtResource( 20 )]
 position = Vector2( 2883.62, 1623.06 )
 
@@ -349,3 +400,4 @@ position = Vector2( -9522.88, 666.375 )
 
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D2" to="bigboi/PathFollow2D/Area2D2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="bigboi/PathFollow2D/Area2D3" to="bigboi/PathFollow2D/Area2D3" method="_on_Area2D_body_entered"]

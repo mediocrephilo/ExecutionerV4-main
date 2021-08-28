@@ -45,12 +45,12 @@ extents = Vector2( 2769.62, 82.4541 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 2740.21, 178.064 )
 
-[sub_resource type="Curve2D" id=7]
+[sub_resource type="Curve2D" id=5]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1514.77, 388.027, 0, 0, 0, 0, 1454.7, 388.027, 0, 0, 0, 0, -1509.45, 388.027 )
 }
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
@@ -73,7 +73,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 59.3335
 height = 158.321
 
@@ -246,7 +246,7 @@ position = Vector2( 1481.21, 2177.68 )
 shape = SubResource( 4 )
 
 [node name="Path2D" type="Path2D" parent="."]
-curve = SubResource( 7 )
+curve = SubResource( 5 )
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
@@ -278,13 +278,13 @@ script = ExtResource( 2 )
 [node name="playerSprite" type="AnimatedSprite" parent="player2"]
 position = Vector2( -60.2664, 22.6635 )
 scale = Vector2( 0.529125, 0.499879 )
-frames = SubResource( 5 )
+frames = SubResource( 6 )
 animation = "walk"
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
 position = Vector2( -68.1951, 19.7629 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="player2"]
 current = true
@@ -456,7 +456,7 @@ position = Vector2( 6692.58, -2206.57 )
 script = ExtResource( 32 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 7049.85, -10184.6 )
+position = Vector2( 5437.42, -10140.5 )
 shape = SubResource( 11 )
 
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
