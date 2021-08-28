@@ -162,7 +162,6 @@ position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 z_index = 10
 frames = SubResource( 5 )
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -261,7 +260,6 @@ texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
-
 [connection signal="body_entered" from="CanvasLayer/ParallaxLayer/ladder" to="." method="_on_ladder_body_entered"]
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]

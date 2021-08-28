@@ -8,10 +8,9 @@ extends Control
 var dialogue = [
 		". . . It seems we're back where we began . . .",
 		"Oh well. Shall we start from the beginning?",
-		"''Once upon a time, on a star far, far away, there lived a little bird.",
-		"''He had wings of gold that shone even brighter than the dust around him and talons of flame that protected him from the heat.''",
-		"''To live on this star, the little bird had left behind the soft skies and gentle fields of his nest,''",
-		"''and made a promise to never return.''",
+		"''Once upon a time, on a star far, far away, there lived a little bird.''",
+		"''He had wings of gold that shone bright in the dark around him and talons of flame that protected him from both heat and frost.''",
+		"''To live on this star, the little bird had Left behind the soft rock and dark ceiling of his cave, and promised to never return.''",
 ]
 var dialogue_index = 0
 var finished = false

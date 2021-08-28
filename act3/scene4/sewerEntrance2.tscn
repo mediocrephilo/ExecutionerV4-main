@@ -15,19 +15,19 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=14]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=15]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 679.929, 1570.84 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 4708.49, 164.076 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 274.057, 2960.21 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 258.494, 2532.24 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
@@ -35,8 +35,7 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="Animation" id=5]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=6]
 length = 30.0
 loop = true
 tracks/0/type = "bezier"
@@ -60,14 +59,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 30 )
 }
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 219.588, 2718.99 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 297.401, 2306.58 )
 
-[sub_resource type="Animation" id=8]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=9]
 length = 40.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:position:x")
@@ -90,7 +88,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 40 )
 }
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=10]
 size = 100
 font_data = ExtResource( 11 )
 
@@ -118,7 +116,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ladder"]
 position = Vector2( 7675.44, 984.031 )
-shape = SubResource( 10 )
+shape = SubResource( 1 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6654.23, 1506.91 )
@@ -134,38 +132,37 @@ limit_right = 7600
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4098.94, 1971.15 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 76.0744, 31.9632 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 7931.59, 1734.2 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="sewerWater" type="AnimatedSprite" parent="."]
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 z_index = 10
-frames = SubResource( 4 )
-frame = 1
+frames = SubResource( 5 )
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 5 )
+"anims/New Anim" = SubResource( 6 )
 
 [node name="leftExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftExit"]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="rightExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rightExit"]
 position = Vector2( 7695.77, 801.48 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Sprite5" type="Sprite" parent="."]
 position = Vector2( -331.384, 1685.01 )
@@ -173,7 +170,7 @@ scale = Vector2( 3.96132, 1.88936 )
 texture = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite5"]
-"anims/New Anim" = SubResource( 8 )
+"anims/New Anim" = SubResource( 9 )
 
 [node name="dialoguebox" type="Control" parent="."]
 margin_right = 40.0
@@ -205,7 +202,7 @@ anchor_bottom = 7.45
 margin_left = -1423.0
 margin_right = 1423.0
 margin_bottom = 343.0
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 10 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -230,7 +227,6 @@ texture = ExtResource( 14 )
 position = Vector2( 3765.36, 886.576 )
 scale = Vector2( 1.08908, 0.99841 )
 texture = ExtResource( 15 )
-
 [connection signal="body_entered" from="ladder" to="." method="_on_ladder_body_entered"]
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]

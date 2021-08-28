@@ -8,7 +8,7 @@ var dialogue = [
 		"Let's see . . .",
 		"Well, that's strange.",
 		"The next few pages seem to be some sort of fairy tale.",
-		"''Once upon a time, on a star far, far away, there lived a little bird.",
+		"''Once upon a time, on a star far, far away, there lived a little bird.''",
 		"''He had wings of gold that shone bright in the dark around him and talons of flame that protected him from both heat and frost.''",
 		"''To live on this star, the little bird had Left behind the soft rock and dark ceiling of his cave, and promised to never return.''",
 		"The first page ends there . . . perhaps this is some sort of convoluted clue?"
