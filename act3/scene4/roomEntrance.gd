@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "playe" and Input.is_action_just_pressed("ui_accept"):
-		Transition.change_scene("res://Act3/scene4/room.tscn")
+	if body.name == "player" and Input.is_action_just_pressed("ui_accept"):
+		Transition.change_scene("res://drawncutscenes/meetingcutscene.tscn")

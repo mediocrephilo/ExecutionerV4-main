@@ -4,11 +4,14 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
+		"They permit smart men to live and useful men to work. As we are neither, there lie ahead only two paths:",
+		"We may die, or we may fight, and I, for one, am too cowardly to die.",
+		". . . Here is my ultimatum.",
 		"We gather here today as traitors, as enemies of the state.",
 		"By setting foot in this room, you have put yourselves on the path of no return.",
-		"Know that, if any of you betray us, you will have nowhere to turn. Both we, and the EALI, will be hunting you down.",
-		". . . I see that you have understood. Then let us commence.",
-		""
+		"Know that there are only two sides to this conflict. Betray us, and you will have nowhere to turn.",
+		"That said, I will give you one opportunity to leave. Stand, and be forgotten. Stay, and be condemned.",
+		". . . Good. Now we may begin.",
 		
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
