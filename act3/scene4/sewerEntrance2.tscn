@@ -145,8 +145,8 @@ shape = SubResource( 4 )
 [node name="sewerWater" type="AnimatedSprite" parent="."]
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
-z_index = 10
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
@@ -165,7 +165,7 @@ position = Vector2( 7695.77, 801.48 )
 shape = SubResource( 8 )
 
 [node name="Sprite5" type="Sprite" parent="."]
-position = Vector2( -331.384, 1685.01 )
+position = Vector2( -356.076, 1351.65 )
 scale = Vector2( 3.96132, 1.88936 )
 texture = ExtResource( 9 )
 
@@ -224,8 +224,8 @@ scale = Vector2( 2.69158, 1 )
 texture = ExtResource( 14 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 3765.36, 886.576 )
-scale = Vector2( 1.08908, 0.99841 )
+position = Vector2( 3765.36, 1010.01 )
+scale = Vector2( 1.08908, 1.11118 )
 texture = ExtResource( 15 )
 [connection signal="body_entered" from="ladder" to="." method="_on_ladder_body_entered"]
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=9]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://act3/scene4/dialoguebox5.gd" type="Script" id=11]
+[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2975.55, 245.507 )
@@ -130,6 +132,7 @@ shape = SubResource( 5 )
 position = Vector2( -2900.83, 1594.73 )
 scale = Vector2( 3.3177, 1.03371 )
 frames = SubResource( 6 )
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -137,7 +140,7 @@ autoplay = "New Anim"
 "anims/New Anim" = SubResource( 7 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 4806.78, 1172.6 )
+position = Vector2( 4822.27, 1389.42 )
 scale = Vector2( 2.36193, 1.6736 )
 texture = ExtResource( 8 )
 
@@ -183,6 +186,19 @@ bbcode_enabled = true
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 445.56, 1439.04 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 1788.75, 722.726 )
+scale = Vector2( 1.08389, 1 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 1980.4, 1046.38 )
+scale = Vector2( 0.553766, 1.06416 )
+texture = ExtResource( 13 )
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
