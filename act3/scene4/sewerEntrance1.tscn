@@ -16,18 +16,6 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=14]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=15]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 209.515, 1263.21 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 4708.49, 164.076 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 274.057, 2960.21 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 258.494, 2532.24 )
-
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
@@ -60,6 +48,18 @@ tracks/1/keys = {
 "points": PoolRealArray( 1537.78, -0.25, 0, 0.25, 0, 1514.93, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 30 )
 }
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 209.515, 1263.21 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4708.49, 164.076 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 274.057, 2960.21 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 258.494, 2532.24 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 219.588, 2718.99 )
@@ -98,6 +98,20 @@ font_data = ExtResource( 11 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( 4.46729, -79.2949 )
 script = ExtResource( 5 )
+
+[node name="sewerWater" type="AnimatedSprite" parent="."]
+position = Vector2( 481.514, 1467.16 )
+scale = Vector2( 3.56214, 1.46418 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 6 )
 
 [node name="CanvasLayer" type="ParallaxBackground" parent="."]
 
@@ -156,20 +170,6 @@ shape = SubResource( 3 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 7781.36, 1174.99 )
 shape = SubResource( 4 )
-
-[node name="sewerWater" type="AnimatedSprite" parent="."]
-position = Vector2( 481.514, 1467.16 )
-scale = Vector2( 3.56214, 1.46418 )
-z_index = 10
-frames = SubResource( 5 )
-playing = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
-autoplay = "New Anim"
-"anims/New Anim" = SubResource( 6 )
 
 [node name="leftExit" type="Area2D" parent="."]
 
@@ -244,6 +244,7 @@ stream = ExtResource( 13 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 600.088, 1525.52 )
+z_index = -1
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 4441.65, 1069.32 )
@@ -254,12 +255,9 @@ __meta__ = {
 }
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 3765.36, 886.576 )
-scale = Vector2( 1.08908, 0.99841 )
+position = Vector2( 3765.36, 1014.97 )
+scale = Vector2( 1.08908, 1.11572 )
 texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
 [connection signal="body_entered" from="CanvasLayer/ParallaxLayer/ladder" to="." method="_on_ladder_body_entered"]
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
