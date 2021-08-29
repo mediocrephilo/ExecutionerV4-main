@@ -11,7 +11,6 @@ var dialogue = [
 		"I am to say: ''I wish only to dedicate my name to the cause''.",
 		" . . . YOU WILL MAKE ME PROUD. I MUST . . . NEVERMIND.",
 		"Father?"
-		
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 var dialogue_index = 0
