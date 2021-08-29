@@ -1,9 +1,6 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var number = 0
 var finished = false
 var canInteract = false
@@ -11,9 +8,12 @@ var canInteract = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Label.hide()
-
+func _process(delta):
+	if canInteract == true and Input.is_action_just_pressed("ui_accept"):
+		Transition.change_scene("act3/scene2/bathtub.tscn")
+		
 func _on_tub_body_entered(body):
-	if body.name == "player" and number == 0:
+	if body.name == "player":
 		canInteract = true
 		$Label.show()
 		$AnimatedSprite.play("default")

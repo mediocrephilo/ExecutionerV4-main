@@ -100,7 +100,6 @@ text = "Look"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
 [connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]
 [connection signal="body_entered" from="mirror" to="mirror" method="_on_mirror_body_entered"]

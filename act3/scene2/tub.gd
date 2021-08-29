@@ -27,7 +27,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		load_dialogue()
 	if number == 1 and Input.is_action_just_pressed("ui_accept") and finished == true:
-		Transition.change_scene("act3/scene2/unplug.tscn")
+		Transition.change_scene("act3/scene2/bathtub.tscn")
 		
 func load_dialogue():
 	$TextureRect.show()

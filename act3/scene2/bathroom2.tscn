@@ -12,12 +12,12 @@
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=10]
 [ext_resource path="res://act3/scene2/tu b2.gd" type="Script" id=11]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 100
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
 "loop": true,
@@ -25,10 +25,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 716.07, 448.444 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 100
 font_data = ExtResource( 7 )
 
@@ -72,7 +72,7 @@ margin_left = 289.0
 margin_top = 655.0
 margin_right = 1683.0
 margin_bottom = 901.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -92,18 +92,18 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="tub"]
 position = Vector2( 1898.73, 1156.96 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tub"]
 position = Vector2( 955.78, 1680.49 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="tub"]
 margin_left = 801.242
 margin_top = 1054.22
 margin_right = 1115.24
 margin_bottom = 1154.22
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "inspect"
 __meta__ = {
