@@ -1,10 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprites/act3settings/scene3/act3maze1.png" type="Texture" id=1]
 [ext_resource path="res://smolplayer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sprites/act3settings/scene3/ghost11.png" type="Texture" id=3]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://sprites/act3settings/scene3/ghost12.png" type="Texture" id=5]
 [ext_resource path="res://sprites/act3settings/scene2/spotlight.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=7]
 [ext_resource path="res://act3/scene4/ghost.gd" type="Script" id=8]
@@ -21,20 +18,8 @@ extents = Vector2( 112.354, 10.2981 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 13.8401, 72.3074 )
 
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 33.9731, 112.099 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 100
-font_data = ExtResource( 4 )
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 100.808, 112.099 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -874,29 +859,15 @@ position = Vector2( 1891.56, 1519.71 )
 texture = ExtResource( 6 )
 
 [node name="ghost" type="Area2D" parent="."]
+position = Vector2( -1779.86, -861.091 )
 script = ExtResource( 8 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="ghost"]
-position = Vector2( 3715.19, 834.162 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 5 )
-frame = 1
-playing = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ghost"]
 position = Vector2( 3719.79, 848.663 )
-shape = SubResource( 6 )
-
-[node name="Label" type="Label" parent="ghost"]
-margin_left = 3321.12
-margin_top = 555.929
-margin_right = 3791.12
-margin_bottom = 655.929
-custom_fonts/font = SubResource( 7 )
-text = "Talk (enter)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+shape = SubResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1933.59, 413.879 )

@@ -156,6 +156,7 @@ autoplay = "New Anim"
 [node name="leftExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftExit"]
+position = Vector2( 3980.03, 71.0723 )
 shape = SubResource( 7 )
 
 [node name="rightExit" type="Area2D" parent="."]
@@ -227,7 +228,7 @@ texture = ExtResource( 14 )
 position = Vector2( 3765.36, 1010.01 )
 scale = Vector2( 1.08908, 1.11118 )
 texture = ExtResource( 15 )
-[connection signal="body_entered" from="ladder" to="." method="_on_ladder_body_entered"]
+
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]

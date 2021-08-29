@@ -204,6 +204,7 @@ shape = SubResource( 7 )
 position = Vector2( 5153.35, 969.826 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 flip_v = true
 
@@ -211,7 +212,7 @@ flip_v = true
 position = Vector2( 6829.6, 1042.93 )
 z_index = -1
 frames = SubResource( 9 )
-frame = 3
+frame = 8
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -260,6 +261,7 @@ __meta__ = {
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 stream = ExtResource( 20 )
+
 [connection signal="body_entered" from="pothole" to="pothole" method="_on_pothole_body_entered"]
 [connection signal="body_exited" from="pothole" to="pothole" method="_on_pothole_body_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

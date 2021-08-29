@@ -132,7 +132,7 @@ shape = SubResource( 5 )
 position = Vector2( -2900.83, 1594.73 )
 scale = Vector2( 3.3177, 1.03371 )
 frames = SubResource( 6 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]

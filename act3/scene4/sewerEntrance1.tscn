@@ -16,7 +16,7 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=14]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=15]
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
@@ -24,7 +24,7 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "New Anim"
 length = 30.0
 loop = true
@@ -49,16 +49,16 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 30 )
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 209.515, 1263.21 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4708.49, 164.076 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 274.057, 2960.21 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 258.494, 2532.24 )
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -102,7 +102,7 @@ script = ExtResource( 5 )
 [node name="sewerWater" type="AnimatedSprite" parent="."]
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -110,7 +110,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 6 )
+"anims/New Anim" = SubResource( 2 )
 
 [node name="CanvasLayer" type="ParallaxBackground" parent="."]
 
@@ -151,7 +151,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ParallaxLayer/ladder"]
 position = Vector2( 6225.08, 770.354 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -160,19 +160,20 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4098.94, 1971.15 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -194.534, 15.5628 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 7781.36, 1174.99 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="leftExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftExit"]
+position = Vector2( 3748.74, 306.914 )
 shape = SubResource( 7 )
 
 [node name="rightExit" type="Area2D" parent="."]
@@ -193,10 +194,10 @@ texture = ExtResource( 9 )
 "anims/New Anim" = SubResource( 9 )
 
 [node name="dialoguebox" type="Control" parent="."]
-margin_left = -3851.78
-margin_top = 23.3441
-margin_right = -3811.78
-margin_bottom = 63.3441
+margin_left = -168.807
+margin_top = -20.5007
+margin_right = -128.807
+margin_bottom = 19.4993
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true,
@@ -242,7 +243,7 @@ __meta__ = {
 stream = ExtResource( 13 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 600.088, 1525.52 )
+position = Vector2( 4436.52, 1642.44 )
 z_index = -1
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -257,7 +258,7 @@ __meta__ = {
 position = Vector2( 3765.36, 1014.97 )
 scale = Vector2( 1.08908, 1.11572 )
 texture = ExtResource( 15 )
-[connection signal="body_entered" from="CanvasLayer/ParallaxLayer/ladder" to="." method="_on_ladder_body_entered"]
+
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]
