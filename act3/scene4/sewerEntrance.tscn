@@ -152,6 +152,7 @@ shape = SubResource( 4 )
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
@@ -161,6 +162,7 @@ autoplay = "New Anim"
 [node name="leftExit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftExit"]
+position = Vector2( 4059.06, 402.866 )
 shape = SubResource( 7 )
 
 [node name="rightExit" type="Area2D" parent="."]
@@ -232,6 +234,7 @@ texture = ExtResource( 14 )
 position = Vector2( 3743.76, 1099.14 )
 scale = Vector2( 1.08908, 1.0288 )
 texture = ExtResource( 15 )
+
 [connection signal="body_entered" from="CanvasLayer/ParallaxLayer/ladder" to="." method="_on_ladder_body_entered"]
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]

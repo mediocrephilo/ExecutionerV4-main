@@ -3,7 +3,7 @@ extends Control
 
 var dialogue = [
 		"It's . . . I remember this place.",
-		"Something's calling me up ahead. I . . . have I finished my duty?",
+		"Something's calling me up ahead. . . . have I finished my duty?"
 ]
 var dialogue_index = 0
 var finished = false
