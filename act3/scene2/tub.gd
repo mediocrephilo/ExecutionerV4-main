@@ -5,7 +5,7 @@ var dialogue = [
 		"There's something stuck to the bottom of the tub.",
 		"The one you just drained the blood out of.",
 		"Why don't you reach in and pick it up?",
-		"I've never been so glad to be incorporeal.",
+		"I've never been so glad to be a ghost.",
 ]
 var dialogue_index = 0
 var number = 0
