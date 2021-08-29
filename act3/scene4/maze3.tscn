@@ -1,12 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sprites/act3settings/scene3/act3maze3.png" type="Texture" id=1]
 [ext_resource path="res://smolplayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=3]
 [ext_resource path="res://sprites/act3settings/scene2/spotlight.png" type="Texture" id=4]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://sprites/act3settings/scene3/ghost32.png" type="Texture" id=6]
-[ext_resource path="res://sprites/act3settings/scene3/ghost31.png" type="Texture" id=7]
 [ext_resource path="res://act3/scene4/ghost3.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -18,20 +15,8 @@ extents = Vector2( 21.2678, 55.1853 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 101.08, 18.1474 )
 
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 81.8609, 140.776 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 100
-font_data = ExtResource( 5 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 106.606, 140.776 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -515,7 +500,7 @@ position = Vector2( 2541.51, 1681.57 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D119" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1550.7, 1889.54 )
+position = Vector2( 1560.44, 1894.04 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D120" type="CollisionShape2D" parent="StaticBody2D"]
@@ -831,7 +816,7 @@ position = Vector2( 1807.8, 1849.24 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D198" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1649.91, 1855.17 )
+position = Vector2( 1673.13, 1855.17 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D199" type="CollisionShape2D" parent="StaticBody2D"]
@@ -854,8 +839,16 @@ shape = SubResource( 3 )
 position = Vector2( 1306.51, 2157.12 )
 shape = SubResource( 3 )
 
+[node name="CollisionShape2D307" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2042.19, 2172.1 )
+shape = SubResource( 3 )
+
 [node name="CollisionShape2D204" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1111.13, 2161.07 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D306" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1882.02, 2164.07 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D205" type="CollisionShape2D" parent="StaticBody2D"]
@@ -1265,27 +1258,9 @@ shape = SubResource( 3 )
 [node name="ghost" type="Area2D" parent="."]
 script = ExtResource( 8 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="ghost"]
-position = Vector2( 3683.4, 1691.21 )
-scale = Vector2( 0.717844, 0.615484 )
-frames = SubResource( 4 )
-frame = 1
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ghost"]
-position = Vector2( 3679.09, 1691.66 )
-shape = SubResource( 5 )
-
-[node name="Label" type="Label" parent="ghost"]
-margin_left = 3298.59
-margin_top = 1420.78
-margin_right = 3768.59
-margin_bottom = 1520.78
-custom_fonts/font = SubResource( 6 )
-text = "Talk (enter)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 1911.67, 5.20779 )
+shape = SubResource( 4 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 413.396, 857.854 )
@@ -1300,7 +1275,8 @@ position = Vector2( 1898.69, 1096.88 )
 texture = ExtResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 1898.69, 1096.88 )
+position = Vector2( 1910.68, 1114.86 )
 texture = ExtResource( 3 )
+
 [connection signal="body_entered" from="ghost" to="ghost" method="_on_ghost_body_entered"]
 [connection signal="body_exited" from="ghost" to="ghost" method="_on_ghost_body_exited"]

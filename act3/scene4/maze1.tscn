@@ -115,7 +115,11 @@ position = Vector2( 1588.73, 2149.35 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1144.95, 2149.35 )
+position = Vector2( 1144.95, 2151.05 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D206" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2018.91, 2165.57 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="StaticBody2D"]

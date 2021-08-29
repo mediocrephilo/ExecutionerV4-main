@@ -204,7 +204,6 @@ shape = SubResource( 7 )
 position = Vector2( 5153.35, 969.826 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 flip_v = true
 
@@ -212,7 +211,7 @@ flip_v = true
 position = Vector2( 6829.6, 1042.93 )
 z_index = -1
 frames = SubResource( 9 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
