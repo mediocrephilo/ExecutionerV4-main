@@ -1,12 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://sprites/act3settings/scene3/maze4.png" type="Texture" id=1]
 [ext_resource path="res://smolplayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/spotlight.png" type="Texture" id=3]
-[ext_resource path="res://sprites/act3settings/scene3/ghost41.png" type="Texture" id=4]
 [ext_resource path="res://act3/scene4/ghost4.gd" type="Script" id=5]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://sprites/act3settings/scene3/ghost42.png" type="Texture" id=7]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -15,20 +12,8 @@ extents = Vector2( 20.7857, 66.9237 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 82.8977, 18.609 )
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 67.7415, 119.123 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 100
-font_data = ExtResource( 6 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 133.786, 119.123 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -1224,7 +1209,23 @@ position = Vector2( 1361.9, 2163.17 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D298" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1197.05, 2162.52 )
+position = Vector2( 1195.86, 2163.71 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D410" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1969.91, 2175.58 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D409" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1839.32, 2173.2 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D407" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1680.23, 2169.64 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D408" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1680.23, 2169.64 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D299" type="CollisionShape2D" parent="StaticBody2D"]
@@ -1668,32 +1669,15 @@ position = Vector2( 351.486, 950.483 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Light2D" type="Light2D" parent="player"]
-position = Vector2( 1844.52, 1524.4 )
+position = Vector2( 1844.52, 1525.98 )
 texture = ExtResource( 3 )
 
 [node name="ghost" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="ghost"]
-position = Vector2( 126.831, 347.982 )
-scale = Vector2( 0.720842, 0.674864 )
-frames = SubResource( 3 )
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ghost"]
-position = Vector2( 135.037, 390.434 )
-shape = SubResource( 4 )
-
-[node name="Label" type="Label" parent="ghost"]
-margin_left = 38.1627
-margin_top = 79.261
-margin_right = 508.163
-margin_bottom = 179.261
-custom_fonts/font = SubResource( 5 )
-text = "Talk (enter)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 1910.92, -2.59628 )
+shape = SubResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1932.52, 540.818 )
@@ -1702,5 +1686,6 @@ texture = ExtResource( 8 )
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 1932.52, 540.818 )
 texture = ExtResource( 8 )
+
 [connection signal="body_entered" from="ghost" to="ghost" method="_on_ghost_body_entered"]
 [connection signal="body_exited" from="ghost" to="ghost" method="_on_ghost_body_exited"]

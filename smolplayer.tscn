@@ -4,7 +4,7 @@
 [ext_resource path="res://act2/maze/smolboi2.png" type="Texture" id=2]
 [ext_resource path="res://act4/scene3/player.gd" type="Script" id=3]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -12,9 +12,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 47.7555
-height = 23.8408
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 41.2185
+height = 0.0
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -22,8 +22,8 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1869.79, 1536.64 )
 scale = Vector2( 1.484, 1.51626 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1863.83, 1535.64 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )

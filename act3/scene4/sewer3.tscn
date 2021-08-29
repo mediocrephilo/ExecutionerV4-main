@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=9]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://act3/scene4/dialoguebox4.gd" type="Script" id=11]
+[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2975.55, 245.507 )
@@ -130,7 +131,6 @@ shape = SubResource( 5 )
 position = Vector2( -2900.83, 1594.73 )
 scale = Vector2( 3.3177, 1.03371 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -184,6 +184,12 @@ bbcode_enabled = true
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 451.582, 1433.02 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 2016.04, 145.989 )
+scale = Vector2( 1.21551, 1 )
+texture = ExtResource( 12 )
+
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

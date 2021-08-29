@@ -7,8 +7,6 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func _on_ladder_body_entered(body):
 	if body.name == "player" and Input.is_action_just_pressed("ui_up"):
@@ -21,4 +19,5 @@ func _on_leftExit_body_entered(body):
 
 
 func _on_rightExit_body_entered(body):
-	pass # Replace with function body.
+	if body.name == "player":
+		Transition.change_scene("res://Act3/scene4/SewerEntrance2.tscn")
