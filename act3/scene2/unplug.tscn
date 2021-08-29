@@ -183,5 +183,4 @@ text = "Move all blocks out of the maze. Press esc to exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

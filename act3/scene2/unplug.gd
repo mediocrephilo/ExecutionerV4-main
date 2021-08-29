@@ -25,7 +25,7 @@ func _on_Area2D_body_entered(body):
 		
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Transition.change_scene("res://act3/scene2/bathroom2.tscn")
+		Transition.change_scene("res://act3/scene2/unplug.tscn")
 		
 func checkpassed():
 	if one == true and two == true and three == true and four == true and five == true:

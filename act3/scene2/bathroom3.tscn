@@ -1,15 +1,20 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://sprites/act3settings/cracked1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=2]
 [ext_resource path="res://sprites/act3settings/tub1.png" type="Texture" id=3]
 [ext_resource path="res://sprites/act3settings/bloodbath.png" type="Texture" id=4]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://act3/scene2/mirrordialogue.gd" type="Script" id=6]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=6]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://act3/scene2/tub.gd" type="Script" id=8]
 [ext_resource path="res://act3/scene2/bathroomexit.gd" type="Script" id=9]
-[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=10]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=10]
+[ext_resource path="res://act3/scene2/tub1.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 5 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -23,10 +28,6 @@ animations = [ {
 extents = Vector2( 716.07, 448.444 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 100
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=4]
 size = 100
 font_data = ExtResource( 5 )
 
@@ -58,8 +59,44 @@ scale = Vector2( 1.00403, 1.02505 )
 z_index = -1
 texture = ExtResource( 4 )
 
-[node name="tub" type="Area2D" parent="."]
+[node name="dialoguebox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
+margin_left = 126.0
+margin_top = 469.0
+margin_right = 1906.0
+margin_bottom = 969.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 10 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
+margin_left = 226.0
+margin_top = 549.0
+margin_right = 1773.0
+margin_bottom = 874.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="dialoguebox"]
+
+[node name="tub" type="Area2D" parent="."]
+script = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="tub"]
 position = Vector2( 1898.73, 1156.96 )
@@ -80,32 +117,6 @@ text = "look inside"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="dialoguebox" type="Control" parent="tub"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Type2" type="AudioStreamPlayer" parent="tub/dialoguebox"]
-
-[node name="Sprite" type="Sprite" parent="tub/dialoguebox"]
-position = Vector2( 1030.33, 471.443 )
-texture = ExtResource( 10 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="tub/dialoguebox"]
-margin_left = 369.0
-margin_top = 304.0
-margin_right = 1687.0
-margin_bottom = 629.0
-custom_fonts/normal_font = SubResource( 4 )
-bbcode_enabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Tween" type="Tween" parent="tub/dialoguebox"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -130,6 +141,9 @@ z_index = -1
 [node name="AnimatedSprite" type="AnimatedSprite" parent="mirror"]
 position = Vector2( 1908.68, 1079.36 )
 frames = SubResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
 position = Vector2( 2508.89, 1584.83 )
@@ -151,40 +165,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="dialoguebox" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
-margin_right = 40.0
-margin_bottom = 40.0
-bbcode_enabled = true
-
-[node name="TextureRect" type="TextureRect" parent="dialoguebox"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="continuesprite" type="Sprite" parent="dialoguebox"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
-
-[node name="Tween" type="Tween" parent="dialoguebox"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="dialoguebox"]
-
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 4022.48, 1494.17 )
 shape = SubResource( 9 )
-
-[connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
-[connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]
-[connection signal="tween_completed" from="tub/dialoguebox/Tween" to="tub" method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="tub" to="dialoguebox" method="_on_tub_body_entered"]
+[connection signal="body_entered" from="tub" to="tub" method="_on_tub_body_entered"]
+[connection signal="body_exited" from="tub" to="dialoguebox" method="_on_tub_body_exited"]
+[connection signal="body_exited" from="tub" to="tub" method="_on_tub_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

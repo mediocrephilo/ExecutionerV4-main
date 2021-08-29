@@ -21,14 +21,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "static",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "static",
 "speed": 5.0
 } ]
 
@@ -189,7 +189,6 @@ texture = ExtResource( 18 )
 position = Vector2( 2172.49, 1109.57 )
 scale = Vector2( 12.1883, 0.587966 )
 texture = ExtResource( 18 )
-
 [connection signal="body_entered" from="tv" to="tv" method="_on_tv_body_entered"]
 [connection signal="body_exited" from="tv" to="tv" method="_on_tv_body_exited"]
 [connection signal="body_entered" from="paper" to="paper" method="_on_paper_body_entered"]

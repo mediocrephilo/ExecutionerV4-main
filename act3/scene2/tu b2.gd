@@ -2,10 +2,8 @@ extends Control
 
 
 var dialogue = [
-		"There's something stuck to the bottom of the tub.",
-		"The one you just drained the blood out of.",
-		"Why don't you reach in and pick it up?",
-		"I've never been so glad to be incorporeal.",
+		"If it looks like blood and smells like blood, it probably is blood.",
+		"Uh oh, stinky!",
 ]
 var dialogue_index = 0
 var number = 0
@@ -49,4 +47,3 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$Type.stop()
 	dialogue_index += 1
-
