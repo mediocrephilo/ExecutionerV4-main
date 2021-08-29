@@ -22,7 +22,7 @@ extents = Vector2( 2085.6, 117.683 )
 size = 100
 font_data = ExtResource( 2 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
 "loop": true,
@@ -30,10 +30,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 359.53, 406.738 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 100
 use_mipmaps = true
 font_data = ExtResource( 2 )
@@ -109,11 +109,11 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="paris"]
 position = Vector2( 2931.39, 1554.19 )
 scale = Vector2( 1.15984, 1.11988 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paris"]
 position = Vector2( 2802.33, 1700.74 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1933.15, 1070.25 )
@@ -147,7 +147,7 @@ margin_left = 1270.0
 margin_top = 1633.0
 margin_right = 3443.0
 margin_bottom = 1872.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -166,6 +166,7 @@ autoplay = "New Anim"
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+
 [connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
