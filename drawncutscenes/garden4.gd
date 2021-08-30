@@ -6,7 +6,8 @@ var dialogue = [
 #<<<<<<< HEAD
 #=======
 		"I-It's not my fault . . . ",
-		"Soph, y-you don't blame me, right?",
+		"Where did it go so wrong? All father wanted to do was create a safer environment for us citizens...",
+		"But what danger would my friends have created?",
 		"It's alright . . . it's okay . . .",
 		"I can still visit them . . . there was nothing I could have done.",
 		"It's not my fault."

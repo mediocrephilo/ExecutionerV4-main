@@ -60,5 +60,6 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="Control"]
+
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

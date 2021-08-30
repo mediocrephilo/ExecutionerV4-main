@@ -11,9 +11,9 @@ var dialogue = [
 		
 ]
 var bluedialogue = [
-	". . . *hic* . . .",
-	"*sob* . . . i'm s-scared",
-	"i-i don't wanna go . . .",
+	". . .  . . .",
+	". . . i'm s-scared",
+	"Do you think they would take me next?",
 	"p-paris, don't let them t-take me too . . ."
 ]
 var dialogue_index = 0

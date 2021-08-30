@@ -13,6 +13,8 @@ var dialogue = [
 		"Know that there are only two sides to this conflict. Betray us, and you will have nowhere to turn.",
 		"That said, I will give you one opportunity to leave. Stand, and be forgotten. Stay, and be condemned.",
 		". . . Good. Now we may begin.",
+		"The bombs have been placed under the E.L.F factory, and I have the detonator.",
+		"Good riddance to that place. I for one surely won't miss it"
 		
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
