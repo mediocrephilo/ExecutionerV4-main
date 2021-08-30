@@ -5,11 +5,11 @@
 [ext_resource path="res://Act1/playerscenes/scenez11/diary3.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 84
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 90
+size = 81
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -33,9 +33,9 @@ custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Elphabolon, XX
-	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
+	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the people who took Arthur laughed at me because I was dirty. All except for one of them who had long black hair covering their eyes. I tried to talk to that guard but they seemed disgusted by me and pushed me "
 text = "Elphabolon, XX
-	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish . . . I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the men that took Arthur laughed at me because I was dirty. They called me names. I didn't understand what they said but I didn't like the way they laughed."
+	I'm cold . . . it's cold . . . Arthur says I don't have to wait much longer. They took him away yesterday. I ate some chicken but I think it went bad because I threw up. It's so cold that I can't think. I wish father would come visit. Where is he? Why isn't he here? Why am I alone? It's so cold . . . the people who took Arthur laughed at me because I was dirty. All except for one of them who had long black hair covering their eyes. I tried to talk to that guard but they seemed disgusted by me and pushed me "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,9 +49,9 @@ custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Elphabon, XX
-	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
+	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. When the screaming stops I always see the guard with the long black hair walking away. Maybe they're the meanest one of them all. somehow I feel like father's hiding something from me because . . . he was crying again."
 text = "Elphabon, XX
-	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. But . . . somehow I feel like father's hiding something from me because . . . he was crying again."
+	Father came today! I'm so excited that my hands are shaking! He told me I would be leaving today, that someone would come take me far away! But why couldn't he just take me with him? I want to get out as soon as possible. It's cold and dirty, and I'm scared because sometimes I can hear screaming at night. When the screaming stops I always see the guard with the long black hair walking away. Maybe they're the meanest one of them all. somehow I feel like father's hiding something from me because . . . he was crying again."
 __meta__ = {
 "_edit_use_anchors_": false
 }

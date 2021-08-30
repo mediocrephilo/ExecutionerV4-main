@@ -14,7 +14,7 @@ var choice3 = [
 ]
 var choice4 = [
 	"[center] WHAT DO YOU WANT?",
-	"[center] I DIDN'T KILL YOU"
+	"[center] I DIDN'T MEAN TO KILL YOU"
 ]
 var choice5 = [
 	"[center] AND NOTHING BUT THE TRUTH?",
