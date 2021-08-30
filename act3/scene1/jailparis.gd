@@ -1,7 +1,7 @@
 extends Control
 var dialogue = [
 		"Oh, a new prisoner. How unexpected!",
-		"It's an honor to meet you. My name is Dream O'Brien.",
+		"It's an honor to meet you. My name is Paris O'Brien.",
 		"What's that look on your face for? Don't tell me you've never seen a ghost?",
 		"Haha, don't worry, I won't hurt you.",
 		"Why am I here? Well now . . . that's a hard question to answer.",

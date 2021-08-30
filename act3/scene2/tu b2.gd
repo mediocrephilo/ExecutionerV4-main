@@ -3,7 +3,7 @@ extends Control
 
 var dialogue = [
 		"If it looks like blood and smells like blood, it probably is blood.",
-		"Uh oh, stinky!",
+		
 ]
 var dialogue_index = 0
 var number = 0

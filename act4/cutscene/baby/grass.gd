@@ -6,7 +6,7 @@ var dialogue = [
 #=======
 		"Hey, good job on the physical today!",
 		"I saw you! You were so fast!",
-		"No, really, I think you're Coach Xee's favorite",
+		"No, really, I think you're Coach Dover's favorite",
 		"What? . . . I-I did alright, I guess . . .",
 		"I don't really want to talk about it.",
 		"No, it's okay, I just did really bad.",

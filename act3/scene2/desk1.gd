@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-		"IT'S TOO DARK TO SEE ANYTHING"
+		"... Quit squinting. It's too dark to see anything. Why don't you try to find a light source?"
 ]
 var dialogue_index = 0
 var number = 0

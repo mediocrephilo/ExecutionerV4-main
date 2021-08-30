@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/act3settings/window.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Act1settings/scenetwo/book.png" type="Texture" id=4]
 [ext_resource path="res://act3/scene2/desk.gd" type="Script" id=5]
-[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=6]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=6]
 [ext_resource path="res://sprites/act3settings/shelf2.png" type="Texture" id=7]
 [ext_resource path="res://sprites/act3settings/homewall.png" type="Texture" id=8]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=9]
@@ -140,16 +140,21 @@ __meta__ = {
 [node name="Type2" type="AudioStreamPlayer" parent="desk/dialoguebox"]
 
 [node name="Sprite" type="Sprite" parent="desk/dialoguebox"]
-position = Vector2( 2853.95, 797.787 )
+position = Vector2( 2351.89, 797.787 )
+scale = Vector2( 1.66941, 1 )
 texture = ExtResource( 6 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="desk/dialoguebox"]
-margin_left = 2222.0
+margin_left = 1231.0
 margin_top = 653.0
 margin_right = 3487.0
 margin_bottom = 947.0
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="desk/dialoguebox"]
 

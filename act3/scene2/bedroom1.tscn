@@ -14,7 +14,7 @@
 [ext_resource path="res://sprites/act3settings/switch1.png" type="Texture" id=12]
 [ext_resource path="res://act3/scene2/booksymbol.gd" type="Script" id=13]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=14]
-[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=15]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=15]
 [ext_resource path="res://act3/scene2/desk1.gd" type="Script" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -136,15 +136,17 @@ __meta__ = {
 [node name="Type2" type="AudioStreamPlayer" parent="chest/dialoguebox"]
 
 [node name="Sprite" type="Sprite" parent="chest/dialoguebox"]
-position = Vector2( 3013.26, 741.72 )
+position = Vector2( 2735.5, 769.643 )
+scale = Vector2( 1.37034, 1.11169 )
 texture = ExtResource( 15 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="chest/dialoguebox"]
-margin_left = 2435.27
-margin_top = 597.331
-margin_right = 3624.27
-margin_bottom = 894.331
+margin_left = 1824.0
+margin_top = 597.0
+margin_right = 3624.0
+margin_bottom = 947.0
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
