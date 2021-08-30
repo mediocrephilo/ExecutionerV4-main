@@ -3,6 +3,7 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
+		"... Elphabon, XX",
 		"It’s been so long since father came",
 		"I don't think he's allowed to see me again. Ever..",
 		"The guard with the long black hair came in today and took away Cindy.",
