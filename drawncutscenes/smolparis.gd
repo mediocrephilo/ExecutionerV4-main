@@ -7,10 +7,14 @@ var dialogue = [
 		"''AND WHAT GOOD DID THE EALI BRING IN THE FIRST YEAR OF THEIR RULE?''",
 		"They preserved the state of humanity and ensured our future through their strength and radical policy, Articles V and XX of the New Order",
 		"and the E.L.F. Acts, in particular",
+		"''VERY GOOD. AND WHAT DID THE E.L.F ACTS DO?''",
+		"They created a strong work force that is completely loyal to the party. For a strong work force is a strong country.",
 		"''VERY GOOD. AND WHEN COUNCILOR MATTHEWS ENQUIRES ABOUT THE REASON FOR YOUR APPLICATION?''",
 		"I am to say: ''I wish only to dedicate my name to the cause''.",
-		" . . . YOU WILL MAKE ME PROUD. I MUST . . . NEVERMIND.",
-		"Father?"
+		" . . . YOU WILL MAKE ME PROUD.",
+		"...Father? Why did you propose the E.L.F?",
+		"''... YOU MAY BE TOO YOUNG TO UNDERSTAND THE MOTIVES AS OF NOW. JUST DON'T QUESTION THE FACT THAT WE KNOW WHAT IS BEST''",
+		"''THERE ARE SOME DISOBEDIENT PEOPLE IN THIS WORLD, AND THERE ARE ONLY A FEW WAYS TO KEEP THEM IN CHECK WHILE MAKING USE OF THEM''"
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 var dialogue_index = 0
