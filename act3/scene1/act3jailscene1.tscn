@@ -82,11 +82,11 @@ position = Vector2( 3895.26, 971.41 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1885.11, 2077.47 )
+position = Vector2( 1893.7, 2134.75 )
 shape = SubResource( 2 )
 
-[node name="player" parent="StaticBody2D/CollisionShape2D3" instance=ExtResource( 3 )]
-position = Vector2( -1372.2, -429.182 )
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 524.367, 1725.62 )
 
 [node name="paris" type="Area2D" parent="."]
 position = Vector2( 6.83765, 20.5129 )
@@ -167,8 +167,8 @@ autoplay = "New Anim"
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 
-[connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
-[connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
+[connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="paris" method="_on_paris_body_exited"]
+[connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

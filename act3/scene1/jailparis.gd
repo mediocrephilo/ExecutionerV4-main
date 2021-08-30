@@ -7,7 +7,7 @@ var dialogue = [
 		"Why am I here? Well now . . . that's a hard question to answer.",
 		"I seem to have forgotten quite a lot . . . to be honest, all I remember is my name.",
 		". . . I-I'm sorry if this offends you, but . . . have we met before?",
-		"No? Are you sure? You seem strangely . . . no, nevermind.",
+		"No? Are you sure? You seem strangely familiar",
 		"What's that? You want to help me?",
 		". . . Ha!",
 		"No, I should be sorry for laughing. And how do you plan on helping me?", 
