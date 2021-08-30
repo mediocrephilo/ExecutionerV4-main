@@ -1,43 +1,40 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=45 format=2]
 
-[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=1]
-[ext_resource path="res://sprites/act 2 setting/scene 5/crumbled2.png" type="Texture" id=2]
-[ext_resource path="res://sprites/act 2 setting/scene 4/sewer.png" type="Texture" id=3]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand8.png" type="Texture" id=4]
-[ext_resource path="res://sprites/act 2 setting/scene 5/crumbled.png" type="Texture" id=5]
-[ext_resource path="res://act2/scene7/news.gd" type="Script" id=6]
-[ext_resource path="res://sprites/act 2 setting/scene6/handbox2.png" type="Texture" id=7]
-[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=9]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand9.png" type="Texture" id=11]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand4.png" type="Texture" id=12]
-[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=13]
-[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=14]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand1.png" type="Texture" id=15]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand5.png" type="Texture" id=16]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand3.png" type="Texture" id=18]
-[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=19]
-[ext_resource path="res://sprites/Act1settings/sceneone/background.png" type="Texture" id=20]
-[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=21]
-[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=22]
-[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=23]
-[ext_resource path="res://sprites/Act1settings/sceneten/wall.png" type="Texture" id=24]
-[ext_resource path="res://sprites/characters/squish2.png" type="Texture" id=25]
-[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=27]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand7.png" type="Texture" id=28]
-[ext_resource path="res://sprites/characters/squish3.png" type="Texture" id=29]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand6.png" type="Texture" id=30]
-[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=31]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=32]
-[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=35]
-[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=36]
-[ext_resource path="res://sprites/act 2 setting/scene6/handbox1.png" type="Texture" id=37]
-[ext_resource path="res://sprites/characters/squish1.png" type="Texture" id=38]
-[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=39]
-[ext_resource path="res://player.gd" type="Script" id=40]
-[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=42]
-[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=43]
-[ext_resource path="res://sprites/act 2 setting/scene6/hand2.png" type="Texture" id=44]
-[ext_resource path="res://sprites/characters/squish4.png" type="Texture" id=46]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=1]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand9.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand8.png" type="Texture" id=3]
+[ext_resource path="res://sprites/act 2 setting/scene6/handbox2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/act 2 setting/scene 4/sewer.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Act1settings/sceneten/wall.png" type="Texture" id=6]
+[ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=8]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand1.png" type="Texture" id=9]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=11]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=13]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand6.png" type="Texture" id=14]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand5.png" type="Texture" id=15]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand3.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Act1settings/sceneone/front tree.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Act1settings/sceneone/background.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/squish2.png" type="Texture" id=21]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=22]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand7.png" type="Texture" id=23]
+[ext_resource path="res://sprites/act 2 setting/scene6/hand4.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=25]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=26]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=27]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=28]
+[ext_resource path="res://sprites/act 2 setting/scene6/handbox1.png" type="Texture" id=29]
+[ext_resource path="res://sprites/characters/squish1.png" type="Texture" id=30]
+[ext_resource path="res://player.gd" type="Script" id=31]
+[ext_resource path="res://sprites/characters/squish3.png" type="Texture" id=32]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=33]
+[ext_resource path="res://sprites/characters/squish4.png" type="Texture" id=34]
+[ext_resource path="res://act2/scene8/Area2D.gd" type="Script" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 608.061, 2286.06 )
@@ -47,27 +44,27 @@ extents = Vector2( 6238.01, 553.387 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 33 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 42 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 38 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ) ],
+"frames": [ ExtResource( 30 ), ExtResource( 21 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "squish",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 35 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 31 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 22 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 27 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 26 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
@@ -79,12 +76,12 @@ height = 598.856
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 44 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 23 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "hand",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -95,7 +92,7 @@ extents = Vector2( 171.399, 404.122 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 37 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -104,27 +101,15 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 199.056, 470.48 )
 
-[sub_resource type="SpriteFrames" id=9]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 130.444, 81.1303 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 100
-font_data = ExtResource( 32 )
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 1113.64, 1269.37 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite6" type="Sprite" parent="."]
 position = Vector2( 6622.95, -124.378 )
 z_index = 5
-texture = ExtResource( 24 )
+texture = ExtResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -132,15 +117,15 @@ texture = ExtResource( 24 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 2832.79, 987.099 )
-texture = ExtResource( 24 )
+texture = ExtResource( 6 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 6620.31, 971.958 )
-texture = ExtResource( 24 )
+texture = ExtResource( 6 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 10442.5, 906.24 )
-texture = ExtResource( 24 )
+texture = ExtResource( 6 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = -101
@@ -151,36 +136,36 @@ layer = -101
 position = Vector2( 447.583, 922.404 )
 scale = Vector2( 0.421872, 1 )
 z_index = 7
-texture = ExtResource( 19 )
+texture = ExtResource( 17 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 3184.99, 1058.91 )
 z_index = 4
-texture = ExtResource( 20 )
+texture = ExtResource( 18 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 3763.34, 1170.52 )
-texture = ExtResource( 23 )
+texture = ExtResource( 7 )
 
 [node name="Sprite5" type="Sprite" parent="."]
 position = Vector2( 11300.4, 1182.05 )
-texture = ExtResource( 23 )
+texture = ExtResource( 7 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 6116.3, 1110.26 )
 scale = Vector2( 3.19942, 1 )
 z_index = 7
-texture = ExtResource( 1 )
+texture = ExtResource( 25 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 843.76, 712.124 )
 scale = Vector2( 1.02468, 1.52248 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="Sprite4" type="Sprite" parent="."]
 position = Vector2( 6162.45, 1104.3 )
 scale = Vector2( 1.60578, 1.0673 )
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -196,9 +181,9 @@ position = Vector2( 6464.75, 2632.46 )
 shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="."]
-position = Vector2( 8537.66, -61.1554 )
+position = Vector2( -72.4258, -126.219 )
 z_index = 5
-script = ExtResource( 40 )
+script = ExtResource( 31 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -334,29 +319,11 @@ speed_scale = 2.0
 position = Vector2( 9566.41, 1522.6 )
 shape = SubResource( 8 )
 
-[node name="news" type="Area2D" parent="."]
-position = Vector2( 1429.42, 1945.61 )
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 35 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="news"]
-frames = SubResource( 9 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 12081.2, 974.493 )
+shape = SubResource( 9 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="news"]
-shape = SubResource( 10 )
-
-[node name="Label" type="Label" parent="news"]
-margin_left = -135.843
-margin_top = -188.558
-margin_right = 178.157
-margin_bottom = -88.5582
-custom_fonts/font = SubResource( 11 )
-text = "inspect"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="body_entered" from="news" to="news" method="_on_news_body_entered"]
-[connection signal="body_exited" from="news" to="news" method="_on_news_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

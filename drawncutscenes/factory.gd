@@ -3,11 +3,11 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
-		". . . ''HERO, HUH?''",
-		"IS THAT WHAT THEY CALLED IT?",
-		"AND I WAS SO PROUD OF MYSELF . . . " 
-	
-#>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
+
+		"They always tell me that I’m lucky, but I don’t get what they mean. Something about factories, something about E.L.F",
+		"... ... ...",
+		"but I’m scared. . . I don’t want to go . . . ",
+		"..."
 ]
 var dialogue_index = 0
 var finished = false
@@ -22,6 +22,8 @@ func _process(_delta):
 	#$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true:
 		load_dialogue()
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 3:
+		Transition.change_scene("res://jailcutscenes/jail1.tscn")
 		
 func load_dialogue():
 	$Sprite.show()
@@ -47,6 +49,3 @@ func _on_Tween_tween_completed(_object, _key):
 	dialogue_index +=1
 
 
-
-func _on_Control_tree_exited():
-	Transition.change_scene("res://act2/scene8/scene8.tscn")

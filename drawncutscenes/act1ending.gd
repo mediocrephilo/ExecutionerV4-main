@@ -8,13 +8,10 @@ var dialogue = [
 		"I don't think he's allowed to see me again. Ever..",
 		"The guard with the long black hair came in today and took away Cindy.",
 		"... She never came back. I don't think I will ever be able to see her again.",
-		"I think she's dead. Arthur too. And that little boy hanging from the tree.",
+		"I think she's dead. Arthur too. And mother. And that little boy hanging from the tree. The guard with the long black hair killed them all",
 		"I'm afraid I might be next.",
 		"The black haired guard is mean! They're so mean! I hate them.",
 		"At least the people here are nice. They smile when they see me but . . . they don’t look happy.",
-		"They always tell me that I’m lucky, but I don’t get what they mean. Something about factories, something about E.L.F",
-		"... ... ...",
-		"but I’m scared. . . I don’t want to go . . . "
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 var dialogue_index = 0
@@ -30,8 +27,8 @@ func _process(_delta):
 	#$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true:
 		load_dialogue()
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 11:
-		Transition.change_scene("res://Act1/playerscenes/scenez11/SceneEleven.tscn")
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 9:
+		Transition.change_scene("res://drawncutscenes/factory.tscn")
 		
 func load_dialogue():
 	$Sprite.show()
@@ -59,4 +56,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	print("adsfdgf")
+	pass

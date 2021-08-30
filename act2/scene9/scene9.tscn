@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=2]
+[ext_resource path="res://sprites/act 2 setting/scene1/path.png" type="Texture" id=3]
+[ext_resource path="res://drawncutscenes/factorything.jpg" type="Texture" id=4]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=5]
+[ext_resource path="res://act2/scene9/dialoguebox.gd" type="Script" id=6]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65.7756, 1223.77 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2752.58, 184.564 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 7 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.733333, 0.290196, 0.290196, 1 )
+position = Vector2( 1721.49, 963.901 )
+scale = Vector2( 2.76998, 2.71077 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0.745098, 0.278431, 0.278431, 1 )
+position = Vector2( 5128.78, 966.785 )
+scale = Vector2( 2.76998, 2.71077 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 2328.19, 966.184 )
+scale = Vector2( 0.663167, 1 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 3775.31, 470.571 )
+scale = Vector2( 1, 1.76706 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2.86438, 1309.03 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 3798.19, 1213.36 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2314.43, 2128.25 )
+shape = SubResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 492.676, 1529.59 )
+
+[node name="control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type" type="AudioStreamPlayer" parent="control"]
+
+[node name="Sprite" type="Sprite" parent="control"]
+position = Vector2( 2334.11, 519.202 )
+scale = Vector2( 1.80867, 1 )
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="control"]
+margin_left = 1195.0
+margin_top = 363.0
+margin_right = 3450.0
+margin_bottom = 665.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+
+[node name="Tween" type="Tween" parent="control"]
+
+[connection signal="tween_completed" from="control/Tween" to="control" method="_on_Tween_tween_completed"]
