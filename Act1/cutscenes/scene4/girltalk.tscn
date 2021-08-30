@@ -25,15 +25,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "default",
-"speed": 3.0
-}, {
 "frames": [ ExtResource( 17 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "patty",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -138,21 +138,21 @@ __meta__ = {
 position = Vector2( 1859.43, 1231.18 )
 scale = Vector2( 4.62068, 4.48755 )
 frames = SubResource( 1 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1991.53, 465.518 )
 scale = Vector2( 0.740516, 0.440623 )
 frames = SubResource( 2 )
-frame = 15
+frame = 16
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 2039.91, 441.98 )
 scale = Vector2( 0.895117, 0.464839 )
 frames = SubResource( 3 )
-frame = 14
+frame = 10
 playing = true
 
 [node name="dialoguebox" type="Control" parent="."]
@@ -237,14 +237,14 @@ __meta__ = {
 position = Vector2( 3205.01, 1684.23 )
 scale = Vector2( 0.249418, 0.236342 )
 frames = SubResource( 7 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="choicebox"]
 position = Vector2( 3207.63, 1875.15 )
 scale = Vector2( 0.291262, 0.272956 )
 frames = SubResource( 8 )
-frame = 1
+frame = 7
 playing = true
 flip_v = true
 
@@ -259,11 +259,12 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
 anims/fade = SubResource( 9 )
-[connection signal="tween_completed" from="dialoguebox/hhhh" to="dialoguebox" method="_on_hhhh_tween_completed"]
+
 [connection signal="tween_completed" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_completed"]
+[connection signal="tween_completed" from="dialoguebox/hhhh" to="dialoguebox" method="_on_hhhh_tween_completed"]
 [connection signal="tween_started" from="dialoguebox/hhhh" to="." method="_on_hhhh_tween_started"]
 [connection signal="tween_started" from="dialoguebox/hhhh" to="choicebox" method="_on_hhhh_tween_started"]
-[connection signal="tween_completed" from="choicebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="choicebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
 [connection signal="tween_started" from="choicebox/Tween" to="." method="_on_Tween_tween_started"]
 [connection signal="tween_started" from="choicebox/Tween" to="choicebox" method="_on_Tween_tween_started"]

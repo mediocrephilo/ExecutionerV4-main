@@ -12,4 +12,4 @@ func _ready():
 
 func _on_exit_body_entered(body):
 	if body.name == "player":
-		Transition.change_scene("res://drawncutscenes/act1girl.tscn")
+		Transition.change_scene("res://Act1/cutscenes/scenez12/Polly.tscn")

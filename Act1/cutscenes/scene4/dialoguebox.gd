@@ -10,7 +10,7 @@ var dialogue2 = [
 
 var dialogue3 = [
 	"[center] you tell me! hehe!",
-	"[center] it's a game! don't you remember? we used to play it all the time!",
+	"[center] it's a game! Have you never played a game before?",
 ]
 
 var dialogue4 = [
@@ -20,7 +20,7 @@ var dialogue4 = [
 
 var dialogue5 = [
 	"[center] you're a liar! a liar and a murderer!",
-	"[center] oh we had so much fun! until you, well . . ."
+	"[center] oh I loved playing games! until you came along. . ."
 ]
 
 var dialogue6 = [

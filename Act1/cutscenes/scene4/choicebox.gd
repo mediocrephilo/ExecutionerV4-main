@@ -14,7 +14,7 @@ var choice3 = [
 ]
 var choice4 = [
 	"[center] WHAT DO YOU WANT?",
-	"[center] I DIDN'T KILL YOU"
+	"[center] I DIDN'T WANT TO KILL YOU"
 ]
 var choice5 = [
 	"[center] AND NOTHING BUT THE TRUTH?",
@@ -65,10 +65,10 @@ func _process(_delta):
 		load_dialogue(choice6)
 	if Input.is_action_just_pressed("ui_up") and finished == true and number == 6:
 		yield(get_tree().create_timer(4), "timeout")
-		Transition.change_scene("res://Act1/playerscenes/scene5/black.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scene5/black2.tscn")
 	if Input.is_action_just_pressed("ui_down") and finished == true and number == 6:
 		yield(get_tree().create_timer(4), "timeout")
-		Transition.change_scene("res://Act1/playerscenes/scene5/black.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scene5/black2.tscn")
 
 func load_dialogue(choicenumber):
 	yield(get_tree().create_timer(4), "timeout")

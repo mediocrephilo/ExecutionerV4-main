@@ -31,7 +31,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFont" id=2]
-size = 90
+size = 84
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
@@ -95,9 +95,9 @@ custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Gemalon, XXXX
-   Everything is blue today. The big man popped out and turned everything blue! The sky is blue, the birds are blue, the hanging boy and my mother too! Don't tell him but I don't really like blue all that much. I think I'll go to the jail again today. They're always so happy to see me. I bring them gifts and they all laugh! And when they're blue I'll go visit and make them laugh. I will!"
+   Everything is blue today. A guard with long black hair covering their eyes popped out and turned everything blue! The sky is blue, the birds are blue, the faces of the hanging boy and my mother too! Don't tell him but I don't really like blue all that much. I think I'll go to the jail again today. They're always so happy to see me. I bring them gifts and they all laugh! And when they're blue I'll go visit and make them laugh. I will!"
 text = "Gemalon, XXXX
-   Everything is blue today. The big man popped out and turned everything blue! The sky is blue, the birds are blue, the hanging boy and my mother too! Don't tell him but I don't really like blue all that much. I think I'll go to the jail again today. They're always so happy to see me. I bring them gifts and they all laugh! And when they're blue I'll go visit and make them laugh. I will!"
+   Everything is blue today. A guard with long black hair covering their eyes popped out and turned everything blue! The sky is blue, the birds are blue, the faces of the hanging boy and my mother too! Don't tell him but I don't really like blue all that much. I think I'll go to the jail again today. They're always so happy to see me. I bring them gifts and they all laugh! And when they're blue I'll go visit and make them laugh. I will!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

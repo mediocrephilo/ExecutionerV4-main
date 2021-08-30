@@ -10,7 +10,7 @@ var dialogue2 = [
 
 var dialogue3 = [
 	"[center] that is so rude! you were always so mean . . . i hate you! [/center]",
-	"[center] hmmm . . . but i'm here, in you, aren't i? [/center]",
+	"[center] and why should I do you a favor? [/center]",
 ]
 
 var dialogue4 = [

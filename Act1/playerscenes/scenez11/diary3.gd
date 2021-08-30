@@ -17,7 +17,7 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_cancel") and canInteract == true:
 		Transition.change_scene("res://Act1/playerscenes/scenez11/SceneEleven.tscn")
 	if Input.is_action_just_pressed("repent") and canInteract == true:
-		Transition.change_scene("res://Act1/cutscenes/scenez12/Polly.tscn")
+		Transition.change_scene("res://drawncutscenes/act1girl.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

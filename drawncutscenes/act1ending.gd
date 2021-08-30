@@ -3,13 +3,13 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
-		"It’s cold in here",
-		"I don’t like sleeping on the ground. It makes my neck hurt.",
-		"Every day the guards come in to feed us, but the bread they give us is as hard as rock.",
-		"I wish someone would come with fruits.",
-		"I wrote down the way I brought food without people noticing on a piece of paper back home. Maybe when father finds it he will come and give me fruits.",
-		"I miss him",
-		"I hope he will come see me before tomorrow... I just want to see him one last time",
+		"It’s been so long since father came",
+		"I don't think he's allowed to see me again. Ever..",
+		"The guard with the long black hair came in today and took away Cindy.",
+		"... She never came back. I don't think I will ever be able to see her again.",
+		"I think she's dead. Arthur too. And that little boy hanging from the tree.",
+		"I'm afraid I might be next.",
+		"The black haired guard is mean! They're so mean! I hate them.",
 		"At least the people here are nice. They smile when they see me but . . . they don’t look happy.",
 		"They always tell me that I’m lucky, but I don’t get what they mean. Something about factories, something about E.L.F",
 		"... ... ...",

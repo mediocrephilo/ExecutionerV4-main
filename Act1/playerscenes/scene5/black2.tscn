@@ -1,63 +1,60 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (11).png" type="Texture" id=1]
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (1).png" type="Texture" id=2]
-[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (1).png" type="Texture" id=3]
-[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (3).png" type="Texture" id=4]
-[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (4).png" type="Texture" id=5]
-[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=6]
-[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=7]
-[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=8]
-[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=9]
-[ext_resource path="res://sprites/characters/right jump 4.png" type="Texture" id=10]
-[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=11]
-[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=12]
-[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=13]
-[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=14]
-[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=15]
-[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=16]
-[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=17]
-[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=18]
-[ext_resource path="res://Act1/playerscenes/player.gd" type="Script" id=19]
-[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=20]
-[ext_resource path="res://Act1/playerscenes/scene5/exit1.gd" type="Script" id=21]
-[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (5).png" type="Texture" id=22]
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (4).png" type="Texture" id=23]
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (3).png" type="Texture" id=24]
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (5).png" type="Texture" id=25]
-[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (2).png" type="Texture" id=26]
-[ext_resource path="res://sprites/Act1settings/sceneone/Untitled123_20210816162207.PNG" type="Texture" id=27]
-[ext_resource path="res://sprites/Act1settings/sceneone/Untitled123_20210816162406.PNG" type="Texture" id=28]
-[ext_resource path="res://Act1/playerscenes/scene5/Area2D2.gd" type="Script" id=29]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (3).png" type="Texture" id=1]
+[ext_resource path="res://Act1/playerscenes/scene5/exit1.gd" type="Script" id=2]
+[ext_resource path="res://sprites/characters/right walk 4.png" type="Texture" id=3]
+[ext_resource path="res://sprites/characters/right walk 3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (4).png" type="Texture" id=5]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (3).png" type="Texture" id=6]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=7]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (5).png" type="Texture" id=8]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (2).png" type="Texture" id=9]
+[ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (5).png" type="Texture" id=11]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (4).png" type="Texture" id=12]
+[ext_resource path="res://sprites/characters/jump 2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (1).png" type="Texture" id=14]
+[ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=15]
+[ext_resource path="res://sprites/characters/right jump 4.png" type="Texture" id=16]
+[ext_resource path="res://sprites/characters/fall.png" type="Texture" id=17]
+[ext_resource path="res://sprites/characters/right walk 7.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Act1settings/scenefive/unnamed (11).png" type="Texture" id=19]
+[ext_resource path="res://sprites/characters/right walk 6.png" type="Texture" id=20]
+[ext_resource path="res://sprites/characters/right walk 5.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Act1settings/scenefour/unnamed (1).png" type="Texture" id=22]
+[ext_resource path="res://Act1/playerscenes/player.gd" type="Script" id=23]
+[ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=24]
+[ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=25]
+[ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=26]
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=19]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 148.679
 height = 569.576
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=3]
 length = 30.0
 loop = true
 tracks/0/type = "bezier"
@@ -81,7 +78,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 15.1, 30 )
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=4]
 length = 5.0
 loop = true
 tracks/0/type = "bezier"
@@ -105,7 +102,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2.5, 5 )
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=5]
 length = 6.0
 loop = true
 tracks/0/type = "bezier"
@@ -129,7 +126,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 3, 6 )
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=6]
 resource_name = "New Anim"
 length = 6.0
 loop = true
@@ -154,7 +151,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0.1, 3.1, 6 )
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=7]
 resource_name = "New Anim"
 length = 7.0
 loop = true
@@ -179,7 +176,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 3, 7 )
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=8]
 resource_name = "New Anim"
 length = 8.0
 loop = true
@@ -204,68 +201,57 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 4, 8 )
 }
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 223.116, 1532.17 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 303.509, 2287.97 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 4010.5, 251.359 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 270.756, 1582.78 )
 
-[sub_resource type="SpriteFrames" id=30]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 3.0
 } ]
 
-[sub_resource type="SpriteFrames" id=31]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 4.0
 } ]
 
-[sub_resource type="SpriteFrames" id=32]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 6.0
 } ]
 
-[sub_resource type="SpriteFrames" id=16]
-animations = [ {
-"frames": [ ExtResource( 27 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 200.992, 280.591 )
-
 [node name="Node2D" type="Node2D"]
 
 [node name="player" type="KinematicBody2D" parent="."]
 z_index = 1
-script = ExtResource( 19 )
+script = ExtResource( 23 )
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 3561.92, 1619.9 )
-frames = SubResource( 18 )
+frames = SubResource( 1 )
 animation = "walk"
 flip_h = true
 
 [node name="playerCollision" type="CollisionShape2D" parent="player"]
 position = Vector2( 3575.98, 1631.67 )
-shape = SubResource( 19 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -279,13 +265,13 @@ limit_right = 3840
 limit_bottom = 2160
 
 [node name="Walk" type="AudioStreamPlayer" parent="player"]
-stream = ExtResource( 20 )
+stream = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1249.95, 1590.41 )
 scale = Vector2( 1.30533, 0.85212 )
 z_index = -4
-texture = ExtResource( 2 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -294,89 +280,89 @@ __meta__ = {
 position = Vector2( -1274.57, 872.168 )
 scale = Vector2( 2.18996, 1 )
 z_index = 5
-texture = ExtResource( 1 )
+texture = ExtResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 20 )
+"anims/New Anim" = SubResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( -219.488, 903.931 )
 scale = Vector2( 1.0152, 1 )
 z_index = 6
-texture = ExtResource( 3 )
+texture = ExtResource( 22 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 21 )
+"anims/New Anim" = SubResource( 4 )
 
 [node name="Sprite4" type="Sprite" parent="."]
 position = Vector2( 2698.6, 1408.78 )
 scale = Vector2( 1.0152, 1 )
 z_index = 6
-texture = ExtResource( 3 )
+texture = ExtResource( 22 )
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite4"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 22 )
+"anims/New Anim" = SubResource( 5 )
 
 [node name="Sprite5" type="Sprite" parent="."]
 position = Vector2( 86.6228, 1482.68 )
 z_index = 6
-texture = ExtResource( 4 )
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite5"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 23 )
+"anims/New Anim" = SubResource( 6 )
 
 [node name="Sprite6" type="Sprite" parent="."]
 position = Vector2( 2299.17, 1515.04 )
 z_index = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 1 )
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite6"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 24 )
+"anims/New Anim" = SubResource( 7 )
 
 [node name="Sprite7" type="Sprite" parent="."]
 position = Vector2( 688.29, 1849.18 )
 z_index = 7
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite7"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 25 )
+"anims/New Anim" = SubResource( 8 )
 
 [node name="Sprite8" type="Sprite" parent="."]
 position = Vector2( 2244.08, 967.847 )
 z_index = 6
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Sprite9" type="Sprite" parent="."]
 position = Vector2( 644.575, 499.294 )
-texture = ExtResource( 22 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource( 21 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1524.48, 1164.2 )
-shape = SubResource( 26 )
+shape = SubResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -388,21 +374,21 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4082.16, 1360.72 )
-shape = SubResource( 27 )
+shape = SubResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 917.071, 2316.5 )
-shape = SubResource( 28 )
+shape = SubResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -1643.58, 1113.59 )
-shape = SubResource( 29 )
+shape = SubResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -411,40 +397,21 @@ __meta__ = {
 position = Vector2( 116.381, 557.231 )
 scale = Vector2( 0.379248, 0.393012 )
 z_index = -1
-frames = SubResource( 30 )
-frame = 6
+frames = SubResource( 13 )
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 4177.53, 597.596 )
-frames = SubResource( 31 )
+frames = SubResource( 14 )
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( 2150.78, 62.015 )
 scale = Vector2( 0.673795, 0.600847 )
-frames = SubResource( 32 )
-frame = 2
+frames = SubResource( 15 )
+frame = 5
 playing = true
-
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2( 81.0881, -165.419 )
-script = ExtResource( 29 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D2"]
-position = Vector2( 899.686, 1770.69 )
-scale = Vector2( 1.97761, 1.78398 )
-frames = SubResource( 16 )
-frame = 1
-playing = true
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 833.583, 1780.69 )
-shape = SubResource( 17 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]

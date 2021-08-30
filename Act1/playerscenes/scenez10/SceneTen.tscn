@@ -36,9 +36,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "idle",
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 12 ) ],
@@ -46,14 +46,14 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 23 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "fall",
 "speed": 5.0
 } ]
 
@@ -460,6 +460,7 @@ script = ExtResource( 31 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scene10exit"]
 position = Vector2( 8064.98, 1485.85 )
 shape = SubResource( 15 )
+
 [connection signal="body_entered" from="road/road layer/jaildoor2" to="road/road layer/jaildoor2" method="_on_jaildoor2_body_entered"]
 [connection signal="body_exited" from="road/road layer/jaildoor2" to="road/road layer/jaildoor2" method="_on_jaildoor2_body_exited"]
 [connection signal="tween_completed" from="road/road layer/jaildoor2/CanvasLayer/dialoguebox/Tween" to="road/road layer/jaildoor2" method="_on_Tween_tween_completed"]
