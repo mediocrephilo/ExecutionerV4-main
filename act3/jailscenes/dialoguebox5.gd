@@ -1,8 +1,7 @@
 extends Control
 var dialogue = [
-		"So that's why . . . and to think I had forgotten . . .",
-		"Thank you. I don't know how, or why you can see into my past, but thank you for letting me remember.",
-		"Where should we go next? ",
+		". . . 161.",
+		"I see now why you refused to tell me your name.",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 

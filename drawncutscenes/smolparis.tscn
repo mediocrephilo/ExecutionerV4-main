@@ -48,10 +48,10 @@ anchor_left = 16.7
 anchor_top = 41.2
 anchor_right = 82.775
 anchor_bottom = 47.325
-margin_left = -31.2837
-margin_top = -11.1309
-margin_right = -24.2837
-margin_bottom = 142.869
+margin_left = -31.0
+margin_top = 37.0
+margin_right = -24.0
+margin_bottom = 143.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -60,6 +60,5 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="Control"]
-
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

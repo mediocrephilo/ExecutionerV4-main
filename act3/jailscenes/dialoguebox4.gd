@@ -1,8 +1,11 @@
 extends Control
 var dialogue = [
-		"So that's why . . . and to think I had forgotten . . .",
-		"Thank you. I don't know how, or why you can see into my past, but thank you for letting me remember.",
-		"Where should we go next? ",
+		"I knew it! I knew I had memories of the rebellion, but it wouldn't have been the first time my mind played tricks on me.",
+		"I am a coward by nature, and I was afraid of thinking of it, for fear that when I came to my senses, it would have given me a false hope.",
+		"But then again, we are not out of the fog just yet, are we. Tell me, did we succeed?",
+		"No! Stop. Do not tell me. Let me witness the result of our fight, even if it was for nothing.",
+		"The fact that we tried proves to me that not all of humanity has descended into darkness.",
+		"It would be a disservice to my brothers and sisters if I shied away from the end now.",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 
