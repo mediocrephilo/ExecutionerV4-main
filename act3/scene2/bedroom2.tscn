@@ -205,7 +205,6 @@ script = ExtResource( 16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 3982.84, 1378.23 )
 shape = SubResource( 8 )
-
 [connection signal="body_entered" from="desk" to="desk" method="_on_desk_body_entered"]
 [connection signal="body_exited" from="desk" to="desk" method="_on_desk_body_exited"]
 [connection signal="tween_completed" from="desk/dialoguebox/Tween" to="desk" method="_on_Tween_tween_completed"]
