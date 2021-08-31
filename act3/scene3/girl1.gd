@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-		"sussy baka"
+		"My comb... it got stuck in the grinder..."
 ]
 var dialogue_index = 0
 var number = 0

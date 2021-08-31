@@ -41,7 +41,7 @@ font_data = ExtResource( 8 )
 position = Vector2( 1943.7, 1034.96 )
 scale = Vector2( 1.071, 1.10752 )
 frames = SubResource( 1 )
-frame = 19
+frame = 17
 playing = true
 
 [node name="Sprite3" type="Sprite" parent="."]
