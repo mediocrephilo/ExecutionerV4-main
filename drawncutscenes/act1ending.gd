@@ -5,8 +5,8 @@ var dialogue = [
 #=======
 		"... Elphabon, XX",
 		"It’s been so long since father came",
-		"I don't think he's allowed to see me again. Ever..",
-		"The guard with the long black hair came in today and took away Cindy.",
+		"I don't think he's allowed to see me again. Ever. . .",
+		"The guard with the long black hair came in today and took away Cindy." , 
 		"... She never came back. I don't think I will ever be able to see her again.",
 		"I think she's dead. Arthur too. And mother. And that little boy hanging from the tree. The guard with the long black hair killed them all",
 		"I'm afraid I might be next.",
