@@ -26,6 +26,7 @@ script = ExtResource( 6 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1920, 1080 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="Label" type="Label" parent="."]
