@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://drawncutscenes/boycutscene1.jpg" type="Texture" id=1]
 [ext_resource path="res://drawncutscenes/boycutscene2.jpg" type="Texture" id=2]
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=3]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://drawncutscenes/act2boi.gd" type="Script" id=5]
+[ext_resource path="res://drawncutscenes/IMG_5766.jpg" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,7 +25,6 @@ font_data = ExtResource( 4 )
 position = Vector2( 1901.42, 1066.78 )
 scale = Vector2( 2.03142, 2.07992 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Control" type="Control" parent="."]
@@ -54,6 +54,11 @@ __meta__ = {
 }
 
 [node name="Type" type="AudioStreamPlayer2D" parent="Control"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 658.614, 990.999 )
+scale = Vector2( 5.32403, 2.24263 )
+texture = ExtResource( 6 )
 
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
