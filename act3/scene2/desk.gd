@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-		"Now that the light is on, this place does seem oddly familiar... Should we take a look at that notebook on the desk?"
+		"Now that the light is on, this place does seem oddly familiar . . . go take a look at the notebook on that desk."
 ]
 var dialogue_index = 0
 var number = 0
