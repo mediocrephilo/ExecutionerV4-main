@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=1]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
@@ -39,6 +39,31 @@ use_mipmaps = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=7]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray( 2642.84, -0.25, 0, 0.25, 0, 2642.84, -0.25, 0, 0.25, 0, 2642.84, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1530.1, -0.25, 0, 0.25, 0, 1600, -0.25, 0, 0.25, 0, 1530.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="Animation" id=8]
 resource_name = "New Anim"
 length = 2.0
 loop = true
@@ -166,9 +191,57 @@ autoplay = "New Anim"
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+
+[node name="dialoguebox2" type="Control" parent="."]
+margin_left = -487.171
+margin_top = -1235.33
+margin_right = -447.171
+margin_bottom = -1195.33
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="dialoguebox2"]
+modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
+margin_left = 1102.0
+margin_top = 1527.0
+margin_right = 3669.0
+margin_bottom = 2027.0
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox2"]
+margin_left = 1270.0
+margin_top = 1633.0
+margin_right = 3443.0
+margin_bottom = 1872.0
+custom_fonts/normal_font = SubResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuesprite" type="Sprite" parent="dialoguebox2"]
+position = Vector2( 2642.84, 1600 )
+scale = Vector2( 1.31444, 1.92604 )
+texture = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox2/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 8 )
+
+[node name="Tween" type="Tween" parent="dialoguebox2"]
+
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox2"]
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="paris" method="_on_paris_body_exited"]
 [connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="dialoguebox2/Tween" to="dialoguebox2" method="_on_Tween_tween_completed"]

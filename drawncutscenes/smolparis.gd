@@ -5,18 +5,18 @@ var dialogue = [
 #=======
 		" . . . and on the seventh year after the Second Cataclysm, the Eali came into power.",
 		"''AND WHAT GOOD DID THE EALI BRING IN THE FIRST YEAR OF THEIR RULE?''",
-		"They preserved the state of humanity and ensured our future through their strength and radical policy, Articles V and XX of the New Order",
-		"and the E.L.F. Acts, in particular",
+		"They preserved the state of humanity and ensured our future through their strength and radical policy, Articles V and XX of the New Order,",
+		"and the E.L.F. Acts, in particular.",
 		"''VERY GOOD. AND WHAT DID THE E.L.F ACTS DO?''",
-		"They created a strong work force that is completely loyal to the party. For a strong work force is a strong country.",
+		"They solved both the problem of overpopulation and secured a constant work force. The strength of a nation can be measured by its production.",
 		"''VERY GOOD. AND WHEN COUNCILOR MATTHEWS ENQUIRES ABOUT THE REASON FOR YOUR APPLICATION?''",
 		"I am to say: ''I wish only to dedicate my name to the cause''.",
 		" . . . YOU WILL MAKE ME PROUD.",
-		"...Father? Why did you propose the E.L.F?",
-		"''... YOU MAY BE TOO YOUNG TO UNDERSTAND THE MOTIVES AS OF NOW. JUST DON'T QUESTION THE FACT THAT WE KNOW WHAT IS BEST''",
-		"''THERE ARE SOME DISOBEDIENT PEOPLE IN THIS WORLD, AND THERE ARE ONLY A FEW WAYS TO KEEP THEM IN CHECK WHILE MAKING USE OF THEM''"
+		". . . Father? May I ask why you proposed the E.L.F Acts?",
+		"''THAT . . . I SUPPOSE YOU ARE OLD ENOUGH TO UNDERSTAND NOW. VERY WELL. LET ME TELL YOU A STORY.''",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
+
 var dialogue_index = 0
 var finished = false
 var interact = false
@@ -57,4 +57,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	print("adsfdgf")
+	Transition.change_scene("res://drawncutscenes/Omelas.tscn")

@@ -1,8 +1,16 @@
 extends Control
 var dialogue = [
-		"So that's why . . . and to think I had forgotten . . .",
-		"Thank you. I don't know how, or why you can see into my past, but thank you for letting me remember.",
-		"Where should we go next? ",
+		". . . 161.",
+		"I see now why you refused to tell me your name.",
+		". . . I may have been a little harsh when speaking of the Corps.",
+		"But I stand by it. People join the Corps for personal greed.",
+		"And the people are the ones who suffer from their ambition.",
+		"Executioners are the worst of them. Nothing is sacred to them, with their sickly gallows, especially not life.",
+		"But . . . you do not strike me as someone who struggles with glory.", 
+		"If you are, well, it's not the first time I've been a bad judge of character.",
+		"In any case, you are my-our last chance.",
+		"Do you still remember the story my father told me?",
+		"Will you stay, or will you fight? Leaving, at least for you, is not an option."
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 

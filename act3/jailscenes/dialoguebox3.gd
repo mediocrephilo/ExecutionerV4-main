@@ -1,8 +1,10 @@
 extends Control
 var dialogue = [
-		"So that's why . . . and to think I had forgotten . . .",
-		"Thank you. I don't know how, or why you can see into my past, but thank you for letting me remember.",
-		"Where should we go next? ",
+		". . . Dogs, the lot of them. The Corps only know how to follow whatever orders they are given,",
+		"and lick their masters boots for awards. Thinking for yourself? Never heard of it.", 
+		". . . You know, they say that good men will die for their country, and blind men will kill for it.",
+		"Excuse me for my outburst. It's just . . . the way Eali pushes its naive ideology makes me sick.",
+		"Let us move on, then.",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 
