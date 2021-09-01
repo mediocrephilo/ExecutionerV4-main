@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=1]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=12]
 [ext_resource path="res://sprites/UI/GirlTextbox/arrow.PNG" type="Texture" id=13]
 [ext_resource path="res://sprites/UI/GirlTextbox/arrow1.PNG" type="Texture" id=14]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 94.6934, 1300.69 )
@@ -97,7 +98,7 @@ position = Vector2( 1893.7, 2134.75 )
 shape = SubResource( 2 )
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 524.367, 1725.62 )
+position = Vector2( 2408.97, 1635.3 )
 
 [node name="paris" type="Area2D" parent="."]
 position = Vector2( 6.83765, 20.5129 )
@@ -146,7 +147,7 @@ modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
 margin_left = 1102.0
 margin_top = 1527.0
 margin_right = 3669.0
-margin_bottom = 2027.0
+margin_bottom = 2057.0
 texture = ExtResource( 9 )
 expand = true
 __meta__ = {
@@ -156,8 +157,8 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
 margin_left = 1270.0
 margin_top = 1633.0
-margin_right = 3443.0
-margin_bottom = 1872.0
+margin_right = 3491.0
+margin_bottom = 1956.0
 custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -177,6 +178,7 @@ autoplay = "New Anim"
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+stream = ExtResource( 15 )
 
 [node name="dialoguebox2" type="Control" parent="dialoguebox"]
 margin_left = 392.955
@@ -226,19 +228,17 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="dialoguebox/dialoguebox2"]
 
-[node name="Type" type="AudioStreamPlayer" parent="dialoguebox/dialoguebox2"]
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="dialoguebox/dialoguebox2"]
 position = Vector2( 3495.83, 1664.44 )
 scale = Vector2( 0.208793, 0.229551 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="dialoguebox/dialoguebox2"]
 position = Vector2( 3493.31, 1865.84 )
 scale = Vector2( 0.208793, 0.229551 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 flip_v = true
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]

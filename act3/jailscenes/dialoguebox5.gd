@@ -2,13 +2,13 @@ extends Control
 var dialogue = [
 		". . . 161.",
 		"I see now why you refused to tell me your name.",
-		". . . I may have been a little harsh when speaking of the Corps.",
-		"But I stand by it. People join the Corps for personal greed.",
-		"And the people are the ones who suffer from their ambition.",
+		". . . I may have been a little harsh when speaking of the Corps before.",
+		"But I stand by it. People join the Corps because of greed.",
+		"And the citizens are the ones who suffer from their ambition.",
 		"Executioners are the worst of them. Nothing is sacred to them, with their sickly gallows, especially not life.",
-		"But . . . you do not strike me as someone who struggles with glory.", 
+		"But . . . you do not strike me as someone who lives for glory.", 
 		"If you are, well, it's not the first time I've been a bad judge of character.",
-		"In any case, you are my-our last chance.",
+		"I hope you are not. In any case, you are my-our last chance.",
 		"Do you still remember the story my father told me?",
 		"Will you celebrate, or will you fight? Leaving, at least for you, is not an option.",
 		"I hope you will remember your decision when the time comes. Take this."
@@ -28,6 +28,7 @@ var dialogue3 = [
 
 var dialogue_index = 0
 var dialogue_index1 = 0
+var dialogue_index2 = 0
 var number = 0
 var finished = true
 var canInteract = false
@@ -48,9 +49,9 @@ func _on_paris_body_exited(body):
 		
 func _process(_delta):
 	$"continuesprite".visible = finished
-	if Input.is_action_just_pressed("ui_accept") and finished == true:
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index < 11:
 		load_dialogue()
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 11:
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 11 and dialogue_index2 == 0:
 		$dialoguebox2.show()
 		load_dialogue2()
 		load_dialogue22()
@@ -58,6 +59,10 @@ func _process(_delta):
 			load_dialogue3()
 		if Input.is_action_just_pressed("ui_down"):
 			load_dialogue()
+	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 12:
+		#Transition.change_scene("")
+	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index3 == 2:
+		#Transition.change_scene("")
 		
 func load_dialogue():
 	$TextureRect.show()
@@ -76,8 +81,6 @@ func load_dialogue():
 		$Tween.start()
 		dialogue_index +=1
 	
-	else:
-		queue_free()
 		
 func load_dialogue3():
 	$TextureRect.show()
@@ -95,44 +98,46 @@ func load_dialogue3():
 		)
 		$Tween.start()
 		dialogue_index1 +=1
-	
-	else:
-		queue_free()
 		
 func load_dialogue2():
-	$TextureRect.show()
-	$RichTextLabel.show()
+	$dialoguebox2/TextureRect.show()
+	$dialoguebox2/RichTextLabel.show()
 	yield(get_tree().create_timer(0.5), "timeout")
 	if dialogue_index < dialogue.size():
 
 		$Type.play()
 		finished = false
-		$dialoguebox/RichTextLabel.bbcode_text = dialogue2[0]
-		$RichTextLabel.percent_visible = 0
-		$Tween.interpolate_property(
-			$RichTextLabel, "percent_visible", 0, 1, 2, 
+		$dialoguebox2/RichTextLabel.bbcode_text = dialogue2[0]
+		$dialoguebox2/RichTextLabel.percent_visible = 0
+		$dialoguebox2/Tween.interpolate_property(
+			$dialoguebox2/RichTextLabel, "percent_visible", 0, 1, 2, 
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
-		$Tween.start()
+		$dialoguebox2/Tween.start()
+		$dialoguebox2/AnimatedSprite.show()
+		$dialoguebox2/AnimatedSprite2.show()
+		dialogue_index2 += 1
 		
 	else:
 		queue_free()
+		
 func load_dialogue22():
-	$TextureRect.show()
-	$RichTextLabel2.show()
+	$dialoguebox2/TextureRect.show()
+	$dialoguebox2/RichTextLabel2.show()
 	yield(get_tree().create_timer(0.5), "timeout")
 	if dialogue_index < dialogue.size():
 
 		$Type.play()
 		finished = false
-		$RichTextLabel2.bbcode_text = dialogue22[0]
-		$RichTextLabel2.percent_visible = 0
-		$Tween.interpolate_property(
-			$RichTextLabel2, "percent_visible", 0, 1, 2, 
+		$dialoguebox2/RichTextLabel2.bbcode_text = dialogue22[0]
+		$dialoguebox2/RichTextLabel2.percent_visible = 0
+		$dialoguebox2/Tween.interpolate_property(
+			$dialoguebox2/RichTextLabel2, "percent_visible", 0, 1, 2, 
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
-		$Tween.start()
-	
+		$dialoguebox2/Tween.start()
+		$dialoguebox2/AnimatedSprite.show()
+		$dialoguebox2/AnimatedSprite2.show()
 	else:
 		queue_free()
 	
