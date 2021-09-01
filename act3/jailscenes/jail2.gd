@@ -10,7 +10,7 @@ func _ready():
 	$Label.hide()
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") and yay == true:
-		Transition.change_scene("res://act3/scene2/hallway.tscn")
+		Transition.change_scene("res://act3/scene3/garden.tscn")
 func _on_dialoguebox_tree_exited():
 	$paris/Label.hide()
 	$Label.show()
