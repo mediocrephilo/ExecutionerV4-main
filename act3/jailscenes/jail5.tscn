@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=1]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=9]
 [ext_resource path="res://act3/jailscenes/paris2.gd" type="Script" id=10]
 [ext_resource path="res://act3/jailscenes/dialoguebox5.gd" type="Script" id=11]
+[ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=12]
+[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=13]
+[ext_resource path="res://act3/jailscenes/choice.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 94.6934, 1300.69 )
@@ -152,6 +155,8 @@ margin_right = -447.171
 margin_bottom = -1195.33
 script = ExtResource( 11 )
 __meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -193,43 +198,42 @@ autoplay = "New Anim"
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 
 [node name="dialoguebox2" type="Control" parent="."]
-margin_left = -487.171
-margin_top = -1235.33
-margin_right = -447.171
-margin_bottom = -1195.33
-script = ExtResource( 11 )
+margin_left = -94.2162
+margin_top = -43.7894
+margin_right = -54.2162
+margin_bottom = -3.78943
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="dialoguebox2"]
 modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
-margin_left = 1102.0
+margin_left = 2034.0
 margin_top = 1527.0
 margin_right = 3669.0
 margin_bottom = 2027.0
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox2"]
-margin_left = 1270.0
+margin_left = 2151.0
 margin_top = 1633.0
-margin_right = 3443.0
-margin_bottom = 1872.0
+margin_right = 3519.0
+margin_bottom = 1916.0
 custom_fonts/normal_font = SubResource( 6 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="continuesprite" type="Sprite" parent="dialoguebox2"]
-position = Vector2( 2642.84, 1600 )
+position = Vector2( 2699.88, 1530.1 )
 scale = Vector2( 1.31444, 1.92604 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox2/continuesprite"]
 autoplay = "New Anim"
