@@ -30,10 +30,11 @@ var dialogue_index = 0
 var dialogue_index1 = 0
 var dialogue_index2 = 0
 var number = 0
-var finished = true
+var finished = false
 var canInteract = false
 
 func _ready():
+	finished = true
 	$TextureRect.hide()
 	$RichTextLabel.hide()
 	$continuesprite.hide()
@@ -55,10 +56,14 @@ func _process(_delta):
 		$dialoguebox2.show()
 		load_dialogue2()
 		load_dialogue22()
-		if Input.is_action_just_pressed("ui_up"):
-			load_dialogue3()
-		if Input.is_action_just_pressed("ui_down"):
-			load_dialogue()
+	if Input.is_action_just_pressed("ui_up") and dialogue_index2 == 1:
+		$dialoguebox2.hide()
+		load_dialogue3()
+	if Input.is_action_just_pressed("ui_down") and dialogue_index2 == 1:
+		$dialoguebox2.hide()
+		load_dialogue()
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index1 == 1:
+		load_dialogue()
 	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 12:
 		#Transition.change_scene("")
 	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index3 == 2:
@@ -100,8 +105,6 @@ func load_dialogue3():
 		dialogue_index1 +=1
 		
 func load_dialogue2():
-	$dialoguebox2/TextureRect.show()
-	$dialoguebox2/RichTextLabel.show()
 	yield(get_tree().create_timer(0.5), "timeout")
 	if dialogue_index < dialogue.size():
 
@@ -116,18 +119,15 @@ func load_dialogue2():
 		$dialoguebox2/Tween.start()
 		$dialoguebox2/AnimatedSprite.show()
 		$dialoguebox2/AnimatedSprite2.show()
+		$Type.stop()
 		dialogue_index2 += 1
 		
-	else:
-		queue_free()
+
 		
 func load_dialogue22():
-	$dialoguebox2/TextureRect.show()
-	$dialoguebox2/RichTextLabel2.show()
 	yield(get_tree().create_timer(0.5), "timeout")
 	if dialogue_index < dialogue.size():
 
-		$Type.play()
 		finished = false
 		$dialoguebox2/RichTextLabel2.bbcode_text = dialogue22[0]
 		$dialoguebox2/RichTextLabel2.percent_visible = 0
@@ -138,8 +138,7 @@ func load_dialogue22():
 		$dialoguebox2/Tween.start()
 		$dialoguebox2/AnimatedSprite.show()
 		$dialoguebox2/AnimatedSprite2.show()
-	else:
-		queue_free()
+
 	
 func _on_Tween_tween_completed(_object, _key):
 	finished = true

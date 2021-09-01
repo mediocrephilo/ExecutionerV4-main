@@ -232,6 +232,7 @@ __meta__ = {
 position = Vector2( 3495.83, 1664.44 )
 scale = Vector2( 0.208793, 0.229551 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="dialoguebox/dialoguebox2"]
