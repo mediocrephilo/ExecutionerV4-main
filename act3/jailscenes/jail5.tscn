@@ -12,8 +12,8 @@
 [ext_resource path="res://act3/jailscenes/paris2.gd" type="Script" id=10]
 [ext_resource path="res://act3/jailscenes/dialoguebox5.gd" type="Script" id=11]
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=12]
-[ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=13]
-[ext_resource path="res://act3/jailscenes/choice.gd" type="Script" id=14]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow.PNG" type="Texture" id=13]
+[ext_resource path="res://sprites/UI/GirlTextbox/arrow1.PNG" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 94.6934, 1300.69 )
@@ -66,30 +66,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "New Anim"
-length = 2.0
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"points": PoolRealArray( 2642.84, -0.25, 0, 0.25, 0, 2642.84, -0.25, 0, 0.25, 0, 2642.84, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1530.1, -0.25, 0, 0.25, 0, 1600, -0.25, 0, 0.25, 0, 1530.1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
@@ -155,8 +138,6 @@ margin_right = -447.171
 margin_bottom = -1195.33
 script = ExtResource( 11 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -197,17 +178,16 @@ autoplay = "New Anim"
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 
-[node name="dialoguebox2" type="Control" parent="."]
-margin_left = -94.2162
-margin_top = -43.7894
-margin_right = -54.2162
-margin_bottom = -3.78943
-script = ExtResource( 14 )
+[node name="dialoguebox2" type="Control" parent="dialoguebox"]
+margin_left = 392.955
+margin_top = 1191.54
+margin_right = 432.955
+margin_bottom = 1231.54
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="dialoguebox2"]
+[node name="TextureRect" type="TextureRect" parent="dialoguebox/dialoguebox2"]
 modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
 margin_left = 2034.0
 margin_top = 1527.0
@@ -219,33 +199,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox2"]
-margin_left = 2151.0
+[node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox/dialoguebox2"]
+margin_left = 2743.0
 margin_top = 1633.0
 margin_right = 3519.0
-margin_bottom = 1916.0
+margin_bottom = 1802.0
 custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
+bbcode_text = "FIGHT"
+text = "FIGHT"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="continuesprite" type="Sprite" parent="dialoguebox2"]
-position = Vector2( 2699.88, 1530.1 )
-scale = Vector2( 1.31444, 1.92604 )
-texture = ExtResource( 13 )
+[node name="RichTextLabel2" type="RichTextLabel" parent="dialoguebox/dialoguebox2"]
+margin_left = 2652.0
+margin_top = 1822.0
+margin_right = 3519.0
+margin_bottom = 1970.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+text = "CELEBRATE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox2/continuesprite"]
-autoplay = "New Anim"
-"anims/New Anim" = SubResource( 8 )
+[node name="Tween" type="Tween" parent="dialoguebox/dialoguebox2"]
 
-[node name="Tween" type="Tween" parent="dialoguebox2"]
+[node name="Type" type="AudioStreamPlayer" parent="dialoguebox/dialoguebox2"]
 
-[node name="Type" type="AudioStreamPlayer" parent="dialoguebox2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="dialoguebox/dialoguebox2"]
+position = Vector2( 3495.83, 1664.44 )
+scale = Vector2( 0.208793, 0.229551 )
+frames = SubResource( 8 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="dialoguebox/dialoguebox2"]
+position = Vector2( 3493.31, 1865.84 )
+scale = Vector2( 0.208793, 0.229551 )
+frames = SubResource( 8 )
+playing = true
+flip_v = true
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="paris" method="_on_paris_body_exited"]
 [connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
-[connection signal="tween_completed" from="dialoguebox2/Tween" to="dialoguebox2" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="dialoguebox/dialoguebox2/Tween" to="dialoguebox/dialoguebox2" method="_on_Tween_tween_completed"]
