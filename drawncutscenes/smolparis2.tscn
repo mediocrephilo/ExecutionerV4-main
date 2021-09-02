@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://drawncutscenes/smolparis1.png" type="Texture" id=1]
 [ext_resource path="res://drawncutscenes/smallparis2.png" type="Texture" id=2]
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=3]
-[ext_resource path="res://drawncutscenes/smolparis2.gd" type="Script" id=4]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=6]
 [ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=7]
@@ -19,7 +18,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
@@ -27,15 +26,54 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "New Anim"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 100
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "New Anim"
+[sub_resource type="Animation" id=5]
 length = 2.0
 loop = true
 tracks/0/type = "bezier"
@@ -71,15 +109,14 @@ frames = SubResource( 1 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1933.5, 1105.17 )
 scale = Vector2( 1.003, 1.032 )
-frames = SubResource( 4 )
+frames = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2"]
-"anims/New Anim" = SubResource( 5 )
+"anims/New Anim" = SubResource( 3 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,9 +136,9 @@ anchor_right = 82.775
 anchor_bottom = 47.325
 margin_left = -31.0
 margin_top = 37.0
-margin_right = -24.0
+margin_right = 42.0
 margin_bottom = 143.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -111,12 +148,12 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="Control"]
 
 [node name="continuesprite" type="Sprite" parent="Control"]
-position = Vector2( 2041.67, 1525 )
+position = Vector2( 2041.67, 1408.93 )
 scale = Vector2( 2.01224, 3.11942 )
 texture = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 3 )
-[connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
-[connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
+"anims/New Anim" = SubResource( 5 )
+[connection signal="tree_exited" from="Control" to="." method="_on_Control_tree_exited"]
+[connection signal="tween_completed" from="Control/Tween" to="." method="_on_Tween_tween_completed"]
