@@ -11,7 +11,7 @@ var dialogue = [
 		"They solved both the problem of overpopulation and secured a constant work force. The strength of a nation can be measured by its production.",
 		"''VERY GOOD. AND WHEN COUNCILOR MATTHEWS ENQUIRES ABOUT THE REASON FOR YOUR APPLICATION?''",
 		"I am to say: ''I wish only to dedicate my name to the cause''.",
-		" . . . YOU WILL MAKE ME PROUD.",
+		" . . . VERY GOOD. SPOKEN LIKE A TRUE LOYALIST.",
 		". . . Father? May I ask why you proposed the E.L.F Acts?",
 		"''THAT . . . I SUPPOSE YOU ARE OLD ENOUGH TO UNDERSTAND NOW. VERY WELL. LET ME TELL YOU A STORY.''",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://drawncutscenes/smolparis1.png" type="Texture" id=1]
 [ext_resource path="res://drawncutscenes/smallparis2.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=6]
 [ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=7]
+[ext_resource path="res://sprites/act3settings/dad/Untitled27-20210902132357.PNG" type="Texture" id=8]
+[ext_resource path="res://sprites/act3settings/dad/Untitled28-20210902132424.PNG" type="Texture" id=9]
+[ext_resource path="res://drawncutscenes/dad.gd" type="Script" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -15,6 +18,17 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "New Anim"
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
@@ -46,13 +60,21 @@ tracks/1/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1933.5, 1105.17 )
 scale = Vector2( 1.0027, 1.03152 )
 frames = SubResource( 1 )
-frame = 1
-playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1933.5, 1105.17 )
+scale = Vector2( 1.003, 1.032 )
+frames = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2"]
+"anims/New Anim" = SubResource( 5 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
