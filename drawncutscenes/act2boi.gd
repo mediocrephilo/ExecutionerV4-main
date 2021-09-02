@@ -35,6 +35,7 @@ func _process(_delta):
 		
 func load_dialogue():
 	$Sprite.show()
+	$Sprite2.show()
 	yield(get_tree().create_timer(0.5), "timeout")
 	if dialogue_index < dialogue.size():
 

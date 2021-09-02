@@ -53,12 +53,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Type" type="AudioStreamPlayer2D" parent="Control"]
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2" type="Sprite" parent="Control"]
+visible = false
 position = Vector2( 658.614, 990.999 )
 scale = Vector2( 5.32403, 2.24263 )
 texture = ExtResource( 6 )
+
+[node name="Type" type="AudioStreamPlayer2D" parent="Control"]
 
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
