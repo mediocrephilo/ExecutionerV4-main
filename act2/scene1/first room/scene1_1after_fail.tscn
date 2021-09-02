@@ -27,7 +27,7 @@
 [ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=25]
 [ext_resource path="res://act2/scene1/first room/enter.gd" type="Script" id=26]
 [ext_resource path="res://act2/scene1/first room/enter2.gd" type="Script" id=27]
-[ext_resource path="res://sounds/act2music.wav" type="AudioStream" id=29]
+[ext_resource path="res://sounds/255715__klankbeeld__horror-ambience-78-130322-00.wav" type="AudioStream" id=28]
 [ext_resource path="res://sounds/zapsplat_human_child_boy_6_years_laugh_short_005_19739.mp3" type="AudioStream" id=30]
 [ext_resource path="res://sprites/act 2 setting/scene1/buildings2.png" type="Texture" id=31]
 [ext_resource path="res://sprites/act 2 setting/scene1/stars.png" type="Texture" id=32]
@@ -53,14 +53,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -350,10 +350,10 @@ texture = ExtResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 33 )
-volume_db = -5.553
+volume_db = -17.67
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 29 )
+stream = ExtResource( 28 )
 volume_db = 2.524
 
 [connection signal="body_entered" from="enter" to="enter" method="_on_enter_body_entered"]
