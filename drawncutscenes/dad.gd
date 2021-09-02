@@ -58,4 +58,5 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	pass # Replace with function body.
+	#Transition.change_scene("res://")
+	pass
