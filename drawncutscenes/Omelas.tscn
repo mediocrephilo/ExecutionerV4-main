@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://sprites/act3settings/omelas/Untitled26-20210901123643.PNG" type="Texture" id=1]
 [ext_resource path="res://sprites/act3settings/omelas/Untitled26-20210901124114.PNG" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=13]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://sounds/menu1.wav" type="AudioStream" id=15]
+[ext_resource path="res://sprites/act3settings/omelas/Untitled26-20210901220820.PNG" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"
@@ -483,6 +484,7 @@ __meta__ = {
 "anims/New Anim" = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 1 )
@@ -491,6 +493,7 @@ texture = ExtResource( 1 )
 "anims/New Anim" = SubResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 2 )
@@ -499,6 +502,7 @@ texture = ExtResource( 2 )
 "anims/New Anim" = SubResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 4 )
@@ -507,6 +511,7 @@ texture = ExtResource( 4 )
 "anims/New Anim" = SubResource( 4 )
 
 [node name="Sprite4" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 3 )
@@ -515,6 +520,7 @@ texture = ExtResource( 3 )
 "anims/New Anim" = SubResource( 5 )
 
 [node name="Sprite5" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 5 )
@@ -523,6 +529,7 @@ texture = ExtResource( 5 )
 "anims/New Anim" = SubResource( 6 )
 
 [node name="Sprite6" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1977.04, 787.466 )
 scale = Vector2( 0.58407, 0.642021 )
 texture = ExtResource( 6 )
@@ -531,6 +538,7 @@ texture = ExtResource( 6 )
 "anims/New Anim" = SubResource( 7 )
 
 [node name="Sprite7" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1953.81, 219.61 )
 scale = Vector2( 1.12047, 1.17737 )
 texture = ExtResource( 7 )
@@ -539,6 +547,7 @@ texture = ExtResource( 7 )
 "anims/New Anim" = SubResource( 8 )
 
 [node name="Sprite8" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1920.26, -141.753 )
 scale = Vector2( 1.24012, 1.52153 )
 texture = ExtResource( 8 )
@@ -547,8 +556,10 @@ texture = ExtResource( 8 )
 "anims/New Anim" = SubResource( 9 )
 
 [node name="Sprite10" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1920.26, -141.753 )
 scale = Vector2( 1.24012, 1.52153 )
+texture = ExtResource( 16 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite10"]
 "anims/New Anim" = SubResource( 12 )
@@ -582,7 +593,7 @@ autoplay = "New Anim"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
 margin_left = 413.0
-margin_top = 1570.0
+margin_top = 1596.0
 margin_right = 3462.0
 margin_bottom = 2002.0
 custom_fonts/normal_font = SubResource( 11 )
