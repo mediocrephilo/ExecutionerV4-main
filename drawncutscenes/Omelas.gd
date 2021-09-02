@@ -57,6 +57,8 @@ func _process(delta):
 			$Sprite8/AnimationPlayer.play("New Anim")
 		if dialogue_index == 16:
 			$Sprite10/AnimationPlayer.play("New Anim")
+		if dialogue_index == 18:
+			Transition.change_scene("res://drawncutscenes/smolParis2.tscn")
 		
 func load_dialogue():
 	$dialoguebox.show()
