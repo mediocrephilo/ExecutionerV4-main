@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=3]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://drawncutscenes/act2boi.gd" type="Script" id=5]
-[ext_resource path="res://drawncutscenes/IMG_5766.jpg" type="Texture" id=6]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -46,20 +46,14 @@ texture = ExtResource( 3 )
 margin_left = 606.0
 margin_top = 213.0
 margin_right = 3424.0
-margin_bottom = 501.0
+margin_bottom = 530.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite2" type="Sprite" parent="Control"]
-visible = false
-position = Vector2( 658.614, 990.999 )
-scale = Vector2( 5.32403, 2.24263 )
-texture = ExtResource( 6 )
-
-[node name="Type" type="AudioStreamPlayer2D" parent="Control"]
-
+[node name="Type" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource( 6 )
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
