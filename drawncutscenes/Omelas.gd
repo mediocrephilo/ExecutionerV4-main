@@ -14,11 +14,11 @@ var dialogue = [
 	"''TRAPPED BELOW THE CITY, IN SQUALOR AND IN FILTH, WRAPPED IN INVISIBLE CHAINS, LIVED A CHILD.''",
 	"''IT HAD NEVER BEEN ABOVE GROUND, NEVER SEEN THE FESTIVALS, NEVER FELT THE HEAT OF THE BLACK SUN.''",
 	"''IT COULD ONLY LISTEN TO THE SOUND OF FEET PATTERING ABOVE, AND THE DEEP BEAT OF THE FESTIVAL DRUM RUMBLING THROUGH.''",
-	"''ITS WORLD WAS ONE OF DARKNESS AND DECAY, AND EACH CITIZEN WAS PROHIBITED FROM ENTERING INTO THE DUNGEONS FOR FEAR OF COMFORTING THIS CHILD.''",
-	"''IF THIS CHILD IS SAVED, THE CITY WILL BE LOST'. THIS PHRASE LINGERED IN EVERY MIND, UNDER THE TIP OF THE TOUNGUE IN AN UNSAID AGREEMENT.",
-	"''ONE FOR MANY, THEY THOUGHT, AND CARRIED ON, BURYING THEIR DISCOMFORT UNDER THE GLAMOUR OF SHINING RUBY ROOFTOPS AND EXOTIC MARKETS.''",
-	"''AND YET, A FEW CHOSE A DIFFERENT PATH, ONE THAT LED THEM OUT OF CITY AND INTO THE UNKNOWN.''",
-	"''THEY WERE THE ONES WHO WALKED AWAY. BUT NO ONE KNEW WHERE THEY WERE GOING, NOT EVEN THEM.",
+	"''ITS WORLD WAS ONE OF DARKNESS AND DECAY, AND EACH CITIZEN KNEW THIS IN THEIR HEART.''",
+	"''IF THIS CHILD IS SAVED, THE CITY WILL BE LOST'. THIS PHRASE LINGERED IN EVERY MIND, UNDER THE TIP OF EACH TOUNGUE IN AN UNSAID AGREEMENT.",
+	"''ONE FOR MANY, THEY THOUGHT, AND CARRIED ON, BURYING THEIR DISCOMFORT UNDER THE GLAMOUR OF SHINING RUBY ROOFTOPS AND SMILING FAMILY.''",
+	"''AND YET, THERE ARE THOSE WHO CHOOSE ANOTHER PATH, ONE THAT LEADS OUT OF CITY AND INTO THE UNKNOWN.''",
+	"''THEY WALK WITH A PURPOSE, BUT WHERE ARE THEY GOING? AT LEAST THEY SEEM TO KNOW, THE ONES WHO WALK AWAY FROM OMELAS . . .''",
 ]
 
 var dialogue_index = 0
@@ -38,17 +38,21 @@ func _process(delta):
 		load_dialogue()
 		if dialogue_index == 2:
 			$Sprite2/AnimationPlayer.play("New Anim")
+			yield(get_tree().create_timer(1), "timeout")
 			$Sprite/AnimationPlayer.play_backwards("New Anim")
 		if dialogue_index == 5:
 			$Sprite4/AnimationPlayer.play("New Anim")
+			yield(get_tree().create_timer(1), "timeout")
 			$Sprite2/AnimationPlayer.play_backwards("New Anim")
 		if dialogue_index == 7:
 			$Sprite6/AnimationPlayer.play("New Anim")
+			yield(get_tree().create_timer(1), "timeout")
 			$Sprite4/AnimationPlayer.play_backwards("New Anim")
 		if dialogue_index == 9:
 			$Sprite7/AnimationPlayer.play("New Anim")
-			$Sprite6/AnimationPlayer.play_backwards("New Anim")
 			$Sprite9/AnimationPlayer.play("New Anim")
+			yield(get_tree().create_timer(1), "timeout")
+			$Sprite6/AnimationPlayer.play_backwards("New Anim")
 		if dialogue_index == 10:
 			$Sprite8/AnimationPlayer.play("New Anim")
 		if dialogue_index == 16:
