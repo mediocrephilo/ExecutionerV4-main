@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/characters/idle right 2.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://act2/scene1/fourth room/scene1.4.gd" type="Script" id=29]
 [ext_resource path="res://sounds/zapsplat_human_child_boy_6_years_laugh_short_005_19739.mp3" type="AudioStream" id=30]
 [ext_resource path="res://sounds/ftus_electromanetic_field_street_light_002_335.mp3" type="AudioStream" id=31]
+[ext_resource path="res://sounds/255715__klankbeeld__horror-ambience-78-130322-00.wav" type="AudioStream" id=32]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -42,11 +43,6 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 19 ) ],
 "loop": true,
 "name": "fall",
@@ -60,6 +56,11 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -215,8 +216,8 @@ __meta__ = {
 }
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
-position = Vector2( 192.085, 1672.69 )
-scale = Vector2( 0.759914, 0.821187 )
+position = Vector2( 192.085, 1693.74 )
+scale = Vector2( 0.759914, 0.780078 )
 frames = SubResource( 2 )
 animation = "fall"
 speed_scale = 1.25
@@ -349,7 +350,10 @@ texture = ExtResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 31 )
-volume_db = -2.524
+volume_db = -17.682
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
 
 [connection signal="body_entered" from="enter" to="enter" method="_on_enter_body_entered"]
 [connection signal="body_exited" from="enter" to="enter" method="_on_enter_body_exited"]
