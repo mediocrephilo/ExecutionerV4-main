@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-		"Why are you squinting? Just go find the light switch, idiot."
+		"Why are you squinting? Just go find the light switch"
 ]
 var dialogue_index = 0
 var number = 0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_foley_footstep_single_boys_sneaker_on_concrete_001_50911.mp3-568569682799c76f55498d7a471ee39a.mp3str"
+
+[deps]
+
+source_file="res://sounds/zapsplat_foley_footstep_single_boys_sneaker_on_concrete_001_50911.mp3"
+dest_files=[ "res://.import/zapsplat_foley_footstep_single_boys_sneaker_on_concrete_001_50911.mp3-568569682799c76f55498d7a471ee39a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

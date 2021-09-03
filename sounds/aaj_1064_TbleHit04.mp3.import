@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/aaj_1064_TbleHit04.mp3-f63bf27b14d8daa66de76a4f464ea557.mp3str"
+
+[deps]
+
+source_file="res://sounds/aaj_1064_TbleHit04.mp3"
+dest_files=[ "res://.import/aaj_1064_TbleHit04.mp3-f63bf27b14d8daa66de76a4f464ea557.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
