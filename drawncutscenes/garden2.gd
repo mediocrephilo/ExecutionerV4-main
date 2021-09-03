@@ -2,8 +2,7 @@ extends Control
 
 var dialogue = [
 	
-		"Why did it leave in the first place if it liked its nest so much?",
-		"And whatever happened to the tree?",
+		"Why ",
 		"But maybe I've remembered incorrectly. I mean, it's been . . . some time since we read it.",
 		"Well, what's next?",
 		"What about you, Ja- . . . sorry. Let's continue.",
