@@ -27,22 +27,86 @@ func _process(delta):
 	$F.hide()
 	$Gb.hide()
 	$G.hide()
-	if Input.is_action_pressed("one"):
+	if Input.is_action_just_pressed("one"):
 		$C.show()
-	if Input.is_action_pressed("two"):
+		$c.play()
+		$db.stop()
+		$d.stop()
+		$eb.stop()
+		$e.stop()
+		$f.stop()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("two"):
 		$Db.show()
-	if Input.is_action_pressed("three"):
+		$c.stop()
+		$db.play()
+		$d.stop()
+		$eb.stop()
+		$e.stop()
+		$f.stop()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("three"):
 		$D.show()
-	if Input.is_action_pressed("four"):
+		$c.stop()
+		$db.stop()
+		$d.play()
+		$eb.stop()
+		$e.stop()
+		$f.stop()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("four"):
 		$Eb.show()
-	if Input.is_action_pressed("five"):
+		$c.stop()
+		$db.stop()
+		$d.stop()
+		$eb.play()
+		$e.stop()
+		$f.stop()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("five"):
 		$E.show()
-	if Input.is_action_pressed("six"):
+		$c.stop()
+		$db.stop()
+		$d.stop()
+		$eb.stop()
+		$e.play()
+		$f.stop()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("six"):
 		$F.show()
-	if Input.is_action_pressed("seven"):
-		$Gb.show()
-	if Input.is_action_pressed("eight"):
+		$c.stop()
+		$db.stop()
+		$d.stop()
+		$eb.stop()
+		$e.stop()
+		$f.play()
+		$gb.stop()
+		$g.stop()
+	if Input.is_action_just_pressed("seven"):
+		$Gb.show()		
+		$c.stop()
+		$db.stop()
+		$d.stop()
+		$eb.stop()
+		$e.stop()
+		$f.stop()
+		$gb.play()
+		$g.stop()
+	if Input.is_action_just_pressed("eight"):
 		$G.show()
+		$c.stop()
+		$db.stop()
+		$d.stop()
+		$eb.stop()
+		$e.stop()
+		$f.stop()
+		$gb.stop()
+		$g.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
