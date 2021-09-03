@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/skyes_audio_Glass_Bottle_Break_Smash_Long_Clink_026.mp3-9b02499cd8083108d42791b79aed6a10.mp3str"
+
+[deps]
+
+source_file="res://sounds/skyes_audio_Glass_Bottle_Break_Smash_Long_Clink_026.mp3"
+dest_files=[ "res://.import/skyes_audio_Glass_Bottle_Break_Smash_Long_Clink_026.mp3-9b02499cd8083108d42791b79aed6a10.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

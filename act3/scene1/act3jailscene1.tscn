@@ -186,6 +186,7 @@ autoplay = "New Anim"
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
+
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="paris" method="_on_paris_body_exited"]
