@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blastwave_FX_MobProtest_BW.15972.mp3-2e957544b4b78b98f7a5ff6b9b5f9a79.mp3str"
+
+[deps]
+
+source_file="res://sounds/Blastwave_FX_MobProtest_BW.15972.mp3"
+dest_files=[ "res://.import/Blastwave_FX_MobProtest_BW.15972.mp3-2e957544b4b78b98f7a5ff6b9b5f9a79.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
