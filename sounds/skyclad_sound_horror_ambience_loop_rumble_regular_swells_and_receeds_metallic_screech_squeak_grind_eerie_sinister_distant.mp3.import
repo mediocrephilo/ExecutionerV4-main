@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/skyclad_sound_horror_ambience_loop_rumble_regular_swells_and_receeds_metallic_screech_squeak_grind_eerie_sinister_distant.mp3-63eef02f67ad5deb9d872af6510b359c.mp3str"
+
+[deps]
+
+source_file="res://sounds/skyclad_sound_horror_ambience_loop_rumble_regular_swells_and_receeds_metallic_screech_squeak_grind_eerie_sinister_distant.mp3"
+dest_files=[ "res://.import/skyclad_sound_horror_ambience_loop_rumble_regular_swells_and_receeds_metallic_screech_squeak_grind_eerie_sinister_distant.mp3-63eef02f67ad5deb9d872af6510b359c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

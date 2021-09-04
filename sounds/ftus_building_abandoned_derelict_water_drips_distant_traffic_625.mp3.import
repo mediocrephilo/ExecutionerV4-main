@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ftus_building_abandoned_derelict_water_drips_distant_traffic_625.mp3-526db2c47ab5ac46def7db5babead780.mp3str"
+
+[deps]
+
+source_file="res://sounds/ftus_building_abandoned_derelict_water_drips_distant_traffic_625.mp3"
+dest_files=[ "res://.import/ftus_building_abandoned_derelict_water_drips_distant_traffic_625.mp3-526db2c47ab5ac46def7db5babead780.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

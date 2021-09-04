@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PM_DS_Soundscape_2.mp3-e8c5555526353b820a485fc3b2500648.mp3str"
+
+[deps]
+
+source_file="res://sounds/PM_DS_Soundscape_2.mp3"
+dest_files=[ "res://.import/PM_DS_Soundscape_2.mp3-e8c5555526353b820a485fc3b2500648.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
