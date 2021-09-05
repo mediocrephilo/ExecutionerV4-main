@@ -21,39 +21,17 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed("one"):
-		$Db.hide()
-		$D.hide()
-		$Eb.hide()
-		$E.hide()
-		$F.hide()
-		$Gb.hide()
-		$G.hide()
 		$C.show()
 		$c.play()
-		$db.stop()
-		$d.stop()
-		$eb.stop()
-		$e.stop()
-		$f.stop()
-		$gb.stop()
-		$g.stop()
-	if Input.is_action_just_pressed("two"):
+	if Input.is_action_just_released("one"):
 		$C.hide()
-		$D.hide()
-		$Eb.hide()
-		$E.hide()
-		$F.hide()
-		$Gb.hide()
-		$G.hide()
-		$Db.show()
 		$c.stop()
+	if Input.is_action_just_pressed("two"):
+		$Db.show()
 		$db.play()
-		$d.stop()
-		$eb.stop()
-		$e.stop()
-		$f.stop()
-		$gb.stop()
-		$g.stop()
+	if Input.is_action_just_released("two"):
+		$Db.hide()
+		$db.stop()
 	if Input.is_action_just_pressed("three"):
 		$C.hide()
 		$Db.hide()
