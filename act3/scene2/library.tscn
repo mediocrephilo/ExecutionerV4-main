@@ -253,3 +253,5 @@ limit_top = 0
 limit_right = 3840
 limit_bottom = 2160
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
+[connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
+[connection signal="tween_completed" from="book/dialoguebox/Tween" to="book" method="_on_Tween_tween_completed"]
