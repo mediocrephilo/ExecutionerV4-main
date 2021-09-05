@@ -18,9 +18,17 @@ func _ready():
 	$F.hide()
 	$Gb.hide()
 	$G.hide()
+	$Ab.hide()
+	$A.hide()
 	
 func _process(delta):
+	if progression == 8:
+		Transition.change_scene("res://act2/scene4/piano.tscn")
 	if Input.is_action_just_pressed("one"):
+		if progression == 6:
+			progression += 1
+		else:
+			progression = 0
 		$C.show()
 		$c.play()
 	if Input.is_action_just_released("one"):
@@ -33,6 +41,10 @@ func _process(delta):
 		$Db.hide()
 		$db.stop()
 	if Input.is_action_just_pressed("three"):
+		if progression == 4 or progression == 7:
+			progression += 1
+		else:
+			progression = 0
 		$D.show()
 		$d.play()
 	if Input.is_action_just_released("three"):
@@ -45,12 +57,20 @@ func _process(delta):
 		$Eb.hide()
 		$eb.stop()
 	if Input.is_action_just_pressed("five"):
+		if progression == 2 or progression == 5:
+			progression += 1
+		else:
+			progression = 0
 		$E.show()
 		$e.play()
 	if Input.is_action_just_released("five"):
 		$E.hide()
 		$e.stop()
 	if Input.is_action_just_pressed("six"):
+		if progression == 3:
+			progression += 1
+		else:
+			progression = 0
 		$F.show()
 		$f.play()
 	if Input.is_action_just_released("six"):
@@ -69,12 +89,20 @@ func _process(delta):
 		$G.hide()
 		$g.stop()
 	if Input.is_action_just_pressed("nine"):
+		if progression == 0:
+			progression += 1
+		else:
+			progression = 0
 		$Ab.show()
 		$ab.play()
 	if Input.is_action_just_released("nine"):
 		$Ab.hide()
 		$ab.stop()
 	if Input.is_action_just_pressed("zero"):
+		if progression == 1:
+			progression += 1
+		else:
+			progression = 0
 		$A.show()
 		$a.play()
 	if Input.is_action_just_released("zero"):
