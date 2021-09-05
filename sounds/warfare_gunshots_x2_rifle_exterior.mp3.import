@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/warfare_gunshots_x2_rifle_exterior.mp3-3c0d0040718274430238488308672714.mp3str"
+
+[deps]
+
+source_file="res://sounds/warfare_gunshots_x2_rifle_exterior.mp3"
+dest_files=[ "res://.import/warfare_gunshots_x2_rifle_exterior.mp3-3c0d0040718274430238488308672714.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
