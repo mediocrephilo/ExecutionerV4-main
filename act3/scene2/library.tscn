@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://sprites/act3settings/desk1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://act3/scene2/book.gd" type="Script" id=11]
 [ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=12]
+[ext_resource path="res://act3/scene2/book2.gd" type="Script" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,6 +30,31 @@ size = 100
 font_data = ExtResource( 10 )
 
 [sub_resource type="Animation" id=6]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 9.07288, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 9.07288, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="Animation" id=7]
 resource_name = "New Anim"
 length = 2.0
 loop = true
@@ -189,6 +215,7 @@ autoplay = "New Anim"
 
 [node name="book2" type="Area2D" parent="."]
 position = Vector2( 2113.93, 0 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -200,6 +227,48 @@ frames = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book2"]
 position = Vector2( 1515.65, 1076.91 )
 shape = SubResource( 2 )
+
+[node name="dialoguebox2" type="Control" parent="book2"]
+margin_left = -1369.74
+margin_top = 1312.05
+margin_right = -1329.74
+margin_bottom = 1352.05
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Type" type="AudioStreamPlayer" parent="book2/dialoguebox2"]
+
+[node name="TextureRect" type="TextureRect" parent="book2/dialoguebox2"]
+margin_right = 1500.0
+margin_bottom = 500.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="book2/dialoguebox2"]
+margin_left = 95.7639
+margin_top = 86.2349
+margin_right = 1393.76
+margin_bottom = 420.235
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="book2/dialoguebox2"]
+
+[node name="continuesprite" type="Sprite" parent="book2/dialoguebox2"]
+position = Vector2( 620.224, 80 )
+scale = Vector2( 1.20209, 1.88708 )
+texture = ExtResource( 12 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="book2/dialoguebox2/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 7 )
 
 [node name="book3" type="Area2D" parent="."]
 position = Vector2( 4168.03, -9.97119 )
@@ -255,3 +324,4 @@ limit_bottom = 2160
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
 [connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
 [connection signal="tween_completed" from="book/dialoguebox/Tween" to="book" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="book2/dialoguebox2/Tween" to="book2" method="_on_Tween_tween_completed"]
