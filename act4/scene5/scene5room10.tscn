@@ -187,10 +187,11 @@ limit_bottom = 2160
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 2523.11, 867.674 )
+visible = false
+position = Vector2( 2519.75, 867.674 )
 scale = Vector2( 1.57678, 1.42284 )
 frames = SubResource( 11 )
-frame = 7
+frame = 11
 playing = true
 
 [connection signal="body_entered" from="door2" to="door2" method="_on_door2_body_entered"]

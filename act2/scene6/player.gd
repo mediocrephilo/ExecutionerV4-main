@@ -51,15 +51,15 @@ func _physics_process(delta):
 	move_and_slide(motion, UP)
 	
 func _process(delta):
-	if(box1.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box1.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")
-	if(box2.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box2.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")
-	if(box3.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box3.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")
-	if(box4.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box4.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")
-	if(box5.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box5.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")
-	if(box7.entered == true and Input.is_action_pressed("ui_interact")):
+	if(box7.entered == true and Input.is_action_pressed("ui_accept")):
 		$playerSprite.play("dead")

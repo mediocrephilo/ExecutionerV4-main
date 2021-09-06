@@ -19,10 +19,10 @@ func _on_box_body_exited(body):
 		$AnimatedSprite.stop()
 		
 func _input(event):
-	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		$beep/AnimatedSprite.show()
 		$beep/AnimatedSprite.play("appear")
-	if Input.is_action_just_pressed("ui_interact") and cantalk == true:
+	if Input.is_action_just_pressed("ui_accept") and cantalk == true:
 		Transition.change_scene("res://drawncutscenes/act2boi.tscn")
 		
 func _on_AnimatedSprite_animation_finished():

@@ -45,9 +45,9 @@ extents = Vector2( 5000.86, 159.56 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "idle",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
@@ -60,9 +60,9 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "jump",
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -171,7 +171,7 @@ frames = SubResource( 1 )
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sewer"]
-position = Vector2( 2977.52, 1838.97 )
+position = Vector2( 2976.52, 1838.97 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

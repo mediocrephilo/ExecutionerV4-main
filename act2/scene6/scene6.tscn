@@ -126,14 +126,14 @@ font_data = ExtResource( 24 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 40 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 35 ) ],
-"loop": true,
-"name": "vibing",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 38 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 39 ) ],
 "loop": false,
 "name": "appear",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "vibing",
 "speed": 5.0
 } ]
 

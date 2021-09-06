@@ -21,7 +21,7 @@ func _on_hand_body_exited(body):
 		$AnimatedSprite.stop()
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		entered = true
 		$AnimatedSprite.play("hand")
 		

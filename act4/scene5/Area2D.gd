@@ -5,7 +5,7 @@ func _ready():
 	$Label.hide()
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		Transition.change_scene("res://act4/scene5/codemachine.tscn")
 		
 func _on_door2_body_entered(body):
