@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://sprites/act3settings/desk1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=2]
@@ -29,7 +29,7 @@ extents = Vector2( 613.509, 898.557 )
 size = 100
 font_data = ExtResource( 10 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "New Anim"
 length = 2.0
 loop = true
@@ -54,7 +54,11 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 10 )
+
+[sub_resource type="Animation" id=5]
 resource_name = "New Anim"
 length = 2.0
 loop = true
@@ -79,10 +83,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 133.378, 1459.76 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 6718.83, 415.299 )
 
 [node name="Node2D" type="Node2D"]
@@ -92,34 +96,41 @@ extents = Vector2( 6718.83, 415.299 )
 [node name="wall1" type="Sprite" parent="background"]
 position = Vector2( 1841.37, 1091.67 )
 scale = Vector2( 1, 1.14614 )
+z_index = -1
 texture = ExtResource( 4 )
 
 [node name="wall2" type="Sprite" parent="background"]
 position = Vector2( 5665.41, 1104.82 )
 scale = Vector2( 1, 1.14614 )
+z_index = -1
 texture = ExtResource( 4 )
 
 [node name="wall3" type="Sprite" parent="background"]
 position = Vector2( 9338.4, 1117.98 )
 scale = Vector2( 1, 1.14614 )
+z_index = -1
 texture = ExtResource( 4 )
 
 [node name="floor1" type="Sprite" parent="background"]
 position = Vector2( 1210.05, 1262.66 )
+z_index = -1
 texture = ExtResource( 6 )
 
 [node name="floor2" type="Sprite" parent="background"]
 position = Vector2( 4902.06, 1275.25 )
+z_index = -1
 texture = ExtResource( 6 )
 flip_h = true
 
 [node name="floor3" type="Sprite" parent="background"]
 position = Vector2( 7879.98, 3019.1 )
+z_index = -1
 texture = ExtResource( 6 )
 flip_v = true
 
 [node name="floor4" type="Sprite" parent="background"]
 position = Vector2( 11654.3, 3010.64 )
+z_index = -1
 texture = ExtResource( 6 )
 flip_h = true
 flip_v = true
@@ -160,11 +171,22 @@ flip_h = true
 [node name="Sprite5" type="Sprite" parent="background"]
 visible = false
 
+[node name="player" parent="." instance=ExtResource( 8 )]
+position = Vector2( 496.896, 1665.78 )
+
+[node name="Camera2D2" type="Camera2D" parent="player"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 3840
+limit_bottom = 2160
+
 [node name="book" type="Area2D" parent="."]
 script = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book"]
 position = Vector2( 1501.45, 1125.7 )
+z_index = -1
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book"]
@@ -211,36 +233,45 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 6 )
+"anims/New Anim" = SubResource( 4 )
+
+[node name="Label" type="Label" parent="book"]
+margin_left = 1252.38
+margin_top = 1029.6
+margin_right = 1784.38
+margin_bottom = 1129.6
+custom_fonts/font = SubResource( 8 )
+text = "Read (space)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="book2" type="Area2D" parent="."]
 position = Vector2( 2113.93, 0 )
 script = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book2"]
 position = Vector2( 1501.45, 1125.7 )
+z_index = -1
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book2"]
 position = Vector2( 1515.65, 1076.91 )
 shape = SubResource( 2 )
 
-[node name="dialoguebox2" type="Control" parent="book2"]
-margin_left = -1369.74
-margin_top = 1312.05
-margin_right = -1329.74
-margin_bottom = 1352.05
+[node name="dialoguebox" type="Control" parent="book2"]
+margin_left = 791.822
+margin_top = 1306.03
+margin_right = 831.822
+margin_bottom = 1346.03
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Type" type="AudioStreamPlayer" parent="book2/dialoguebox2"]
+[node name="Type" type="AudioStreamPlayer" parent="book2/dialoguebox"]
 
-[node name="TextureRect" type="TextureRect" parent="book2/dialoguebox2"]
+[node name="TextureRect" type="TextureRect" parent="book2/dialoguebox"]
 margin_right = 1500.0
 margin_bottom = 500.0
 texture = ExtResource( 9 )
@@ -248,7 +279,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="book2/dialoguebox2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="book2/dialoguebox"]
 margin_left = 95.7639
 margin_top = 86.2349
 margin_right = 1393.76
@@ -259,16 +290,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tween" type="Tween" parent="book2/dialoguebox2"]
+[node name="Tween" type="Tween" parent="book2/dialoguebox"]
 
-[node name="continuesprite" type="Sprite" parent="book2/dialoguebox2"]
+[node name="continuesprite" type="Sprite" parent="book2/dialoguebox"]
 position = Vector2( 620.224, 80 )
 scale = Vector2( 1.20209, 1.88708 )
 texture = ExtResource( 12 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="book2/dialoguebox2/continuesprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="book2/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 7 )
+"anims/New Anim" = SubResource( 5 )
+
+[node name="Label" type="Label" parent="book2"]
+margin_left = 1298.49
+margin_top = 1047.75
+margin_right = 1830.49
+margin_bottom = 1147.75
+custom_fonts/font = SubResource( 8 )
+text = "Read (space)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="book3" type="Area2D" parent="."]
 position = Vector2( 4168.03, -9.97119 )
@@ -278,6 +320,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book3"]
 position = Vector2( 1501.45, 1125.7 )
+z_index = -1
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book3"]
@@ -292,6 +335,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book4"]
 position = Vector2( 1501.45, 1125.7 )
+z_index = -1
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book4"]
@@ -302,26 +346,16 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -18.0647, 1124.53 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 11189.7, 886.946 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="floor" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4447.38, 2413.34 )
-shape = SubResource( 5 )
-
-[node name="player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 496.896, 1665.78 )
-
-[node name="Camera2D2" type="Camera2D" parent="player"]
-current = true
-limit_left = 0
-limit_top = 0
-limit_right = 3840
-limit_bottom = 2160
+shape = SubResource( 7 )
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
 [connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
 [connection signal="tween_completed" from="book/dialoguebox/Tween" to="book" method="_on_Tween_tween_completed"]
-[connection signal="tween_completed" from="book2/dialoguebox2/Tween" to="book2" method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="book2/dialoguebox/Tween" to="book2" method="_on_Tween_tween_completed"]

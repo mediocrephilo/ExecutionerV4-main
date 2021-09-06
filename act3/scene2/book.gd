@@ -2,28 +2,32 @@ extends Area2D
 
 
 var dialogue = [
-	"HMM . . . 'BEFORE THE CATACLYSMS: CIVILIZATION AND DIPLOMACY' BY TIMOTHIE SATO. SOUNDS . . . RIVETING.",
+	"HMM . . . ''BEFORE THE CATACLYSMS: CIVILIZATION AND DIPLOMACY''",
+	"TIMOTHIE SATO. SOUNDS . . . RIVETING.",
 ]
 var canInteract = false
 var dialogue_index = 0
 var finished = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
+	$Label.hide()
+	$dialoguebox.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$"dialoguebox/continuesprite".show() == finished
 	if canInteract == true and Input.is_action_just_pressed("ui_accept"):
-		if dialogue_index == 0:
+		if dialogue_index <= 1:
 			load_dialogue()
-		if dialogue_index == 1:
+		if dialogue_index == 2:
+			$dialoguebox.hide()
+			$Label.show()
+			yield(get_tree().create_timer(1), "timeout")
+			dialogue_index += 1
+	if dialogue_index == 3 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
 			Transition.change_scene("res://act3/scene2/book1.tscn")
 		
 func load_dialogue():
-	$dialoguebox/TextureRect.show()
-	$dialoguebox/RichTextLabel.show()
+	$dialoguebox.show()
 	if dialogue_index < dialogue.size():
 		finished = false
 		$dialoguebox/Type.play()
