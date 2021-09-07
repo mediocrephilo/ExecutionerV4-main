@@ -2,6 +2,8 @@ extends Control
 var dialogue = [
 		". . . 161.",
 		"I see now why you refused to tell me your name.",
+		"That is why you know so much about me, isn't it?",
+		"I must have told you everything... the location of our meetings, our plans, even my childhood during questioning",
 		". . . I may have been a little harsh when speaking of the Corps before.",
 		"But I stand by it. People join the Corps because of greed.",
 		"And the citizens are the ones who suffer from their ambition.",
@@ -10,6 +12,7 @@ var dialogue = [
 		"If you are, well, it's not the first time I've been a bad judge of character.",
 		"I hope you are not. In any case, you are my-our last chance.",
 		"Do you still remember the story my father told me?",
+		"The city of Omelas runs on the suffering of children. That is what keeps people like you in power.",
 		"Will you celebrate, or will you fight? Leaving, at least for you, is not an option.",
 		"I hope you will remember your decision when the time comes. Take this."
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
@@ -50,9 +53,9 @@ func _on_paris_body_exited(body):
 		
 func _process(_delta):
 	$"continuesprite".visible = finished
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index < 11:
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index < 15:
 		load_dialogue()
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 11 and dialogue_index2 == 0:
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 15 and dialogue_index2 == 0:
 		$dialoguebox2.show()
 		load_dialogue2()
 		load_dialogue22()

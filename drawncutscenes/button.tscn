@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://drawncutscenes/Untitled132_20210831163056.PNG" type="Texture" id=1]
+[ext_resource path="res://drawncutscenes/Untitled132_20210831162852.PNG" type="Texture" id=2]
+[ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=4]
+[ext_resource path="res://drawncutscenes/button.gd" type="Script" id=5]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1936.91, 1064.46 )
+scale = Vector2( 1.01277, 1.04823 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1978.89, 1078.99 )
+scale = Vector2( 0.522883, 1.03919 )
+texture = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control"]
+position = Vector2( 2069.32, 393.871 )
+scale = Vector2( 2.36755, 1.32789 )
+texture = ExtResource( 4 )
+
+[node name="Type" type="AudioStreamPlayer" parent="Control"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_left = 468.0
+margin_top = 188.0
+margin_right = 3631.0
+margin_bottom = 570.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Control"]
+
+[connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
+[connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
