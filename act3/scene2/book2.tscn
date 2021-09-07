@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://act3/scene2/poem.gd" type="Script" id=1]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -20,11 +20,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="Eudaimonia"]
+margin_left = 2002.13
+margin_top = 42.0
+margin_right = 3853.13
+margin_bottom = 3303.62
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "we tore bandages off too fast (too fast!) 
+to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
+do not go gentle into that good light
+turn off the night-light the firefly lights
+and the streetlights at the end of the path
+we were impervious
+
+we dreamed in shouts and screams of elation no words needed
+we were raw feeling bundled up into one party one mind
+we bled blood red and laughed with our souls wide open
+our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
+remember remember our deeds and our deaths
+remember what we did
+and that we, and you, truly lived once
+"
+text = "we tore bandages off too fast (too fast!) 
+to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
+do not go gentle into that good light
+turn off the night-light the firefly lights
+and the streetlights at the end of the path
+we were impervious
+
+we dreamed in shouts and screams of elation no words needed
+we were raw feeling bundled up into one party one mind
+we bled blood red and laughed with our souls wide open
+our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
+remember remember our deeds and our deaths
+remember what we did
+and that we, and you, truly lived once
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Eudaimonia"]
-margin_left = 111.0
-margin_top = 124.0
-margin_right = 1963.0
-margin_bottom = 3199.0
+margin_left = 83.8301
+margin_top = 42.49
+margin_right = 1935.83
+margin_bottom = 3117.49
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "Eudaimonia
@@ -42,9 +83,7 @@ donning masks of courage that cracked at cackling bursting brightness
 and grinning in terrified silence
 but we were free and then we crawled to safety
 beyond the cliff content in blindness
-
-we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we could"
+"
 text = "Eudaimonia
 
 we remember
@@ -60,54 +99,12 @@ donning masks of courage that cracked at cackling bursting brightness
 and grinning in terrified silence
 but we were free and then we crawled to safety
 beyond the cliff content in blindness
-
-we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we could"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Eudaimonia"]
-margin_left = 2013.0
-margin_top = 124.0
-margin_right = 3804.0
-margin_bottom = 3396.0
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "we cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of the path
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, and you, truly lived once
-"
-text = "we cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of the path
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, and you, truly lived once
 "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Martius" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -115,10 +112,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Martius"]
-margin_left = 111.0
+margin_left = 94.698
 margin_top = 124.0
-margin_right = 1963.0
-margin_bottom = 3199.0
+margin_right = 1946.7
+margin_bottom = 3204.43
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "twelve eagles crowed our end (but we move too quickly to stop for you now)
@@ -136,12 +133,7 @@ you pass us by ten years ago tomorrow
 we walk in different seasons
 your footprints winterlight and timely
 unwound, one-hundred years tick by out of sync and you
-are back when we began
-
-to stand with you of yesteryear
-would your gaze have eclipsed us?
-now we walk upon six legs
-does solitude still attract you?"
+are back when we began"
 text = "twelve eagles crowed our end (but we move too quickly to stop for you now)
 
 winter in Martius have you ever thought
@@ -157,12 +149,7 @@ you pass us by ten years ago tomorrow
 we walk in different seasons
 your footprints winterlight and timely
 unwound, one-hundred years tick by out of sync and you
-are back when we began
-
-to stand with you of yesteryear
-would your gaze have eclipsed us?
-now we walk upon six legs
-does solitude still attract you?"
+are back when we began"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -174,7 +161,12 @@ margin_right = 3906.23
 margin_bottom = 3111.62
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "we turn and the world turns with us;
+bbcode_text = "to stand with you of yesteryear
+would your gaze have eclipsed us?
+now we walk upon six legs
+does solitude still attract you?
+
+we turn and the world turns with us;
 the heavens are fixed, us less so
 the choice escapes us; it lives with them now, fattened with repetition
 
@@ -186,7 +178,12 @@ but for now,
 
 Aprilis/and they do open
 "
-text = "we turn and the world turns with us;
+text = "to stand with you of yesteryear
+would your gaze have eclipsed us?
+now we walk upon six legs
+does solitude still attract you?
+
+we turn and the world turns with us;
 the heavens are fixed, us less so
 the choice escapes us; it lives with them now, fattened with repetition
 
