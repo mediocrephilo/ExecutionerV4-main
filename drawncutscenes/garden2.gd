@@ -110,3 +110,7 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$Type.stop()
 	dialogue_index +=1
+
+
+func _on_Control_tree_exited():
+	Transition.change_scene("res://act3/scene3/normal3.tscn")

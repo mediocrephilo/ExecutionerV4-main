@@ -41,7 +41,7 @@ font_data = ExtResource( 8 )
 position = Vector2( 1943.7, 1034.96 )
 scale = Vector2( 1.071, 1.10752 )
 frames = SubResource( 1 )
-frame = 17
+frame = 20
 playing = true
 
 [node name="Sprite3" type="Sprite" parent="."]
@@ -60,17 +60,14 @@ scale = Vector2( 2.34861, 2.5249 )
 texture = ExtResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 255.548, 1788.09 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
 position = Vector2( 2433.59, 232.23 )
 scale = Vector2( 1.84493, 1.10147 )
 texture = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-visible = false
 position = Vector2( 1962.69, 1020.39 )
 scale = Vector2( 0.540548, 1.10341 )
 texture = ExtResource( 7 )
