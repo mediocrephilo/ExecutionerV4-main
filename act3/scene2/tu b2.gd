@@ -47,3 +47,7 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$Type.stop()
 	dialogue_index += 1
+
+
+func _on_dialoguebox_tree_exited():
+	Transition.change_scene("act3/scene2/unplug.tscn")

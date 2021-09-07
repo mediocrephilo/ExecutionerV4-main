@@ -104,7 +104,7 @@ position = Vector2( 2184.15, 601.081 )
 z_index = -1
 frames = SubResource( 1 )
 animation = "static"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tv"]
@@ -157,11 +157,11 @@ position = Vector2( 3836.25, 1061.82 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1735.45, 2180.72 )
+position = Vector2( 1743.05, 2256.76 )
 shape = SubResource( 8 )
 
 [node name="player" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3250.74, 1635.24 )
+position = Vector2( 3250.74, 1673.26 )
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 17 )

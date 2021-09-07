@@ -52,38 +52,38 @@ func _on_green_body_entered(body):
 		$green/Label.show()
 		
 func _input(event):
-	if Input.is_action_just_pressed("ui_interact") and canInteractr == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteractr == true:
 		$red/AnimatedSprite.play("select")
 		redselect = true
 		$red/Label.hide()
-	if Input.is_action_just_pressed("ui_interact") and canInteractb == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteractb == true:
 		$blue/AnimatedSprite.play("select")
 		blueselect = true
 		$blue/Label.hide()
-	if Input.is_action_just_pressed("ui_interact") and canInteracty == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteracty == true:
 		$yellow/AnimatedSprite.play("select")
 		yelselect = true
 		$yellow/Label.hide()
-	if Input.is_action_just_pressed("ui_interact") and canInteractg == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteractg == true:
 		$green/AnimatedSprite.play("select")
 		greenselect = true
 		$green/Label.hide()
-	if Input.is_action_just_pressed("ui_interact") and conr == true:
+	if Input.is_action_just_pressed("ui_accept") and conr == true:
 		$red/AnimatedSprite.play("connect")
 		completer = true
 		$redconnect/Label.hide()
 		checkComplete()
-	if Input.is_action_just_pressed("ui_interact") and conb == true:
+	if Input.is_action_just_pressed("ui_accept") and conb == true:
 		$blue/AnimatedSprite.play("connect")
 		completeb = true
 		$blueconnect/Label.hide()
 		checkComplete()
-	if Input.is_action_just_pressed("ui_interact") and cony == true:
+	if Input.is_action_just_pressed("ui_accept") and cony == true:
 		$yellow/AnimatedSprite.play("connect")
 		completey = true
 		$yellowconnect/Label.hide()
 		checkComplete()
-	if Input.is_action_just_pressed("ui_interact") and cong == true:
+	if Input.is_action_just_pressed("ui_accept") and cong == true:
 		$green/AnimatedSprite.play("connect")
 		completeg = true
 		$greenconnect/Label.hide()

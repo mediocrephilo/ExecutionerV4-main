@@ -15,6 +15,6 @@ func _on_Area2D_body_exited(body):
 		canInteract = false
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
+	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		Transition.change_scene("res://act3/scene2/light.tscn")
 

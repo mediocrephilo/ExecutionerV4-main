@@ -70,11 +70,11 @@ position = Vector2( 3741.62, 1278.78 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1875.54, 2018.21 )
+position = Vector2( 1877.88, 2079.1 )
 shape = SubResource( 4 )
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3459.35, 1610.82 )
+position = Vector2( 3440.62, 1582.72 )
 
 [node name="mirror" type="Area2D" parent="."]
 z_index = -1

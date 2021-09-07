@@ -179,8 +179,9 @@ margin_top = 49.09
 margin_right = 3196.63
 margin_bottom = 149.09
 custom_fonts/font = SubResource( 9 )
-text = "Move all blocks out of the maze. Press esc to exit"
+text = "Move all blocks out of the maze. Press esc to restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
