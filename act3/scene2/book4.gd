@@ -39,20 +39,18 @@ func load_dialogue():
 		$dialoguebox/Tween.start()
 	else:
 		queue_free()
-
-func _on_book_body_entered(body):
-	$AnimatedSprite.play()
-	if body.name == "player":
-		canInteract = true
-
-
-func _on_book_body_exited(body):
-	$AnimatedSprite.stop()
-	if body.name == "player":
-		canInteract = false
-
-
+		
 func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$dialoguebox/Type.stop()
 	dialogue_index += 1
+
+func _on_book4_body_entered(body):
+	$AnimatedSprite.play()
+	if body.name == "player":
+		canInteract = true
+
+func _on_book4_body_exited(body):
+	$AnimatedSprite.stop()
+	if body.name == "player":
+		canInteract = false

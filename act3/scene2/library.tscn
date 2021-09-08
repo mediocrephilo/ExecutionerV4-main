@@ -108,7 +108,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 length = 2.0
 loop = true
 tracks/0/type = "bezier"
@@ -132,10 +132,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 133.378, 1459.76 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 6718.83, 415.299 )
 
 [node name="Node2D" type="Node2D"]
@@ -224,7 +224,7 @@ position = Vector2( 496.896, 1665.78 )
 current = true
 limit_left = 0
 limit_top = 0
-limit_right = 3840
+limit_right = 1215752192
 limit_bottom = 2160
 
 [node name="book" type="Area2D" parent="."]
@@ -477,7 +477,7 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book4/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 10 )
+"anims/New Anim" = SubResource( 8 )
 
 [node name="Label" type="Label" parent="book4"]
 margin_left = 1260.45
@@ -494,18 +494,24 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -18.0647, 1124.53 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 11189.7, 886.946 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="floor" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4447.38, 2413.34 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
 [connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
 [connection signal="tween_completed" from="book/dialoguebox/Tween" to="book" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="book2" to="book2" method="_on_book2_body_entered"]
+[connection signal="body_exited" from="book2" to="book2" method="_on_book2_body_exited"]
 [connection signal="tween_completed" from="book2/dialoguebox/Tween" to="book2" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="book3" to="book3" method="_on_book3_body_entered"]
+[connection signal="body_exited" from="book3" to="book3" method="_on_book3_body_exited"]
 [connection signal="tween_completed" from="book3/dialoguebox/Tween" to="book3" method="_on_Tween_tween_completed"]
+[connection signal="body_entered" from="book4" to="book4" method="_on_book4_body_entered"]
+[connection signal="body_exited" from="book4" to="book4" method="_on_book4_body_exited"]
 [connection signal="tween_completed" from="book4/dialoguebox/Tween" to="book4" method="_on_Tween_tween_completed"]
