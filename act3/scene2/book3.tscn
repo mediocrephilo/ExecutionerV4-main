@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://act3/scene2/poem.gd" type="Script" id=1]
+[ext_resource path="res://act3/scene2/novel.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
@@ -12,14 +12,14 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-[node name="Eudaimonia" type="Control" parent="."]
+[node name="Text" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Eudaimonia"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
 margin_left = 2002.13
 margin_top = 42.0
 margin_right = 3853.13
@@ -60,7 +60,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Eudaimonia"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Text"]
 margin_left = 83.8301
 margin_top = 42.49
 margin_right = 1935.83
@@ -98,102 +98,6 @@ donning masks of courage that cracked at cackling bursting brightness
 and grinning in terrified silence
 but we were free and then we crawled to safety
 beyond the cliff content in blindness
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Martius" type="Control" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="Martius"]
-margin_left = 94.698
-margin_top = 124.0
-margin_right = 1946.7
-margin_bottom = 3204.43
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "twelve eagles crowed our end (but we move too quickly to stop for you now)
-
-winter in Martius have you ever thought
-these months too long and years too short
-where do unnamed days go to pass?
-
-gilded limbo, limbs akimbo
-sixty days make not an era
-and hesitation is an unbecoming rouge
-but haste is belladonna
-
-you pass us by ten years ago tomorrow
-we walk in different seasons
-your footprints winterlight and timely
-unwound, one-hundred years tick by out of sync and you
-are back when we began"
-text = "twelve eagles crowed our end (but we move too quickly to stop for you now)
-
-winter in Martius have you ever thought
-these months too long and years too short
-where do unnamed days go to pass?
-
-gilded limbo, limbs akimbo
-sixty days make not an era
-and hesitation is an unbecoming rouge
-but haste is belladonna
-
-you pass us by ten years ago tomorrow
-we walk in different seasons
-your footprints winterlight and timely
-unwound, one-hundred years tick by out of sync and you
-are back when we began"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="Martius"]
-margin_left = 2054.23
-margin_top = 124.0
-margin_right = 3906.23
-margin_bottom = 3111.62
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "to stand with you of yesteryear
-would your gaze have eclipsed us?
-now we walk upon six legs
-does solitude still attract you?
-
-we turn and the world turns with us;
-the heavens are fixed, us less so
-the choice escapes us; it lives with them now, fattened with repetition
-
-so after, then, give us ours
-at the limits of earth, the extremity of heaven
-we wait for us as June kills May
-when we have come to power what will we say?
-but for now,
-
-Aprilis/and they do open
-"
-text = "to stand with you of yesteryear
-would your gaze have eclipsed us?
-now we walk upon six legs
-does solitude still attract you?
-
-we turn and the world turns with us;
-the heavens are fixed, us less so
-the choice escapes us; it lives with them now, fattened with repetition
-
-so after, then, give us ours
-at the limits of earth, the extremity of heaven
-we wait for us as June kills May
-when we have come to power what will we say?
-but for now,
-
-Aprilis/and they do open
 "
 __meta__ = {
 "_edit_use_anchors_": false
