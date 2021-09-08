@@ -7,7 +7,7 @@ var dialogue = [
 	"I have placed bombs underneath the E.L.F Factory",
 	"To destroy it for good. No children should have to suffer like this",
 	"This is the detonator. All you have to do is press this, and it would be destroyed",
-	"i liteally dont wknow what else to wrte lol "
+	"Perhaps it could redeem you from all the pain you have caused"
 ]
 var dialogue_index = 0
 var finished = false
@@ -49,4 +49,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	print("sfdgfhg")
+	Transition.change_scene("res://act3/jailscenes/jailafter.tscn")
