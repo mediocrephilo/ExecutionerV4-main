@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-	"",
+	"''A DIZZINESS'' BY RICHARD SARTE.",
 ]
 var canInteract = false
 var dialogue_index = 0
@@ -23,7 +23,7 @@ func _process(delta):
 			yield(get_tree().create_timer(1), "timeout")
 			dialogue_index += 1
 	if dialogue_index == 4 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
-			Transition.change_scene("res://act3/scene2/book1.tscn")
+			Transition.change_scene("res://act3/scene2/book3.tscn")
 		
 func load_dialogue():
 	$dialoguebox.show()

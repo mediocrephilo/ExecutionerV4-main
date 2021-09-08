@@ -25,7 +25,7 @@ func _process(delta):
 			yield(get_tree().create_timer(1), "timeout")
 			dialogue_index += 1
 	if dialogue_index == 4 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
-			Transition.change_scene("res://act3/scene2/book1.tscn")
+			Transition.change_scene("res://act3/scene2/book2.tscn")
 		
 func load_dialogue():
 	$dialoguebox.show()
@@ -41,7 +41,6 @@ func load_dialogue():
 		$dialoguebox/Tween.start()
 	else:
 		queue_free()
-
 
 func _on_Tween_tween_completed(_object, _key):
 	finished = true
