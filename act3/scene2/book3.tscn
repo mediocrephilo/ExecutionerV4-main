@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://act3/scene2/novel.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -11,6 +12,9 @@ font_data = ExtResource( 2 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1929.08, 1081.37 )
+scale = Vector2( 3.74885, 2.97873 )
+texture = ExtResource( 3 )
 
 [node name="Text" type="Control" parent="."]
 margin_right = 40.0
@@ -25,6 +29,7 @@ margin_top = 42.0
 margin_right = 3853.13
 margin_bottom = 3303.62
 custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "we tore bandages off too fast (too fast!) 
 to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
@@ -66,6 +71,7 @@ margin_top = 42.49
 margin_right = 1935.83
 margin_bottom = 3117.49
 custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Eudaimonia
 
