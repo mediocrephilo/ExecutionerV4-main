@@ -23,4 +23,4 @@ func _process(delta):
 			yield(get_tree().create_timer(0.5), "timeout")
 			page = 0
 	if Input.is_action_just_pressed("ui_escape"):
-		Transition.change_scene("")
+		Transition.change_scene("res://act3/scene2/library")
