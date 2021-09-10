@@ -31,11 +31,11 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=29]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=30]
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=1]
 size = 100
 font_data = ExtResource( 30 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 13 ) ],
 "loop": true,
@@ -43,20 +43,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 215.13, 166.255 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 197.701, 1065.79 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 5000.86, 159.56 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "idle",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ) ],
@@ -69,17 +69,17 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "jump",
+"name": "idle",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 82.9133
 height = 171.178
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 10 ) ],
 "loop": true,
@@ -87,10 +87,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 253.302, 211.108 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
 "frames": [ ExtResource( 15 ), ExtResource( 21 ) ],
 "loop": true,
@@ -98,15 +98,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 361.018, 469.7 )
 
-[sub_resource type="Curve2D" id=11]
+[sub_resource type="Curve2D" id=12]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 373.171, 1596.33, 0, 0, 0, 0, 14231.7, 1668.8 )
 }
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
@@ -114,7 +114,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 672.912, 1185.32 )
 
 [node name="Node2D" type="Node2D"]
@@ -182,7 +182,7 @@ margin_left = 5913.91
 margin_top = 1235.94
 margin_right = 6144.91
 margin_bottom = 1348.94
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 1 )
 text = "Enter"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -191,26 +191,26 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="sewer"]
 position = Vector2( 6309.14, -263.828 )
 scale = Vector2( 1.4071, 2.46728 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sewer"]
 position = Vector2( 6071.31, 1917.29 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -861.701, 1074.99 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 6539.56, 1104.02 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3502.53, 2135.01 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 209.129, 34.8548 )
@@ -220,13 +220,13 @@ script = ExtResource( 19 )
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 1773.43, 1772.07 )
 scale = Vector2( 0.70485, 0.717409 )
-frames = SubResource( 5 )
+frames = SubResource( 6 )
 animation = "walk"
 speed_scale = 1.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 1761.46, 1839.12 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
 position = Vector2( 1760.16, 1856.01 )
@@ -245,25 +245,25 @@ limit_bottom = 2160
 [node name="AnimatedSprite" type="AnimatedSprite" parent="piano"]
 position = Vector2( 952.177, 1624.13 )
 scale = Vector2( 3.35704, 2.52924 )
-frames = SubResource( 7 )
+frames = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piano"]
 position = Vector2( 948.362, 1810.93 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="buildings" type="Area2D" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="buildings"]
 position = Vector2( 2847.58, 1096.01 )
 z_index = -1
-frames = SubResource( 9 )
+frames = SubResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="buildings"]
 position = Vector2( 1764.86, 1543.24 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Path2D" type="Path2D" parent="."]
-curve = SubResource( 11 )
+curve = SubResource( 12 )
 script = ExtResource( 12 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -277,12 +277,12 @@ script = ExtResource( 28 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/Area2D"]
 position = Vector2( -5122.92, -173.752 )
 scale = Vector2( 0.570285, 0.581476 )
-frames = SubResource( 12 )
+frames = SubResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
 position = Vector2( -4892.99, -749.731 )
 z_index = 5
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 2851.96, 647.412 )

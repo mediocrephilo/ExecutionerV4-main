@@ -12,4 +12,8 @@ func _ready():
 
 func _on_exit_body_entered(body):
 	if body.name == "player":
-		Transition.change_scene("res://Act1/cutscenes/scenez12/Polly.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scenez11/SceneEleven.tscn")
+		
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		Transition.change_scene("res://Act1/playerscenes/scenez10/SceneTen.tscn")

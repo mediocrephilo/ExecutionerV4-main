@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/characters/fall.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://sprites/Act1settings/sceneseven/getaroundgetaroundigetaround.png" type="Texture" id=17]
 [ext_resource path="res://sprites/Act1settings/sceneseven/blooodrock.png" type="Texture" id=18]
 [ext_resource path="res://sprites/Act1settings/sceneseven/clownback.PNG" type="Texture" id=19]
+[ext_resource path="res://Act1/playerscenes/scene7/table.gd" type="Script" id=20]
 [ext_resource path="res://sprites/Act1settings/sceneseven/clown1.png" type="Texture" id=21]
 [ext_resource path="res://Act1/playerscenes/scene7/deathclownR.gd" type="Script" id=24]
 [ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=25]
@@ -79,6 +80,11 @@ extents = Vector2( 1755.97, 173.467 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "nom",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 35 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "reversenom",
@@ -88,11 +94,6 @@ animations = [ {
 "loop": false,
 "name": "default",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
-"loop": false,
-"name": "nom",
-"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
@@ -140,7 +141,7 @@ position = Vector2( 3943.19, 942.398 )
 shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="."]
-position = Vector2( -439.726, -132.86 )
+position = Vector2( -1487.57, -52.5591 )
 z_index = 100
 script = ExtResource( 1 )
 __meta__ = {
@@ -1476,6 +1477,7 @@ position = Vector2( -6908.74, -3268.62 )
 texture = ExtResource( 29 )
 
 [node name="table" type="Area2D" parent="."]
+script = ExtResource( 20 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="table"]
 position = Vector2( -9210.26, -16246.9 )
@@ -1498,3 +1500,4 @@ shape = SubResource( 13 )
 [connection signal="body_entered" from="rfacingclown5" to="rfacingclown5" method="_on_rfacingclown_body_entered"]
 [connection signal="body_entered" from="rfacingclown6" to="rfacingclown6" method="_on_rfacingclown_body_entered"]
 [connection signal="body_entered" from="rfacingclown3" to="rfacingclown3" method="_on_rfacingclown_body_entered"]
+[connection signal="body_entered" from="table" to="table" method="_on_table_body_entered"]

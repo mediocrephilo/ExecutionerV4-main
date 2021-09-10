@@ -68,14 +68,9 @@ font_data = ExtResource( 17 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "walk",
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -83,9 +78,14 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "jump",
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -254,7 +254,7 @@ shape = SubResource( 10 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 3741.5, 756.078 )
 frames = SubResource( 11 )
-frame = 2
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -287,6 +287,8 @@ texture = ExtResource( 27 )
 position = Vector2( 1488.18, 538.638 )
 z_index = -4
 texture = ExtResource( 27 )
+
 [connection signal="body_entered" from="box" to="box" method="_on_box_body_entered"]
 [connection signal="body_exited" from="box" to="box" method="_on_box_body_exited"]
+[connection signal="tree_exited" from="box/dialoguebox" to="box" method="_on_dialoguebox_tree_exited"]
 [connection signal="tween_completed" from="box/dialoguebox/Tween" to="box" method="_on_Tween_tween_completed"]

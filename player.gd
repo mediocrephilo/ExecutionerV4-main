@@ -46,3 +46,6 @@ func _physics_process(delta):
 			$Walk.play()
 	move_and_slide(motion, UP)
 	
+
+
+

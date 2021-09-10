@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://drawncutscenes/image4 copy 2.png" type="Texture" id=1]
+[ext_resource path="res://drawncutscenes/deadlol.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1837.04, 1022.17 )
+scale = Vector2( 1.05744, 1.05912 )
+texture = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.552
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -59,11 +59,6 @@ extents = Vector2( 6238.01, 553.387 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ) ],
 "loop": false,
 "name": "dead",
@@ -77,6 +72,11 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 11 ) ],
@@ -126,14 +126,14 @@ font_data = ExtResource( 24 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 38 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 39 ) ],
-"loop": false,
-"name": "appear",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 40 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "vibing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 39 ) ],
+"loop": false,
+"name": "appear",
 "speed": 5.0
 } ]
 

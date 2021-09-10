@@ -27,7 +27,7 @@ func _process(delta):
 		$Label.hide()
 		load_dialogue()
 	elif Input.is_action_just_pressed("ui_accept") and canInteract == true and number == 1:
-		Transition.change_scene("res://Act1/cutscenes/scene6/SceneSixOnePuzzle")
+		Transition.change_scene("res://Act1/cutscenes/scene6/SceneSixOnePuzzle.tscn")
 func load_dialogue():
 	$dialoguebox.show()
 	$AnimatedSprite.stop()

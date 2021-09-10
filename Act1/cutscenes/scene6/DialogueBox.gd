@@ -34,7 +34,7 @@ func _process(delta):
 			if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed("ui_left"):
 				get_tree().change_scene("res://Act1/cutscenes/scene6/Death.tscn")
 		if dialogue_index == 4 and Input.is_action_just_pressed("ui_accept"):
-			Transition.change_scene("res://Act1/playerscenes/scene6/scenesixone.tscn")
+			Transition.change_scene("res://Act1/playerscenes/scene6/idkwhatscenethisis.tscn")
 		if Input.is_action_just_pressed("ui_accept"):
 			$RichTextLabel.hide()
 			$symbol1.show()
