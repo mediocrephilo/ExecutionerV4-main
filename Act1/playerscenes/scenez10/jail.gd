@@ -27,7 +27,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") and canInteract == true and number == 0:
 		load_dialogue()
 	elif Input.is_action_just_pressed("ui_accept") and canInteract == true and number == 1:
-		Transition.change_scene("res://Act1/playerscene/scene10/SceneTenPuzzleOne.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scenez10/SceneTenPuzzleOne.tscn")
 func load_dialogue():
 	$CanvasLayer/dialoguebox.show()
 	$jaildoor1.stop()
