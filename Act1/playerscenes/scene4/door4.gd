@@ -18,7 +18,7 @@ func _on_Area2D3_body_exited(body):
 func _input(_event):
 	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
 		$AudioStreamPlayer.play()
-		Transition.change_scene("res://Act1/playerscenes/scene3/SceneThree2.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scene5/black.tscn")
 		yield($AudioStreamPlayer, "finished")
 		HorrorSound.stopsound()
 # Called every frame. 'delta' is the elapsed time since the previous frame.

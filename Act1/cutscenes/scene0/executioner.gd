@@ -13,7 +13,7 @@ func _ready():
 	yield(get_tree().create_timer(4), "timeout")
 	$AnimationPlayer.play_backwards("fade")
 	yield(get_tree().create_timer(3), "timeout")
-	Transition.change_scene("res://Act1/cutscenes/scene0/ladyPictures.tscn")
+	get_tree().change_scene("res://Act1/cutscenes/scene1/ACT1.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

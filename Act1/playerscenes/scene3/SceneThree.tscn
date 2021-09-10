@@ -35,14 +35,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -271,15 +271,16 @@ autoplay = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1212.64, 1235.52 )
 frames = SubResource( 12 )
-frame = 4
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
+
 [connection signal="body_entered" from="doortime2" to="doortime2" method="_on_doortime2_body_entered"]
 [connection signal="body_exited" from="doortime2" to="doortime2" method="_on_doortime2_body_exited"]
-[connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
 [connection signal="body_entered" from="chest" to="chest/dialoguebox" method="_on_chest_body_entered"]
-[connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
+[connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
 [connection signal="body_exited" from="chest" to="chest/dialoguebox" method="_on_chest_body_exited"]
+[connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
 [connection signal="tween_completed" from="chest/dialoguebox/Tween" to="chest/dialoguebox" method="_on_Tween_tween_completed"]

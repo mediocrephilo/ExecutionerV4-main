@@ -44,9 +44,9 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "fall",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -54,9 +54,9 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "idle",
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -299,7 +299,7 @@ __meta__ = {
 position = Vector2( 1044.25, -684.493 )
 scale = Vector2( 0.63002, 0.628466 )
 frames = SubResource( 9 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]

@@ -39,24 +39,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -238,7 +238,7 @@ texture = ExtResource( 23 )
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 10 )
-frame = 1
+frame = 9
 playing = true
 __meta__ = {
 "_edit_lock_": true

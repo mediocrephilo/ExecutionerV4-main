@@ -48,6 +48,11 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "jump",
@@ -56,11 +61,6 @@ animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 } ]
 
@@ -226,9 +226,6 @@ __meta__ = {
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3752.03, 988.94 )
 shape = SubResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="doortime" type="Area2D" parent="."]
 position = Vector2( -244.216, 988.94 )

@@ -16,4 +16,4 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.name == "player2":
 		HorrorSound.fade_out()
-		Transition.change_scene("res://Act1/cutscenes/scene4/girltalk.tscn")
+		Transition.change_scene("res://Act1/playerscenes/scene5/black.tscn")

@@ -20,7 +20,7 @@ func _on_rfacingclown_body_entered(body):
 		$rock1/Sprite.show()
 		$rock2/Sprite.show()
 		$rock3/Sprite.show()
-		#$rrock/CollisionShape2D.disabled = false
+		$rrock/CollisionShape2D.disabled = false
 		$rrock.show()
 		$rrock1.show()
 		$rrock2.show()

@@ -79,20 +79,20 @@ __meta__ = {
 }
 
 [node name="Control" type="RichTextLabel" parent="."]
-margin_left = 749.323
-margin_top = 789.362
-margin_right = 3397.32
-margin_bottom = 1750.36
+margin_left = 946.793
+margin_top = 811.871
+margin_right = 3594.79
+margin_bottom = 1772.87
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "
 	  -----------
 	  OLD FRIEND
-      ------------"
+      -----------"
 text = "
 	  -----------
 	  OLD FRIEND
-      ------------"
+      -----------"
 __meta__ = {
 "_edit_use_anchors_": false
 }

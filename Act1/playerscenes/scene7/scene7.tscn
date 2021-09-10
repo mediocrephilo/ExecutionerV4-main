@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/characters/fall.png" type="Texture" id=2]
@@ -42,24 +42,24 @@ extents = Vector2( 345.366, 1491.12 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -113,6 +113,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 316.245, 249.555 )
 
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 400.483, 182.935 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -141,7 +144,7 @@ position = Vector2( 3943.19, 942.398 )
 shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="."]
-position = Vector2( -1487.57, -52.5591 )
+position = Vector2( -1780.73, -147.829 )
 z_index = 100
 script = ExtResource( 1 )
 __meta__ = {
@@ -230,7 +233,7 @@ shape = SubResource( 6 )
 one_way_collision = true
 
 [node name="blood2" type="StaticBody2D" parent="."]
-position = Vector2( -9305.4, -2027.79 )
+position = Vector2( -9305.4, -2025.14 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1486,6 +1489,24 @@ frames = SubResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
 position = Vector2( -9186.72, -16200.9 )
 shape = SubResource( 13 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -5583.95, 30.2108 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -6293.9, 35.246 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -6540.63, 55.3866 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -6540.63, 55.3866 )
+shape = SubResource( 14 )
 
 [connection signal="body_entered" from="deathclownR" to="deathclownR" method="_on_deathclownR_body_entered"]
 [connection signal="body_entered" from="deathclownR2" to="deathclownR2" method="_on_deathclownR_body_entered"]

@@ -7,8 +7,8 @@ extends Control
 var canInteract = false
 var dialogue = [
 	"THERE'S A DIARY HERE",
-	"MUST BE HER'S. THE FIRST . . . ",
-	"NEVERMIND",
+	"MUST BE HER'S...",
+	"LET'S SEE WHAT'S INSIDE",
 ]
 var dialogue_index = 0
 var number = 0

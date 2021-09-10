@@ -2,7 +2,7 @@ extends Control
 
 var dialogue = [
 		"*COUGH*  *COUGH*  *COUGH*",
-		"SURPRISINGLY, IT'S EMPTY EXCEPT FOR ALL THE DUST."
+		"SURPRISINGLY, IT'S EMPTY EXCEPT FOR ALL THE DUST. IS THIS WHERE SHE KEPT HER TEDDY BEAR?"
 ]
 var dialogue_index = 0
 var number = 0
