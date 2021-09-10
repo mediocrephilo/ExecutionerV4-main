@@ -17,21 +17,21 @@ var dialogue = [
 		"I hope you will remember your decision when the time comes. Take this."
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
-var dialogue2 = [
-	"FIGHT",
-]
-var dialogue22 = [
-	"CELEBRATE",
-]
-var dialogue3 = [
-	". . . I must confess, I am a little disappointed in your answer. Take this.",
-	"I hope, when the time comes, your decision will change.",
+#var dialogue2 = [
+#	"FIGHT",
+#]
+#var dialogue22 = [
+#	"CELEBRATE",
+#
+#var dialogue3 = [
+#	". . . I must confess, I am a little disappointed in your answer. Take this.",
+#	"I hope, when the time comes, your decision will change.",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
-]
+#]
 
 var dialogue_index = 0
-var dialogue_index1 = 0
-var dialogue_index2 = 0
+#var dialogue_index1 = 0
+#var dialogue_index2 = 0
 var number = 0
 var finished = false
 var canInteract = false
@@ -55,18 +55,21 @@ func _process(_delta):
 	$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index < 15:
 		load_dialogue()
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 15 and dialogue_index2 == 0:
-		$dialoguebox2.show()
-		load_dialogue2()
-		load_dialogue22()
-	if Input.is_action_just_pressed("ui_up") and dialogue_index2 == 1:
-		$dialoguebox2.hide()
-		load_dialogue3()
-	if Input.is_action_just_pressed("ui_down") and dialogue_index2 == 1:
-		$dialoguebox2.hide()
-		load_dialogue()
-	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index1 == 1:
-		load_dialogue()
+	if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 15:
+		Transition.change_scene("res://drawncutscenes/button.tscn")
+		
+	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 15 and dialogue_index2 == 0:
+	#	$dialoguebox2.show()
+	#	load_dialogue2()
+	#	load_dialogue22()
+	#if Input.is_action_just_pressed("ui_up") and dialogue_index2 == 1:
+	#	$dialoguebox2.hide()
+	#	load_dialogue3()
+	#if Input.is_action_just_pressed("ui_down") and dialogue_index2 == 1:
+	#	$dialoguebox2.hide()
+	#	load_dialogue()
+	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index1 == 1:
+	#	load_dialogue()
 	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index == 12:
 		#Transition.change_scene("")
 	#if Input.is_action_just_pressed("ui_accept") and finished == true and dialogue_index3 == 2:
@@ -90,59 +93,60 @@ func load_dialogue():
 		dialogue_index +=1
 	
 		
-func load_dialogue3():
-	$TextureRect.show()
-	$RichTextLabel.show()
-	yield(get_tree().create_timer(0.5), "timeout")
-	if dialogue_index < dialogue.size():
+#func load_dialogue3():
+#	$TextureRect.show()
+#	$RichTextLabel.show()
+#	yield(get_tree().create_timer(0.5), "timeout")
+#	if dialogue_index < dialogue.size():
 
-		$Type.play()
-		finished = false
-		$RichTextLabel.bbcode_text = dialogue3[dialogue_index1]
-		$RichTextLabel.percent_visible = 0
-		$Tween.interpolate_property(
-			$RichTextLabel, "percent_visible", 0, 1, 2, 
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-		)
-		$Tween.start()
-		dialogue_index1 +=1
+#		$Type.play()
+#		finished = false
+#		$RichTextLabel.bbcode_text = dialogue3[dialogue_index1]
+#		$RichTextLabel.percent_visible = 0
+#		$Tween.interpolate_property(
+#			$RichTextLabel, "percent_visible", 0, 1, 2, 
+#			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+#		)
+##		dialogue_index1 +=1
 		
-func load_dialogue2():
-	yield(get_tree().create_timer(0.5), "timeout")
-	if dialogue_index < dialogue.size():
+#func load_dialogue2():
+#	yield(get_tree().create_timer(0.5), "timeout")
+#	if dialogue_index < dialogue.size():
 
-		$Type.play()
-		finished = false
-		$dialoguebox2/RichTextLabel.bbcode_text = dialogue2[0]
-		$dialoguebox2/RichTextLabel.percent_visible = 0
-		$dialoguebox2/Tween.interpolate_property(
-			$dialoguebox2/RichTextLabel, "percent_visible", 0, 1, 2, 
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-		)
-		$dialoguebox2/Tween.start()
-		$dialoguebox2/AnimatedSprite.show()
-		$dialoguebox2/AnimatedSprite2.show()
-		$Type.stop()
-		dialogue_index2 += 1
+#		$Type.play()
+#		finished = false
+#		$dialoguebox2/RichTextLabel.bbcode_text = dialogue2[0]
+##		$dialoguebox2/RichTextLabel.percent_visible = 0
+	#	$dialoguebox2/Tween.interpolate_property(
+	#		$dialoguebox2/RichTextLabel, "percent_visible", 0, 1, 2, 
+	#		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+	#	)
+	#	$dialoguebox2/Tween.start()
+	#	$dialoguebox2/AnimatedSprite.show()
+	#	$dialoguebox2/AnimatedSprite2.show()
+	#	$Type.stop()
+	#	dialogue_index2 += 1
 		
 
 		
-func load_dialogue22():
-	yield(get_tree().create_timer(0.5), "timeout")
-	if dialogue_index < dialogue.size():
+##	yield(get_tree().create_timer(0.5), "timeout")
+	#if dialogue_index < dialogue.size():
 
-		finished = false
-		$dialoguebox2/RichTextLabel2.bbcode_text = dialogue22[0]
-		$dialoguebox2/RichTextLabel2.percent_visible = 0
-		$dialoguebox2/Tween.interpolate_property(
-			$dialoguebox2/RichTextLabel2, "percent_visible", 0, 1, 2, 
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-		)
-		$dialoguebox2/Tween.start()
-		$dialoguebox2/AnimatedSprite.show()
-		$dialoguebox2/AnimatedSprite2.show()
+	#	finished = false
+	#	$dialoguebox2/RichTextLabel2.bbcode_text = dialogue22[0]
+	#	$dialoguebox2/RichTextLabel2.percent_visible = 0
+	#	$dialoguebox2/Tween.interpolate_property(
+	#		$dialoguebox2/RichTextLabel2, "percent_visible", 0, 1, 2, 
+	#		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+	#	)
+	#	$dialoguebox2/Tween.start()
+	#	$dialoguebox2/AnimatedSprite.show()
+	#	$dialoguebox2/AnimatedSprite2.show()
 
 	
 func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	$Type.stop()
+
+
+

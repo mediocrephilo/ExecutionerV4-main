@@ -58,5 +58,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	#Transition.change_scene("res://")
-	pass
+	Transition.change_scene("res://act3/jailscenes/jail2.tscn")
