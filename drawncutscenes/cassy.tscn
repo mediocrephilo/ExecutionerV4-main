@@ -27,19 +27,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "happ",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "4",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "kalm",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -47,9 +37,14 @@ animations = [ {
 "name": "3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "1",
+"name": "kalm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "happ",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
@@ -57,9 +52,14 @@ animations = [ {
 "name": "blush",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "2",
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "4",
 "speed": 5.0
 } ]
 
@@ -128,7 +128,6 @@ position = Vector2( 1900.28, 1909.67 )
 scale = Vector2( 1.35088, 1.3549 )
 frames = SubResource( 1 )
 animation = "happ"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Control"]
@@ -146,10 +145,10 @@ frame = 1
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Control"]
-position = Vector2( 2277.92, 428.282 )
-scale = Vector2( 1.06687, 0.509848 )
+position = Vector2( 2272.79, 538.857 )
+scale = Vector2( 1.06687, 0.733301 )
 frames = SubResource( 3 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="Type" type="AudioStreamPlayer" parent="Control"]
@@ -160,10 +159,10 @@ anchor_left = 25.8708
 anchor_top = 7.08623
 anchor_right = 25.8708
 anchor_bottom = 7.08623
-margin_left = 298.838
-margin_top = -108.447
-margin_right = 1774.84
-margin_bottom = 216.553
+margin_left = 332.497
+margin_top = -82.8111
+margin_right = 1808.5
+margin_bottom = 419.189
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -229,13 +228,13 @@ __meta__ = {
 position = Vector2( 3010.44, 1725.3 )
 scale = Vector2( 0.326183, 0.299013 )
 frames = SubResource( 8 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="choiceBox"]
 position = Vector2( 3013.16, 1937.22 )
 scale = Vector2( 0.309881, 0.342485 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 flip_v = true
 
@@ -249,6 +248,7 @@ flip_v = true
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]
 [connection signal="tween_completed" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_completed"]
 [connection signal="tween_started" from="Control/Tween" to="choiceBox" method="_on_Tween_tween_started"]
+[connection signal="tree_exited" from="choiceBox" to="choiceBox" method="_on_choiceBox_tree_exited"]
 [connection signal="tween_completed" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_completed"]
 [connection signal="tween_started" from="choiceBox/hhh" to="choiceBox" method="_on_hhh_tween_started"]
 [connection signal="tween_completed" from="choiceBox/aks" to="choiceBox" method="_on_aks_tween_completed"]

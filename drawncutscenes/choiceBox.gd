@@ -121,3 +121,4 @@ func _on_aks_tween_completed(object, key):
 	$AnimatedSprite3.show()
 	finished = true
 	$type.stop()
+

@@ -13,6 +13,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "3",
@@ -21,11 +26,6 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "1",
 "speed": 5.0
 } ]
 
@@ -73,5 +73,6 @@ position = Vector2( 1145.87, 386.248 )
 scale = Vector2( 2.03343, 1.103 )
 z_index = -1
 texture = ExtResource( 8 )
+
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

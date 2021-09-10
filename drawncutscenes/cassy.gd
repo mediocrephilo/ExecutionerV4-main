@@ -119,4 +119,4 @@ func _on_Tween_tween_completed(_object, _key):
 
 
 func _on_Control_tree_exited():
-	print("adsfdgf")
+	Transition.change_scene("res://act2/cutscenes/title.tscn")
