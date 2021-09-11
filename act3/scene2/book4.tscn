@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 80
+size = 100
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
@@ -24,25 +24,53 @@ __meta__ = {
 }
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
-margin_left = 2002.13
-margin_top = 42.0
-margin_right = 3853.13
-margin_bottom = 3303.62
+margin_left = 2100.0
+margin_top = 96.0
+margin_right = 3690.0
+margin_bottom = 3304.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+bbcode_text = "IV. Section of state budget funding single-use compensation system for targeted families.
+
+V. Increased funding for research into life energy (sources, uses, methods of extraction).
+
+VI. Expand the Bureau of Internal Intelligence to maintain secrecy and fund development of feasible covers.
+
+VII. Addition of \"secrecy clause\" to the Council's oath of office."
+text = "IV. Section of state budget funding single-use compensation system for targeted families.
+
+V. Increased funding for research into life energy (sources, uses, methods of extraction).
+
+VI. Expand the Bureau of Internal Intelligence to maintain secrecy and fund development of feasible covers.
+
+VII. Addition of \"secrecy clause\" to the Council's oath of office."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
-margin_left = 83.8301
-margin_top = 42.49
-margin_right = 1935.83
-margin_bottom = 3117.49
+margin_left = 176.378
+margin_top = 96.3403
+margin_right = 1783.38
+margin_bottom = 3171.34
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+bbcode_text = "			Eali Labor Force Act I
+
+I. Immediate termination of the Jackson Lottery as well as significant downsizing of the Executioner Corps.
+
+II. Expedited construction of factory towns and establishment of workers' shelters.
+
+III. Establishment of Bureau of Labor, overseeing selection, transportation, and efficiency of workers."
+text = "			Eali Labor Force Act I
+
+I. Immediate termination of the Jackson Lottery as well as significant downsizing of the Executioner Corps.
+
+II. Expedited construction of factory towns and establishment of workers' shelters.
+
+III. Establishment of Bureau of Labor, overseeing selection, transportation, and efficiency of workers."
 __meta__ = {
 "_edit_use_anchors_": false
 }
