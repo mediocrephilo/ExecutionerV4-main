@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://act3/scene2/poem.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sounds/page-flip-01a.wav" type="AudioStream" id=3]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=4]
+[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -209,3 +214,15 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3377.35
+margin_top = 360.504
+margin_right = 3807.35
+margin_bottom = 451.504
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Leave (esc)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
