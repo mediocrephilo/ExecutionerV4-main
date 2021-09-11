@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://act3/scene2/novel.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
 size = 80
 font_data = ExtResource( 2 )
 
@@ -23,91 +27,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
-margin_left = 2002.13
-margin_top = 42.0
-margin_right = 3853.13
-margin_bottom = 3303.62
-custom_fonts/normal_font = SubResource( 1 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of all things
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, thereby you, truly did live once
-"
-text = "we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of all things
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, thereby you, truly did live once
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
-margin_left = 83.8301
-margin_top = 42.49
-margin_right = 1935.83
-margin_bottom = 3117.49
+margin_left = 84.0
+margin_top = 42.0
+margin_right = 1936.0
+margin_bottom = 224.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Eudaimonia
-
-we remember
-pounding shoes and heavy breaths
-thrills and chills from not knowing we dared not to linger at cliffs
-to look down at jagged knives of sand and rust
-we played the piano smashing keys in cacophonous harmony
-melon slipping down our chins in rivulets of sticky red
-storms that swept over steel clanging harsh melodic sweet brash
-we were huddled under blankets ten to one sheet
-stomachs growling always hungry 
-donning masks of courage that cracked at cackling bursting brightness
-and grinning in terrified silence
-but we were free and then we crawled to safety
-beyond the cliff content in blindness
-"
-text = "Eudaimonia
-
-we remember
-pounding shoes and heavy breaths
-thrills and chills from not knowing we dared not to linger at cliffs
-to look down at jagged knives of sand and rust
-we played the piano smashing keys in cacophonous harmony
-melon slipping down our chins in rivulets of sticky red
-storms that swept over steel clanging harsh melodic sweet brash
-we were huddled under blankets ten to one sheet
-stomachs growling always hungry 
-donning masks of courage that cracked at cackling bursting brightness
-and grinning in terrified silence
-but we were free and then we crawled to safety
-beyond the cliff content in blindness
-"
+bbcode_text = "								Chapter 1"
+text = "							VII"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
+margin_left = 83.0
+margin_top = 212.0
+margin_right = 1873.0
+margin_bottom = 2113.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
 
 [node name="Label" type="Label" parent="."]
 margin_right = 40.0
