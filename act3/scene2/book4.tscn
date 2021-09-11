@@ -31,36 +31,6 @@ margin_bottom = 3303.62
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of all things
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, thereby you, truly did live once
-"
-text = "we tore bandages off too fast (too fast!) 
-to watch red spread over pale yellow skin just because we couldwe cried tears in anger in euphoria
-do not go gentle into that good light
-turn off the night-light the firefly lights
-and the streetlights at the end of all things
-we were impervious
-
-we dreamed in shouts and screams of elation no words needed
-we were raw feeling bundled up into one party one mind
-we bled blood red and laughed with our souls wide open
-our eyes wide shut we ran mindlessly calloused soles pounding the floor and we ask you now
-remember remember our deeds and our deaths
-remember what we did
-and that we, thereby you, truly did live once
-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -73,38 +43,6 @@ margin_bottom = 3117.49
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Eudaimonia
-
-we remember
-pounding shoes and heavy breaths
-thrills and chills from not knowing we dared not to linger at cliffs
-to look down at jagged knives of sand and rust
-we played the piano smashing keys in cacophonous harmony
-melon slipping down our chins in rivulets of sticky red
-storms that swept over steel clanging harsh melodic sweet brash
-we were huddled under blankets ten to one sheet
-stomachs growling always hungry 
-donning masks of courage that cracked at cackling bursting brightness
-and grinning in terrified silence
-but we were free and then we crawled to safety
-beyond the cliff content in blindness
-"
-text = "Eudaimonia
-
-we remember
-pounding shoes and heavy breaths
-thrills and chills from not knowing we dared not to linger at cliffs
-to look down at jagged knives of sand and rust
-we played the piano smashing keys in cacophonous harmony
-melon slipping down our chins in rivulets of sticky red
-storms that swept over steel clanging harsh melodic sweet brash
-we were huddled under blankets ten to one sheet
-stomachs growling always hungry 
-donning masks of courage that cracked at cackling bursting brightness
-and grinning in terrified silence
-but we were free and then we crawled to safety
-beyond the cliff content in blindness
-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
