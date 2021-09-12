@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://act3/scene2/textbook.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE9.ttf" type="DynamicFontData" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=2]
-size = 50
+size = 90
 font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=3]
@@ -34,6 +34,10 @@ font_data = ExtResource( 2 )
 size = 50
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 6 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -47,15 +51,14 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 1705.0
-margin_top = 2060.0
-margin_right = 2147.0
-margin_bottom = 2173.0
+margin_left = 1710.16
+margin_top = 2003.21
+margin_right = 2152.16
+margin_bottom = 2116.21
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Leave (esc)"
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -123,11 +126,11 @@ scale = Vector2( 1.14753, 1.25993 )
 texture = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 884.447
-margin_top = 2066.06
-margin_right = 1314.45
-margin_bottom = 2179.06
-custom_fonts/font = SubResource( 2 )
+margin_left = 825.969
+margin_top = 2049.44
+margin_right = 996.969
+margin_bottom = 2124.44
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "- 335 -"
 __meta__ = {
@@ -135,11 +138,11 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 2841.22
-margin_top = 2075.87
-margin_right = 3271.22
-margin_bottom = 2188.87
-custom_fonts/font = SubResource( 2 )
+margin_left = 2803.13
+margin_top = 2054.6
+margin_right = 2974.13
+margin_bottom = 2129.6
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "- 336 -"
 __meta__ = {
