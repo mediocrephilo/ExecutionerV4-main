@@ -3,8 +3,11 @@ extends Node2D
 var page = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Label.hide()
 	$Martius.hide()
-
+	yield(get_tree().create_timer(10), "timeout")
+	$Label.show()
+	$Label/AnimationPlayer.play("New Anim")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_right"):
@@ -22,5 +25,5 @@ func _process(delta):
 			$Martius.hide()
 			yield(get_tree().create_timer(0.5), "timeout")
 			page = 0
-	if Input.is_action_just_pressed("ui_escape"):
-		Transition.change_scene("res://act3/scene2/library")
+	if Input.is_action_just_pressed("ui_cancel"):
+		Transition.change_scene("res://act3/scene2/library1")
