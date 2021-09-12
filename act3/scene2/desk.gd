@@ -11,6 +11,7 @@ var canInteract = false
 func _ready():
 	$dialoguebox.hide()
 	$Label.hide()
+	$dialoguebox/continuesprite.hide()
 func _on_desk_body_entered(body):
 	if body.name == "player" and number == 0:
 		canInteract = true
@@ -22,6 +23,7 @@ func _on_desk_body_exited(body):
 		$Label.hide()
 		$AnimatedSprite.stop()
 func _process(delta):
+	$"dialoguebox/continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and canInteract == true and number == 0:
 		load_dialogue()
 func load_dialogue():
