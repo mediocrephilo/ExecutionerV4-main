@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://sprites/act3settings/bed.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=15]
 [ext_resource path="res://act3/scene2/desk1.gd" type="Script" id=16]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -35,6 +36,31 @@ font_data = ExtResource( 14 )
 [sub_resource type="DynamicFont" id=4]
 size = 100
 font_data = ExtResource( 14 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2718.37, -0.25, 0, 0.25, 0, 2718.38, -0.25, 0, 0.25, 0, 2718.37, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 441.036, -0.25, 0, 0.25, 0, 520, -0.25, 0, 0.25, 0, 441.036, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 113.382, 887.27 )
@@ -154,6 +180,15 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="chest/dialoguebox"]
 
+[node name="continuesprite" type="Sprite" parent="chest/dialoguebox"]
+position = Vector2( 2718.38, 520 )
+scale = Vector2( 1.38918, 2.39654 )
+texture = ExtResource( 17 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="chest/dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 8 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -194,7 +229,6 @@ text = "inspect "
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
 [connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
 [connection signal="tween_completed" from="chest/dialoguebox/Tween" to="chest" method="_on_Tween_tween_completed"]
