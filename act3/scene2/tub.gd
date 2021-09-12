@@ -14,6 +14,7 @@ var canInteract = false
 func _ready():
 	$TextureRect.hide()
 	$RichTextLabel.hide()
+	$continuesprite.hide()
 
 func _on_tub_body_entered(body):
 	if body.name == "player" and number == 0:
@@ -24,6 +25,7 @@ func _on_tub_body_exited(body):
 		canInteract = false
 
 func _process(delta):
+	$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		load_dialogue()
 	if dialogue_index == 3 and Input.is_action_just_pressed("ui_accept") and finished == true:
