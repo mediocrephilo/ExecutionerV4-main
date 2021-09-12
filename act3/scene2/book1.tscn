@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://act3/scene2/textbook.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE9.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
-[ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://sprites/act3settings/factoryphoto.PNG" type="Texture" id=5]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=2]
-size = 90
-font_data = ExtResource( 4 )
+size = 50
+font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "New Anim"
@@ -42,17 +41,21 @@ script = ExtResource( 1 )
 position = Vector2( 1921.92, 1086.8 )
 scale = Vector2( 3.7818, 3.01975 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 1720.13
-margin_top = 2055.08
-margin_right = 2150.13
-margin_bottom = 2146.08
+margin_left = 1705.0
+margin_top = 2060.0
+margin_right = 2147.0
+margin_bottom = 2173.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Leave (esc)"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -81,10 +84,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Eudaimonia"]
-margin_left = 2292.27
-margin_top = 2083.09
-margin_right = 3538.27
-margin_bottom = 2403.09
+margin_left = 2311.89
+margin_top = 1994.81
+margin_right = 3557.89
+margin_bottom = 2314.81
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -115,6 +118,30 @@ __meta__ = {
 }
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 2910.36, 1691.97 )
+position = Vector2( 2925.07, 1593.88 )
 scale = Vector2( 1.14753, 1.25993 )
 texture = ExtResource( 5 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 884.447
+margin_top = 2066.06
+margin_right = 1314.45
+margin_bottom = 2179.06
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- 335 -"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 2841.22
+margin_top = 2075.87
+margin_right = 3271.22
+margin_bottom = 2188.87
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- 336 -"
+__meta__ = {
+"_edit_use_anchors_": false
+}
