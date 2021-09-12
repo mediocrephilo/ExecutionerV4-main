@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://act3/scene2/textbook.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE9.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://sprites/act3settings/factory.JPG" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 80
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -53,9 +54,13 @@ custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "Articles were incorporated through direct action and directives. The Council used Michaelis’ ruling in key decisions Abbott II and Hollister V, effectively eliminating the major issues proposed in Michaelis’ first essay. (See Topic 1.6) 
-	In 21XX, Councilor O’Brien raised a further problem with the lottery system, citing its inhumanity and loss of efficiency as reasons for its removal. In one of the more crucial decisions of the fourth Diplomacy, nine of twelve Council members voted in favor of adopting a new system of O’Brien’s design. The resulting documents and laws became known as the Eali Labor Force Acts, or E.L.F. In this new system, the old issues of a diminishing workforce and a wasteful use of resources were solved in one blow by combining the source of the problems. (See Topic 7.6) While it is an ongoing debate within the Bureau of Ethics, scholars agree that E.L.F is a vast improvement from the obsolete annual lottery. For his efforts and contributions to the state, the Council bestowed the Nobel"
+	In 21XX, Councilor O’Brien raised a further problem with the lottery system, citing its inhumanity and loss of efficiency as reasons for its removal. In one of the more crucial decisions of the fourth Diplomacy, nine of twelve Council members voted in favor of adopting a new system of O’Brien’s design. The resulting documents and laws became known as the Eali Labor Force Acts, or E.L.F. In this new system, the old issues of a diminishing workforce and a wasteful use of resources were solved in one blow by combining the source of the problems. (See Topic 7.6) While it is an ongoing debate within the Bureau of Ethics, scholars agree that E.L.F is a vast improvement from the obsolete annual lottery. For his efforts and contributions to the state, the Council bestowed the Nobel Hearts Medal upon O’Brien during the 25th Cultural Convention.
+Incomplete Solutions:
+	It is much easier to dictate a directive than it is to implement one.  Although the methods of previous leaders ensured a uniformity in beliefs, the resulting loyalty proved incredibly"
 text = "Articles were incorporated through direct action and directives. The Council used Michaelis’ ruling in key decisions Abbott II and Hollister V, effectively eliminating the major issues proposed in Michaelis’ first essay. (See Topic 1.6) 
-	In 21XX, Councilor O’Brien raised a further problem with the lottery system, citing its inhumanity and loss of efficiency as reasons for its removal. In one of the more crucial decisions of the fourth Diplomacy, nine of twelve Council members voted in favor of adopting a new system of O’Brien’s design. The resulting documents and laws became known as the Eali Labor Force Acts, or E.L.F. In this new system, the old issues of a diminishing workforce and a wasteful use of resources were solved in one blow by combining the source of the problems. (See Topic 7.6) While it is an ongoing debate within the Bureau of Ethics, scholars agree that E.L.F is a vast improvement from the obsolete annual lottery. For his efforts and contributions to the state, the Council bestowed the Nobel"
+	In 21XX, Councilor O’Brien raised a further problem with the lottery system, citing its inhumanity and loss of efficiency as reasons for its removal. In one of the more crucial decisions of the fourth Diplomacy, nine of twelve Council members voted in favor of adopting a new system of O’Brien’s design. The resulting documents and laws became known as the Eali Labor Force Acts, or E.L.F. In this new system, the old issues of a diminishing workforce and a wasteful use of resources were solved in one blow by combining the source of the problems. (See Topic 7.6) While it is an ongoing debate within the Bureau of Ethics, scholars agree that E.L.F is a vast improvement from the obsolete annual lottery. For his efforts and contributions to the state, the Council bestowed the Nobel Hearts Medal upon O’Brien during the 25th Cultural Convention.
+Incomplete Solutions:
+	It is much easier to dictate a directive than it is to implement one.  Although the methods of previous leaders ensured a uniformity in beliefs, the resulting loyalty proved incredibly"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -68,12 +73,8 @@ margin_bottom = 3362.28
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "Hearts Medal upon O’Brien during the 25th Cultural Convention.
-Incomplete Solutions:
-	It is much easier to dictate a directive than it is to implement one. Although the methods of previous leaders ensured a uniformity in beliefs, the resulting loyalty proved incredibly inconducive towards change. (See Topic 6.5) The E.L.F. Acts served as a replacement for a status-quo, introducing a new order, a new way of thinking. The Bureau of Justice was one of the major opponents to the ratification of these Acts, as they feared a significant decrease in funding as well as political power due to the eventual elimination of the Executioner Corps. However, these fears proved to be unfounded, as the idealism of the E.L.F. Acts failed, as many do, to translate into reality. Surprisingly, the year after the ratification of the E.L.F Acts, the Executioner Corps received an increase in applications (although some suspect this surplus to be manufactured). (See Topic 10.2) "
-text = "Hearts Medal upon O’Brien during the 25th Cultural Convention.
-Incomplete Solutions:
-	It is much easier to dictate a directive than it is to implement one. Although the methods of previous leaders ensured a uniformity in beliefs, the resulting loyalty proved incredibly inconducive towards change. (See Topic 6.5) The E.L.F. Acts served as a replacement for a status-quo, introducing a new order, a new way of thinking. The Bureau of Justice was one of the major opponents to the ratification of these Acts, as they feared a significant decrease in funding as well as political power due to the eventual elimination of the Executioner Corps. However, these fears proved to be unfounded, as the idealism of the E.L.F. Acts failed, as many do, to translate into reality. Surprisingly, the year after the ratification of the E.L.F Acts, the Executioner Corps received an increase in applications (although some suspect this surplus to be manufactured). (See Topic 10.2) "
+bbcode_text = " Although the methods of previous leaders ensured a uniformity in beliefs, the resulting loyalty proved incredibly inconducive towards change. (See Topic 6.5) The E.L.F. Acts served as a replacement for a status-quo, introducing a new order, a new way of thinking. The Bureau of Justice was one of the major opponents to the ratification of these Acts, as they feared a significant decrease in funding as well as political power due to the eventual elimination of the Executioner Corps. However, these fears proved to be unfounded, as the idealism of the E.L.F. Acts failed, as many do, to translate into reality. Surprisingly, the year after the ratification of the E.L.F Acts, the Executioner Corps received an increase in applications (although some suspect this surplus to be manufactured). (See Topic 10.2) "
+text = "inconducive towards change. (See Topic 6.5) The E.L.F. Acts served as a replacement for a status-quo, introducing a new order, a new way of thinking. The Bureau of Justice was one of the major opponents to the ratification of these Acts, as they feared a significant decrease in funding as well as political power due to the eventual elimination of the Executioner Corps. However, these fears proved to be unfounded, as the idealism of the E.L.F. Acts failed, as many do, to translate into reality. Surprisingly, the year after the ratification of the E.L.F Acts, the Executioner Corps received an increase in applications (although some suspect this surplus to be manufactured). (See Topic 10.2) "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -93,3 +94,8 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
 "anims/New Anim" = SubResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 2890.2, 1571.24 )
+scale = Vector2( 1.14753, 1.25993 )
+texture = ExtResource( 5 )
