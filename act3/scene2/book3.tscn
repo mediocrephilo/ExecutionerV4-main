@@ -49,8 +49,8 @@ margin_bottom = 2113.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around."
-text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around."
+bbcode_text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around. "
+text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around. "
 __meta__ = {
 "_edit_use_anchors_": false
 }
