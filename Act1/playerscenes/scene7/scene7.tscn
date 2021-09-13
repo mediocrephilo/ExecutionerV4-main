@@ -42,11 +42,6 @@ extents = Vector2( 345.366, 1491.12 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "jump",
@@ -55,6 +50,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
@@ -80,14 +80,14 @@ extents = Vector2( 1755.97, 173.467 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
-"loop": false,
-"name": "nom",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 35 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "reversenom",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "nom",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 33 ) ],
@@ -1566,6 +1566,30 @@ shape = SubResource( 14 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2( -2865.28, -13089.3 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -9938.07, -15772.1 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -9159.95, -15760.5 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -8393.44, -15748.9 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -7847.59, -15737.2 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -7168.19, -15748.9 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -6622.34, -15748.9 )
 shape = SubResource( 14 )
 
 [connection signal="body_entered" from="deathclownR" to="deathclownR" method="_on_deathclownR_body_entered"]
