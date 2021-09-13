@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=13]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=14]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=15]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -95,6 +96,30 @@ tracks/1/keys = {
 size = 100
 font_data = ExtResource( 11 )
 
+[sub_resource type="Animation" id=11]
+resource_name = "New Anim"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 5762.25, -0.25, 0, 0.25, 0, 5762.25, -0.25, 0, 0.25, 0, 5762.25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 186.041, -0.25, 0, 0.25, 0, 250, -0.25, 0, 0.25, 0, 186.041, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 4.46729, -79.2949 )
 script = ExtResource( 5 )
@@ -103,7 +128,6 @@ script = ExtResource( 5 )
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 frames = SubResource( 1 )
-frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -237,8 +261,12 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="continuesprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 5762.25, 250 )
+scale = Vector2( 2.16653, 1.82462 )
+texture = ExtResource( 16 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+"anims/New Anim" = SubResource( 11 )
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 stream = ExtResource( 13 )
@@ -259,7 +287,6 @@ __meta__ = {
 position = Vector2( 3765.36, 1014.97 )
 scale = Vector2( 1.08908, 1.11572 )
 texture = ExtResource( 15 )
-
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]

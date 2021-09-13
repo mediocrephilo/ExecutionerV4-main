@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=1]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=2]
 [ext_resource path="res://sprites/act 2 setting/scene 5/ladder1.png" type="Texture" id=3]
 [ext_resource path="res://player/playerLeft.tscn" type="PackedScene" id=4]
 [ext_resource path="res://act3/scene4/sewerEntrance2.gd" type="Script" id=5]
@@ -91,6 +92,31 @@ tracks/1/keys = {
 [sub_resource type="DynamicFont" id=10]
 size = 100
 font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 5666.25, -0.25, 0, 0.25, 0, 5666.25, -0.25, 0, 0.25, 0, 5666.25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 143.881, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 143.881, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -3926.77, -148.455 )
@@ -212,8 +238,13 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="continuesprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 5666.25, 200 )
+scale = Vector2( 2.30804, 2.2308 )
+texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 11 )
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 stream = ExtResource( 13 )
@@ -227,7 +258,6 @@ texture = ExtResource( 14 )
 position = Vector2( 3765.36, 1010.01 )
 scale = Vector2( 1.08908, 1.11118 )
 texture = ExtResource( 15 )
-
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]

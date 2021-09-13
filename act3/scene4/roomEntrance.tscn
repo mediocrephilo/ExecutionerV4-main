@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/wall.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=12]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=13]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4708.49, 164.076 )
@@ -89,6 +90,31 @@ tracks/1/keys = {
 size = 100
 font_data = ExtResource( 14 )
 
+[sub_resource type="Animation" id=9]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2107.38, -0.25, 0, 0.25, 0, 2107.38, -0.25, 0, 0.25, 0, 2107.38, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 139.435, -0.25, 0, 0.25, 0, 250, -0.25, 0, 0.25, 0, 139.435, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -144,6 +170,7 @@ position = Vector2( 3394.78, 1415.81 )
 position = Vector2( 7028.91, 1536.95 )
 scale = Vector2( 3.43735, 1.08666 )
 frames = SubResource( 5 )
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -168,10 +195,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="dialoguebox"]
-margin_left = 452.596
-margin_top = 174.916
-margin_right = 3698.6
-margin_bottom = 674.916
+margin_left = 453.0
+margin_top = 175.0
+margin_right = 3699.0
+margin_bottom = 719.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -179,10 +206,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="dialoguebox"]
-margin_left = 663.263
-margin_top = 272.841
-margin_right = 3499.26
-margin_bottom = 592.841
+margin_left = 663.0
+margin_top = 292.0
+margin_right = 3531.0
+margin_bottom = 637.0
 custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -194,8 +221,13 @@ __meta__ = {
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 
 [node name="continuesprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 2107.38, 194.718 )
+scale = Vector2( 2.14506, 2.16619 )
+texture = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 9 )
 
 [node name="Sprite7" type="Sprite" parent="."]
 visible = false
@@ -207,6 +239,5 @@ texture = ExtResource( 12 )
 position = Vector2( 3806.11, 1026.3 )
 scale = Vector2( 1.04429, 1.03751 )
 texture = ExtResource( 13 )
-
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]

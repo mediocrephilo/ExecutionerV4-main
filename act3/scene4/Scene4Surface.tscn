@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://sprites/act3settings/scene4/greySnow.PNG" type="Texture" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene 4/road2.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://act3/scene4/surfacedialoguebox.gd" type="Script" id=19]
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=20]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=21]
 
 [sub_resource type="Animation" id=1]
 resource_name = "snow2"
@@ -109,6 +110,31 @@ animations = [ {
 [sub_resource type="DynamicFont" id=10]
 size = 100
 font_data = ExtResource( 18 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1824.88, -0.25, 0, 0.25, 0, 1824.88, -0.25, 0, 0.25, 0, 1824.88, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 193.587, -0.25, 0, 0.25, 0, 275, -0.25, 0, 0.25, 0, 193.587, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -204,6 +230,7 @@ shape = SubResource( 7 )
 position = Vector2( 5153.35, 969.826 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 flip_v = true
 
@@ -211,7 +238,7 @@ flip_v = true
 position = Vector2( 6829.6, 1042.93 )
 z_index = -1
 frames = SubResource( 9 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -255,12 +282,16 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="dialoguebox"]
 
 [node name="continuesprite" type="Sprite" parent="dialoguebox"]
+position = Vector2( 1824.88, 275 )
+scale = Vector2( 1.64357, 1.98084 )
+texture = ExtResource( 21 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 11 )
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 stream = ExtResource( 20 )
-
 [connection signal="body_entered" from="pothole" to="pothole" method="_on_pothole_body_entered"]
 [connection signal="body_exited" from="pothole" to="pothole" method="_on_pothole_body_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
