@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-		"my favorite toy... it fell into the pumps"
+		"my favorite toy . . . it fell into the pumps . . ."
 ]
 var dialogue_index = 0
 var number = 0
@@ -20,8 +20,12 @@ func _on_chest_body_exited(body):
 		canInteract = false
 		
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept") and canInteract == true and number == 0:
-		load_dialogue()
+	$"dialoguebox/continuesprite".visible = finished
+	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
+		if number == 0:
+			load_dialogue()
+		if number == 1:
+			Transition.change_scene("res://act3/scene3/puzzle3.tscn")
 func load_dialogue():
 	$dialoguebox.show()
 	if number == 0:
@@ -41,4 +45,3 @@ func _on_Tween_tween_completed(_object, _key):
 	finished = true
 	if number == 0:
 		$dialoguebox/Type2.stop()
-		Transition.change_scene("res://act3/scene3/puzzle3.tscn")

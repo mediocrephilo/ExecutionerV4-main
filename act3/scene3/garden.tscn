@@ -122,7 +122,6 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="chest/dialoguebox"]
-
 [connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
 [connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
 [connection signal="tween_completed" from="chest/dialoguebox/Tween" to="chest" method="_on_Tween_tween_completed"]

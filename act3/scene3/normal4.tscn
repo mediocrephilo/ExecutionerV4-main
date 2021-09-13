@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://act3/scene3/girl2.gd" type="Script" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=7]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=9]
+[ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=10]
+[ext_resource path="res://sprites/UI/continuesprite copy.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -35,13 +37,38 @@ font_data = ExtResource( 8 )
 size = 100
 font_data = ExtResource( 8 )
 
+[sub_resource type="Animation" id=7]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1976.27, -0.25, 0, 0.25, 0, 1976.27, -0.25, 0, 0.25, 0, 1976.27, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 194.48, -0.25, 0, 0.25, 0, 270, -0.25, 0, 0.25, 0, 194.48, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1943.7, 1034.96 )
 scale = Vector2( 1.071, 1.10752 )
 frames = SubResource( 1 )
-frame = 20
+frame = 24
 playing = true
 
 [node name="Sprite3" type="Sprite" parent="."]
@@ -60,12 +87,15 @@ scale = Vector2( 2.34861, 2.5249 )
 texture = ExtResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 255.548, 1788.09 )
+position = Vector2( 2326.19, 1759.49 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 2433.59, 232.23 )
 scale = Vector2( 1.84493, 1.10147 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 1962.69, 1020.39 )
@@ -118,6 +148,7 @@ __meta__ = {
 }
 
 [node name="Type2" type="AudioStreamPlayer" parent="chest/dialoguebox"]
+stream = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="chest/dialoguebox"]
 position = Vector2( 1910.56, 512.398 )
@@ -126,9 +157,9 @@ texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="chest/dialoguebox"]
 margin_left = 878.0
-margin_top = 328.0
-margin_right = 2915.0
-margin_bottom = 659.0
+margin_top = 357.0
+margin_right = 2938.0
+margin_bottom = 682.0
 custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -138,6 +169,14 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="chest/dialoguebox"]
 
+[node name="continuesprite" type="Sprite" parent="chest/dialoguebox"]
+position = Vector2( 1976.27, 270 )
+scale = Vector2( 1.46904, 2.21264 )
+texture = ExtResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="chest/dialoguebox/continuesprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 7 )
 [connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]
 [connection signal="body_exited" from="chest" to="chest" method="_on_chest_body_exited"]
 [connection signal="tween_completed" from="chest/dialoguebox/Tween" to="chest" method="_on_Tween_tween_completed"]
