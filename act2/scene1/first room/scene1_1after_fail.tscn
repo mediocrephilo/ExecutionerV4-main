@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene1/black background.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://act2/scene1/first room/enter.gd" type="Script" id=26]
 [ext_resource path="res://act2/scene1/first room/enter2.gd" type="Script" id=27]
 [ext_resource path="res://sounds/255715__klankbeeld__horror-ambience-78-130322-00.wav" type="AudioStream" id=28]
+[ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=29]
 [ext_resource path="res://sounds/zapsplat_human_child_boy_6_years_laugh_short_005_19739.mp3" type="AudioStream" id=30]
 [ext_resource path="res://sprites/act 2 setting/scene1/buildings2.png" type="Texture" id=31]
 [ext_resource path="res://sprites/act 2 setting/scene1/stars.png" type="Texture" id=32]
@@ -43,14 +44,14 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 25 ) ],
@@ -58,9 +59,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "walk",
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -227,6 +228,7 @@ position = Vector2( 209.64, 1765.99 )
 shape = SubResource( 3 )
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource( 29 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2( 240.214, 1660.3 )
