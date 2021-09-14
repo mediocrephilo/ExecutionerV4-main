@@ -7,7 +7,7 @@ func _ready():
 	
 func _input(event):
 	if Input.is_action_just_pressed("ui_interact") and canInteract == true:
-		print("sdjfsk")
+		Transition.change_scene("res://act2/scene4/piano.tscn")
 
 
 

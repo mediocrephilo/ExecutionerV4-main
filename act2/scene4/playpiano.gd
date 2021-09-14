@@ -25,7 +25,7 @@ func _process(delta):
 	if progression == 0:
 		$AnimatedSprite.show()
 	if progression == 8:
-		Transition.change_scene("res://act2/scene4/piano.tscn")
+		Transition.change_scene("res://act2/scene4/bread2.tscn")
 	if Input.is_action_just_pressed("one"):
 		if progression == 6:
 			progression += 1
