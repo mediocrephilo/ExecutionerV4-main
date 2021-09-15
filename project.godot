@@ -38,7 +38,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GameOver="*res://global/gameover/gameOver.gd"
+GameOver="*res://global/gameover/gameOver.tscn"
 ForestSound="*res://global/ForestSound.tscn"
 HorrorSound="*res://global/HorrorSound.tscn"
 SewerSound="*res://global/SewerSound.tscn"
