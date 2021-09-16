@@ -32,14 +32,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "idle",
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
@@ -47,9 +42,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "fall",
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -412,13 +412,12 @@ position = Vector2( 116.381, 557.231 )
 scale = Vector2( 0.379248, 0.393012 )
 z_index = -1
 frames = SubResource( 13 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 4177.53, 597.596 )
 frames = SubResource( 14 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
@@ -438,7 +437,6 @@ __meta__ = {
 position = Vector2( 899.686, 1770.69 )
 scale = Vector2( 1.97761, 1.78398 )
 frames = SubResource( 16 )
-frame = 1
 playing = true
 flip_h = true
 

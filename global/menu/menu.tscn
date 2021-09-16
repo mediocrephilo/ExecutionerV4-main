@@ -38,7 +38,7 @@ __meta__ = {
 position = Vector2( 2667.65, 1282.16 )
 scale = Vector2( 1.17858, 1.10733 )
 frames = SubResource( 1 )
-frame = 10
+frame = 31
 playing = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

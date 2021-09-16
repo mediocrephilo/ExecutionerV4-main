@@ -34,11 +34,6 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "jump",
@@ -47,6 +42,11 @@ animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -411,7 +411,7 @@ playing = true
 position = Vector2( 2150.78, 62.015 )
 scale = Vector2( 0.673795, 0.600847 )
 frames = SubResource( 15 )
-frame = 5
+frame = 2
 playing = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
