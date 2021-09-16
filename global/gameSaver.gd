@@ -4,6 +4,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+const SaveGame = preload('res://global/saveGame.gd')
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
