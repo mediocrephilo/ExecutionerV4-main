@@ -14,15 +14,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$"dialoguebox/continuesprite".show() == finished
-	if canInteract == true and Input.is_action_just_pressed("ui_accept"):
-		if dialogue_index <= 2:
+	if canInteract == true and Input.is_action_just_pressed("three"):
+		if dialogue_index <2:
 			load_dialogue()
-		if dialogue_index == 3:
-			$dialoguebox.hide()
-			$Label.show()
-			yield(get_tree().create_timer(1), "timeout")
 			dialogue_index += 1
-	if dialogue_index == 4 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
+	if dialogue_index == 2 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
 			Transition.change_scene("res://act3/scene2/book3.tscn")
 		
 func load_dialogue():
@@ -50,9 +46,11 @@ func _on_book3_body_entered(body):
 	$AnimatedSprite.play()
 	if body.name == "player":
 		canInteract = true
+		$Label.show()
 
 
 func _on_book3_body_exited(body):
 	$AnimatedSprite.stop()
 	if body.name == "player":
 		canInteract = false
+		$Label.hide()
