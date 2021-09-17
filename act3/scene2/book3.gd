@@ -18,6 +18,12 @@ func _process(delta):
 		if dialogue_index <2:
 			load_dialogue()
 			dialogue_index += 1
+	if canInteract == true and Input.is_action_just_pressed("one"):
+		get_parent().get_node("StaticBody2D/floor").disabled = true
+	if canInteract == true and Input.is_action_just_pressed("two"):
+		get_parent().get_node("StaticBody2D/floor").disabled = true
+	if canInteract == true and Input.is_action_just_pressed("four"):
+		get_parent().get_node("StaticBody2D/floor").disabled = true
 	if dialogue_index == 2 and Input.is_action_just_pressed("ui_accept") and canInteract == true:
 			Transition.change_scene("res://act3/scene2/book3.tscn")
 		

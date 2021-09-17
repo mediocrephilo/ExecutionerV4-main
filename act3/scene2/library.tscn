@@ -28,7 +28,7 @@
 [ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=26]
 [ext_resource path="res://act3/scene2/a.gd" type="Script" id=27]
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
@@ -40,21 +40,21 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 8 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 146.34, 377.366 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
@@ -62,37 +62,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 613.509, 898.557 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 100
-font_data = ExtResource( 10 )
-
-[sub_resource type="Animation" id=4]
-resource_name = "New Anim"
-length = 2.0
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 9.07288, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 9.07288, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
 
 [sub_resource type="DynamicFont" id=5]
 size = 100
@@ -122,29 +93,9 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="Animation" id=7]
-length = 2.0
-loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 9.07288, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 9.07288, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 2 )
-}
+[sub_resource type="DynamicFont" id=7]
+size = 100
+font_data = ExtResource( 10 )
 
 [sub_resource type="Animation" id=8]
 length = 2.0
@@ -170,13 +121,61 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 133.378, 1459.76 )
+[sub_resource type="Animation" id=9]
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 9.07288, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 9.07288, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 6718.83, 415.299 )
+[sub_resource type="Animation" id=10]
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0, 620.224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 9.07288, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 9.07288, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
 
 [sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 133.378, 1459.76 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 6718.83, 415.299 )
+
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 512.161, 1810.08 )
 
 [node name="Node2D" type="Node2D"]
@@ -266,12 +265,12 @@ script = ExtResource( 27 )
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 81.4327, 1273.59 )
-frames = SubResource( 12 )
+frames = SubResource( 1 )
 animation = "fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 50.0258, 1243.97 )
-shape = SubResource( 13 )
+shape = SubResource( 2 )
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="player"]
 
@@ -289,11 +288,11 @@ script = ExtResource( 11 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book"]
 position = Vector2( 1501.45, 1125.7 )
 z_index = -1
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book"]
 position = Vector2( 1515.65, 1076.91 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="dialoguebox" type="Control" parent="book"]
 margin_left = 744.187
@@ -320,7 +319,7 @@ margin_left = 95.7639
 margin_top = 86.2349
 margin_right = 1393.76
 margin_bottom = 420.235
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -335,14 +334,14 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 4 )
+"anims/New Anim" = SubResource( 6 )
 
 [node name="Label" type="Label" parent="book"]
 margin_left = 1161.05
 margin_top = 76.6075
 margin_right = 1800.05
 margin_bottom = 485.608
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "PKLT (press 1)
 DG3F (press 2)
 CIFM (press 3)
@@ -358,11 +357,11 @@ script = ExtResource( 13 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book2"]
 position = Vector2( 1501.45, 1125.7 )
 z_index = -1
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book2"]
 position = Vector2( 1515.65, 1076.91 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="dialoguebox" type="Control" parent="book2"]
 margin_left = 791.822
@@ -389,7 +388,7 @@ margin_left = 95.7639
 margin_top = 86.2349
 margin_right = 1393.76
 margin_bottom = 420.235
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -404,14 +403,14 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book2/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 6 )
+"anims/New Anim" = SubResource( 8 )
 
 [node name="Label" type="Label" parent="book2"]
 margin_left = 1200.02
 margin_top = 72.9157
 margin_right = 1822.02
 margin_bottom = 481.916
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "UHFS (press 1)
 GFK6 (press 2)
 ANIE (press 3)
@@ -427,11 +426,11 @@ script = ExtResource( 14 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book3"]
 position = Vector2( 1501.45, 1125.7 )
 z_index = -1
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book3"]
 position = Vector2( 1515.65, 1076.91 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="dialoguebox" type="Control" parent="book3"]
 margin_left = 759.175
@@ -458,7 +457,7 @@ margin_left = 95.7639
 margin_top = 86.2349
 margin_right = 1393.76
 margin_bottom = 420.235
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -473,14 +472,14 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book3/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 7 )
+"anims/New Anim" = SubResource( 9 )
 
 [node name="Label" type="Label" parent="book3"]
 margin_left = 1170.85
 margin_top = 101.365
 margin_right = 1810.85
 margin_bottom = 510.365
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "7JUSK (press 1)
 GYFJ (press 2)
 M8LZ (press 3)
@@ -496,11 +495,11 @@ script = ExtResource( 15 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="book4"]
 position = Vector2( 1501.45, 1125.7 )
 z_index = -1
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="book4"]
 position = Vector2( 1515.65, 1076.91 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="dialoguebox" type="Control" parent="book4"]
 margin_left = 772.255
@@ -527,7 +526,7 @@ margin_left = 95.7639
 margin_top = 86.2349
 margin_right = 1393.76
 margin_bottom = 420.235
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -542,14 +541,14 @@ texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="book4/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 8 )
+"anims/New Anim" = SubResource( 10 )
 
 [node name="Label" type="Label" parent="book4"]
 margin_left = 1146.27
 margin_top = 108.526
 margin_right = 1816.27
 margin_bottom = 517.526
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "GHDA (press 1)
 HS8O (press2)
 ADK0 (press 3)
@@ -562,21 +561,21 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -18.0647, 1124.53 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 11189.7, 886.946 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="floor" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4447.38, 2413.34 )
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="exit" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 position = Vector2( 11354.9, 927.343 )
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
 [connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
