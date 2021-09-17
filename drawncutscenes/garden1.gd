@@ -10,7 +10,7 @@ var dialogue = [
 		"Hmm . . . I suppose we might as well begin from the beginning.",
 ]
 var reddialogue = [
-		"i don't know a lot about pre-cataclysm history . . ."
+		"i still don't understand the story about that bird. . ."
 ]
 var greendialogue = [
 		"REALLY? WE JUST FINISHED THAT UNIT, AND I THINK IT WAS PRETTY EASY."

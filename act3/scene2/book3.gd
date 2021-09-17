@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-	"''A DIZZINESS'' BY RICHARD SARTE.",
+	"A TEXTBOOK USED IN SCHOOL. . . I REMEBER READING THIS ONE",
 ]
 var canInteract = false
 var dialogue_index = 0

@@ -51,10 +51,10 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 1710.16
-margin_top = 2003.21
-margin_right = 2152.16
-margin_bottom = 2116.21
+margin_left = 1736.57
+margin_top = 2032.02
+margin_right = 2178.57
+margin_bottom = 2145.02
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Leave (esc)"

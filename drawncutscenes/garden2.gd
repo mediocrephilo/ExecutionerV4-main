@@ -2,18 +2,18 @@ extends Control
 
 var dialogue = [
 	
-		"Why ",
-		"But maybe I've remembered incorrectly. I mean, it's been . . . some time since we read it.",
-		"Well, what's next?",
-		"What about you, Ja- . . . sorry. Let's continue.",
-		". . . Soph, I don't-",
-		"Nevermind. It's not like we're short on time, or anything. Let's meet again in a week."
+		"What do you guys think the moral of the story is?",
+		"I mean, there is a sample paragraph, but that doesn't mean we can't make our own morals",
+		"I think that perhaps. . . It's telling us that good intentions can lead to bad outcomes",
+		"The parents wanted to put out the fire to save their son, but ended up killing him instead.",
+		". . . Well, I mean. . .",
+		"Nevermind, you're right. Let's meet again in a week."
 ]
 var reddialogue = [
-		"i think my teacher mentioned foucault? who is that?"
+		"i think my teacher said to only write about the morals that they gave us."
 ]
 var bluedialogue = [
-		". . . s-shouldn't we wait j-just one more week?"
+		". . . s-shouldn't we just go with what the teacher said?"
 ]
 var dialogue_index = 0
 var dialogue_index1 = 0

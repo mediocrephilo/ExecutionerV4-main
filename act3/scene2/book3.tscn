@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://act3/scene2/novel.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE1.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -11,6 +12,10 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 size = 80
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,15 +33,15 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
-margin_left = 84.0
-margin_top = 42.0
-margin_right = 1936.0
-margin_bottom = 224.0
+margin_left = -101.792
+margin_top = 38.0045
+margin_right = 1750.21
+margin_bottom = 220.004
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "						Chapter 1"
-text = "						Chapter 1"
+bbcode_text = "						Chapter 1 Questions"
+text = "						Chapter 1 Questions"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,8 +54,24 @@ margin_bottom = 2113.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around. "
-text = "	Five days later the ducks had flown east for the winter and the sun was beginning to turn an alarming shade of purple. Jayne was lying down in the garden attempting to return to the dirt. They lay with their left ear half-buried in the mulch so they could better hear the soft shifting of grains as beetles and other things moved around. "
+bbcode_text = "	Analysis:
+	
+	1. Why did the bird live inside a star while his parents live on Earth? What you believe this represents?
+	
+	2. The bird's parents wished to save the bird from the burning flames, but ended up killing him instead. What do you think this is supposed to represent about life?
+	
+	3. Once you have thought about these
+	questions, write a paragraph about the
+	moral of the story."
+text = "	Analysis:
+	
+	1. Why did the bird live inside a star while his parents live on Earth? What you believe this represents?
+	
+	2. The bird's parents wished to save the bird from the burning flames, but ended up killing him instead. What do you think this is supposed to represent about life?
+	
+	3. Once you have thought about these
+	questions, write a paragraph about the
+	moral of the story."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -63,13 +84,21 @@ margin_bottom = 2092.35
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+text = "Sample paragraph:
+
+	The moral of the story is to not stand out from others.. The bird lived inside of a star, and thus was different than his family, who lived on Earth. He left his home on Earth just to stand out, leaving behind a safe and happy life in pursuit of a dangerous one. It changed his way of life as well. His way of life led to extreme loneliness, leading him to go to write to his parents. But at that point, he was far beyond saving. He had become so different from the other birds that even the slightest bit of water burnt his flesh. If we stand out from the social order, we would likewise be lonely and beyond saving."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 1699.79
+margin_top = 1845.68
+margin_right = 2183.79
+margin_bottom = 1932.68
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Leave (esc)"
 __meta__ = {
 "_edit_use_anchors_": false
 }

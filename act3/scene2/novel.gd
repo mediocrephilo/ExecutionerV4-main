@@ -15,5 +15,5 @@ func _ready():
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("escape"):
-		Transition.change_scene("res://act3/scene2/library")
+	if Input.is_action_just_pressed("ui_cancel"):
+		Transition.change_scene("res://act3/scene2/library4.tscn")

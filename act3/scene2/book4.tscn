@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://act3/scene2/e.l.f.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/act3settings/scene2/books.jpg" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE1.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -76,8 +81,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 1686.24
+margin_top = 2018.46
+margin_right = 2140.24
+margin_bottom = 2105.46
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "leave (esc)"
 __meta__ = {
 "_edit_use_anchors_": false
 }

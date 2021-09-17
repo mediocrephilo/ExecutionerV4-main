@@ -9,8 +9,8 @@ var dialogue = [
 		"Where did it go so wrong? All father wanted to do was create a safer environment for us citizens...",
 		"But what danger would my friends have created?",
 		"It's alright . . . it's okay . . .",
-		"I can still visit them . . . there was nothing I could have done.",
-		"It's not my fault."
+		"I need to focus on my studies. . . the one about the bird. . .",
+		". . . I can't concentrate. . ."
 		
 ]
 var dialogue_index = 0
