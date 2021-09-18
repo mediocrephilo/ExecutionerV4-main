@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/characters/fall.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://sprites/Act1settings/sceneseven/clownback.PNG" type="Texture" id=19]
 [ext_resource path="res://Act1/playerscenes/scene7/table.gd" type="Script" id=20]
 [ext_resource path="res://sprites/Act1settings/sceneseven/clown1.png" type="Texture" id=21]
+[ext_resource path="res://Act1/playerscenes/scene7/Area2D.gd" type="Script" id=22]
+[ext_resource path="res://Act1/playerscenes/scene7/Area2D2.gd" type="Script" id=23]
 [ext_resource path="res://Act1/playerscenes/scene7/deathclownR.gd" type="Script" id=24]
 [ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=25]
 [ext_resource path="res://sprites/Act1settings/sceneseven/rclown1.png" type="Texture" id=26]
@@ -80,14 +82,14 @@ extents = Vector2( 1755.97, 173.467 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
-"loop": false,
-"name": "nom",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 35 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "reversenom",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "nom",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 33 ) ],
@@ -97,7 +99,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 200.556, 651.726 )
+extents = Vector2( 558.463, 651.726 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 757.907, 703.401 )
@@ -116,6 +118,12 @@ extents = Vector2( 316.245, 249.555 )
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 400.483, 182.935 )
 
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 29126.1, 735.203 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 6161.55, 919.199 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -129,8 +137,8 @@ position = Vector2( 1919.24, 203.955 )
 texture = ExtResource( 14 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1871.35, 1852.93 )
-scale = Vector2( 2.84632, 1 )
+position = Vector2( 198.016, 1852.93 )
+scale = Vector2( 2.00965, 1 )
 texture = ExtResource( 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -494,7 +502,7 @@ position = Vector2( 6324.79, -1452.76 )
 shape = SubResource( 10 )
 
 [node name="deathclownR2" type="Area2D" parent="."]
-position = Vector2( -4351.22, -2342.17 )
+position = Vector2( -4351.22, -2339.64 )
 script = ExtResource( 24 )
 __meta__ = {
 "_edit_group_": true
@@ -1592,6 +1600,20 @@ shape = SubResource( 14 )
 position = Vector2( -6622.34, -15748.9 )
 shape = SubResource( 14 )
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -32027.5, 2989.43 )
+shape = SubResource( 15 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 10062.3, 3056.63 )
+shape = SubResource( 16 )
+
 [connection signal="body_entered" from="deathclownR" to="deathclownR" method="_on_deathclownR_body_entered"]
 [connection signal="body_entered" from="deathclownR2" to="deathclownR2" method="_on_deathclownR_body_entered"]
 [connection signal="body_entered" from="deathclownR4" to="deathclownR4" method="_on_deathclownR_body_entered"]
@@ -1606,3 +1628,5 @@ shape = SubResource( 14 )
 [connection signal="body_entered" from="rfacingclown6" to="rfacingclown6" method="_on_rfacingclown_body_entered"]
 [connection signal="body_entered" from="rfacingclown3" to="rfacingclown3" method="_on_rfacingclown_body_entered"]
 [connection signal="body_entered" from="table" to="table" method="_on_table_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]

@@ -24,4 +24,7 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_accept") and canInteract == true:
 		entered = true
 		$AnimatedSprite.play("hand")
+		GameOver.transition("res://act2/scene5/scene5.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
 		

@@ -15,4 +15,6 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.name == "smolboi":
-		print("jghsgfdhghga")
+		GameOver.transition("res://act2/maze/maze.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")

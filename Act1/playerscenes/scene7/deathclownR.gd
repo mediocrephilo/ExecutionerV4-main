@@ -8,4 +8,6 @@ func _on_deathclownR_body_entered(body):
 		$Sprite.hide()
 		$AnimatedSprite.play("nom")	
 		yield(get_tree().create_timer(0.75), "timeout")
-		get_tree().change_scene("res://Act1/cutscenes/scene7/ClownDeath.tscn")
+		GameOver.transition("res://Act1/playerscenes/scene6/scenesixone.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
