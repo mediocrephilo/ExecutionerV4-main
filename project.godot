@@ -23,17 +23,11 @@ _global_script_classes=[ {
 "class": "ReBox",
 "language": "GDScript",
 "path": "res://ReBox.gd"
-}, {
-"base": "Resource",
-"class": "SaveGame",
-"language": "GDScript",
-"path": "res://global/saveGame.gd"
 } ]
 _global_script_class_icons={
 "BluBox": "",
 "GrenBox": "",
-"ReBox": "",
-"SaveGame": ""
+"ReBox": ""
 }
 
 [application]
@@ -41,7 +35,6 @@ _global_script_class_icons={
 config/name="executioner"
 run/main_scene="res://global/menu/menu.tscn"
 config/icon="res://icon.png"
-config/version="0.0.1"
 
 [autoload]
 

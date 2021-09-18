@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://act3/scene2/novel.gd" type="Script" id=1]
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=2]
@@ -6,63 +6,16 @@
 [ext_resource path="res://sprites/UI/baskerville-cufonfonts/BASKE1.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 100
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 80
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 50
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 100
 font_data = ExtResource( 4 )
-
-[sub_resource type="Animation" id=5]
-resource_name = "New Anim"
-tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath(".:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
-}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -80,47 +33,45 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text"]
-margin_left = 140.597
-margin_top = 79.7854
-margin_right = 2302.6
-margin_bottom = 405.785
+margin_left = -101.792
+margin_top = 38.0045
+margin_right = 1750.21
+margin_bottom = 220.004
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "						Chapter 1 Questions"
-text = "The Strange and Thrilling Tales: Firefall"
+text = "						Chapter 1 Questions"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Text"]
-margin_left = 77.8376
+margin_left = 83.0
 margin_top = 212.0
-margin_right = 1867.84
+margin_right = 1873.0
 margin_bottom = 2113.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "	Analysis Questions:
-	1. Compare and contrast the values of the pheonix and its parents. What does the ending of the story suggest about these values? 
+bbcode_text = "	Analysis:
 	
-	2. The kind intentions of the pheonix's parents ended its life. Should the parents be punished? Why or why not?
+	1. Why did the bird live inside a star while his parents live on Earth? What you believe this represents?
 	
-	3. Write a paragraph about the
-moral and political ramifications of counterthought using excerpts from TSTT: Firefall as evidence to support your claims.
+	2. The bird's parents wished to save the bird from the burning flames, but ended up killing him instead. What do you think this is supposed to represent about life?
 	
-	Food For Thought:
-What does this fable suggest is the most powerful motive? Would it be enough to make you abandon everything you love?"
-text = "	Analysis Questions:
-	1. Compare and contrast the values of the pheonix and its parents. What does the ending of the story suggest about these values? 
+	3. Once you have thought about these
+	questions, write a paragraph about the
+	moral of the story."
+text = "	Analysis:
 	
-	2. The kind intentions of the pheonix's parents ended its life. Should the parents be punished? Why or why not?
+	1. Why did the bird live inside a star while his parents live on Earth? What you believe this represents?
 	
-	3. Write a paragraph about the
-moral and political ramifications of counterthought using excerpts from TSTT: Firefall as evidence to support your claims.
+	2. The bird's parents wished to save the bird from the burning flames, but ended up killing him instead. What do you think this is supposed to represent about life?
 	
-	Food For Thought:
-What does this fable suggest is the most powerful motive? Would it be enough to make you abandon everything you love?"
+	3. Once you have thought about these
+	questions, write a paragraph about the
+	moral of the story."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -135,40 +86,16 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 text = "Sample paragraph:
 
-	The moral of the story is to not stand out from others. The bird lived inside of a star, and thus was different than his family, who lived on Earth. He left his home on Earth just to stand out, leaving behind a safe and happy life in pursuit of a dangerous one. It changed his way of life as well. His way of life led to extreme loneliness, leading him to go to write to his parents. But at that point, he was far beyond saving. He had become so different from the other birds that even the slightest bit of water burnt his flesh. If we stand out from the social order, we would likewise be lonely and beyond saving.
-	"
+	The moral of the story is to not stand out from others.. The bird lived inside of a star, and thus was different than his family, who lived on Earth. He left his home on Earth just to stand out, leaving behind a safe and happy life in pursuit of a dangerous one. It changed his way of life as well. His way of life led to extreme loneliness, leading him to go to write to his parents. But at that point, he was far beyond saving. He had become so different from the other birds that even the slightest bit of water burnt his flesh. If we stand out from the social order, we would likewise be lonely and beyond saving."
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="Text"]
-margin_left = 2008.54
-margin_top = 191.351
-margin_right = 3798.54
-margin_bottom = 2092.35
-custom_fonts/normal_font = SubResource( 2 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel5" type="RichTextLabel" parent="Text"]
-margin_left = 1997.81
-margin_top = 1770.67
-margin_right = 4696.81
-margin_bottom = 2590.67
-custom_fonts/normal_font = SubResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "*Excerpt from EHEA 20XX submission 1293, Stanly Epipolaios"
-text = "*Excerpt from EHEA 20XX submission 1293, Stanly Epipolaios"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 1699.79
-margin_top = 1933.44
+margin_top = 1845.68
 margin_right = 2183.79
-margin_bottom = 2020.44
+margin_bottom = 1932.68
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Leave (esc)"
@@ -177,4 +104,3 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
-"anims/New Anim" = SubResource( 5 )
