@@ -23,17 +23,11 @@ _global_script_classes=[ {
 "class": "ReBox",
 "language": "GDScript",
 "path": "res://ReBox.gd"
-}, {
-"base": "Resource",
-"class": "SaveGame",
-"language": "GDScript",
-"path": "res://global/saveGame.gd"
 } ]
 _global_script_class_icons={
 "BluBox": "",
 "GrenBox": "",
-"ReBox": "",
-"SaveGame": ""
+"ReBox": ""
 }
 
 [application]
@@ -44,7 +38,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
+gameSaver="*res://global/gameSaver.gd"
 GameOver="*res://global/gameover/gameOver.tscn"
+JailSound="*res://global/JailSound.tscn"
 ForestSound="*res://global/ForestSound.tscn"
 HorrorSound="*res://global/HorrorSound.tscn"
 SewerSound="*res://global/SewerSound.tscn"
@@ -52,7 +48,6 @@ Transition="*res://transition/Transition.tscn"
 Steer="*res://steer.gd"
 Exit="*res://global/menu/exit.tscn"
 FactorySound="*res://global/FactorySound.tscn"
-JailSound="*res://global/JailSound.tscn"
 
 [display]
 

@@ -5,6 +5,7 @@ var canInteract = false
 func _ready():
 	$Label.hide()
 	ForestSound.playsound()
+	gameSaver.save_game("res://Act1/playerscenes/scene1/SceneOne.tscn")
 func _on_Area2D_body_entered(body):
 	if body.name == "player":
 		$Label.show()
