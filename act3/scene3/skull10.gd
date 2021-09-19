@@ -7,4 +7,6 @@ func _ready():
 
 func _on_skull10_body_entered(body):
 	if body.name == "player":
-		print("hjahd")
+		GameOver.transition("res://act3/scene3/puzzle1.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
