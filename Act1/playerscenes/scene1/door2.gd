@@ -4,6 +4,7 @@ extends Area2D
 var canInteract = false
 func _ready():
 	ForestSound.playsound()
+	gameSaver.save_game("res://Act1/playerscenes/scene1/SceneOne1.tscn")
 func _on_Area2D_body_entered(body):
 	if body.name == "player":
 		canInteract = true
