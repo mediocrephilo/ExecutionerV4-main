@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=1]
 [ext_resource path="res://act3/scene5/player2.gd" type="Script" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://sprites/characters/right walk 2.png" type="Texture" id=30]
 [ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=31]
 [ext_resource path="res://act3/scene5/exit1.gd" type="Script" id=32]
+[ext_resource path="res://act3/scene5/Area2D2.gd" type="Script" id=33]
+[ext_resource path="res://act3/scene5/Area2D3.gd" type="Script" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 487.299, 71.4017 )
@@ -43,7 +45,7 @@ extents = Vector2( 1431.82, 96.1583 )
 extents = Vector2( 2769.62, 82.4541 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 2740.21, 178.064 )
+extents = Vector2( 2264.53, 178.064 )
 
 [sub_resource type="Curve2D" id=5]
 _data = {
@@ -52,14 +54,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 22 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ) ],
@@ -92,6 +94,12 @@ extents = Vector2( 1302.74, 2983.01 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 544.175, 1859.87 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 18567.1, 285.163 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 460.978, 33.1358 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -242,7 +250,7 @@ texture = ExtResource( 4 )
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 1481.21, 2177.68 )
+position = Vector2( 2119.16, 2177.68 )
 shape = SubResource( 4 )
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -459,6 +467,30 @@ script = ExtResource( 32 )
 position = Vector2( 5437.42, -10140.5 )
 shape = SubResource( 11 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 3476.32, 2540.77 )
+shape = SubResource( 12 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource( 34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( -104.797, 894.917 )
+shape = SubResource( 13 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+script = ExtResource( 34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 560.143, -3458.64 )
+shape = SubResource( 13 )
+
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D2" to="bigboi/PathFollow2D/Area2D2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D3_body_entered"]
