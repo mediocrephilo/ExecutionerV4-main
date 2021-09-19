@@ -340,6 +340,7 @@ script = ExtResource( 38 )
 position = Vector2( 1607.63, 1119.92 )
 z_index = -1
 frames = SubResource( 12 )
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -412,7 +413,6 @@ pitch_scale = 0.7
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 17 )
-frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true

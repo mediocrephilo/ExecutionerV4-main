@@ -280,7 +280,7 @@ margin_right = 5685.95
 margin_bottom = 189.132
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.972549, 0.972549, 0.972549, 1 )
-text = "Enter to enter"
+text = "enter [Enter]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -447,7 +447,7 @@ margin_top = 1087.34
 margin_right = 3585.7
 margin_bottom = 1215.34
 custom_fonts/font = SubResource( 4 )
-text = "Space to interact"
+text = "interact [Space]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -578,6 +578,7 @@ shape = SubResource( 17 )
 position = Vector2( 3657.56, 1406.76 )
 z_index = 2
 frames = SubResource( 18 )
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -588,7 +589,7 @@ position = Vector2( 6065.61, 952.736 )
 scale = Vector2( 1.04841, 1.1256 )
 z_index = 2
 frames = SubResource( 19 )
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 __meta__ = {
@@ -601,7 +602,7 @@ rotation = -0.404916
 scale = Vector2( 0.666533, 0.709781 )
 z_index = 2
 frames = SubResource( 19 )
-frame = 1
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
