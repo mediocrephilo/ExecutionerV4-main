@@ -3,7 +3,6 @@
 [ext_resource path="res://sounds/234122__klankbeeld__horror-prayer-roman-catholic-02-120306-01.wav" type="AudioStream" id=1]
 [ext_resource path="res://global/HorrorSound.gd" type="Script" id=2]
 
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
