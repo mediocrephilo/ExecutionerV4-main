@@ -26,3 +26,10 @@ func _physics_process(delta):
 		$RayCast2D.position.x *= -1
 	
 	
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene1/act4scene1.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")

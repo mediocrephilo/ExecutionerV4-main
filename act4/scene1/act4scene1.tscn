@@ -69,16 +69,6 @@ extents = Vector2( 1199.61, 114.416 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
@@ -87,6 +77,16 @@ animations = [ {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -487,9 +487,6 @@ position = Vector2( -529.184, 14.6996 )
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 21.3153, -87.886 )
 script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 779.075, 1818.1 )
@@ -508,6 +505,7 @@ shape = SubResource( 9 )
 stream = ExtResource( 38 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 1985.87, 1910.7 )
 current = true
 limit_left = 0
 limit_top = 0
