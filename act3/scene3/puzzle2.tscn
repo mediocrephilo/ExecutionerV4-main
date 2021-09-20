@@ -1,8 +1,8 @@
 [gd_scene load_steps=91 format=2]
 
-[ext_resource path="res://act3/scene3/skull7.gd" type="Script" id=1]
-[ext_resource path="res://act3/scene3/skull8.gd" type="Script" id=2]
-[ext_resource path="res://act3/scene3/skull9.gd" type="Script" id=3]
+[ext_resource path="res://act3/scene3/2skull1.gd" type="Script" id=1]
+[ext_resource path="res://act3/scene3/2skull8.gd" type="Script" id=2]
+[ext_resource path="res://act3/scene3/2skull10.gd" type="Script" id=3]
 [ext_resource path="res://act4/scene3/pixelblacksquare.png" type="Texture" id=4]
 [ext_resource path="res://act4/scene3/pixelinsquare.png" type="Texture" id=5]
 [ext_resource path="res://act4/scene3/pixeloutsquare.png" type="Texture" id=6]
@@ -28,15 +28,15 @@
 [ext_resource path="res://act3/scene3/pick.gd" type="Script" id=26]
 [ext_resource path="res://act3/scene3/portal2.gd" type="Script" id=27]
 [ext_resource path="res://sprites/act3settings/scene2/tank.png" type="Texture" id=28]
-[ext_resource path="res://act3/scene3/skull1.gd" type="Script" id=29]
-[ext_resource path="res://act3/scene3/skull12.gd" type="Script" id=30]
-[ext_resource path="res://act3/scene3/skull3.gd" type="Script" id=31]
+[ext_resource path="res://act3/scene3/2skull9.gd" type="Script" id=29]
+[ext_resource path="res://act3/scene3/2skull12.gd" type="Script" id=30]
+[ext_resource path="res://act3/scene3/2skull2.gd" type="Script" id=31]
 [ext_resource path="res://smolplaywer.gd" type="Script" id=32]
-[ext_resource path="res://act3/scene3/skull10.gd" type="Script" id=33]
-[ext_resource path="res://act3/scene3/skull2.gd" type="Script" id=34]
-[ext_resource path="res://act3/scene3/skull6.gd" type="Script" id=35]
-[ext_resource path="res://act3/scene3/skull5.gd" type="Script" id=36]
-[ext_resource path="res://act3/scene3/skull11.gd" type="Script" id=37]
+[ext_resource path="res://act3/scene3/2skull11.gd" type="Script" id=33]
+[ext_resource path="res://act3/scene3/2skull3.gd" type="Script" id=34]
+[ext_resource path="res://act3/scene3/2skull6.gd" type="Script" id=35]
+[ext_resource path="res://act3/scene3/2skull5.gd" type="Script" id=36]
+[ext_resource path="res://act3/scene3/2skull7.gd" type="Script" id=37]
 [ext_resource path="res://sprites/act3settings/scene2/table2.png" type="Texture" id=38]
 [ext_resource path="res://sprites/act3settings/scene2/hat.png" type="Texture" id=39]
 
@@ -1214,7 +1214,7 @@ lookahead = 0.001
 
 [node name="skull1" type="Area2D" parent="Path2D/PathFollow2D"]
 position = Vector2( -573.17, -389.214 )
-script = ExtResource( 29 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1240,7 +1240,7 @@ position = Vector2( 143.023, 622.739 )
 
 [node name="skull2" type="Area2D" parent="Path2D2/PathFollow2D"]
 position = Vector2( -3.1568, -4.80219 )
-script = ExtResource( 34 )
+script = ExtResource( 31 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1267,7 +1267,7 @@ position = Vector2( 143.023, 622.739 )
 
 [node name="skull2" type="Area2D" parent="Path2D4/PathFollow2D"]
 position = Vector2( -3.1568, -4.80219 )
-script = ExtResource( 34 )
+script = ExtResource( 31 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1291,7 +1291,7 @@ rotation = 0.0152035
 
 [node name="skull3" type="Area2D" parent="Path2D3/PathFollow2D"]
 position = Vector2( 6.11682, 4.98975 )
-script = ExtResource( 31 )
+script = ExtResource( 34 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1351,7 +1351,7 @@ position = Vector2( 4126.45, 4143.41 )
 rotation = 1.54081
 
 [node name="skull7" type="Area2D" parent="Path2D7/PathFollow2D"]
-script = ExtResource( 1 )
+script = ExtResource( 37 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D7/PathFollow2D/skull7"]
 position = Vector2( 29.0479, -21.8431 )
@@ -1391,7 +1391,7 @@ position = Vector2( -3828.76, 4172.4 )
 rotation = 1.04695
 
 [node name="skull9" type="Area2D" parent="Path2D9/PathFollow2D"]
-script = ExtResource( 3 )
+script = ExtResource( 29 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D9/PathFollow2D/skull9"]
 position = Vector2( 34.0167, 5.67473 )
@@ -1411,7 +1411,7 @@ position = Vector2( -3759.6, 5632.31 )
 rotation = -1.12787
 
 [node name="skull10" type="Area2D" parent="Path2D10/PathFollow2D"]
-script = ExtResource( 33 )
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D10/PathFollow2D/skull10"]
 position = Vector2( 23.72, 0.346252 )
@@ -1431,7 +1431,7 @@ position = Vector2( -5234.91, -60.9648 )
 rotation = 3.10188
 
 [node name="skull11" type="Area2D" parent="Path2D11/PathFollow2D"]
-script = ExtResource( 37 )
+script = ExtResource( 33 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D11/PathFollow2D/skull11"]
 position = Vector2( -38.0254, -40.2556 )

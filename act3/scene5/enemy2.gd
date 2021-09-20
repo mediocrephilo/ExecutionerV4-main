@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 const GRAVITY = 10
 const SPEED = 400
 const FLOOR = Vector2(0,-1)
@@ -28,7 +29,6 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "player2":
-		GameOver.transition("res://act3/scene5/obstaclecouse.tscn")
+		GameOver.transition("res://act3/scene5/obstaclecouse2.tscn")
 		GameOver.change(true)
 		Transition.change_scene("res://global/gameover/gameOver.tscn")
-	

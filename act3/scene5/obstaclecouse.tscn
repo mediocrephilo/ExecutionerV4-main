@@ -282,6 +282,9 @@ texture = ExtResource( 8 )
 [node name="player2" type="KinematicBody2D" parent="."]
 position = Vector2( 2185.09, 1734.01 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="playerSprite" type="AnimatedSprite" parent="player2"]
 position = Vector2( -60.2664, 22.6635 )

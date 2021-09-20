@@ -9,12 +9,7 @@ var motion = Vector2()
 
 func _ready():
 	$walk.play()
-	
-func _process(delta):
-	if end.entered == true:
-		$AnimatedSprite.play("idle")
-		$walk.stop()
-		Transition.change_scene("res://act4/cutscene/baby/grass.tscn")
+
 	
 	
 func _physics_process(delta):
@@ -22,9 +17,16 @@ func _physics_process(delta):
 	$AnimatedSprite.play("walk")
 	if Input.is_action_pressed("ui_down"):
 		$AnimatedSprite.play("down")
-	if Input.is_action_just_pressed("ui_down"):
 		$walk.stop()
+		$CollisionShape2D.disabled = true
+	if Input.is_action_just_pressed("ui_down"):
 		$slide.play()
+		
+	if Input.is_action_just_released("ui_down"):
+		$walk.play()
+		$slide.stop()
+		$CollisionShape2D.disabled = false
+		
 
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
@@ -33,7 +35,6 @@ func _physics_process(delta):
 		if motion.y < 0:
 			$AnimatedSprite.play("jump")
 			$walk.stop()
-			$slide.stop()
 		else:
 			$AnimatedSprite.play("fall")
 			$walk.play()

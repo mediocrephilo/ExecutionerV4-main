@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://sprites/act4setting/scene2/courtfbackmount.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act4setting/scene2/courtroad.png" type="Texture" id=2]
@@ -27,19 +27,14 @@
 [ext_resource path="res://sounds/Slide On Gravel Series [SOUND EFFECT].wav" type="AudioStream" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 137.593
-height = 391.535
+radius = 93.096
+height = 309.838
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "walk",
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
@@ -52,11 +47,19 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "fall",
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 74.3442, 102.306 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 134.48, 1381.85 )
@@ -77,9 +80,6 @@ script = ExtResource( 18 )
 position = Vector2( 611.841, 1681.4 )
 z_index = 5
 script = ExtResource( 15 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 z_index = 1
@@ -106,6 +106,10 @@ autoplay = true
 
 [node name="slide" type="AudioStreamPlayer" parent="player"]
 stream = ExtResource( 25 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
+position = Vector2( -4.58301, 238.315 )
+shape = SubResource( 7 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -192,7 +196,7 @@ scale = Vector2( 1, 1.03019 )
 texture = ExtResource( 5 )
 
 [node name="sky" type="Sprite" parent="."]
-position = Vector2( 6819.75, 1078.06 )
+position = Vector2( 6878.9, 1118.1 )
 scale = Vector2( 1.79054, 1.03019 )
 z_index = -2
 texture = ExtResource( 3 )
@@ -288,7 +292,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 19947.5, 1771.09 )
+position = Vector2( 19957, 1771.09 )
 script = ExtResource( 19 )
 __meta__ = {
 "_edit_group_": true
@@ -1023,3 +1027,51 @@ shape = SubResource( 6 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="ball" to="." method="_on_ball_body_entered"]
+[connection signal="body_entered" from="ball2" to="." method="_on_ball2_body_entered"]
+[connection signal="body_entered" from="ball3" to="." method="_on_ball3_body_entered"]
+[connection signal="body_entered" from="ball4" to="." method="_on_ball4_body_entered"]
+[connection signal="body_entered" from="ball5" to="." method="_on_ball5_body_entered"]
+[connection signal="body_entered" from="ball6" to="." method="_on_ball6_body_entered"]
+[connection signal="body_entered" from="ball7" to="." method="_on_ball7_body_entered"]
+[connection signal="body_entered" from="ball8" to="." method="_on_ball8_body_entered"]
+[connection signal="body_entered" from="ball9" to="." method="_on_ball9_body_entered"]
+[connection signal="body_entered" from="ball10" to="." method="_on_ball10_body_entered"]
+[connection signal="body_entered" from="ball11" to="." method="_on_ball11_body_entered"]
+[connection signal="body_entered" from="ball12" to="." method="_on_ball12_body_entered"]
+[connection signal="body_entered" from="ball13" to="." method="_on_ball13_body_entered"]
+[connection signal="body_entered" from="ball14" to="." method="_on_ball14_body_entered"]
+[connection signal="body_entered" from="ball15" to="." method="_on_ball15_body_entered"]
+[connection signal="body_entered" from="ball16" to="." method="_on_ball16_body_entered"]
+[connection signal="body_entered" from="ball17" to="." method="_on_ball17_body_entered"]
+[connection signal="body_entered" from="ball18" to="." method="_on_ball18_body_entered"]
+[connection signal="body_entered" from="ball19" to="." method="_on_ball19_body_entered"]
+[connection signal="body_entered" from="ball20" to="." method="_on_ball20_body_entered"]
+[connection signal="body_entered" from="ball21" to="." method="_on_ball21_body_entered"]
+[connection signal="body_entered" from="ball22" to="." method="_on_ball22_body_entered"]
+[connection signal="body_entered" from="ball23" to="." method="_on_ball23_body_entered"]
+[connection signal="body_entered" from="ball24" to="." method="_on_ball24_body_entered"]
+[connection signal="body_entered" from="ball25" to="." method="_on_ball25_body_entered"]
+[connection signal="body_entered" from="ball26" to="." method="_on_ball26_body_entered"]
+[connection signal="body_entered" from="ball27" to="." method="_on_ball27_body_entered"]
+[connection signal="body_entered" from="ball28" to="." method="_on_ball28_body_entered"]
+[connection signal="body_entered" from="ball29" to="." method="_on_ball29_body_entered"]
+[connection signal="body_entered" from="ball30" to="." method="_on_ball30_body_entered"]
+[connection signal="body_entered" from="ball31" to="." method="_on_ball31_body_entered"]
+[connection signal="body_entered" from="ball32" to="." method="_on_ball32_body_entered"]
+[connection signal="body_entered" from="ball33" to="." method="_on_ball33_body_entered"]
+[connection signal="body_entered" from="ball34" to="." method="_on_ball34_body_entered"]
+[connection signal="body_entered" from="ball35" to="." method="_on_ball35_body_entered"]
+[connection signal="body_entered" from="ball36" to="." method="_on_ball36_body_entered"]
+[connection signal="body_entered" from="ball37" to="." method="_on_ball37_body_entered"]
+[connection signal="body_entered" from="ball38" to="." method="_on_ball38_body_entered"]
+[connection signal="body_entered" from="ball39" to="." method="_on_ball39_body_entered"]
+[connection signal="body_entered" from="ball40" to="." method="_on_ball40_body_entered"]
+[connection signal="body_entered" from="ball41" to="." method="_on_ball41_body_entered"]
+[connection signal="body_entered" from="ball42" to="." method="_on_ball42_body_entered"]
+[connection signal="body_entered" from="ball43" to="." method="_on_ball43_body_entered"]
+[connection signal="body_entered" from="ball44" to="." method="_on_ball44_body_entered"]
+[connection signal="body_entered" from="ball45" to="." method="_on_ball45_body_entered"]
+[connection signal="body_entered" from="ball46" to="." method="_on_ball46_body_entered"]
+[connection signal="body_entered" from="ball47" to="." method="_on_ball47_body_entered"]
+[connection signal="body_entered" from="ball48" to="." method="_on_ball48_body_entered"]

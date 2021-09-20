@@ -84,3 +84,327 @@ func _on_Area2D_body_entered(body):
 		$Area2D.position.x -= 0
 		#get_tree().paused =true
 		$player/AnimatedSprite.play("idle")
+
+
+func _on_ball_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball2_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball3_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball4_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball5_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball6_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball7_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball8_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball9_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball10_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball11_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball12_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball13_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball14_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball15_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball16_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball17_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball18_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball19_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball20_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball21_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball22_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball23_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball24_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball25_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball26_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball27_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball28_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball29_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball30_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball31_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball32_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball33_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball34_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball35_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball36_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball37_body_entered(body):if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball38_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+
+func _on_ball39_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball40_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball41_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball42_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball43_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball44_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball45_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball46_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball47_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
+
+func _on_ball48_body_entered(body):
+	if body.name == "player":
+		GameOver.transition("res://act4/scene2/scene2.tscn")
+		GameOver.change(true)
+		Transition.change_scene("res://global/gameover/gameOver.tscn")
