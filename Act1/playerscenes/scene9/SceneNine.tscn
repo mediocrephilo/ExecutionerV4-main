@@ -41,11 +41,6 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 23 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "jump",
@@ -54,6 +49,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -282,7 +282,6 @@ position = Vector2( 6065.61, 952.736 )
 scale = Vector2( 1.04841, 1.1256 )
 z_index = 2
 frames = SubResource( 8 )
-frame = 2
 playing = true
 flip_h = true
 __meta__ = {
@@ -295,7 +294,6 @@ rotation = -0.404916
 scale = Vector2( 0.666533, 0.709781 )
 z_index = 2
 frames = SubResource( 8 )
-frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
