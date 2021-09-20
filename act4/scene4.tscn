@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=1]
 [ext_resource path="res://sprites/characters/idle right 1.png" type="Texture" id=2]
@@ -18,10 +18,17 @@
 [ext_resource path="res://sprites/characters/fall.png" type="Texture" id=16]
 [ext_resource path="res://wood3.tscn" type="PackedScene" id=17]
 [ext_resource path="res://act4/Area2D.gd" type="Script" id=18]
+[ext_resource path="res://act4/Area2D2.gd" type="Script" id=19]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=20]
 [ext_resource path="res://sprites/Act1settings/sceneone/grass1.png" type="Texture" id=21]
 [ext_resource path="res://sprites/Act1settings/sceneone/middle tree.png" type="Texture" id=22]
 [ext_resource path="res://sprites/act 2 setting/scene1/lamp3.png" type="Texture" id=23]
+[ext_resource path="res://act4/Area2D3.gd" type="Script" id=24]
+[ext_resource path="res://act4/Area2D5.gd" type="Script" id=25]
+[ext_resource path="res://act4/Area2D6.gd" type="Script" id=26]
+[ext_resource path="res://act4/Area2D44.gd" type="Script" id=27]
+[ext_resource path="res://act4/Area2D7.gd" type="Script" id=28]
+[ext_resource path="res://act4/Area2D8.gd" type="Script" id=29]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 100.357
@@ -29,16 +36,6 @@ height = 249.157
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
@@ -47,6 +44,16 @@ animations = [ {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -58,6 +65,27 @@ extents = Vector2( 222.664, 143.978 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 957.031, 555.462 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 75541.9, 531.525 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 212.734, 60.959 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 220.902, 56.4849 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 208.73, 77.6323 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 1746.94, 235.155 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 955.973, 120.887 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 985.938, 91.5921 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -870,4 +898,63 @@ __meta__ = {
 position = Vector2( 80709.4, 2505.61 )
 shape = SubResource( 5 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 35551, 8029.61 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 30585.7, 2704.85 )
+shape = SubResource( 7 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+script = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 32463.4, 2680.78 )
+shape = SubResource( 8 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 34585.4, 2697.69 )
+shape = SubResource( 9 )
+
+[node name="Area2D6" type="Area2D" parent="."]
+script = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2( 39793.7, 2834.35 )
+shape = SubResource( 10 )
+
+[node name="Area2D7" type="Area2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2( 44627.8, 2737.56 )
+shape = SubResource( 11 )
+
+[node name="Area2D8" type="Area2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2( 48149.2, 2711.2 )
+shape = SubResource( 12 )
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D4_body_entered"]
+[connection signal="body_entered" from="Area2D5" to="Area2D5" method="_on_Area2D5_body_entered"]
+[connection signal="body_entered" from="Area2D6" to="Area2D6" method="_on_Area2D6_body_entered"]
+[connection signal="body_entered" from="Area2D7" to="Area2D7" method="_on_Area2D7_body_entered"]
+[connection signal="body_entered" from="Area2D8" to="Area2D8" method="_on_Area2D8_body_entered"]
