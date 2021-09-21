@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://sprites/Act1settings/scenethree/oh no.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Act1settings/scenethree/chair copy.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://sprites/Act1settings/scenethree/chest2/Untitled688-20200626202234.PNG" type="Texture" id=18]
 [ext_resource path="res://sprites/Act1settings/scenethree/chest2/Untitled688-20200626201924.PNG" type="Texture" id=19]
 [ext_resource path="res://sprites/Act1settings/scenethree/chest2/unnamed.png" type="Texture" id=20]
+[ext_resource path="res://Act1/playerscenes/scene3/SceneThree2.gd" type="Script" id=21]
 [ext_resource path="res://sounds/Closing-Squeaky-Door-1-www.fesliyanstudios.com.wav" type="AudioStream" id=24]
 [ext_resource path="res://sounds/255715__klankbeeld__horror-ambience-78-130322-00.wav" type="AudioStream" id=25]
 [ext_resource path="res://sounds/Squeaky-Wooden-Floor-Footsteps--Fast--www.fesliyanstudios.com.wav" type="AudioStream" id=26]
@@ -31,9 +32,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -41,14 +42,14 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 } ]
 
@@ -92,6 +93,7 @@ animations = [ {
 } ]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 21 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -198,7 +200,7 @@ autoplay = true
 position = Vector2( 1774.63, 1094.14 )
 z_index = -1
 frames = SubResource( 8 )
-frame = 1
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -214,9 +216,8 @@ stream = ExtResource( 27 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1212.64, 1235.52 )
 frames = SubResource( 10 )
-frame = 3
+frame = 7
 playing = true
-
 [connection signal="body_entered" from="doortime2" to="doortime2" method="_on_doortime2_body_entered"]
 [connection signal="body_exited" from="doortime2" to="doortime2" method="_on_doortime2_body_exited"]
 [connection signal="body_entered" from="chest" to="chest" method="_on_chest_body_entered"]

@@ -53,9 +53,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "jump",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
@@ -63,14 +63,14 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -1314,12 +1314,11 @@ rotation_duration = 10.0
 [node name="orbit3" type="KinematicBody2D" parent="orbitcenter2" groups=[
 "platforms",
 ]]
-position = Vector2( 125.332, 992.115 )
+position = Vector2( -661.31, -750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit3"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit3"]
@@ -1329,12 +1328,12 @@ shape = SubResource( 35 )
 [node name="orbit5" type="KinematicBody2D" parent="orbitcenter2" groups=[
 "platforms",
 ]]
-position = Vector2( -992.115, 125.332 )
+position = Vector2( 750.112, -661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit5"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit5"]
@@ -1344,12 +1343,12 @@ shape = SubResource( 35 )
 [node name="orbit6" type="KinematicBody2D" parent="orbitcenter2" groups=[
 "platforms",
 ]]
-position = Vector2( -125.332, -992.115 )
+position = Vector2( 661.31, 750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit6"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit6"]
@@ -1359,12 +1358,12 @@ shape = SubResource( 35 )
 [node name="orbit4" type="KinematicBody2D" parent="orbitcenter2" groups=[
 "platforms",
 ]]
-position = Vector2( 992.115, -125.332 )
+position = Vector2( -750.112, 661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter2/orbit4"]
 position = Vector2( 1058.44, 959.304 )
 frames = SubResource( 34 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter2/orbit4"]
@@ -1383,12 +1382,12 @@ rotation_duration = 10.0
 [node name="orbit" type="KinematicBody2D" parent="orbitcenter3" groups=[
 "platforms",
 ]]
-position = Vector2( 125.332, 992.115 )
+position = Vector2( -661.31, -750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit"]
@@ -1398,12 +1397,11 @@ shape = SubResource( 35 )
 [node name="orbit2" type="KinematicBody2D" parent="orbitcenter3" groups=[
 "platforms",
 ]]
-position = Vector2( -992.115, 125.332 )
+position = Vector2( 750.112, -661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit2"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit2"]
@@ -1413,12 +1411,12 @@ shape = SubResource( 35 )
 [node name="orbit3" type="KinematicBody2D" parent="orbitcenter3" groups=[
 "platforms",
 ]]
-position = Vector2( -125.332, -992.115 )
+position = Vector2( 661.31, 750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit3"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit3"]
@@ -1428,12 +1426,12 @@ shape = SubResource( 35 )
 [node name="orbit5" type="KinematicBody2D" parent="orbitcenter3" groups=[
 "platforms",
 ]]
-position = Vector2( 992.115, -125.332 )
+position = Vector2( -750.112, 661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter3/orbit5"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter3/orbit5"]
@@ -1449,11 +1447,12 @@ rotation_duration = 10.0
 [node name="orbit" type="KinematicBody2D" parent="orbitcenter4" groups=[
 "platforms",
 ]]
-position = Vector2( 125.332, 992.115 )
+position = Vector2( -661.31, -750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit"]
@@ -1463,11 +1462,12 @@ shape = SubResource( 35 )
 [node name="orbit2" type="KinematicBody2D" parent="orbitcenter4" groups=[
 "platforms",
 ]]
-position = Vector2( -992.115, 125.332 )
+position = Vector2( 750.112, -661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit2"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit2"]
@@ -1477,12 +1477,12 @@ shape = SubResource( 35 )
 [node name="orbit3" type="KinematicBody2D" parent="orbitcenter4" groups=[
 "platforms",
 ]]
-position = Vector2( -125.332, -992.115 )
+position = Vector2( 661.31, 750.112 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit3"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit3"]
@@ -1492,12 +1492,12 @@ shape = SubResource( 35 )
 [node name="orbit4" type="KinematicBody2D" parent="orbitcenter4" groups=[
 "platforms",
 ]]
-position = Vector2( 992.115, -125.332 )
+position = Vector2( -750.112, 661.31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="orbitcenter4/orbit4"]
 position = Vector2( 1058.44, 969.4 )
 frames = SubResource( 34 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="orbitcenter4/orbit4"]
@@ -1579,7 +1579,7 @@ motion_mirroring = Vector2( 4000, 4000 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 3903.21, 483.921 )
 frames = SubResource( 38 )
-frame = 1
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1589,14 +1589,13 @@ __meta__ = {
 position = Vector2( 1044.25, -684.493 )
 scale = Vector2( 0.63002, 0.628466 )
 frames = SubResource( 39 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 3667.61, -1808.34 )
 scale = Vector2( 1.22074, 1.11504 )
 frames = SubResource( 40 )
-frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1702,7 +1701,6 @@ __meta__ = {
 position = Vector2( 10.1729, -1142.78 )
 scale = Vector2( 2.02881, 2.41962 )
 frames = SubResource( 43 )
-frame = 4
 playing = true
 
 [node name="Area2D" type="Area2D" parent="bear"]
@@ -1748,7 +1746,6 @@ texture = ExtResource( 44 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite10"]
 autoplay = "New Anim"
 "anims/New Anim" = SubResource( 48 )
-
 [connection signal="ground_update" from="player" to="player/playercam" method="_on_player_ground_update"]
 [connection signal="animation_finished" from="wood/AnimationPlayer" to="wood" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="timeout" from="wood/Timer" to="wood" method="_on_Timer_timeout"]

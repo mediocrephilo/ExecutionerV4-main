@@ -8,13 +8,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	gameSaver.save_game("res://Act1/playerscenes/scene4/scenefour.tscn")
-	HorrorSound.playsound()
+	gameSaver.save_game("res://Act1/playerscenes/scene5/black.tscn")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _on_Area2D_body_entered(body):
-	if body.name == "player2":
-		HorrorSound.fade_out()
-		Transition.change_scene("res://Act1/playerscenes/scene5/black.tscn")
