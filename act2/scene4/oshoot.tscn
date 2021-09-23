@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=1]
 [ext_resource path="res://sprites/characters/right walk 8.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://act2/scene4/Area2D.gd" type="Script" id=28]
 [ext_resource path="res://sprites/Act1settings/sceneone/dark filter.png" type="Texture" id=29]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=30]
+[ext_resource path="res://act2/scene4/oshoot.gd" type="Script" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -54,6 +55,16 @@ extents = Vector2( 5000.86, 159.56 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
 "name": "fall",
@@ -62,16 +73,6 @@ animations = [ {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 } ]
 
@@ -119,6 +120,7 @@ extents = Vector2( 672.912, 1185.32 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 1035.3, 41.9109 )
+script = ExtResource( 31 )
 
 [node name="sky" type="ParallaxBackground" parent="."]
 layer = -104
@@ -290,7 +292,6 @@ scale = Vector2( 2.02972, 1 )
 z_index = 1
 z_as_relative = false
 texture = ExtResource( 29 )
-
 [connection signal="body_entered" from="sewer" to="sewer" method="_on_sewer_body_entered"]
 [connection signal="body_exited" from="sewer" to="sewer" method="_on_sewer_body_exited"]
 [connection signal="body_entered" from="piano" to="piano" method="_on_piano_body_entered"]

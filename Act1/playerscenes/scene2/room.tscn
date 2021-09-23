@@ -54,14 +54,14 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -128,7 +128,7 @@ animations = [ {
 extents = Vector2( 361.851, 206.003 )
 
 [sub_resource type="DynamicFont" id=14]
-size = 90
+size = 100
 font_data = ExtResource( 12 )
 
 [sub_resource type="Animation" id=15]
@@ -371,8 +371,8 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="chest/dialoguebox"]
 anchor_right = 17.776
 anchor_bottom = 13.082
-margin_left = 749.0
-margin_top = 1635.0
+margin_left = 767.0
+margin_top = 1659.0
 margin_right = 2116.96
 margin_bottom = 1434.72
 custom_fonts/normal_font = SubResource( 14 )
@@ -413,6 +413,7 @@ pitch_scale = 0.7
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 17 )
+frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true

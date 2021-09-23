@@ -72,14 +72,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 5 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -311,8 +311,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Type" type="AudioStreamPlayer2D" parent="ohnocut"]
-position = Vector2( -313.314, 276.558 )
+[node name="Type" type="AudioStreamPlayer" parent="ohnocut"]
 
 [node name="Tween" type="Tween" parent="ohnocut"]
 
@@ -339,7 +338,6 @@ bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="body_entered" from="buildings" to="buildings" method="_on_buildings_body_entered"]
 [connection signal="body_exited" from="buildings" to="buildings" method="_on_buildings_body_exited"]
 [connection signal="body_entered" from="sewer" to="sewer" method="_on_sewer_body_entered"]
