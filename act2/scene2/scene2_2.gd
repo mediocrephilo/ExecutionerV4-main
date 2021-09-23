@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gameSaver.save_game("res://act2/scene2/scene2_2.tscn")
 	$AudioStreamPlayer.play()
 	$AudioStreamPlayer2.play()
 
