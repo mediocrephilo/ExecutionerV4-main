@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://sprites/Act1settings/scenetwo/room.png" type="Texture" id=1]
 [ext_resource path="res://sprites/characters/jump 1.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Act1/playerscenes/scene8/SceneEightDialogue.gd" type="Script" id=18]
 [ext_resource path="res://Act1/playerscenes/scene8/dooragain.gd" type="Script" id=19]
+[ext_resource path="res://Act1/playerscenes/scene8/SceneEight.gd" type="Script" id=20]
 [ext_resource path="res://sprites/Act1settings/scenetwo/chest/Untitled687-20200625204054.PNG" type="Texture" id=23]
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=24]
 [ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=25]
@@ -39,24 +40,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "jump",
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -115,6 +116,7 @@ tracks/0/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -238,7 +240,7 @@ texture = ExtResource( 23 )
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 10 )
-frame = 9
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -291,7 +293,6 @@ autoplay = "New Anim"
 
 [node name="Type" type="AudioStreamPlayer" parent="dialoguebox"]
 stream = ExtResource( 27 )
-
 [connection signal="body_entered" from="doortime" to="doortime" method="_on_doortime_body_entered"]
 [connection signal="body_exited" from="doortime" to="doortime" method="_on_doortime_body_exited"]
 [connection signal="body_entered" from="chair" to="chair" method="_on_chair_body_entered"]

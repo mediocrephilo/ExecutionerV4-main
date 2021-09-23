@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/characters/fall.png" type="Texture" id=2]
@@ -35,6 +35,7 @@
 [ext_resource path="res://sprites/Act1settings/sceneseven/deathclown5.PNG" type="Texture" id=33]
 [ext_resource path="res://sprites/Act1settings/sceneseven/deathclown3.PNG" type="Texture" id=34]
 [ext_resource path="res://sprites/Act1settings/sceneseven/deathclown1.PNG" type="Texture" id=35]
+[ext_resource path="res://Act1/playerscenes/scene7/scene7.gd" type="Script" id=36]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3926.3, 183.43 )
@@ -44,9 +45,9 @@ extents = Vector2( 345.366, 1491.12 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "fall",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -54,14 +55,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 } ]
 
@@ -82,6 +83,11 @@ extents = Vector2( 1755.97, 173.467 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
+"frames": [ ExtResource( 33 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 35 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "reversenom",
@@ -91,11 +97,6 @@ animations = [ {
 "loop": false,
 "name": "nom",
 "speed": 7.0
-}, {
-"frames": [ ExtResource( 33 ) ],
-"loop": false,
-"name": "default",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
@@ -125,6 +126,7 @@ extents = Vector2( 29126.1, 735.203 )
 extents = Vector2( 6161.55, 919.199 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 36 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1613,7 +1615,6 @@ script = ExtResource( 23 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 10062.3, 3056.63 )
 shape = SubResource( 16 )
-
 [connection signal="body_entered" from="deathclownR" to="deathclownR" method="_on_deathclownR_body_entered"]
 [connection signal="body_entered" from="deathclownR2" to="deathclownR2" method="_on_deathclownR_body_entered"]
 [connection signal="body_entered" from="deathclownR4" to="deathclownR4" method="_on_deathclownR_body_entered"]
