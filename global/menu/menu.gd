@@ -15,6 +15,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("one"):
 		Transition.change_scene("res://Act1/cutscenes/scene0/InitialCutscene.tscn")
-		print("ajndk")
 	if Input.is_action_just_pressed("two"):
 		Transition.change_scene(gameSaver.load_game())
+	if Input.is_action_just_pressed("three"):
+		Transition.change_scene("res://global/menu/credits.tscn")
