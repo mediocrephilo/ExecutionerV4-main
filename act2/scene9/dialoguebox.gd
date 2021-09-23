@@ -4,11 +4,11 @@ var dialogue = [
 #<<<<<<< HEAD
 #=======
 
-		"BUT THINK ABOUT IT... IF IT WASN'T FOR ME, THAT KID WOULD BE SENT OFF TO JOIN THE E.L.F",
-		"SO I DID SAVE HIM IN SOME STRANGE WAY",
-		". . .",
-		"WHAT AM I THINKING. IT'S STILL A SORRY EXCUSE...",
-		"..."
+		"LISTEN . . . IF IT WASN'T FOR ME, THAT KID WOULD HAVE BEEN SENT TO THE E.L.F",
+		"IN THE END . . . DIDN'T I SAVE HIM?",
+		". . . ATLAS, I SOUND LIKE POLLY'S DAD . . .",
+		"WHAT AM I THINKING? IT'S JUST A SORRY EXCUSE FOR . . .",
+		" . . ."
 ]
 var dialogue_index = 0
 var finished = false

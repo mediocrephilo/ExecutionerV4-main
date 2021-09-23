@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=5]
 [ext_resource path="res://act2/scene9/dialoguebox.gd" type="Script" id=6]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://act2/scene9/scene9.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 65.7756, 1223.77 )
@@ -19,6 +20,7 @@ size = 100
 font_data = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
 self_modulate = Color( 0.733333, 0.290196, 0.290196, 1 )
@@ -82,7 +84,9 @@ margin_right = 3450.0
 margin_bottom = 665.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="control"]
-
 [connection signal="tween_completed" from="control/Tween" to="control" method="_on_Tween_tween_completed"]
