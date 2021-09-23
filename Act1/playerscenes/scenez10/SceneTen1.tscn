@@ -31,7 +31,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=29]
 [ext_resource path="res://sprites/UI/continuesprite.png" type="Texture" id=30]
 [ext_resource path="res://Act1/playerscenes/scenez10/scene10exit.gd" type="Script" id=31]
-[ext_resource path="res://Act1/playerscenes/scenez10/SceneTen.gd" type="Script" id=32]
+[ext_resource path="res://Act1/playerscenes/scenez10/SceneTen1.gd" type="Script" id=32]
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=33]
 [ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=34]
 
@@ -142,9 +142,12 @@ extents = Vector2( 516.659, 2176.68 )
 script = ExtResource( 32 )
 
 [node name="player" type="KinematicBody2D" parent="."]
-position = Vector2( 2506.65, 657.947 )
+position = Vector2( -2256.86, 615.605 )
 z_index = 50
 script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 4691.4, 921.099 )
@@ -186,6 +189,9 @@ position = Vector2( -231.835, 0 )
 scale = Vector2( 2.12478, 1 )
 texture = ExtResource( 2 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="back tree" type="ParallaxBackground" parent="."]
 layer = -9
