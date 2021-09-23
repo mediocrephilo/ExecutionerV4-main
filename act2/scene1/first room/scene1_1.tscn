@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene1/buildings1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act 2 setting/scene1/black background.png" type="Texture" id=2]
@@ -31,9 +31,7 @@
 [ext_resource path="res://act2/scene1/first room/dialoguebox.gd" type="Script" id=29]
 [ext_resource path="res://sounds/fast-pace-Typing-on-mechanical-keyboard-1-www.FesliyanStudios.com.wav" type="AudioStream" id=30]
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=31]
-[ext_resource path="res://sounds/zapsplat_human_child_boy_6_years_laugh_short_005_19739.mp3" type="AudioStream" id=32]
 [ext_resource path="res://act2/scene1/first room/scene1_1.gd" type="Script" id=33]
-[ext_resource path="res://sounds/ftus_electromanetic_field_street_light_002_335.mp3" type="AudioStream" id=34]
 [ext_resource path="res://sounds/255715__klankbeeld__horror-ambience-78-130322-00.wav" type="AudioStream" id=35]
 [ext_resource path="res://sounds/Walking-on-Gravel--Medium--www.fesliyanstudios.com.wav" type="AudioStream" id=36]
 
@@ -47,6 +45,11 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "jump",
@@ -55,11 +58,6 @@ animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
@@ -234,7 +232,7 @@ speed_scale = 1.25
 position = Vector2( 209.64, 1765.99 )
 shape = SubResource( 3 )
 
-[node name="Walk" type="AudioStreamPlayer2D" parent="player"]
+[node name="Walk" type="AudioStreamPlayer" parent="player"]
 stream = ExtResource( 36 )
 volume_db = 24.0
 pitch_scale = 0.8
@@ -352,7 +350,6 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="enter5"]
-stream = ExtResource( 32 )
 
 [node name="dialoguebox" type="Control" parent="."]
 margin_right = 40.0
@@ -397,9 +394,7 @@ texture = ExtResource( 24 )
 stream = ExtResource( 35 )
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 34 )
 volume_db = -16.565
-
 [connection signal="body_entered" from="enter" to="enter" method="_on_enter_body_entered"]
 [connection signal="body_exited" from="enter" to="enter" method="_on_enter_body_exited"]
 [connection signal="body_entered" from="enter2" to="enter2" method="_on_enter2_body_entered"]
