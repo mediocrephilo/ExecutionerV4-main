@@ -56,11 +56,6 @@ font_data = ExtResource( 23 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle",
@@ -74,6 +69,11 @@ animations = [ {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -146,7 +146,7 @@ position = Vector2( 5591.19, 1283.72 )
 scale = Vector2( 3.07375, 1.69392 )
 z_index = 2
 frames = SubResource( 2 )
-frame = 31
+frame = 28
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -434,7 +434,6 @@ text = "Observe"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]
 [connection signal="body_exited" from="door" to="door" method="_on_door_body_exited"]
 [connection signal="body_entered" from="door2" to="door2" method="_on_door_body_entered"]

@@ -6,8 +6,8 @@ extends Node2D
 #func _on_Timer_timeout():
 #	var ball = BALL.instance()
 #	add_child(ball)
-
-
+func _ready():
+	gameSaver.save_game("res://Act4/scene2/scene2.tscn")
 #func _on_Timer2_timeout():
 #	var ball2 = BALL2.instance()
 #	add_child(ball2)

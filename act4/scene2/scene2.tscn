@@ -32,9 +32,9 @@ height = 309.838
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "fall",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
@@ -47,30 +47,30 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 74.3442, 102.306 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 134.48, 1381.85 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 5040.13, 194.082 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 957.597, 358.41 )
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=7]
 radius = 119.624
 
 [node name="Node2D" type="Node2D"]
@@ -109,17 +109,17 @@ stream = ExtResource( 25 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
 position = Vector2( -4.58301, 238.315 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -10.4191, 1106.47 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 4903.32, 2213.56 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="front" type="Area2D" parent="."]
 
@@ -299,7 +299,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 texture = ExtResource( 20 )
@@ -317,7 +317,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball2" type="Area2D" parent="."]
 position = Vector2( 4786.5, 2020.21 )
@@ -332,7 +332,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball2"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball3" type="Area2D" parent="."]
 position = Vector2( 6056.31, 2072.98 )
@@ -347,7 +347,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball3"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball4" type="Area2D" parent="."]
 position = Vector2( 7254.63, 1678.6 )
@@ -362,7 +362,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball4"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball5" type="Area2D" parent="."]
 position = Vector2( 8405.86, 1530.68 )
@@ -377,7 +377,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball5"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball6" type="Area2D" parent="."]
 position = Vector2( 10140.6, 2038.31 )
@@ -392,7 +392,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball6"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball7" type="Area2D" parent="."]
 position = Vector2( 11544.4, 1575.7 )
@@ -407,7 +407,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball7"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball8" type="Area2D" parent="."]
 position = Vector2( 13795.4, 2008.01 )
@@ -422,7 +422,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball8"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball9" type="Area2D" parent="."]
 position = Vector2( 16097.8, 1504.95 )
@@ -437,7 +437,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball9"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball10" type="Area2D" parent="."]
 position = Vector2( 17909.7, 2070.47 )
@@ -452,7 +452,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball10"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball11" type="Area2D" parent="."]
 position = Vector2( 19223.5, 1710.76 )
@@ -467,7 +467,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball11"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball12" type="Area2D" parent="."]
 position = Vector2( 20767, 1492.09 )
@@ -482,7 +482,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball12"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball13" type="Area2D" parent="."]
 position = Vector2( 22208.6, 2041.25 )
@@ -497,7 +497,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball13"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball14" type="Area2D" parent="."]
 position = Vector2( 23584, 1537.11 )
@@ -512,7 +512,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball14"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball15" type="Area2D" parent="."]
 position = Vector2( 24945.5, 2093.98 )
@@ -527,7 +527,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball15"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball16" type="Area2D" parent="."]
 position = Vector2( 26362.4, 1582.13 )
@@ -542,7 +542,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball16"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball17" type="Area2D" parent="."]
 position = Vector2( 27725.8, 2117.23 )
@@ -557,7 +557,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball17"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball18" type="Area2D" parent="."]
 position = Vector2( 28742, 1492.09 )
@@ -572,7 +572,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball18"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball19" type="Area2D" parent="."]
 position = Vector2( 29946.2, 2072.11 )
@@ -587,7 +587,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball19"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball20" type="Area2D" parent="."]
 position = Vector2( 31388, 2088.68 )
@@ -602,7 +602,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball20"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball21" type="Area2D" parent="."]
 position = Vector2( 32343.6, 1757.24 )
@@ -617,7 +617,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball21"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball22" type="Area2D" parent="."]
 position = Vector2( 33608.6, 2055.54 )
@@ -632,7 +632,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball22"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball23" type="Area2D" parent="."]
 position = Vector2( 34946.8, 1523.9 )
@@ -647,7 +647,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball23"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball24" type="Area2D" parent="."]
 position = Vector2( 36463.3, 1577.36 )
@@ -662,7 +662,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball24"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball25" type="Area2D" parent="."]
 position = Vector2( 37978.2, 2099.73 )
@@ -677,7 +677,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball25"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball26" type="Area2D" parent="."]
 position = Vector2( 39740.3, 1655.51 )
@@ -692,7 +692,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball26"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball27" type="Area2D" parent="."]
 position = Vector2( 41358.9, 2107.15 )
@@ -707,7 +707,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball27"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball28" type="Area2D" parent="."]
 position = Vector2( 42684.6, 1585.48 )
@@ -722,7 +722,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball28"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball29" type="Area2D" parent="."]
 position = Vector2( 44227.3, 1600.75 )
@@ -737,7 +737,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball29"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball30" type="Area2D" parent="."]
 position = Vector2( 45234.7, 2096.07 )
@@ -752,7 +752,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball30"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball31" type="Area2D" parent="."]
 position = Vector2( 46877.4, 1646.58 )
@@ -767,7 +767,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball31"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball32" type="Area2D" parent="."]
 position = Vector2( 48114.6, 1371.64 )
@@ -782,7 +782,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball32"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball33" type="Area2D" parent="."]
 position = Vector2( 49829.4, 2072.53 )
@@ -797,7 +797,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball33"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball34" type="Area2D" parent="."]
 position = Vector2( 51658.3, 1554.93 )
@@ -812,7 +812,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball34"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball35" type="Area2D" parent="."]
 position = Vector2( 53850.6, 2041.2 )
@@ -827,7 +827,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball35"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball36" type="Area2D" parent="."]
 position = Vector2( 56395.6, 2036.82 )
@@ -842,7 +842,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball36"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball37" type="Area2D" parent="."]
 position = Vector2( 58684.5, 2081.89 )
@@ -857,7 +857,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball37"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball38" type="Area2D" parent="."]
 position = Vector2( 61411, 2013.16 )
@@ -872,7 +872,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball38"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball39" type="Area2D" parent="."]
 position = Vector2( 63469.6, 1459.83 )
@@ -887,7 +887,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball39"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball40" type="Area2D" parent="."]
 position = Vector2( 65659, 1497.54 )
@@ -902,7 +902,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball40"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball41" type="Area2D" parent="."]
 position = Vector2( 67337.7, 1995.43 )
@@ -917,7 +917,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball41"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball42" type="Area2D" parent="."]
 position = Vector2( 68923.4, 2002.48 )
@@ -932,7 +932,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball42"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball43" type="Area2D" parent="."]
 position = Vector2( 75948.4, 2102.19 )
@@ -947,7 +947,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball43"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball44" type="Area2D" parent="."]
 position = Vector2( 78377.8, 3144.3 )
@@ -962,7 +962,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball44"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball45" type="Area2D" parent="."]
 position = Vector2( 81068.8, 3262.69 )
@@ -977,7 +977,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball45"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball46" type="Area2D" parent="."]
 position = Vector2( 83560.1, 2272.76 )
@@ -992,7 +992,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball46"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball47" type="Area2D" parent="."]
 position = Vector2( 85413.3, 2659.72 )
@@ -1007,7 +1007,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball47"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ball48" type="Area2D" parent="."]
 position = Vector2( 87854, 3645.72 )
@@ -1022,8 +1022,7 @@ texture = ExtResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball48"]
 position = Vector2( -101.367, -97.6317 )
-shape = SubResource( 6 )
-
+shape = SubResource( 7 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

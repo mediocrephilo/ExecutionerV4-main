@@ -3,6 +3,7 @@ extends Area2D
 var canInteract = false
 
 func _ready():
+	gameSaver.save_game("res://Act4/scene3/scene3.3.tscn")
 	$Label.hide()
 
 
