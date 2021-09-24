@@ -9,6 +9,7 @@ var number = 0
 var finished = false
 var canInteract = false
 func _ready():
+	gameSaver.save_game("res://Act3/scene2/bedroom1.tscn")
 	$dialoguebox.hide()
 	$Label.hide()
 	$dialoguebox/continuesprite.hide()

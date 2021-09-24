@@ -128,7 +128,6 @@ script = ExtResource( 5 )
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 frames = SubResource( 1 )
-frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -288,7 +287,6 @@ __meta__ = {
 position = Vector2( 3765.36, 1014.97 )
 scale = Vector2( 1.08908, 1.11572 )
 texture = ExtResource( 15 )
-
 [connection signal="body_entered" from="leftExit" to="." method="_on_leftExit_body_entered"]
 [connection signal="body_entered" from="rightExit" to="." method="_on_rightExit_body_entered"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]

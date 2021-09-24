@@ -1,7 +1,7 @@
 extends Area2D
 
 var dialogue = [
-		"THE E.L.F FACTORY... I CAN HEAR THE MACHINERY FROM HERE..."
+		"AN E.L.F FACTORY . . . I CAN HEAR THE MACHINERY FROM HERE . . ."
 ]
 var dialogue_index = 0
 var number = 0

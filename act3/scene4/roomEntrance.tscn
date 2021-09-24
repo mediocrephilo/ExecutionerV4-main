@@ -170,7 +170,7 @@ position = Vector2( 3394.78, 1415.81 )
 position = Vector2( 7028.91, 1536.95 )
 scale = Vector2( 3.43735, 1.08666 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]

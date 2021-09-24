@@ -1,6 +1,7 @@
 extends Area2D
 var canInteract = false
 func _ready():
+	gameSaver.save_game("res://Act3/scene2/downstairs.tscn")
 	$Label.hide()
 func _on_Area2D_body_entered(body):
 	if body.name == "player":

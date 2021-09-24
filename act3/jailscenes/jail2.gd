@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 var yay = false
 func _ready():
+	gameSaver.save_game("res://Act3/jailscenes/jail2.tscn")
 	$dialoguebox/continuesprite.hide()
 	$Label.hide()
 func _process(delta):

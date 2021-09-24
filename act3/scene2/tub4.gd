@@ -7,6 +7,7 @@ var canInteract = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gameSaver.save_game("res://Act3/scene2/bathroom4.tscn")
 	$Label.hide()
 func _process(delta):
 	if canInteract == true and Input.is_action_just_pressed("ui_accept"):

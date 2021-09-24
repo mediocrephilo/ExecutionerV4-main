@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Act1/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Act1settings/sceneone/back tree.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://act3/scene3/elf.gd" type="Script" id=8]
 [ext_resource path="res://sprites/UI/dialoguebox.png" type="Texture" id=9]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://act3/scene3/garden.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 168.384, 1082.22 )
@@ -29,6 +30,7 @@ size = 100
 font_data = ExtResource( 10 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 3787.5, 1056.13 )

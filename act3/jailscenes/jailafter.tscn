@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://act3/jailscenes/jail4.gd" type="Script" id=2]
+[ext_resource path="res://act3/jailscenes/jailafter.gd" type="Script" id=2]
 [ext_resource path="res://sprites/Act1settings/sceneone/vignette.png" type="Texture" id=3]
 [ext_resource path="res://sprites/UI/dialoguebox copy.png" type="Texture" id=4]
 [ext_resource path="res://sprites/characters/other/paris2.png" type="Texture" id=5]
@@ -196,10 +196,10 @@ script = ExtResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -39.3697, 1068.23 )
 shape = SubResource( 9 )
-[connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_entered" from="paris" to="paris" method="_on_paris_body_entered"]
-[connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
+[connection signal="body_entered" from="paris" to="dialoguebox" method="_on_paris_body_entered"]
 [connection signal="body_exited" from="paris" to="paris" method="_on_paris_body_exited"]
+[connection signal="body_exited" from="paris" to="dialoguebox" method="_on_paris_body_exited"]
 [connection signal="tree_exited" from="dialoguebox" to="." method="_on_dialoguebox_tree_exited"]
 [connection signal="tween_completed" from="dialoguebox/Tween" to="dialoguebox" method="_on_Tween_tween_completed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

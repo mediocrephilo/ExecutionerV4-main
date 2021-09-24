@@ -2,7 +2,7 @@ extends Area2D
 
 
 var dialogue = [
-	"THE EALI PARTY CONSTITUTION",
+	"ELI LABOR FORCE ACT SECTION X",
 ]
 var canInteract = false
 var dialogue_index = 0

@@ -8,6 +8,7 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gameSaver.save_game("res://Act3/scene4/Scene4Surface.tscn")
 	$AnimatedSprite2.hide()
 	
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/act3settings/stairs.png" type="Texture" id=1]
 [ext_resource path="res://sprites/act3settings/window.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://act3/scene2/intersectup.gd" type="Script" id=5]
 [ext_resource path="res://act3/scene2/intersectl.gd" type="Script" id=6]
 [ext_resource path="res://act3/scene2/intersectr.gd" type="Script" id=7]
+[ext_resource path="res://act3/scene2/intersection.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 167.521, 1235.17 )
@@ -27,6 +28,7 @@ extents = Vector2( 75.3276, 921.272 )
 extents = Vector2( 150.148, 744.487 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1877.83, 887.392 )
@@ -212,7 +214,6 @@ script = ExtResource( 7 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2( 7971.66, 122.422 )
 shape = SubResource( 6 )
-
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D2_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D3_body_entered"]

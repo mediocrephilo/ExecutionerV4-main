@@ -12,6 +12,7 @@ var number = 0
 var finished = false
 var canInteract = false
 func _ready():
+	gameSaver.save_game("res://Act3/scene2/bathroom3.tscn")
 	$TextureRect.hide()
 	$RichTextLabel.hide()
 	$continuesprite.hide()

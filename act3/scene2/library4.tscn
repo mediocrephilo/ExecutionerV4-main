@@ -30,9 +30,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "walk",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -40,14 +40,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "idle",
 "speed": 5.0
 } ]
 
@@ -579,7 +579,6 @@ shape = SubResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 position = Vector2( 11354.9, 927.343 )
 shape = SubResource( 13 )
-
 [connection signal="body_entered" from="book" to="book" method="_on_book_body_entered"]
 [connection signal="body_exited" from="book" to="book" method="_on_book_body_exited"]
 [connection signal="tween_completed" from="book/dialoguebox/Tween" to="book" method="_on_Tween_tween_completed"]

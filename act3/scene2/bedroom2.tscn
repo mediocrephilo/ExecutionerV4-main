@@ -38,7 +38,7 @@ font_data = ExtResource( 9 )
 size = 100
 font_data = ExtResource( 9 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 resource_name = "New Anim"
 length = 2.0
 loop = true
@@ -63,13 +63,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 )
 }
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 113.382, 887.27 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 3607.25, 349.753 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 2 ) ],
 "loop": true,
@@ -77,7 +77,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 303.321, 826.123 )
 
 [node name="Node2D" type="Node2D"]
@@ -193,21 +193,21 @@ texture = ExtResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="desk/dialoguebox/continuesprite"]
 autoplay = "New Anim"
-"anims/New Anim" = SubResource( 9 )
+"anims/New Anim" = SubResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3904.07, 1315.5 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -14.1453, 1322.58 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1973.25, 2390.54 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="player" parent="StaticBody2D/CollisionShape2D3" instance=ExtResource( 14 )]
 position = Vector2( -1240.77, -704.219 )
@@ -218,7 +218,7 @@ z_index = -1
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
 position = Vector2( 726.715, 1354.41 )
 scale = Vector2( 1.35507, 1.69534 )
-frames = SubResource( 7 )
+frames = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 695.428, 1517.4 )
@@ -241,7 +241,7 @@ script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 3982.84, 1378.23 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 [connection signal="body_entered" from="desk" to="desk" method="_on_desk_body_entered"]
 [connection signal="body_exited" from="desk" to="desk" method="_on_desk_body_exited"]
 [connection signal="tween_completed" from="desk/dialoguebox/Tween" to="desk" method="_on_Tween_tween_completed"]

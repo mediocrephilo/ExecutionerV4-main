@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://sprites/act 2 setting/scene 4/sky.png" type="Texture" id=1]
 [ext_resource path="res://act3/scene5/player2.gd" type="Script" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://act3/scene5/exit1.gd" type="Script" id=32]
 [ext_resource path="res://act3/scene5/Area2D2.gd" type="Script" id=33]
 [ext_resource path="res://act3/scene5/Area2D3.gd" type="Script" id=34]
+[ext_resource path="res://act3/scene5/obstaclecouse.gd" type="Script" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 487.299, 71.4017 )
@@ -54,14 +55,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ) ],
@@ -69,9 +70,9 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 22 ) ],
 "loop": true,
-"name": "idle",
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -102,6 +103,7 @@ extents = Vector2( 18567.1, 285.163 )
 extents = Vector2( 460.978, 33.1358 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 35 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -490,7 +492,6 @@ script = ExtResource( 34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2( 560.143, -3458.64 )
 shape = SubResource( 13 )
-
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D" to="bigboi/PathFollow2D/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="bigboi/PathFollow2D/Area2D2" to="bigboi/PathFollow2D/Area2D2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gameSaver.save_game("res://Act3/scene4/sewerEntrance.tscn")
 	$player.set_process_input(false)
 	SewerSound.playsound()
 	

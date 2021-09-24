@@ -178,7 +178,6 @@ shape = SubResource( 4 )
 position = Vector2( 481.514, 1467.16 )
 scale = Vector2( 3.56214, 1.46418 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sewerWater"]
