@@ -242,7 +242,7 @@ texture = ExtResource( 23 )
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 10 )
-frame = 3
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true

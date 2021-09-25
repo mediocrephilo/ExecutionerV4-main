@@ -17,7 +17,7 @@
 [ext_resource path="res://player.gd" type="Script" id=15]
 [ext_resource path="res://sprites/Act1settings/scenetwo/chair.png" type="Texture" id=16]
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://Act1/playerscenes/scene8/SceneEight2.gd" type="Script" id=18]
+[ext_resource path="res://Act1/playerscenes/scene8/SceneEight3.gd" type="Script" id=18]
 [ext_resource path="res://Act1/playerscenes/scene2/doortime.gd" type="Script" id=19]
 [ext_resource path="res://sprites/Act1settings/scenetwo/chest/Untitled687-20200625204054.PNG" type="Texture" id=23]
 [ext_resource path="res://sounds/Closing-Squeaky-Door-1-www.fesliyanstudios.com.wav" type="AudioStream" id=26]
@@ -119,10 +119,11 @@ position = Vector2( 44.7449, 133.958 )
 script = ExtResource( 15 )
 
 [node name="playerSprite" type="AnimatedSprite" parent="player"]
-position = Vector2( 296.187, 1507.97 )
+position = Vector2( 2779.2, 1446.01 )
 frames = SubResource( 1 )
 animation = "fall"
 speed_scale = 1.5
+flip_h = true
 
 [node name="playerCollision" type="CollisionShape2D" parent="player"]
 position = Vector2( 245.784, 1584.02 )
@@ -220,7 +221,7 @@ texture = ExtResource( 23 )
 position = Vector2( 1065.05, 945.423 )
 scale = Vector2( 1.04249, 0.926498 )
 frames = SubResource( 9 )
-frame = 4
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true

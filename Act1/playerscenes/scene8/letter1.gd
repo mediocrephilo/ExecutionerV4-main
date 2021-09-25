@@ -12,5 +12,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		Transition.change_scene("res://Act1/scene8/SceneEight3")
 #	pass
