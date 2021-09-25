@@ -5,7 +5,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 90
+size = 60
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -64,22 +64,34 @@ position = Vector2( 1931.63, 793.72 )
 scale = Vector2( 3.83662, 3.82386 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 1109.48
-margin_top = 166.12
-margin_right = 2516.48
-margin_bottom = 1979.12
+margin_left = 1109.0
+margin_top = 219.0
+margin_right = 2516.0
+margin_bottom = 2067.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+bbcode_text = "E.Corps Branch 3 Station Vil 2  Report 2.23.XX
+No major movement from either faction. Vils generally working  in preparation for E.L.F announcement. Minor disturbance (M6) resolved through minor punishment. Possible violation of A13 at Vil 2 prison. Subject lives in vil outskirts and travels to the prison every seventh day between  23:00 and 01:00. Attached evidence including: hand-drawn map (1), witness testimony (2), missing rations (bread, foulmeat, fruit). Suggested course of action: termination.
+
+I confirm reception of the E.L.F candidate list and am making preparations to inform family. Normal procedures successfully executed. All is normal. May our loyalty protect us and the Council guide us.
+
+Executioner 87"
+text = "E.Corps Branch 3 Station Vil 2  Report 2.23.XX
+No major movement from either faction. Vils generally working  in preparation for E.L.F announcement. Minor disturbance (M6) resolved through minor punishment. Possible violation of A13 at Vil 2 prison. Subject lives in vil outskirts and travels to the prison every seventh day between  23:00 and 01:00. Attached evidence including: hand-drawn map (1), witness testimony (2), missing rations (bread, foulmeat, fruit). Suggested course of action: termination.
+
+I confirm reception of the E.L.F candidate list and am making preparations to inform family. Normal procedures successfully executed. All is normal. May our loyalty protect us and the Council guide us.
+
+Executioner 87"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 1704.56
-margin_top = 143.0
-margin_right = 2097.56
-margin_bottom = 230.0
+margin_left = 1514.68
+margin_top = 1958.12
+margin_right = 1907.68
+margin_bottom = 2018.12
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
