@@ -1,6 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/UI/baskerville-cufonfonts/BaskervilleBT.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://global/menu/credits.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 5459.0
@@ -10,9 +22,89 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Sounds+Links" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sounds+Links"]
+margin_left = 118.479
+margin_top = 126.349
+margin_right = 3551.48
+margin_bottom = 277.349
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "Sounds + Links"
+text = "Sounds + Links"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Sounds+Links"]
+margin_left = 108.647
+margin_top = 299.719
+margin_right = 3813.65
+margin_bottom = 3182.72
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "Horror Ambience 1 by Klankbeeld - https://freesound.org/people/klankbeeld/sounds/255715/
+Closing Squeaky Door 1 by fesliyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/door-squeaking-50
+Forest Ambience by Alexander - http://www.orangefreesounds.com/forest-ambience/
+Simple Book Page Turn by fesliyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/book-238
+Fast Paced Typing on Mechanical Keyboard 1 by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/keyboard-typing-6
+\"UI, Mechanical, Text-Scroll, 03, FX, 01, LOOP.wav\" by InspectorJ (www.jshaw.co.uk) of Freesound.org - https://freesound.org/people/InspectorJ/sounds/458587/
+Small clock in room by Yuval, freesound.org - https://freesound.org/people/Yuval/sounds/211192/
+Walking on Gravel Medium by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-on-gravel-131
+Trying to Open Door Handlel 1 by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/door-lock-91
+Squeaky Wooden Floor Footsteps Fast by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-on-squeaky-floor-130
+Horror Prayer Roman Catholic 02 120306_01.wav by toiletrolltube, klankbeeld, freesound.org - https://freesound.org/people/klankbeeld/sounds/234122/
+Heavy body impact or hit Version 5. Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/body-impacts/page/2/
+Wind Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/wind/
+Cave Ambience Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/caves/
+Slap sound (getting slapped by big hand - https://www.zapsplat.com/?s=slap&post_type=music&sound-effect-category-id=
+Walking on concrete - https://www.zapsplat.com/?s=footsteps&post_type=music&sound-effect-category-id=
+Glass break - https://www.zapsplat.com/page/2/?s=glass+break&post_type=music&sound-effect-category-id
+Unclog bathtub - https://www.zapsplat.com/page/3/?s=water+drip&post_type=music&sound-effect-category-id
+Bathroom ambience - https://www.zapsplat.com/page/2/?s=water&post_type=music&sound-effect-category-id
+Creepy sound 1 - https://www.zapsplat.com/?s=horror+ambience&post_type=music&sound-effect-category-id=
+Creepy sound 2 - https://www.zapsplat.com/?s=horror+ambience&post_type=music&sound-effect-category-id=
+Beep - https://www.zapsplat.com/?s=beep&post_type=music&sound-effect-category-id=
+Crowd - https://www.zapsplat.com/?s=mob&post_type=music&sound-effect-category-id=
+Gunshot - https://www.zapsplat.com/?s=2x+gunshot&post_type=music&sound-effect-category-id=
+Ear ring - https://www.zapsplat.com/music/increasing-in-loudness-high-pitched-shrill-tone-good-for-ringing-in-ear-or-tinnitus-or-to-convey-a-sense-of-immediate-shock/
+Breathing - https://www.zapsplat.com/music/male-breathing-medium-fast-panting-panicking/
+"
+text = "Horror Ambience 1 by Klankbeeld - https://freesound.org/people/klankbeeld/sounds/255715/
+Closing Squeaky Door 1 by fesliyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/door-squeaking-50
+Forest Ambience by Alexander - http://www.orangefreesounds.com/forest-ambience/
+Simple Book Page Turn by fesliyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/book-238
+Fast Paced Typing on Mechanical Keyboard 1 by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/keyboard-typing-6
+\"UI, Mechanical, Text-Scroll, 03, FX, 01, LOOP.wav\" by InspectorJ (www.jshaw.co.uk) of Freesound.org - https://freesound.org/people/InspectorJ/sounds/458587/
+Small clock in room by Yuval, freesound.org - https://freesound.org/people/Yuval/sounds/211192/
+Walking on Gravel Medium by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-on-gravel-131
+Trying to Open Door Handlel 1 by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/door-lock-91
+Squeaky Wooden Floor Footsteps Fast by fesilyanstudios - https://www.fesliyanstudios.com/royalty-free-sound-effects-download/footsteps-on-squeaky-floor-130
+Horror Prayer Roman Catholic 02 120306_01.wav by toiletrolltube, klankbeeld, freesound.org - https://freesound.org/people/klankbeeld/sounds/234122/
+Heavy body impact or hit Version 5. Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/body-impacts/page/2/
+Wind Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/wind/
+Cave Ambience Sound from ZapSplat - https://www.zapsplat.com/sound-effect-category/caves/
+Slap sound (getting slapped by big hand - https://www.zapsplat.com/?s=slap&post_type=music&sound-effect-category-id=
+Walking on concrete - https://www.zapsplat.com/?s=footsteps&post_type=music&sound-effect-category-id=
+Glass break - https://www.zapsplat.com/page/2/?s=glass+break&post_type=music&sound-effect-category-id
+Unclog bathtub - https://www.zapsplat.com/page/3/?s=water+drip&post_type=music&sound-effect-category-id
+Bathroom ambience - https://www.zapsplat.com/page/2/?s=water&post_type=music&sound-effect-category-id
+Creepy sound 1 - https://www.zapsplat.com/?s=horror+ambience&post_type=music&sound-effect-category-id=
+Creepy sound 2 - https://www.zapsplat.com/?s=horror+ambience&post_type=music&sound-effect-category-id=
+Beep - https://www.zapsplat.com/?s=beep&post_type=music&sound-effect-category-id=
+Crowd - https://www.zapsplat.com/?s=mob&post_type=music&sound-effect-category-id=
+Gunshot - https://www.zapsplat.com/?s=2x+gunshot&post_type=music&sound-effect-category-id=
+Ear ring - https://www.zapsplat.com/music/increasing-in-loudness-high-pitched-shrill-tone-good-for-ringing-in-ear-or-tinnitus-or-to-convey-a-sense-of-immediate-shock/
+Breathing - https://www.zapsplat.com/music/male-breathing-medium-fast-panting-panicking/
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
