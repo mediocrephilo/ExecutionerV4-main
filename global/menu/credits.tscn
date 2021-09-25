@@ -152,7 +152,7 @@ bbcode_text = "Developers
 
 Character Design
 
-Scene Design and Art
+Level Design and Art
 
 Programmers
 
@@ -166,12 +166,12 @@ Piano
 
 Sound Design
 
-Puzzles"
+"
 text = "Developers
 
 Character Design
 
-Scene Design and Art
+Level Design and Art
 
 Programmers
 
@@ -185,7 +185,7 @@ Piano
 
 Sound Design
 
-Puzzles"
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -204,7 +204,7 @@ An_Emo_Inchworm
 
 An_Emo_Inchworm
 
-An_Emo_Inchworm % Mathgonewrong
+An_Emo_Inchworm & Mathgonewrong
 
 Mathgonewrong
 
@@ -216,7 +216,7 @@ Mathgonewrong
 
 An_Emo_Inchworm & Mathgonewrong
 
-An_Emo_Inchworm"
+"
 text = "An_Emo_Inchworm & Mathgonewrong
 
 An_Emo_Inchworm
@@ -235,7 +235,7 @@ Mathgonewrong
 
 An_Emo_Inchworm & Mathgonewrong
 
-An_Emo_Inchworm"
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
