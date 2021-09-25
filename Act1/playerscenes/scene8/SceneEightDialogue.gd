@@ -3,15 +3,7 @@ extends Control
 
 # Declare member variables here. Examples:
 # var a = 2
-var dialogue = [
-#<<<<<<< HEAD
-#=======
-		"LOOKS LIKE I'M BACK HERE . . .",
-		"WHAT . . . JUST HAPPENED?", 
-		". . .  . . .  . . .",
-		"WELL, MIGHT AS WELL LOOK AROUND . . ." 
-#>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
-]
+
 var dialogue_index = 0
 var finished = false
 
