@@ -139,14 +139,14 @@ __meta__ = {
 position = Vector2( 1859.43, 1231.18 )
 scale = Vector2( 4.62068, 4.48755 )
 frames = SubResource( 1 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1991.53, 465.518 )
 scale = Vector2( 0.740516, 0.440623 )
 frames = SubResource( 2 )
-frame = 6
+frame = 13
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
@@ -238,14 +238,14 @@ __meta__ = {
 position = Vector2( 3205.01, 1684.23 )
 scale = Vector2( 0.249418, 0.236342 )
 frames = SubResource( 7 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="choicebox"]
 position = Vector2( 3207.63, 1875.15 )
 scale = Vector2( 0.291262, 0.272956 )
 frames = SubResource( 8 )
-frame = 1
+frame = 5
 playing = true
 flip_v = true
 
