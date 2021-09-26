@@ -4,14 +4,14 @@ var dialogue = [
 #<<<<<<< HEAD
 #=======
 		"... Elphabon, XX",
-		"It’s been so long since father came",
+		"It’s been so long since father visited.",
 		"I don't think he's allowed to see me again. Ever. . .",
-		"The guard with the long black hair came in today and took away Cindy." , 
-		"... She never came back. I don't think I will ever be able to see her again.",
-		"I think she's dead. Arthur too. And mother. And that little boy hanging from the tree. The guard with the long black hair killed them all",
+		"The guard with the long black hair came in today and took Cindy." , 
+		". . . She hasn't come back. Maybe she never will",
+		"I think she's dead. Arthur too. And mother. And that little boy hanging from the tree. The guard with the long black hair killed them all.",
 		"I'm afraid I might be next.",
-		"The black haired guard is mean! They're so mean! I hate them.",
-		"At least the people here are nice. They smile when they see me but . . . they don’t look happy.",
+		"The black haired guard is mean! They're so mean! I hate them. They don't talk to me. They won't even look at me! ",
+		"At least the other people don't bother me. They smile when they see me but . . . they don’t look happy.",
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 var dialogue_index = 0

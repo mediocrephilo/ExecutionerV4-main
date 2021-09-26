@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://drawncutscenes/jail1.jpg" type="Texture" id=1]
 [ext_resource path="res://drawncutscenes/jail2.jpg" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprites/UI/the-unseen/the unseen.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://drawncutscenes/act1ending.gd" type="Script" id=5]
 [ext_resource path="res://sounds/458587__inspectorj__ui-mechanical-text-scroll-03-fx-01-loop-[AudioTrimmer.com].wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/girl.wav" type="AudioStream" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,6 +26,7 @@ font_data = ExtResource( 4 )
 position = Vector2( 1939.43, 1103.47 )
 scale = Vector2( 2.07934, 2.07699 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="Control" type="Control" parent="."]
@@ -61,5 +63,9 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="Control"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 12.117
+autoplay = true
 [connection signal="tree_exited" from="Control" to="Control" method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="Control" method="_on_Tween_tween_completed"]

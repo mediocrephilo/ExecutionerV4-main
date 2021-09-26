@@ -3,7 +3,7 @@ extends Control
 var dialogue = [
 #<<<<<<< HEAD
 #=======
-		"IS...WAS THE BREAD THAT GOOD?",
+		"IS . . .WAS THE BREAD THAT GOOD?",
 		". . .",
 		"LISTEN, I AM SORRY ABOUT WHAT HAPPENED",
 		". . .",
@@ -14,9 +14,9 @@ var dialogue = [
 		"LISTEN, I'VE JUST BEEN THINKING A LOT LATELY. I WISH I COULD TAKE BACK WHAT I DID",
 		"I KNOW I DESERVE WHAT'S COMING FOR ME",
 		"I SHOULD HAVE LISTENED TO HER",
-		"CAN YOU AT LEAST TAKE MY APOLOGY?",
+		"WILL YOU ACCEPT MY APOLOGY?",
 		". . . ",
-		"FORGET IT. YOU CAN'T FORGIVE ME ANYWAYS"
+		"FORGET IT. IT'S NOT LIKE YOUR FORGIVENESS MEANS ANYTHING."
 #>>>>>>> f0599f3fa4c9156509b07ab3f949457bf47c4d97
 ]
 var dialogue_index = 0
@@ -29,7 +29,7 @@ func _ready():
 	load_dialogue()
 
 func _process(_delta):
-	#$"continuesprite".visible = finished
+	$"continuesprite".visible = finished
 	if Input.is_action_just_pressed("ui_accept") and finished == true:
 		load_dialogue()
 		
