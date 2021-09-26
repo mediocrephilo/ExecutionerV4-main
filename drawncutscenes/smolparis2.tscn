@@ -159,5 +159,6 @@ texture = ExtResource( 7 )
 autoplay = "New Anim"
 "anims/New Anim" = SubResource( 5 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="tree_exited" from="Control" to="." method="_on_Control_tree_exited"]
 [connection signal="tween_completed" from="Control/Tween" to="." method="_on_Tween_tween_completed"]

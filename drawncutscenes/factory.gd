@@ -5,9 +5,9 @@ var dialogue = [
 #=======
 
 		"They always tell me that I’m lucky, but I don’t get what they mean. Something about factories, something about E.L.F",
-		"... ... ...",
-		"but I’m scared. . . I don’t want to go . . . ",
-		"..."
+		". . .  . . .  . . .",
+		"I’m scared . . . I don’t want to go . . . ",
+		". . . "
 ]
 var dialogue_index = 0
 var finished = false

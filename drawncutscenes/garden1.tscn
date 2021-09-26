@@ -25,7 +25,6 @@ font_data = ExtResource( 2 )
 position = Vector2( 1933.5, 1101.78 )
 scale = Vector2( 1.0027, 1.02839 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Control" type="Control" parent="."]
